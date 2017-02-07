@@ -5,7 +5,7 @@ A fist docker image for testing [alvisnlp](https://github.com/Bibliome/alvisnlp)
 
 `docker pull mandiayba/alvisengine`
 
-If all work fine, you will get help
+If all work fine, you will display the help
 
 `docker run mandiayba/alvisengine alvisnlp -help`
 
