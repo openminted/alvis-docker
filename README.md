@@ -7,8 +7,8 @@ A fist docker image for testing [alvisnlp](https://github.com/Bibliome/alvisnlp)
 
 If all work fine, you will get help
 
-`docker run alvisengine alvisnlp -help`
+`docker run mandiayba/alvisengine alvisnlp -help`
 
-list the alvis modules
+list the modules supported by alvis
 
-`docker run alvisengine alvisnlp -supportedModules`
+`docker run mandiayba/alvisengine alvisnlp -supportedModules`
