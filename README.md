@@ -6,7 +6,13 @@ A fist docker image for testing the [alvisnlp](https://github.com/Bibliome/alvis
 `docker pull mandiayba/alvisengine`
 
 display the alvis help
+
 `docker run mandiayba/alvisengine alvisnlp -help`
 
 list the modules supported by alvis
+
 `docker run mandiayba/alvisengine alvisnlp -supportedModules`
+
+display the doc of the module named `SimpleProjector`
+
+`docker run mandiayba/alvisengine alvisnlp -moduleDoc SimpleProjector`
