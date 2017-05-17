@@ -42,17 +42,20 @@ WORKDIR /opt/alvisnlp/psoft
 RUN git clone https://github.com/jbjorne/TEES.git && \
     cd TEES/ && \
     apt-get install -y python && \
+    apt-get install -y python-numpy && \
     apt-get install -y make && \
     apt-get install -y ruby && \
     apt-get install -y g++ && \
     apt-get install -y flex && \
-    # python configure.py && \
-    cd ../
+    # python configure.py && \ # have to answer multiple choice questions during installation
+    cd ../ 
 
 # install geniatagger
 RUN wget http://www.nactem.ac.uk/tsujii/GENIA/tagger/geniatagger-3.0.2.tar.gz && \
     tar -xvf geniatagger-3.0.2.tar.gz && \
-    rm geniatagger-3.0.2.tar.gz
+    rm geniatagger-3.0.2.tar.gz && \
+    cd geniatagger-3.0.2 && \
+    make
 
 WORKDIR /opt/alvisnlp
 
