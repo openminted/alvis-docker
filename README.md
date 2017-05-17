@@ -24,7 +24,7 @@ display the doc of the module named `SimpleProjector`
 * automatically clone and install alvisnlp with Dockerfile
 * then, install the following external programs in an interactive mode 
 
-  * [Species](http://linnaeus.sourceforge.net/) 1.0
+  * [Species](http://download.jensenlab.org/species_tagger.tar.gz) 1.0
   * [BioLG](http://mars.cs.utu.fi/biolg/) 1.1.12
   * [CCGParser](http://www.cl.cam.ac.uk/~sc609/candc-1.00.html) 1.00
   * [CCGPosTagger](http://www.cl.cam.ac.uk/~sc609/candc-1.00.html) 1.00
