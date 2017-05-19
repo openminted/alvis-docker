@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alvisnlp-plan id="tees-train">
 
-  <import>BioNLP-ST-2016_BB-event/read.plan</import>
+  <import>data/plans/read.plan</import>
   
   <import>res://org.bibliome.alvisnlp.resources/segmentation.plan</import>
   
@@ -30,7 +30,7 @@
       <relationRole1>Bacteria</relationRole1>
       <relationRole2>Location</relationRole2>
 
-      <model>models</model>
+      <model>data/models</model>
 
       <omitSteps>SPLIT-SENTENCES,NER</omitSteps>
     </train>

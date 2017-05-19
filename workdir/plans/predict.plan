@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alvisnlp-plan id="tees-predict">
-  <import>BioNLP-ST-2016_BB-event/read.plan</import>
+ 
+  <import>data/plans/read.plan</import>
   
   <keep-test class="Action">
     <target>documents[@set != "test"]</target>
@@ -32,7 +33,7 @@
       <relationRole1>Bacteria</relationRole1>
       <relationRole2>Location</relationRole2>
 
-      <model>models/model-test</model>
+      <model>data/models/model-test</model>
 
       <omitSteps>SPLIT-SENTENCES,NER</omitSteps>
 
