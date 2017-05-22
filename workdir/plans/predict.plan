@@ -33,7 +33,7 @@
       <relationRole1>Bacteria</relationRole1>
       <relationRole2>Location</relationRole2>
 
-      <model>data/models/model-test</model>
+      <model>data/models/model</model>
 
       <omitSteps>SPLIT-SENTENCES,NER</omitSteps>
 
@@ -53,7 +53,7 @@
 
   <export>
     <TP class="TabularExport">
-      <outDir>.</outDir>
+      <outDir>data/results</outDir>
       <files>$</files>
       <fileName>"TP.txt"</fileName>
       <lines>documents.sections.relations:Lives_In.tuples[@predicted == "true" and args:reference]</lines>
@@ -67,7 +67,7 @@
     </TP>
 
     <FP class="TabularExport">
-      <outDir>.</outDir>
+      <outDir>data/results</outDir>
       <files>$</files>
       <fileName>"FP.txt"</fileName>
       <lines>documents.sections.relations:Lives_In.tuples[@predicted == "true" and not args:reference]</lines>
@@ -81,7 +81,7 @@
     </FP>
 
     <FN class="TabularExport">
-      <outDir>.</outDir>
+      <outDir>data/results</outDir>
       <files>$</files>
       <fileName>"FN.txt"</fileName>
       <lines>documents.sections.relations:Lives_In.tuples[@predicted != "true" and not args:prediction]</lines>

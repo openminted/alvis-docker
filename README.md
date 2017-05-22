@@ -5,11 +5,11 @@ Dockerizing Alvis and its components
 
 A fist docker image for testing the [alvisnlp](https://github.com/Bibliome/alvisnlp) engine is present into the Docker Hub
 
-`docker pull mandiayba/alvisengine`
+`docker pull mandiayba/alvisengine:1.0.0`
 
 display the alvis help
 
-`docker run mandiayba/alvisengine alvisnlp -help`
+`docker run mandiayba/alvisengine:1.0.0 alvisnlp -help`
 
 list the modules supported by alvis
 
@@ -18,6 +18,11 @@ list the modules supported by alvis
 display the doc of the module named `SimpleProjector`
 
 `docker run mandiayba/alvisengine alvisnlp -moduleDoc SimpleProjector`
+
+run alvis plans
+
+`docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data  -a stderr mandiayba/alvisengine:1.0.0 alvisnlp -log tees.log /opt/alvisnlp/data/plans/train.plan`
+
 
 ## The docker image creation
 
