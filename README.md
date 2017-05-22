@@ -17,11 +17,11 @@ A fist docker image for testing the [alvisnlp](https://github.com/Bibliome/alvis
 
 `docker run mandiayba/alvisengine alvisnlp -moduleDoc GeniaTagger`
 
-3. run an alvis plan that trains a ML model for binary relation extraction from a text corpus
+4. run an alvis plan that trains a ML model for binary relation extraction from a text corpus
 
 `docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data  -a stderr mandiayba/alvisengine:1.0.0 alvisnlp /opt/alvisnlp/data/plans/train.plan`
 
-4. run an alvis plan that classifies binary relations from a text corpus
+5. run an alvis plan that classifies binary relations from a text corpus
 
 `docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data  -a stderr mandiayba/alvisengine:1.0.0 alvisnlp /opt/alvisnlp/data/plans/predict.plan`
 
