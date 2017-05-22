@@ -5,25 +5,23 @@ Dockerizing Alvis and its components
 
 A fist docker image for testing the [alvisnlp](https://github.com/Bibliome/alvisnlp) engine is present into the Docker Hub
 
-`docker pull mandiayba/alvisengine:1.0.0`
-
-display the alvis help
+1. display the alvis help
 
 `docker run mandiayba/alvisengine:1.0.0 alvisnlp -help`
 
-list the modules supported by alvis
+2. list the modules supported by alvis
 
 `docker run mandiayba/alvisengine alvisnlp -supportedModules`
 
-display the doc of the module named `SimpleProjector`
+3. display the doc of the module named `SimpleProjector`
 
 `docker run mandiayba/alvisengine alvisnlp -moduleDoc SimpleProjector`
 
-run alvis plan that trains a model for binary relation extraction 
+3. run alvis plan that trains a model for binary relation extraction 
 
 `docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data  -a stderr mandiayba/alvisengine:1.0.0 alvisnlp -log tees.log /opt/alvisnlp/data/plans/train.plan`
 
-run alvis plan that classify binary relations
+4. run alvis plan that classify binary relations
 
 `docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data  -a stderr mandiayba/alvisengine:1.0.0 alvisnlp -log tees.log /opt/alvisnlp/data/plans/predict.plan`
 
