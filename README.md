@@ -31,7 +31,7 @@ The train and classify plans are based on [GeniaTagger](http://www.nactem.ac.uk/
 ## The docker image creation
 
 * automatically clone and install alvisnlp with Dockerfile
-* then, install the following external programs in an interactive mode 
+* then, install the following external programs in an interactive way 
 
   * [Species](http://download.jensenlab.org/species_tagger.tar.gz) 1.0
   * [BioLG](http://mars.cs.utu.fi/biolg/) 1.1.12
