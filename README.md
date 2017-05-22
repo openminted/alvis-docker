@@ -25,7 +25,7 @@ A fist docker image for testing the [alvisnlp](https://github.com/Bibliome/alvis
 
 `docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data  -a stderr mandiayba/alvisengine:1.0.0 alvisnlp /opt/alvisnlp/data/plans/predict.plan`
 
-The train and classify plans are based on [GeniaTagger](http://www.nactem.ac.uk/GENIA/tagger/) and [TEES](https://github.com/jbjorne/TEES/) tools integrated to AlvisNLP. The corpus used is the [Bacteria Biotope 2016](https://sites.google.com/site/bionlpst2016/tasks/bb2). The binary relation classified here is named "Lives_in". It expresses the fact that some bacteries live in some habitats.
+The train and classify plans are based on [GeniaTagger](http://www.nactem.ac.uk/GENIA/tagger/) and [TEES](https://github.com/jbjorne/TEES/) tools integrated to AlvisNLP. The corpus used is [Bacteria Biotope 2016](https://sites.google.com/site/bionlpst2016/tasks/bb2). The binary relation classified here is named "Lives_in". It expresses the fact that some bacteries live in some habitats.
 
 
 ## The docker image creation
