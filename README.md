@@ -51,7 +51,7 @@ docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvise
            /opt/alvisnlp/data/plans/train.plan
 ```
 
-The train and classify workflows (called plans into alvis) are based on [GeniaTagger](http://www.nactem.ac.uk/GENIA/tagger/) and [TEES](https://github.com/jbjorne/TEES/) tools integrated to AlvisNLP. The corpus used is [Bacteria Biotope 2016](https://sites.google.com/site/bionlpst2016/tasks/bb2). The binary relation classified here is named "Lives_in". It expresses the fact that some bacteries live in some habitats.
+The train and classify workflows (called plans into alvis) are based on [GeniaTagger](http://www.nactem.ac.uk/GENIA/tagger/) and [TEES](https://github.com/jbjorne/TEES/) tools integrated to AlvisNLP. The corpus used is [Bacteria Biotope 2016](https://sites.google.com/site/bionlpst2016/tasks/bb2). The binary relation here is named "Lives_in" ant it expresses the fact that some bacteries live in some habitats.
 
 
 ## The docker image creation
