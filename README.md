@@ -26,21 +26,21 @@ docker run mandiayba/alvisengine
        alvisnlp -moduleDoc GeniaTagger
 ```
 
-4. run an alvis plan that trains a ML model for binary relation extraction from a text corpus
+4. run an alvis workflow that trains a ML model for binary relation extraction from a text corpus
 
 ```
 docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data  -a stderr mandiayba/alvisengine:1.0.0 
        alvisnlp /opt/alvisnlp/data/plans/train.plan
 ```
 
-5. run an alvis plan that classifies binary relations from a text corpus
+5. run an alvis workflow that classifies binary relations from a text corpus
 
 ```
 docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data  -a stderr mandiayba/alvisengine:1.0.0 
            alvisnlp /opt/alvisnlp/data/plans/predict.plan
 ```
 
-6. run the train plan by passing the main parameters 
+6. run the train workflow with the main parameters passed to the workflow 
 ```
 docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvisengine:1.0.0 
            alvisnlp
@@ -51,7 +51,7 @@ docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvise
            /opt/alvisnlp/data/plans/train.plan
 ```
 
-The train and classify plans are based on [GeniaTagger](http://www.nactem.ac.uk/GENIA/tagger/) and [TEES](https://github.com/jbjorne/TEES/) tools integrated to AlvisNLP. The corpus used is [Bacteria Biotope 2016](https://sites.google.com/site/bionlpst2016/tasks/bb2). The binary relation classified here is named "Lives_in". It expresses the fact that some bacteries live in some habitats.
+The train and classify workflows (called plans into alvis) are based on [GeniaTagger](http://www.nactem.ac.uk/GENIA/tagger/) and [TEES](https://github.com/jbjorne/TEES/) tools integrated to AlvisNLP. The corpus used is [Bacteria Biotope 2016](https://sites.google.com/site/bionlpst2016/tasks/bb2). The binary relation classified here is named "Lives_in". It expresses the fact that some bacteries live in some habitats.
 
 
 ## The docker image creation
