@@ -5,6 +5,8 @@ Dockerizing Alvis and its components
 
 A fist docker image for testing the [alvisnlp](https://github.com/Bibliome/alvisnlp) engine in command line is present into [Docker Hub](https://hub.docker.com/r/mandiayba/alvisengine)
 
+Requirements : docker installed, 4go of disk space
+
 1. display the alvis help
 
 ```{r, engine='bash', count_lines}
