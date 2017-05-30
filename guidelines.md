@@ -29,7 +29,8 @@ The following plan adapt the Alvis component `WoSMig` to a OpenMinteD module. `W
 </alvisnlp>
 ```
 
-Parameter values of components that don't need to be passed as input parameter values can be directly set to the component into the plan as follow. That has the advantage of saving optimal parameters and reducing for the end user the number of parameters to consider.
+The parameter values that don't need to be passed to conserned components as input values can be directly set into the plan as follow for component `WoSMig`. That has the double advantage of saving optimal parameters and reducing for the end user the number of parameters to consider.
+
 
 ```
 ...
@@ -43,10 +44,10 @@ Parameter values of components that don't need to be passed as input parameter v
 ```
 
 {% blurb style='tip', title='Important notice' %}
-Defining a plan requires you to know Alvis and its components. However, most of the time you will re-use existing plans that are created by the Alvis developers.
+Note that, what interests us here is using Alvis plans to make the Alvis modules compatible with OpenMinTeD. Plans are used in a general way to define complexe modules and workflows. A more complete presentation on how to write a plan is available [here](https://github.com/Bibliome/alvisnlp/wiki/Writing-plans). 
 {% endblurb %}
 
-Note that, what interests us here is using Alvis plans to make the Alvis modules compatible with OpenMinTeD. Plans are used in a general way to define complexe modules and workflows. A more complete presentation on how to write a plan is available [here](https://github.com/Bibliome/alvisnlp/wiki/Writing-plans). 
+Defining a plan requires you to know Alvis and its components. However, most of the time you will be re-using existing plans that are created by the Alvis developers.
 
 
 ## Preparing the component description
@@ -56,10 +57,23 @@ After the previous step, you have defined a runnable module. It can be executed 
 ```
 docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvisengine:1.0.0 
            alvisnlp
-           -param read ...  # specific param and associated value for the component *read* 
-           -param write ... # specific param and associated value for the component *write*
-	   -param tomap ... # specific param and associated value for the component *tomap*
+           -param read sourcePath /path/to/the/text/files  # other params can be add to the component *read* 
+           -param write outDir /path/to/the/directory/where/to/write/output # other params can be add to the component *read* 
+	   -param WoSMiG ... # params can be added to the component *tomap* if required by the usage
            /path/to/the/plan.plan
 ```
 
-The 
+The previous command can be executed directly into a shell. But before defining the command, we need at least to know what are the functionalies and the parameters of the modules. It is why it is required into OpenMinTeD for each module to provide its description including functionalies and parameters. Thus, we use [OMTD Schema](https://guidelines.openminted.eu/the_omtd-share_metadata_schema.html) to describe the modules. We describe each all [mandatory elements of the OMTD Schema](https://guidelines.openminted.eu/guidelines_for_providers_of_sw_resources/recommended_schema_for_sw_resources.html). Some element values (module name and presentation, input and output parameter description, etc.) already existing into Alvis, hence they are automatically generated from Alvis. Some other values need currently to be provided by hand (i.e., external resources, citation, etc.).
+
+When describing a module, a particular attention must be paid to the metadata related to the module execution. They are those used by the module during execution including command, type system, inputs/outputs, etc. The command metadata (see [`command` element](https://guidelines.openminted.eu/components_command.html)) is a rewritten of the command presented above, where the values of the parameters are contained in variables referencing the parameters of the module.  
+
+```
+docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvisengine:1.0.0 
+           alvisnlp
+           -param read sourcePath ${incorpus}  # other params can be add to the component *read* 
+           -param write outDir ${outdir} # other params can be add to the component *read* 
+	   -param WoSMiG ... # params can be added to the component *tomap* if required by the usage
+           /path/to/the/plan.plan
+```
+
+The variable 
