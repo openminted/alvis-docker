@@ -65,7 +65,7 @@ docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvise
 
 The previous command can be executed directly into a shell. But before defining the command, we need at least to know what are the functionalies and the parameters of the modules. It is why it is required into OpenMinTeD for each module to provide its description including functionalies and parameters. Thus, we use [OMTD Schema](https://guidelines.openminted.eu/the_omtd-share_metadata_schema.html) to describe the modules. We describe each all [mandatory elements of the OMTD Schema](https://guidelines.openminted.eu/guidelines_for_providers_of_sw_resources/recommended_schema_for_sw_resources.html). Some element values (module name and presentation, input and output parameter description, etc.) already existing into Alvis, hence they are automatically generated from Alvis. Some other values need currently to be provided by hand (i.e., external resources, citation, etc.).
 
-When describing a module, a particular attention must be paid to the metadata related to the module execution. They are those used by the module during execution including command, type system, inputs/outputs, etc. The command metadata (see [`command` element](https://guidelines.openminted.eu/components_command.html)) is a rewritten of the command presented above, where the values of the parameters are contained in variables referencing the parameters of the module.  
+When describing a module, a particular attention must be paid to the metadata related to the module execution. They are those used by the module during execution including command, type system, inputs/outputs, etc. The command metadata (see [`command` element](https://guidelines.openminted.eu/components_command.html)) is a rewritten of the command presented above, where the values of the parameters are contained in variables referencing parameter names of the module.  
 
 ```
 docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvisengine:1.0.0 
@@ -76,4 +76,4 @@ docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvise
            /path/to/the/plan.plan
 ```
 
-The variable 
+The command is a value for metadata element `command`. It supposes the existence of two parameters of the modules having the values `incorpus` and `outdir` for their `parameterName` elements. 
