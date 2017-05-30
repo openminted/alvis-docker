@@ -1,4 +1,4 @@
-# Guidelines for deploying a Alvis component based on docker
+# Guidelines for deploying a Alvis component based on docker (DRAFT)
 An Alvis instance exists as a docker image. The image is packaged with all required to run Alvis and its components.
 
 {% blurb style='tip', title='Important notice' %}
