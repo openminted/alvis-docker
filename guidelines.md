@@ -1,5 +1,8 @@
+
+
+
 # Guidelines for deploying a Alvis component with a dockerized Alvis engine (DRAFT)
-In this document we will describe how to adapt the Alvis component as OpenMinTeD modules. The Alvis framework we use here is packaged as a docker image with the Alvis components and the required ressources. The guidelines does not concern docker, docker is just used to run Alvis. See [here](https://github.com/openminted/alvis-docker) for more about Alvis docker. The guidelines describe how the Alvis plans are used to adapt component as OMTD modules and how the modules are described to fit the OpenMinTeD requirements.
+In this document we will describe how to adapt the Alvis component as OpenMinTeD modules. The [Alvis framework](https://github.com/Bibliome/alvisnlp) we use here is packaged as a docker image with the Alvis components and required ressources. The guidelines does not concern docker, docker is just used to deploy and run Alvis. See [here](https://github.com/openminted/alvis-docker) for more about Alvis docker. The guidelines describe how the Alvis plans are used to adapt component as OMTD modules and how the modules are described to fit the OpenMinTeD requirements.
 
 {% blurb style='tip', title='Important notice' %}
 This document assumes your machine to have docker intalled and 4Go of free space. You will also need Java and XML skills for some indeipt configurations.
