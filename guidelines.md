@@ -76,7 +76,7 @@ docker run run mandiayba/alvisengine:1.0.0 alvisnlp -moduleDoc WoSMig # a user d
 ```
 
 
-## Describe a runnable module for OpenMinTeD
+## Describe the runnable module for OpenMinTeD
 
 OpenMinTeD requires to provide descriptions based on the [OpenMinTeD Schema](https://guidelines.openminted.eu/the_omtd-share_metadata_schema.html) for all the modules. We use the schema to describe into OpenMinTeD the runnable module. At least, description of the [mandatory elements of the OpenMinTeD Schema](https://guidelines.openminted.eu/guidelines_for_providers_of_sw_resources/recommended_schema_for_sw_resources.html) is required. In Alvis some element instances of the schema are automatically generated (module name and presentation, input and output parameter description, etc.), others currently need to be defined by hand (i.e., external resources, citation, etc.). regardless of the method, what is important is to provide a valid description (against the schema) of the Alvis runnable modules.
 
