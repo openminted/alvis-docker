@@ -7,7 +7,7 @@ This document assumes your machine to have docker intalled and 4Go of free space
 
 Before going further, let's define the notion of plan into Alvis. A plan is a preconfigured receipt using Alvis elementary components in order to define a specific runable module. The modules are seen as workflows but in this OpenMinTeD context they are compatible OpenMinTeD modules. A plan here lets us adapt a Alvis component as a OpenMinTeD module by preparing the interface for its inputs, outputs and parameters.
 
-## Configuring an Alvis Plan to define a runnable module
+## Define a runnable module with an Alvis plan
 An alvis plan to define a module is a xml file with extension `.plan` that contains 3 parts : a reader part that configures the inputs, a writer part that configures the outputs, and the main part that specify the Alvis component to adapt as a OpenMinTeD module.
 
 The following plan adapt the Alvis component `WoSMig` as a OpenMinteD module. `WoSMig` do tokenization of text documents. The plan is composed of the elementary Alvis component `TextFileReader` to read text files, the elementary component `TabularExport` to export the results as tabular forms, and the module `WoSMig` doing the main tokenization task. The schema of the plan remains the same from a module to another, the things that change are the components. All components must be present into Alvis. Alvis has several typical reader and writer components, new ones can be implemented if required (for example to convert new formats). 
@@ -76,7 +76,7 @@ docker run run mandiayba/alvisengine:1.0.0 alvisnlp -moduleDoc WoSMig # a user d
 ```
 
 
-## Describing the module for OpenMinTeD
+## Describe a runnable module for OpenMinTeD
 
 OpenMinTeD requires to provide descriptions based on the [OpenMinTeD Schema](https://guidelines.openminted.eu/the_omtd-share_metadata_schema.html) for all the modules. We use the schema to describe into OpenMinTeD the runnable module. At least, description of the [mandatory elements of the OpenMinTeD Schema](https://guidelines.openminted.eu/guidelines_for_providers_of_sw_resources/recommended_schema_for_sw_resources.html) is required. In Alvis some element instances of the schema are automatically generated (module name and presentation, input and output parameter description, etc.), others currently need to be defined by hand (i.e., external resources, citation, etc.). regardless of the method, what is important is to provide a valid description (against the schema) of the Alvis runnable modules.
 
@@ -95,6 +95,11 @@ docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvise
 
 All parameters of the module must be described in the metadata at least with a name, a description, a type (or format). That description is generated from Alvis.
 
-## Package
+## Package for OpenMinTeD
 
 The minimal resources into the package is a XML file containing the module description and the plan file. Other resources can be added according to the description of the module.
+
+{% blurb style='tip', title='Important notice' %}
+We suppose the OpenMinTeD platform has all required to manage docker images and containers.
+{% endblurb %}
+
