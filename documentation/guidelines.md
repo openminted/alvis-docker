@@ -2,7 +2,7 @@
 
 
 # Guidelines to define a OpenMinTeD runnable module based on a dockerized Alvis engine 
-This document describes how to setup the Alvis components as OpenMinTeD runnable modules. The [Alvis framework](https://github.com/Bibliome/alvisnlp) we use here is packaged with all the Alvis components and required ressources as a docker image already available into docker hub. The guidelines do not concern docker, docker is just used to deploy and run the Alvis engine. See [here](https://github.com/openminted/alvis-docker) for the Alvis docker project. The guidelines specifically describe how Alvis plans are used to adapt component as runnable modules and how the modules are described to fit OpenMinTeD requirements.
+This document describes how to setup the Alvis components as OpenMinTeD runnable modules. The [Alvis framework](https://github.com/Bibliome/alvisnlp) is packaged with all the Alvis components and required ressources as a docker image available into docker hub. The guidelines do not concern aspect dockerizing Alvis, docker is just used to deploy and run the Alvis engine. See [here](https://github.com/openminted/alvis-docker) for the Alvis docker project. The guidelines specifically describe how Alvis plans are used to adapt component as runnable modules and how the modules are described to fit OpenMinTeD requirements.
 
 {% blurb style='tip', title='Important notice' %}
 This procedure requires docker to be intalled and 4Go of free space. You will also need XML and Java skills for in-depth configurations.
