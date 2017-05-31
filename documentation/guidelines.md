@@ -17,13 +17,9 @@ The following plan adapts the Alvis component named `WoSMig` as a OpenMinteD run
 
 ```
 <alvisnlp-plan id="OMTD_WoSMig">
-
 	<read class="TextFileReader"/>
-
 	<annotation class="WoSMig"/>
-
 	<write class="TabularExport"/>
-
 </alvisnlp>
 ```
 
@@ -32,16 +28,12 @@ You can feed values of the parameters that don't require to be used as input par
 
 ```
 <alvisnlp-plan id="OMTD_WoSMig">
-
 	<read class="TextFileReader"/>
-
 	<annotation class="WoSMig">
   		<ponctuations>?.!;,:-</pontuations>
   		<balancedPunctuations>()[]{}""</balancedPunctuations>
 	</annotation>
-
 	<write class="TabularExport"/>
-
 </alvisnlp>
 ```
 
