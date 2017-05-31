@@ -50,6 +50,18 @@ Note that, what interests us here is using Alvis plans to make the Alvis modules
 {% endblurb %}
 
 
+With the previous plan, you have defined a runnable module. It can be executed with the following command. 
+
+```
+docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvisengine:1.0.0 
+           alvisnlp
+           -param read sourcePath /path/to/the/text/files  # other params can be add to the component *read* 
+           -param write outDir /path/to/the/directory/where/to/write/output # other params can be add to the component *read* 
+	   -param WoSMiG ... # params can be added to the component *tomap* if required by the usage
+           /path/to/the/plan.plan
+```
+
+
 Defining a plan requires you to know Alvis and its components. However, most of the time you will be re-using existing plans that are created by the Alvis developers. To know what components to use, you can ckeck it in command line with a docker container.
 
 ```
@@ -66,28 +78,19 @@ docker run run mandiayba/alvisengine:1.0.0 alvisnlp -moduleDoc WoSMig # a user d
 
 ## Describing the module for OpenMinTeD
 
-After the previous step, you have defined a runnable module. It can be executed with the following command. 
+OpenMinTeD requires to provide descriptions based on the [OpenMinTeD Schema](https://guidelines.openminted.eu/the_omtd-share_metadata_schema.html) for all the modules. We use the schema to describe into OpenMinTeD the runnable module. At least, description of the [mandatory elements of the OpenMinTeD Schema](https://guidelines.openminted.eu/guidelines_for_providers_of_sw_resources/recommended_schema_for_sw_resources.html) is required. In Alvis some element instances of the schema are automatically generated (module name and presentation, input and output parameter description, etc.), others currently need to be defined by hand (i.e., external resources, citation, etc.). regardless of the method, what is important is to provide a valid description (against the schema) of the Alvis runnable modules.
 
-```
-docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvisengine:1.0.0 
-           alvisnlp
-           -param read sourcePath /path/to/the/text/files  # other params can be add to the component *read* 
-           -param write outDir /path/to/the/directory/where/to/write/output # other params can be add to the component *read* 
-	   -param WoSMiG ... # params can be added to the component *tomap* if required by the usage
-           /path/to/the/plan.plan
-```
+A particular attention must be paid to the metadata related to the module execution when describing a module. They are those used by the module during execution including command, input and output parameters. The command metadata (see [`command` element](https://guidelines.openminted.eu/components_command.html)) is similar to the command presented in the previous section, where the values of the parameters will be contained in variables referencing parameter names of the module. The plan is seen as a related resource identified and localized with metadata element [`relatedResource`](https://guidelines.openminted.eu/compoments_relatedResource.md). 
 
-The previous command can be executed into a shell. But before defining the command, we need to know what are the functionalies and the parameters of the modules. That meets the requirement into OpenMinTeD to provide descriptions for all the modules, including functionalies and parameters. Thus, we use the [openMinTeD Schema](https://guidelines.openminted.eu/the_omtd-share_metadata_schema.html) to describe the modules. We have to describe, at least, the [mandatory elements of the OpenMinTeD Schema](https://guidelines.openminted.eu/guidelines_for_providers_of_sw_resources/recommended_schema_for_sw_resources.html). Some element (module name and presentation, input and output parameter description, etc.) are automatically generated from Alvis, others (i.e., external resources, citation, etc.) currently need to be defined by hand. 
 
-When describing a module, a particular attention must be paid to the metadata related to the module execution. They are those used by the module during execution including command, type system, inputs/outputs, etc. The command metadata (see [`command` element](https://guidelines.openminted.eu/components_command.html)) is a rewritten of the command presented above, where the values of the parameters are contained in variables referencing parameter names of the module.  
-
+The following command is a value for metadata element `command`. It supposes the existence of two parameters of the modules having values `incorpus` and `outdir` for their `parameterName` elements. It also supposes the plan of the module is described as a related resource. 
 ```
 docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvisengine:1.0.0 
            alvisnlp
            -param read sourcePath ${incorpus}  # other params can be add to the component *read* 
            -param write outDir ${outdir} # other params can be add to the component *read* 
 	   -param WoSMiG ... # params can be added to the component *tomap* if required by the usage
-           /path/to/the/plan.plan
+           /path/to/the/relatedResource.plan # the plan to use for the module must be available as a related resource
 ```
 
-The command is a value for metadata element `command`. It supposes the existence of two parameters of the modules having the values `incorpus` and `outdir` for their `parameterName` elements. 
+All parameters of the module must be described in the metadata at least with a name, a description, a type (or format). 
