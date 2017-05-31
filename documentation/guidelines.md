@@ -1,7 +1,7 @@
 
 
 
-# Guidelines to define a OpenMinTeD runnable module based on the dockerized Alvis engine 
+# Guidelines to define a OpenMinTeD runnable module based on a dockerized Alvis engine 
 This document describes how to setup the Alvis components as OpenMinTeD runnable modules. The [Alvis framework](https://github.com/Bibliome/alvisnlp) we use here is packaged with all the Alvis components and required ressources as a docker image already available into docker hub. The guidelines do not concern docker, docker is just used to deploy and run the Alvis engine. See [here](https://github.com/openminted/alvis-docker) for the Alvis docker project. The guidelines specifically describe how Alvis plans are used to adapt component as runnable modules and how the modules are described to fit OpenMinTeD requirements.
 
 {% blurb style='tip', title='Important notice' %}
@@ -20,7 +20,7 @@ The following plan adapts the Alvis component named `WoSMig` to an runnable modu
 	<read class="TextFileReader"/>
 	<annotation class="WoSMig"/>
 	<write class="TabularExport"/>
-</alvisnlp>
+</alvisnlp-plan>
 ```
 
 You can feed values of parameters (that don't require to be used as input parameter of the module) into the plan. That has the double advantage of recording the optimal parameters and values and reducing for the end user the number of parameters to consider. In the following modified plan parameters `ponctuations` and `balancedPuntuations` of component `WoSMig` are fed.
@@ -34,7 +34,7 @@ You can feed values of parameters (that don't require to be used as input parame
   		<balancedPunctuations>()[]{}""</balancedPunctuations>
 	</annotation>
 	<write class="TabularExport"/>
-</alvisnlp>
+</alvisnlp-plan>
 ```
 
 {% blurb style='tip', title='Important notice' %}
