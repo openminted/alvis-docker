@@ -83,7 +83,7 @@ OpenMinTeD requires to provide descriptions based on the [OpenMinTeD Schema](htt
 A particular attention must be paid to the metadata related to the module execution when describing a module. They are those used by the module during execution including command, input and output parameters. The command metadata (see [`command` element](https://guidelines.openminted.eu/components_command.html)) is similar to the command presented in the previous section, where the values of the parameters will be contained in variables referencing parameter names of the module. The plan is seen as a related resource identified and localized with metadata element [`relatedResource`](https://guidelines.openminted.eu/compoments_relatedResource.md). 
 
 
-The following command is a value for metadata element `command`. It supposes the existence of two parameters of the modules having values `incorpus` and `outdir` for their `parameterName` elements. It also supposes the plan of the module is described as a related resource. 
+The following command is a value for metadata element `command`. It supposes the existence of two parameters of the modules having values `incorpus` and `outdir` for their `parameterName` elements. It also supposes the plan of the module is described as a related resource (see [here](https://guidelines.openminted.eu/guidelines_for_providers_of_ancillary_resources/)  for how to fully describe an ancillary_resource).
 ```
 docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvisengine:1.0.0 
            alvisnlp
@@ -93,4 +93,8 @@ docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvise
            /path/to/the/relatedResource.plan # the plan to use for the module must be available as a related resource
 ```
 
-All parameters of the module must be described in the metadata at least with a name, a description, a type (or format). 
+All parameters of the module must be described in the metadata at least with a name, a description, a type (or format). That description is generated from Alvis.
+
+## Package
+
+The minimal resources into the package is a XML file containing the module description and the plan file. Other resources can be added according to the description of the module.
