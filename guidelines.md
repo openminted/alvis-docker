@@ -50,13 +50,13 @@ Note that, what interests us here is using Alvis plans to make the Alvis modules
 {% endblurb %}
 
 
-With the previous plan, you have defined a runnable module. It can be executed with the following command. 
+The previous plan defined a runnable module that can be executed with the following command. The `-v` option is used to mount the directory where input and output data are present.   
 
 ```
 docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvisengine:1.0.0 
            alvisnlp
-           -param read sourcePath /path/to/the/text/files  # other params can be add to the component *read* 
-           -param write outDir /path/to/the/directory/where/to/write/output # other params can be add to the component *read* 
+           -param read sourcePath /opt/alvisnlp/data[/path/to/text/files]  # other params can be add to the component *read* 
+           -param write outDir /opt/alvisnlp/data[/path/to/the/outdirectory/] # other params can be add to the component *read* 
 	   -param WoSMiG ... # params can be added to the component *tomap* if required by the usage
            /path/to/the/plan.plan
 ```
@@ -83,15 +83,18 @@ OpenMinTeD requires to provide descriptions based on the [OpenMinTeD Schema](htt
 A particular attention must be paid to the metadata related to the module execution when describing a module. They are those used by the module during execution including command, input and output parameters. The command metadata (see [`command` element](https://guidelines.openminted.eu/components_command.html)) is similar to the command presented in the previous section, where the values of the parameters will be contained in variables referencing parameter names of the module. The plan is seen as a related resource identified and localized with metadata element [`relatedResource`](https://guidelines.openminted.eu/compoments_relatedResource.md). 
 
 
-The following command is a value for metadata element `command`. It supposes the existence of two parameters of the modules having values `incorpus` and `outdir` for their `parameterName` elements. It also supposes the plan of the module is described as a related resource (see [here](https://guidelines.openminted.eu/guidelines_for_providers_of_ancillary_resources/)  for how to fully describe an ancillary_resource).
+The following command is a value for metadata element `command`. It supposes the existence of two parameters of the modules having values `incorpus` and `outdir` for their `parameterName` elements. It also supposes the plan of the module is described as a related resource (see [here](https://guidelines.openminted.eu/guidelines_for_providers_of_ancillary_resources/)  for how to fully describe an ancillary_resource). 
 ```
-docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvisengine:1.0.0 
+docker run -i --rm -v /path/to/OMTD_Workdir:/opt/alvisnlp/data -a stderr mandiayba/alvisengine:1.0.0 
            alvisnlp
            -param read sourcePath ${incorpus}  # other params can be add to the component *read* 
            -param write outDir ${outdir} # other params can be add to the component *read* 
 	   -param WoSMiG ... # params can be added to the component *tomap* if required by the usage
            /path/to/the/relatedResource.plan # the plan to use for the module must be available as a related resource
 ```
+{% blurb style='tip', title='Important notice' %}
+We assume in the command that OpenMinTeD will resolve the correspondance between the path to the mounted `OMTD_Workdir` and the input and output data.
+{% endblurb %}
 
 All parameters of the module must be described in the metadata at least with a name, a description, a type (or format). That description is generated from Alvis.
 
@@ -100,6 +103,6 @@ All parameters of the module must be described in the metadata at least with a n
 The minimal resources into the package is a XML file containing the module description and the plan file. Other resources can be added according to the description of the module.
 
 {% blurb style='tip', title='Important notice' %}
-We suppose the OpenMinTeD platform has all required to manage docker images and containers. The deployment of Alvis and its component can be done with `docker pull mandiayba/alvisengine:1.0.0`.
+We assume OpenMinTeD platform has all required to manage docker images and containers. The deployment of Alvis and its component can be done with `docker pull mandiayba/alvisengine:1.0.0`.
 {% endblurb %}
 
