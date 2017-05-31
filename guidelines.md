@@ -15,14 +15,11 @@ The following plan adapt the Alvis component `WoSMig` as a OpenMinteD module. `W
 ```
 <alvisnlp-plan id="OMTD_WoSMig">
 
-<read class="TextFileReader">
-</read>
+	<read class="TextFileReader"/>
 
-<tokenization class="WoSMig">
-</tokenization>
+	<annotation class="WoSMig"/>
 
-<write class="TabularExport">
-</write>
+	<write class="TabularExport"/>
 
 </alvisnlp>
 ```
@@ -33,16 +30,16 @@ Into the plan you can feed values of the parameters that don't require to be use
 ```
 <alvisnlp-plan id="OMTD_WoSMig">
 
-<read class="TextFileReader">
-</read>
+	<read class="TextFileReader"/>
 
-<annotation class="WoSMig">
-  <ponctuations>?.!;,:-</pontuations>
-  <balancedPunctuations>()[]{}""</balancedPunctuations>
-</annotation>
+	<annotation class="WoSMig">
+  		<ponctuations>?.!;,:-</pontuations>
+  		<balancedPunctuations>()[]{}""</balancedPunctuations>
+	</annotation>
 
-<write class="TabularExport">
-</write>
+	<write class="TabularExport"/>
+
+</alvisnlp>
 ```
 
 {% blurb style='tip', title='Important notice' %}
@@ -100,6 +97,6 @@ All parameters of the module must be described in the metadata at least with a n
 The minimal resources into the package is a XML file containing the module description and the plan file. Other resources can be added according to the description of the module.
 
 {% blurb style='tip', title='Important notice' %}
-We suppose the OpenMinTeD platform has all required to manage docker images and containers.
+We suppose the OpenMinTeD platform has all required to manage docker images and containers. The deployment of Alvis and its component can be done with `docker pull mandiayba/alvisengine:1.0.0`.
 {% endblurb %}
 
