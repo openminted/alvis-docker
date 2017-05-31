@@ -1,13 +1,11 @@
-# Guidelines for deploying a Alvis component based on docker (DRAFT)
-An Alvis instance exists as a docker image. The image is packaged with all required to run Alvis and its components.
+# Guidelines for deploying a Alvis component with a dockerized Alvis engine (DRAFT)
+In this document we will describe how to adapt the Alvis component as OpenMinTeD modules and how the deployment process will be done. The Alvis framework we use here is packaged as a docker image with the Alvis components and the required ressources. The guidelines does not concern
 
 {% blurb style='tip', title='Important notice' %}
-This document assumes you have docker intalled in your machine and your machine have 4Go of free space. You will need manage XML files.
+This document assumes your machine have docker intalled and 4Go of free space. You will also need skill and Java and XML for the indeept configurations.
 {% endblurb %}
 
-The rest of the document will describe how to abstract component as OpenMinTeD modules from Alvis plan and how the OpenMinTeD modules are deployed.
-
-Before going further, let's define the Alvis plans. A plan is a preconfigured receipt on Alvis elementary components in order to define a specific modules. The obtained modules can be seen as workflows but in the context of OpenMinTeD they will be compatible OpenMinTeD modules. The plans thus lets us adapt the Alvis modules to OpenMinTeD modules by, for example, configuring the formats of the inputs/outputs and adapting parameters to requirements.
+Before going further, let's define the Alvis plans. A plan is a preconfigured receipt using Alvis elementary components in order to define a specific modules. The obtained modules can be seen as workflows but in the context of OpenMinTeD they will be compatible OpenMinTeD modules. The plans thus lets us adapt the Alvis modules to OpenMinTeD modules by, for example, configuring the formats of the inputs/outputs and adapting parameters to requirements.
 
 ## Preparing an Alvis Plan
 An alvis plan is a xml file with extension `.plan` that contains 3 parts : a reader part that configures the inputs, a writer part that configures the outputs, and the main part that specify the module specific task.
