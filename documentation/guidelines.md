@@ -5,27 +5,27 @@
 
 This document describes how to setup an OpenMinTeD runnable component from the AlvisNLP/ML modules.
 
-We use the [AlvisNLP/ML framework](https://github.com/Bibliome/alvisnlp) packaged as a docker image (available into docker hub) that includes all AlvisNLP/ML modules and ressources. The guidelines specifically describe how AlvisNLP/ML "plans" are used to adapt modules as runnable components and how the components are described to fit OpenMinTeD requirements.
+We use the [AlvisNLP/ML framework](https://github.com/Bibliome/alvisnlp) packaged as a [docker image](https://hub.docker.com/r/mandiayba/alvisengine/) (available into docker hub) that includes all AlvisNLP/ML modules and ressources. The guidelines specifically describe how AlvisNLP/ML "plans" are used to adapt modules as runnable components and how the components are described to fit OpenMinTeD requirements.
 
 ## Requirements
 
 * `docker` version XXX
 * 4Gb available in RAM/filesystem? XXX
-* Basic XML and Java knowledge for in-depth configuration
+* Basic XML and Java knowledge for in-depth configuration. <!-- @J: rather a required skill ;) -->
 
 ## AlvisNLP/ML Basics
 
 [AlvisNLP/ML framework](https://github.com/Bibliome/alvisnlp) is a corpus processing engine that features a library of processing modules. These library includes modules for tokenization, sentence splitting, POS-tagging, parsing, NER, relation extraction, etc.
 
-Users run AlvisNLP/ML 
+Users run AlvisNLP/ML <!-- @J: ?-->
 
 AlvisNLP
-Before going further, let's define the notion of plan into Alvis. A plan is a preconfigured receipt using the Alvis elementary components in order to define a specific runable module. These runnable modules are workflows but in this OpenMinTeD context they are seen as OpenMinTeD compatible modules. Thus, rather than composing several modules, a plan here lets us just adapt an Alvis component to an OpenMinTeD module by preparing the interface for its inputs, outputs and parameters.
+Before going further, let's define the notion of plan into Alvis. A plan is a preconfigured receipt using the Alvis elementary components in order to define a specific runable module. These runnable modules are workflows but in this OpenMinTeD context they are seen as OpenMinTeD compatible modules. <!-- @J: introduire composants, modules et workflows et les approches OMTD et Galaxy dans une phrase est dur à suivre. Une liste avec le vocabulaire ferait probablement l'affaire--> Thus, rather than composing several modules, a plan here lets us just adapt an Alvis component to an OpenMinTeD module by preparing the interface for its inputs, outputs and parameters.  <!-- @J: aussi un petit peu dur-->
 
 ## Define a runnable module with an Alvis plan
-An plan for a runnable module is a XML file (with extension `.plan`) that contains 3 parts : a read part that configures the inputs, a write part that configures the outputs, and a process part that configures the task of the Alvis component being adapted as an OpenMinTeD runnable module.
+A plan for a runnable module is a XML file (with extension `.plan`) that contains 3 parts: a read part that configures the inputs, a write part that configures the outputs, and a process part that configures the task of the Alvis component being adapted as an OpenMinTeD runnable module.
 
-The following plan adapts the Alvis component named `WoSMig` to an runnable module. `WoSMig` do tokenization of text documents. The plan is composed of the Alvis component `TextFileReader` to read text files, the component `TabularExport` to export the results as tabular forms, and the process module `WoSMig` doing the tokenization task. The runnable modules will be set in this way, it is just the `read` and `write` parts who will change according to the needs. The process components to use are available into Alvis. Alvis also has several typical components for the read and write parts (new components can be implemented, for example to convert new formats).
+The following plan adapts the Alvis component named `WoSMig` to an runnable module. `WoSMig` does tokenization of text documents. The plan is composed of the Alvis component `TextFileReader` to read text files, the component `TabularExport` to export the results as tabular forms, and the process module `WoSMig` doing the tokenization task. The runnable modules will be set in this way, it is just the `read` and `write` parts who will change according to the needs. The process components to use are available into Alvis. Alvis also has several typical components for the read and write parts (new components can be implemented, for example to convert new formats).
 ```xml
 <alvisnlp-plan id="OMTD_WoSMig">
 	<read class="TextFileReader"/>
@@ -50,7 +50,7 @@ You can feed values of parameters (that don't require to be used as input parame
 Note that, what interests us here is using the Alvis plans to make the Alvis modules compatible with OpenMinTeD. Plans are used in a general way to define complexe modules and workflows. A more complete presentation on how to write plans is available [here](https://github.com/Bibliome/alvisnlp/wiki/Writing-plans). 
 {% endblurb %}
 
-The previous plan defines an autonomous and runnable module that can be executed with the following command. The `-v` option is used to mount the directory where the input and output data will be accessible to the docker image. `mandiayba/alvisengine:1.0.0` is to identify the concerned docker image and `alvisnlp` is to run the alvisengine on parameters. The above defined plan is one of the parameter to feed to the alvis engine.
+The previous plan defines an autonomous and runnable module that can be executed with the following command. The `-v` option is used to mount the directory where the input and output data will be accessible to the docker image. `mandiayba/alvisengine:1.0.0` is used to identify the concerned docker image and `alvisnlp` is used to run the alvisengine on parameters. The above defined plan is one of the parameter to feed to the alvis engine.
 ```bash
 docker run -i --rm -a stderr -v $PWD/workdir:/opt/alvisnlp/data mandiayba/alvisengine:1.0.0 
            alvisnlp
@@ -60,7 +60,7 @@ docker run -i --rm -a stderr -v $PWD/workdir:/opt/alvisnlp/data mandiayba/alvise
            /path/to/the/plan.plan
 ```
 
-Defining a plan requires you to know Alvis and its components. However, most of the time you will be re-using existing plans that are created by the Alvis developers. To know what components to use, you can ckeck in command line with a docker container using the following commands.
+Defining a plan requires you to know Alvis and its components. However, most of the time you will be re-using existing plans that are created by the Alvis developers. To know which components to use, you can ckeck in command line with a docker container using the following commands.
 ```bash
 docker run mandiayba/alvisengine:1.0.0 alvisnlp -supportedModules # Alvis general help
 
@@ -72,7 +72,7 @@ docker run run mandiayba/alvisengine:1.0.0 alvisnlp -moduleDoc WoSMig # a user-d
 ```
 
 ## Describe the runnable module for OpenMinTeD
-With the autonomous and runnable module, OpenMinTeD requires you to provide a description based on the [OpenMinTeD Metadata Schema](https://guidelines.openminted.eu/the_omtd-share_metadata_schema.html) for the module. We thus use that schema to describe the OpenMinTeD runnable modules. At least, description instances of the [mandatory elements of the OpenMinTeD Schema](https://guidelines.openminted.eu/guidelines_for_providers_of_sw_resources/recommended_schema_for_sw_resources.html) are required. Alvis  automatically generates some element instances of the schema (module name and presentation, input and output parameter description, etc.), some others currently need to be defined by hand (i.e., external resources, citation, etc.). Regardless the method, what is important is to provide a valid XML description (against the schema) of the runnable modules.
+With the autonomous and runnable module, OpenMinTeD requires you to provide a description based on the [OpenMinTeD Metadata Schema](https://guidelines.openminted.eu/the_omtd-share_metadata_schema.html) for the module. We thus use that schema to describe the OpenMinTeD runnable modules. At least, description instances of the [mandatory elements of the OpenMinTeD Schema](https://guidelines.openminted.eu/guidelines_for_providers_of_sw_resources/recommended_schema_for_sw_resources.html) are required. Alvis  automatically generates some element instances of the schema (module name and presentation, input and output parameter description, etc.), some others currently need to be defined by hand (i.e., external resources, citation, etc.). Regardless of the method, what is important is to provide a valid XML description (against the schema) of the runnable modules.
 
 For Alvis, a particular attention must be paid to the metadata related to the module execution. They are those used by the module during execution including command, input and output parameters. The command metadata (see [`command` element](https://guidelines.openminted.eu/components_command.html)) is similar to the command presented in the previous section, with the values of the parameters contained in variables referencing parameter names of the module. The plan is seen as an ancillary resource identified and localized with metadata element [`relatedResource`](https://guidelines.openminted.eu/compoments_relatedResource.md). 
 
