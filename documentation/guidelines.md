@@ -11,7 +11,7 @@ We use the [AlvisNLP/ML framework](https://github.com/Bibliome/alvisnlp) package
 
 * `docker` version 1.13.1
 * 4Gb available on disque
-* Basic XML and Java knowledge for in-depth configuration
+* Basic XML and Java knowledge
 
 ## AlvisNLP/ML Basics
 
