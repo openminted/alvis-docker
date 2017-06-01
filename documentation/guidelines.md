@@ -9,8 +9,8 @@ We use the [AlvisNLP/ML framework](https://github.com/Bibliome/alvisnlp) package
 
 ## Requirements
 
-* `docker` version XXX
-* 4Gb available in RAM/filesystem? XXX
+* `docker` version 1.13.1
+* 4Gb available on disque
 * Basic XML and Java knowledge for in-depth configuration
 
 ## AlvisNLP/ML Basics
