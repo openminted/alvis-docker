@@ -2,18 +2,18 @@
 
 
 # Guidelines to define a OpenMinTeD runnable module based on a dockerized Alvis engine 
-This document describes how to setup the Alvis components as OpenMinTeD runnable modules. The [Alvis framework](https://github.com/Bibliome/alvisnlp) is packaged with all the Alvis components and required ressources as a docker image available into docker hub. The guidelines do not concern aspect dockerizing Alvis, docker is just used to deploy and run the Alvis engine. See [here](https://github.com/openminted/alvis-docker) for the Alvis docker project. The guidelines specifically describe how Alvis plans are used to adapt components as runnable modules and how the modules are described to fit OpenMinTeD requirements.
+This document describes how to setup OpenMinTeD runnable modules from the Alvis components. We use the [Alvis framework](https://github.com/Bibliome/alvisnlp) packaged as a docker image (available into docker hub) with all its components and required ressources. The guidelines do not concern aspect dockerizing Alvis, docker is here for the purpose of deployment and running of the Alvis engine (see [here](https://github.com/openminted/alvis-docker) for information about the Alvis docker image). The guidelines specifically describe how Alvis `plans` are used to adapt components as runnable modules and how the modules are described to fit OpenMinTeD requirements.
 
 {% blurb style='tip', title='Important notice' %}
 This procedure requires docker to be intalled and 4Go of free space. You will also need XML and Java skills for in-depth configurations.
 {% endblurb %}
 
-Before going further, let's define the notion of plan into Alvis. A plan is a preconfigured receipt using the Alvis elementary components in order to define a specific runable module. These runnable modules are workflows but in this OpenMinTeD context they are seen as OpenMinTeD compatible modules. Thus, rather than composing several modules, a plan here lets us just adapt an Alvis component to an OpenMinTeD module by preparing an interface for its inputs, outputs and parameters.
+Before going further, let's define the notion of plan into Alvis. A plan is a preconfigured receipt using the Alvis elementary components in order to define a specific runable module. These runnable modules are workflows but in this OpenMinTeD context they are seen as OpenMinTeD compatible modules. Thus, rather than composing several modules, a plan here lets us just adapt an Alvis component to an OpenMinTeD module by preparing the interface for its inputs, outputs and parameters.
 
 ## Define a runnable module with an Alvis plan
-An plan for a runnable module is a XML file (with extension `.plan`) that contains 3 parts : a read part that configures the inputs, a write part that configures the outputs, and a process part that corresponds to the task of the Alvis component being adapted as an OpenMinTeD runnable module.
+An plan for a runnable module is a XML file (with extension `.plan`) that contains 3 parts : a read part that configures the inputs, a write part that configures the outputs, and a process part that configures the task of the Alvis component being adapted as an OpenMinTeD runnable module.
 
-The following plan adapts the Alvis component named `WoSMig` to an runnable module. `WoSMig` do tokenization of text documents. The plan is composed of the Alvis component `TextFileReader` to read text files, the component `TabularExport` to export the results as tabular forms, and the process module `WoSMig` doing the tokenization task. The schema of the plan remains the same from a module to another, it is just the components who will change into the plan. The process components to use are available into Alvis whom also has several typical read and write components (and new ones can be implemented, for example to convert new formats).
+The following plan adapts the Alvis component named `WoSMig` to an runnable module. `WoSMig` do tokenization of text documents. The plan is composed of the Alvis component `TextFileReader` to read text files, the component `TabularExport` to export the results as tabular forms, and the process module `WoSMig` doing the tokenization task. The runnable modules will be set in this way, it is just the `read` and `write` parts who will change according to the needs. The process components to use are available into Alvis. Alvis also has several typical components for the read and write parts (new components can be implemented, for example to convert new formats).
 ```xml
 <alvisnlp-plan id="OMTD_WoSMig">
 	<read class="TextFileReader"/>
@@ -22,7 +22,7 @@ The following plan adapts the Alvis component named `WoSMig` to an runnable modu
 </alvisnlp-plan>
 ```
 
-You can feed values of parameters (that don't require to be used as input parameter of the module) into the plan. That has the double advantage of recording the optimal parameters and values and reducing for the end user the number of parameters to consider. In the following modified plan parameters `ponctuations` and `balancedPuntuations` of component `WoSMig` are fed.
+You can feed values of parameters (that don't require to be used as input parameter of the module) into the plan. That has the double advantage of recording the optimal parameters and values and reducing for the end user the number of input parameters to consider. In the following modified plan parameters `ponctuations` and `balancedPuntuations` of component `WoSMig` are fed.
 ```xml
 <alvisnlp-plan id="OMTD_WoSMig">
 	<read class="TextFileReader"/>
@@ -68,10 +68,10 @@ The following command is a value for metadata element `command`. It assumes the 
 ```bash
 docker run -i --rm -a stderr -v /path/to/OMTD_Workdir:/opt/alvisnlp/data mandiayba/alvisengine:1.0.0 
            alvisnlp
-           -param read sourcePath ${incorpus}  # other params can be add to the component *read* 
-           -param write outDir ${outdir} # other params can be add to the component *read* 
-	   -param WoSMiG ... # params can be added to the component *tomap* if required by the usage
-           /path/to/the/relatedResource.plan # the plan to use for the module must be available as a related resource
+           -param read sourcePath ${incorpus}  # additional params can exist according to the component `read` 
+           -param write outDir ${outdir} # additional params can exist according to the component  `write` 
+	   -param WoSMiG ... # params can be added to the component `tomap` if required by the usage
+           /path/to/the/relatedResource.plan # the plan defined for the module is provided as a related resource
 ```
 {% blurb style='tip', title='Important notice' %}
 We assume in the above command that OpenMinTeD will do the matching between the path to the mounted `OMTD_Workdir` and the paths to the input (and output) data.
