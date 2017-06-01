@@ -1,13 +1,25 @@
 
 
 
-# Guidelines to define a OpenMinTeD runnable module based on a dockerized Alvis engine 
-This document describes how to setup OpenMinTeD runnable modules from the Alvis components. We use the [Alvis framework](https://github.com/Bibliome/alvisnlp) packaged as a docker image (available into docker hub) with all its components and required ressources. The guidelines do not concern aspect dockerizing Alvis, docker is here for the purpose of deployment and running of the Alvis engine (see [here](https://github.com/openminted/alvis-docker) for information about the Alvis docker image). The guidelines specifically describe how Alvis `plans` are used to adapt components as runnable modules and how the modules are described to fit OpenMinTeD requirements.
+# HOWTO: Build an OpenMinTeD runnable component based on AlvisNLP/ML docker image
 
-{% blurb style='tip', title='Important notice' %}
-This procedure requires docker to be intalled and 4Go of free space. You will also need XML and Java skills for in-depth configurations.
-{% endblurb %}
+This document describes how to setup an OpenMinTeD runnable component from the AlvisNLP/ML modules.
 
+We use the [AlvisNLP/ML framework](https://github.com/Bibliome/alvisnlp) packaged as a docker image (available into docker hub) that includes all AlvisNLP/ML modules and ressources. The guidelines specifically describe how AlvisNLP/ML "plans" are used to adapt modules as runnable components and how the components are described to fit OpenMinTeD requirements.
+
+## Requirements
+
+* `docker` version XXX
+* 4Gb available in RAM/filesystem? XXX
+* Basic XML and Java knowledge for in-depth configuration
+
+## AlvisNLP/ML Basics
+
+[AlvisNLP/ML framework](https://github.com/Bibliome/alvisnlp) is a corpus processing engine that features a library of processing modules. These library includes modules for tokenization, sentence splitting, POS-tagging, parsing, NER, relation extraction, etc.
+
+Users run AlvisNLP/ML 
+
+AlvisNLP
 Before going further, let's define the notion of plan into Alvis. A plan is a preconfigured receipt using the Alvis elementary components in order to define a specific runable module. These runnable modules are workflows but in this OpenMinTeD context they are seen as OpenMinTeD compatible modules. Thus, rather than composing several modules, a plan here lets us just adapt an Alvis component to an OpenMinTeD module by preparing the interface for its inputs, outputs and parameters.
 
 ## Define a runnable module with an Alvis plan
