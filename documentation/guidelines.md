@@ -50,7 +50,7 @@ You can feed values of parameters (that don't require to be used as input parame
 Note that, what interests us here is using the Alvis plans to make the Alvis modules compatible with OpenMinTeD. Plans are used in a general way to define complexe workflows. A more complete presentation of how to write plans is available [here](https://github.com/Bibliome/alvisnlp/wiki/Writing-plans). 
 {% endblurb %}
 
-The previous plan defines an autonomous and runnable component that can be executed with the following command. The `-v` option is used to mount the directory where the input and output data will be accessed by the docker image. `mandiayba/alvisengine:1.0.0` is to identify the docker image and `alvisnlp` is to run the alvisengine on parameters. The defined plan is fed as a parameter to the alvis engine.
+The previous plan defines an autonomous and runnable component that can be executed with the following command. The `-v` option is used to mount the directory where the input and output data will be accessed by the docker image. `mandiayba/alvisengine:1.0.0` is used to identify the docker image and `alvisnlp` is used to run the alvisengine on the parameters. The defined plan is fed as a parameter to the alvis engine.
 ```bash
 docker run -i --rm -a stderr -v $PWD/workdir:/opt/alvisnlp/data mandiayba/alvisengine:1.0.0 
            alvisnlp
