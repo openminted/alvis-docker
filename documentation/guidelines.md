@@ -3,25 +3,31 @@
 
 # HOWTO: Build an OpenMinTeD runnable component based on AlvisNLP/ML docker image
 
-This document describes how to setup an OpenMinTeD runnable component from the AlvisNLP/ML modules.
+This document describes how to setup an OpenMinTeD runnable component from the AlvisNLP/ML workflow definitions.
 
-We use the [AlvisNLP/ML framework](https://github.com/Bibliome/alvisnlp) packaged as a docker image (available into docker hub) that includes all AlvisNLP/ML modules and ressources. The guidelines specifically describe how AlvisNLP/ML "plans" are used to adapt modules as runnable components and how the components are described to fit OpenMinTeD requirements.
+We use the [AlvisNLP/ML framework](https://github.com/Bibliome/alvisnlp) packaged as a docker image (available on DockerHub) which includes all modules shipped with AlvisNLP/ML. The guidelines specifically describe how AlvisNLP/ML "plans" can be packaged and distributed as OpenMinTeD components.
 
 ## Requirements
 
-* `docker` version 1.13.1
-* 4Gb available on disque
+* [docker](https://www.docker.com/) version 1.13.1
+* a filesystem with at least 4Gb available
 * Basic XML and Java knowledge
+* A functionning AlvisNLP/ML plan file as well as all the necessary resource files.
 
 ## AlvisNLP/ML Basics
 
-[AlvisNLP/ML framework](https://github.com/Bibliome/alvisnlp) is a corpus processing engine that features a library of processing modules. These library includes modules for tokenization, sentence splitting, POS-tagging, parsing, NER, relation extraction, etc.
+[AlvisNLP/ML framework](https://github.com/Bibliome/alvisnlp) is a corpus processing engine that features a library of processing modules. This library includes modules for tokenization, sentence splitting, POS-tagging, parsing, NER, relation extraction, etc.
+
+In AlvisNLP/ML terminology, the workflow definition is called a *plan*.
+The plan file is an XML file that the user writes in order to specify the sequence of modules to run on the corpus and, for each module, the options, location of resources, and parameter values.
+
 
 <!-- Users run AlvisNLP/ML -->
 
 <!--AlvisNLP
 Before going further, let's define the notion of plan into Alvis. --> A plan is a preconfigured receipt using the Alvis elementary components in order to define a specific runable module. These runnable modules are workflows but in this OpenMinTeD context they are seen as OpenMinTeD compatible modules. Thus, rather than composing several modules, a plan here lets us just adapt an Alvis module to an OpenMinTeD component by preparing the interface for its inputs, outputs and parameters.
 
+<!--
 ## Define a runnable component with an Alvis plan
 A plan for a runnable component is a XML file (with extension `.plan`) that contains 3 parts : a read part that configures the inputs, a write part that configures the outputs, and a process part that configures the task of the Alvis module being adapted as an OpenMinTeD runnable component.
 
@@ -49,6 +55,7 @@ You can feed values of parameters (that don't require to be used as input parame
 {% blurb style='tip', title='Important notice' %}
 Note that, what interests us here is using the Alvis plans to make the Alvis modules compatible with OpenMinTeD. Plans are used in a general way to define complexe workflows. A more complete presentation of how to write plans is available [here](https://github.com/Bibliome/alvisnlp/wiki/Writing-plans). 
 {% endblurb %}
+-->
 
 The previous plan defines an autonomous and runnable component that can be executed with the following command. The `-v` option is used to mount the directory where the input and output data will be accessed by the docker image. `mandiayba/alvisengine:1.0.0` is used to identify the docker image and `alvisnlp` is used to run the alvisengine on the parameters. The defined plan is fed as a parameter to the alvis engine.
 ```bash
