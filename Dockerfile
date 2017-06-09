@@ -1,5 +1,5 @@
 #FROM maven:3.2-jdk-7-onbuild
-FROM ubuntu:14.04 # need a more 
+FROM ubuntu:14.04 
 MAINTAINER Mouhamadou Ba <mouhamadou.ba@inra.fr>
 
 RUN apt-get -yqq update
@@ -46,40 +46,42 @@ ENV PATH /opt/alvisnlp/bin:$PATH
 # create the external soft dir
 RUN mkdir psoft
 WORKDIR /opt/alvisnlp/psoft
+
 # install TEES
-# RUN git clone https://github.com/jbjorne/TEES.git && \
-wget https://github.com/jbjorne/TEES/tarball/master && \
+RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     tar xvf master && \
     rm -rf master && \
-    mv *-TEES-*  tees && \ 
-    cd tees/ && \
+    mv *-TEES-*  tees 
 
-COPY tees.expect /opt/alvisnlp/TEES
-    
-RUN expect tees.expect && \ # install tees by answering the  multiple choice questions during installation
-    cd ../ 
+RUN cd tees/
+COPY tees.expect /opt/alvisnlp/tees
+# install tees by answering questions
+RUN expect tees.expect
+RUN cd ../ 
 
 
 # SPECIES
 RUN wget http://download.jensenlab.org/species_tagger.tar.gz && \
     tar xvf species_tagger.tar.gz && \
-    rm  species_tagger.tar.gz && \
-    cd ../
+    rm  species_tagger.tar.gz
+   
+RUN cd ../
 
 
 # install biolg
 RUN wget http://staff.cs.utu.fi/~spyysalo/biolg/biolg-1.1.12.tar.gz && \
     tar xvf biolg-1.1.12.tar.gz && \
-    rm biolg-1.1.12.tar.gz && \
-    # make && \
-    cd ..\
+    rm biolg-1.1.12.tar.gz
+   
+RUN cd ../
 
 # install CCGParser 1.00
 RUN wget http://www.cl.cam.ac.uk/%7Esc609/resources/candc-downloads/candc-linux-1.00.tgz && \
     tar xvf candc-linux-1.00.tgz && \
     rm candc-linux-1.00.tgz && \
-    #make && \
-    cd ..\
+    make 
+
+RUN cd ../
 
 # CCGPosTagger 1.00 /!\ seem to be the same as CGParser 1.00
 
@@ -92,22 +94,25 @@ RUN wget http://www.nactem.ac.uk/tsujii/GENIA/tagger/geniatagger-3.0.2.tar.gz &&
     tar -xvf geniatagger-3.0.2.tar.gz && \
     rm geniatagger-3.0.2.tar.gz && \
     cd geniatagger-3.0.2 && \
-    make && \
-    cd ../
+    make 
+
+RUN cd ../
 
 # StanfordNER 2014-06-16*
 RUN wget https://nlp.stanford.edu/software/stanford-ner-2016-10-31.zip && \
     unzip stanford-ner-2016-10-31.zip && \
-    rm stanford-ner-2016-10-31.zip && \
-    cd ..\
+    rm stanford-ner-2016-10-31.zip 
+
+RUN cd ../
 
 # TEES see above
 
 # treeTagger
  RUN wget http://www.cis.uni-muenchen.de/%7Eschmid/tools/TreeTagger/data/tree-tagger-linux-3.2.1.tar.gz && \
      tar xvf tree-tagger-linux-3.2.1.tar.gz && \
-     rm tree-tagger-linux-3.2.1.tar.gz && \
-     cd ..\
+     rm tree-tagger-linux-3.2.1.tar.gz
+    
+RUN cd ../
 
 # WapitiLabel 1.5.0
 
