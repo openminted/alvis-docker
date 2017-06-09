@@ -1,6 +1,6 @@
-# Integration of dockerized components
+# Common interface for the OMTD dockerized components
 
-## Component Docker image : Basics
+## Docker images of components
 
 ## Prerequisities for a common interface 
 
