@@ -37,15 +37,22 @@ ENV PATH /opt/alvisnlp/bin:$PATH
 RUN mkdir psoft
 WORKDIR /opt/alvisnlp/psoft
 # install TEES
-RUN git clone https://github.com/jbjorne/TEES.git && \
-    cd TEES/ && \
+# RUN git clone https://github.com/jbjorne/TEES.git && \
+wget https://github.com/jbjorne/TEES/tarball/master && \
+    tar xvf master && \
+    rm -rf master && \
+    mv *-TEES-*  tees && \ 
+    cd tees/ && \
     apt-get install -y python && \
     apt-get install -y python-numpy && \
     apt-get install -y make && \
     apt-get install -y ruby && \
     apt-get install -y g++ && \
-    apt-get install -y flex && \
-    # python configure.py && \ # have to answer multiple choice questions during installation
+    apt-get install -y flex
+
+COPY tees.expect /opt/alvisnlp/TEES
+    
+RUN expect tees.expect && \ # install tees by answering the  multiple choice questions during installation
     cd ../ 
 
 
