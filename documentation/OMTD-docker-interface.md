@@ -1,7 +1,9 @@
 # Integration of dockerized components
 
-## Basics
+## Component Docker image : Basics
 
-## Integration to the OMTD registry
+## Prerequisities for a common interface 
 
-## Integration to the OMTD Galaxy instance
+## Prerequisities for an integration to the OMTD registry
+
+## Prerequisities for an integration to the OMTD Galaxy instance
