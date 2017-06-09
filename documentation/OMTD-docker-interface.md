@@ -1,9 +1,7 @@
-# Common interface for the OMTD dockerized components
+# How to define an interface for the OMTD dockerized components
 
-## Docker images of components
+## Common requirements
 
-## Prerequisities for a common interface 
+## Requirements for an integration to the OMTD registry
 
-## Prerequisities for an integration to the OMTD registry
-
-## Prerequisities for an integration to the OMTD Galaxy instance
+## Requirements for an integration to the OMTD Galaxy instance
