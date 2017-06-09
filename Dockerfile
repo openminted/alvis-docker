@@ -10,6 +10,16 @@ RUN apt-get -yqq install git
 
 RUN apt-get -yqq install wget
 
+RUN apt-get -yqq install expect
+
+# for the python-based tools
+RUN apt-get install -y python && \
+    apt-get install -y python-numpy && \
+    apt-get install -y make && \
+    apt-get install -y ruby && \
+    apt-get install -y g++ && \
+    apt-get install -y flex
+
 RUN apt-get install -y  software-properties-common && \
     add-apt-repository ppa:webupd8team/java -y && \
     apt-get update && \
@@ -43,12 +53,6 @@ wget https://github.com/jbjorne/TEES/tarball/master && \
     rm -rf master && \
     mv *-TEES-*  tees && \ 
     cd tees/ && \
-    apt-get install -y python && \
-    apt-get install -y python-numpy && \
-    apt-get install -y make && \
-    apt-get install -y ruby && \
-    apt-get install -y g++ && \
-    apt-get install -y flex
 
 COPY tees.expect /opt/alvisnlp/TEES
     
