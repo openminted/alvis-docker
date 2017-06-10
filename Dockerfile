@@ -55,15 +55,15 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     rm -rf master && \
     mv *-TEES-*  tees 
 RUN cd tees/
-echo "spawn ./configure.py" >> tees.expect
-echo "expect ">" { send "2\n" }" >> tees.expect
-echo "expect ">" { send "3\n" }" >> tees.expect
-echo "expect ">" { send "c\n" }" >> tees.expect
-echo "expect ">" { send "c\n" }" >> tees.expect
-echo "expect ">" { send "i\n" }" >> tees.expect
-echo "expect ">" { send "3\n" }" >> tees.expect
-echo "expect ">" { send "i\n" }" >> tees.expect
-echo "interact" >> tees.expect
+RUN echo "spawn ./configure.py" >> tees.expect && \
+    echo "expect ">" { send "2\n" }" >> tees.expect && \
+    echo "expect ">" { send "3\n" }" >> tees.expect && \
+    echo "expect ">" { send "c\n" }" >> tees.expect && \
+    echo "expect ">" { send "c\n" }" >> tees.expect && \
+    echo "expect ">" { send "i\n" }" >> tees.expect && \
+    echo "expect ">" { send "3\n" }" >> tees.expect && \
+    echo "expect ">" { send "i\n" }" >> tees.expect && \
+    echo "interact" >> tees.expect
 #COPY tees.expect /opt/alvisnlp/tees
 # install tees by answering questions
 RUN expect tees.expect
