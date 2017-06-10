@@ -53,12 +53,12 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
 # RUN cd tees/
 WORKDIR /opt/alvisnlp/psoft/tees
 RUN echo "spawn python configure.py" >> tees.expect && \
-    echo "expect \">\" { send \"2\n\" }" >> tees.expect && \
-    echo "expect \">\" { send \"3\n\" }" >> tees.expect && \
-    echo "expect \">\" { send \"c\n\" }" >> tees.expect && \
-    echo "expect \">\" { send \"c\n\" }" >> tees.expect && \
-    echo "expect \">\" { send \"i\n\" }" >> tees.expect && \
-    echo "expect \">\" { send \"i\n\" }" >> tees.expect && \
+    echo "expect \">\" { send \"2\\n\" }" >> tees.expect && \
+    echo "expect \">\" { send \"3\\n\" }" >> tees.expect && \
+    echo "expect \">\" { send \"c\\n\" }" >> tees.expect && \
+    echo "expect \">\" { send \"c\\n\" }" >> tees.expect && \
+    echo "expect \">\" { send \"i\\n\" }" >> tees.expect && \
+    echo "expect \">\" { send \"i\\n\" }" >> tees.expect && \
     echo "interact" >> tees.expect
 #COPY tees.expect /opt/alvisnlp/tees
 # install tees by answering questions
