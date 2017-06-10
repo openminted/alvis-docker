@@ -64,7 +64,7 @@ RUN echo "spawn python configure.py" >> tees.expect && \
 # install tees by answering questions
 RUN expect tees.expect
 RUN cd ../ 
-RUN xmlstarlet ed -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
+RUN xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
 #RUN xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESTrain]/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
 
 # SPECIES
@@ -106,7 +106,7 @@ RUN wget http://www.nactem.ac.uk/tsujii/GENIA/tagger/geniatagger-3.0.2.tar.gz &&
     make 
 
 RUN cd ../
-RUN xmlstarlet ed -u "/default-param-values/module/geniaDir" -v /opt/alvisnlp/psoft/geniatagger-3.0.2  /opt/alvisnlp/share/default-param-values.xml
+RUN xmlstarlet ed --inplace -u "/default-param-values/module/geniaDir" -v /opt/alvisnlp/psoft/geniatagger-3.0.2  /opt/alvisnlp/share/default-param-values.xml
 
 # StanfordNER 2014-06-16*
 RUN wget https://nlp.stanford.edu/software/stanford-ner-2016-10-31.zip && \
