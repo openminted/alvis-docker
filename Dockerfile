@@ -39,12 +39,6 @@ WORKDIR /opt/alvisnlp
 
 RUN cp /opt/alvisnlp/share/default-param-values.xml.template /opt/alvisnlp/share/default-param-values.xml
 
-RUN mvn clean install
-
-RUN ./install.sh .
-
-ENV PATH /opt/alvisnlp/bin:$PATH
-
 # create the external soft dir
 RUN mkdir psoft
 WORKDIR /opt/alvisnlp/psoft
@@ -54,7 +48,8 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     tar xvf master && \
     rm -rf master && \
     mv *-TEES-*  tees 
-RUN cd tees/
+# RUN cd tees/
+WORKDIR /opt/alvisnlp/psoft/tees
 RUN echo "spawn python configure.py" >> tees.expect && \
     echo "expect \">\" { send \"2\n\" }" >> tees.expect && \
     echo "expect \">\" { send \"3\n\" }" >> tees.expect && \
@@ -133,7 +128,14 @@ RUN cd ../
 
 # YateaExtractor 0.5*
 
+# install alvisnlp
 WORKDIR /opt/alvisnlp
+
+RUN mvn clean install
+
+RUN ./install.sh .
+
+ENV PATH /opt/alvisnlp/bin:$PATH
 
 # ENTRYPOINT ["/opt/alvisnlp/bin/alvisnlp"]
 
