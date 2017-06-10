@@ -37,9 +37,9 @@ RUN git clone https://github.com/Bibliome/alvisnlp.git
 
 VOLUME /opt/alvisnlp/data
 
-WORKDIR /opt/alvisnlp
+WORKDIR /opt/alvisnlp/share
 
-RUN cp /opt/alvisnlp/share/default-param-values.xml.template /opt/alvisnlp/share/default-param-values.xml
+RUN cp default-param-values.xml.template default-param-values.xml
 
 # create the external soft dir
 RUN mkdir psoft
@@ -53,17 +53,17 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
 # RUN cd tees/
 WORKDIR /opt/alvisnlp/psoft/tees
 RUN echo "spawn python configure.py" >> tees.expect && \
-    echo "expect \">\" { send \"2\\n\" }" >> tees.expect && \
-    echo "expect \">\" { send \"3\\n\" }" >> tees.expect && \
-    echo "expect \">\" { send \"c\\n\" }" >> tees.expect && \
-    echo "expect \">\" { send \"c\\n\" }" >> tees.expect && \
-    echo "expect \">\" { send \"i\\n\" }" >> tees.expect && \
-    echo "expect \">\" { send \"i\\n\" }" >> tees.expect && \
+    echo "expect \">\" { send \"2\\r\" }" >> tees.expect && \
+    echo "expect \">\" { send \"3\\r\" }" >> tees.expect && \
+    echo "expect \">\" { send \"c\\r\" }" >> tees.expect && \
+    echo "expect \">\" { send \"c\\r\" }" >> tees.expect && \
+    echo "expect \">\" { send \"i\\r\" }" >> tees.expect && \
+    echo "expect \">\" { send \"\\r\" }" >> tees.expect && \
     echo "interact" >> tees.expect
 #COPY tees.expect /opt/alvisnlp/tees
 # install tees by answering questions
 RUN expect tees.expect
-RUN cd ../ 
+ 
 RUN xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
 #RUN xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESTrain]/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
 
