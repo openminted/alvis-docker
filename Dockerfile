@@ -61,7 +61,6 @@ RUN echo "spawn python configure.py" >> tees.expect && \
     echo "expect \">\" { send \"c\n\" }" >> tees.expect && \
     echo "expect \">\" { send \"c\n\" }" >> tees.expect && \
     echo "expect \">\" { send \"i\n\" }" >> tees.expect && \
-    echo "expect \">\" { send \"3\n\" }" >> tees.expect && \
     echo "expect \">\" { send \"i\n\" }" >> tees.expect && \
     echo "interact" >> tees.expect
 #COPY tees.expect /opt/alvisnlp/tees
