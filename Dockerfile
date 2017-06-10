@@ -12,6 +12,8 @@ RUN apt-get -yqq install wget
 
 RUN apt-get -yqq install expect
 
+RUN apt-get -yqq install xmlstarlet
+
 # for the python-based tools
 RUN apt-get install -y python && \
     apt-get install -y python-numpy && \
