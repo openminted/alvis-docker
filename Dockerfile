@@ -64,8 +64,8 @@ RUN echo "spawn python configure.py" >> tees.expect && \
 # install tees by answering questions
 RUN expect tees.expect
 RUN cd ../ 
-RUN xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESClassify]/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
-RUN xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESTrain]/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
+RUN xmlstarlet ed -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
+#RUN xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESTrain]/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
 
 # SPECIES
 RUN wget http://download.jensenlab.org/species_tagger.tar.gz && \
@@ -73,23 +73,23 @@ RUN wget http://download.jensenlab.org/species_tagger.tar.gz && \
     rm  species_tagger.tar.gz
    
 RUN cd ../
-# RUN xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESClassify]/teesHome" -v /opt/alvisnlp/tees /opt/alvisnlp/share/default-param-values.xml
+#RUN xmlstarlet ed -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/tees /opt/alvisnlp/share/default-param-values.xml
 
 # install biolg
-RUN wget http://staff.cs.utu.fi/~spyysalo/biolg/biolg-1.1.12.tar.gz && \
-    tar xvf biolg-1.1.12.tar.gz && \
-    rm biolg-1.1.12.tar.gz
+#RUN wget http://staff.cs.utu.fi/~spyysalo/biolg/biolg-1.1.12.tar.gz && \
+#    tar xvf biolg-1.1.12.tar.gz && \
+#    rm biolg-1.1.12.tar.gz
    
-RUN cd ../
+#RUN cd ../
 # RUN xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESClassify]/teesHome" -v /opt/alvisnlp/tees /opt/alvisnlp/share/default-param-values.xml
 
 # install CCGParser 1.00
-RUN wget http://www.cl.cam.ac.uk/%7Esc609/resources/candc-downloads/candc-linux-1.00.tgz && \
-    tar xvf candc-linux-1.00.tgz && \
-    rm candc-linux-1.00.tgz && \
-    make 
+# RUN wget http://www.cl.cam.ac.uk/%7Esc609/resources/candc-downloads/candc-linux-1.00.tgz && \
+#    tar xvf candc-linux-1.00.tgz && \
+#    rm candc-linux-1.00.tgz && \
+#    make 
 
-RUN cd ../
+#RUN cd ../
 #RUN xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESClassify]/teesHome" -v /opt/alvisnlp/tees /opt/alvisnlp/share/default-param-values.xml
 
 # CCGPosTagger 1.00 /!\ seem to be the same as CGParser 1.00
@@ -106,7 +106,7 @@ RUN wget http://www.nactem.ac.uk/tsujii/GENIA/tagger/geniatagger-3.0.2.tar.gz &&
     make 
 
 RUN cd ../
-RUN xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.geniatagger.GeniaTagger]/geniaDir" -v /opt/alvisnlp/psoft/geniatagger-3.0.2  /opt/alvisnlp/share/default-param-values.xml
+RUN xmlstarlet ed -u "/default-param-values/module/geniaDir" -v /opt/alvisnlp/psoft/geniatagger-3.0.2  /opt/alvisnlp/share/default-param-values.xml
 
 # StanfordNER 2014-06-16*
 RUN wget https://nlp.stanford.edu/software/stanford-ner-2016-10-31.zip && \
