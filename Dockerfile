@@ -43,25 +43,17 @@ RUN cp default-param-values.xml.template default-param-values.xml
 
 # create the external soft dir
 RUN mkdir psoft
-WORKDIR /opt/alvisnlp/psoft
+
 
 # install TEES
+WORKDIR /opt/alvisnlp/psoft
 RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     tar xvf master && \
     rm -rf master && \
     mv *-TEES-*  tees 
-# RUN cd tees/
-WORKDIR /opt/alvisnlp/psoft/tees
-RUN echo "spawn python configure.py" >> tees.expect
-RUN echo "expect \">\" { send \"2\\r\" }" >> tees.expect
-RUN echo "expect \">\" { send \"3\\r\" }" >> tees.expect
-RUN echo "expect \">\" { send \"c\\r\" }" >> tees.expect
-RUN echo "expect \">\" { send \"c\\r\" }" >> tees.expect
-RUN echo "expect \">\" { send \"i\\r\" }" >> tees.expect
-RUN echo "expect \">\" { send \"\\r\" }" >> tees.expect
-RUN echo "interact" >> tees.expect
-#COPY tees.expect /opt/alvisnlp/tees
+ADD tees.expect /opt/alvisnlp/psoft/tees
 # install tees by answering questions
+WORKDIR /opt/alvisnlp/psoft/tees
 RUN expect tees.expect
  
 RUN xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
