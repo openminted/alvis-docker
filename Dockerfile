@@ -2,17 +2,14 @@
 FROM ubuntu:14.04 
 MAINTAINER Mouhamadou Ba <mouhamadou.ba@inra.fr>
 
-RUN apt-get -yqq update
 
-RUN apt-get -yqq install maven
-
-RUN apt-get -yqq install git
-
-RUN apt-get -yqq install wget
-
-RUN apt-get -yqq install expect
-
-RUN apt-get -yqq install xmlstarlet
+# general tools
+RUN apt-get -yqq update && \
+    apt-get -yqq install maven && \
+    apt-get -yqq install git && \
+    apt-get -yqq install wget && \
+    apt-get -yqq install expect &&\
+    apt-get -yqq install xmlstarlet
 
 # for the python-based tools
 RUN apt-get install -y python && \
@@ -22,6 +19,7 @@ RUN apt-get install -y python && \
     apt-get install -y g++ && \
     apt-get install -y flex
 
+# java
 RUN apt-get install -y  software-properties-common && \
     add-apt-repository ppa:webupd8team/java -y && \
     apt-get update && \
@@ -35,7 +33,7 @@ WORKDIR /opt/
 
 RUN git clone https://github.com/Bibliome/alvisnlp.git
 
-VOLUME /opt/alvisnlp/data
+VOLUME data
 
 WORKDIR /opt/alvisnlp/share
 
@@ -43,6 +41,9 @@ RUN cp default-param-values.xml.template default-param-values.xml
 
 # create the external soft dir
 RUN mkdir psoft
+VOLUME /opt/alvisnlp/psoft
+
+ADD tees.expect /opt/alvisnlp/psoft/
 
 
 # install TEES
@@ -50,14 +51,19 @@ WORKDIR /opt/alvisnlp/psoft
 RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     tar xvf master && \
     rm -rf master && \
-    mv *-TEES-*  tees 
-ADD tees.expect /opt/alvisnlp/psoft/tees
+    mv *-TEES-*  tees && \
+    cp tees.expect tees/ && \
+    cd tees && \
+    expect tees.expect && \
+    export TEES_SETTINGS=$pwd/tees_local_settings.py && \
+    xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
+
+
 # install tees by answering questions
-WORKDIR /opt/alvisnlp/psoft/tees
-RUN expect tees.expect
- 
-RUN xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
-#RUN xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESTrain]/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
+#WORKDIR /opt/alvisnlp/psoft/tees
+#RUN expect tees.expect && \
+#    xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
+
 
 # SPECIES
 WORKDIR /opt/alvisnlp/psoft
