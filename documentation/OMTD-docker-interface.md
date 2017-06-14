@@ -1,6 +1,6 @@
-# How to : create an interface for docker-based components (DRAFT)
+# How to : create an interface between docker-based component and Galaxy (DRAFT)
 
-This document explains how to prepare an interface for a component to setup into the Galaxy OMTD instance.
+This document explains how to prepare an interface for a component to setup into the OMTD Galaxy instance.
 
 ## Common recommandation
 A docker image for a component must be self-sufficient and be able to provide an execution of the component task into a container and provide the final outputs. If resources that change from one execution to another are used by the component, we recommand to make them available as values of parameters of the component. Otherwise, you must ensure that the right and required resources are avalaible to each component containers. The docker image of the component must be available into a docker repository accessible to OMTD (e.g., [docker hub](https://hub.docker.com/)).
