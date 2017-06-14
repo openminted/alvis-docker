@@ -35,6 +35,6 @@ The docker-based components are wrapped as any tool into Galaxy. You must use [G
 A complete example of XML wrapper (of a component that will run into a docker container) is provided [here](simpleprojector.xml). Note that, in the near future, the `requirements` and `command` elements will be provided into the OpenMinTeD Component description that includes XML wrapper of Component for Galaxy.
 
 {% blurb style='tip', title='Important notice' %}
-It is the Galaxy instance that manage the life-cycle of the docker containers (e.g., pull images, run images, mount the folders, kill containers, etc...). We assume that required configuration for Galaxy are done on the Galaxy side.
+The OMTD Galaxy instance manages the life-cycle of the docker containers (e.g., pull images, run images, mount folders for inputs/outputs, kill containers, etc...). We assume that the required configuration is done on the Galaxy side.
 {% endblurb %}
 
