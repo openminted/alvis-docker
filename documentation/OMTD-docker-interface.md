@@ -18,7 +18,7 @@ The docker-based components are wrapped as any tool into Galaxy by using [Galaxy
     </requirements>
  ```
 
- 2. The command to provide as a value of the `command` element is the one used inside the docker container. This part is similar to what you know when describing script-based components.  
+ 2. The component command is a value of the `command` element to execute inside the docker container. This part is similar to what we do when describing script-based components.  
 
 ```bash
      <command>
