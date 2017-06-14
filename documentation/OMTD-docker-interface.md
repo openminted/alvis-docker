@@ -10,7 +10,7 @@ The docker-based components are wrapped as any tool into Galaxy by using [Galaxy
 
  1. To identify the docker image the [`requirements`](https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-requirements) of Galaxy Tool XML File is used. `requirements` will contain the `container` element that describes the type of container that the component may be executed in (e.g., docker) with the `type` attribute and the tag identifying the component docker image as value. Here is an example. 
   
-```
+```xml
     <requirements>
         <container type="docker">
               bibliome/alvisnlp:1.0.0
@@ -20,7 +20,7 @@ The docker-based components are wrapped as any tool into Galaxy by using [Galaxy
 
  2. The command to provide as a value of the `command` element is the one used inside the docker container. This part is similar to what you know when describing script-based components.  
 
-```
+```bash
      <command>
          simpleprojector2.py 
 	-verbose ${verbose}  
