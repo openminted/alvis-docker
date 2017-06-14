@@ -32,20 +32,4 @@ The docker-based components are wrapped as any tool into Galaxy by using [Galaxy
 	-keyIndex ${ki} 
      </command>
 ```
-
-
-<!--
-For example, if the following command to execute your docker-based component in command-line
-```
-docker run [options] my_docker_image_tag 
- component_exe -param1 value1 param2 value2
-```
-then, requirement element is defined as follow
-```
-my_docker_image_tag 
-```
- and the requirement element is
- ```
-  component_exe -param1 ${value1 param2 value2
-  ```
--->
+A complete example of XML wrapper of a component that will run into a docker container is provided [here]. Note that, in the near future, the `requirements` and `command` elements will be provided into the OpeMinTeD Component description and the XML wrapper of the component will be included into the OpeMinTeD Component description.
