@@ -1,8 +1,11 @@
 <tool id="simpleprojector" name="simple projector" version="0.0.1">
   <description>Projects a simple dictionary on sections.</description>
+	
   <requirements>
 	<container type="docker"> </container>
   <requirements>
+	 
+ <command>
 	simpleprojector.py
 	--dictFile ${input}
 	--trieSink ${output}
