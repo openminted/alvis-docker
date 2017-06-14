@@ -32,7 +32,7 @@ The docker-based components are wrapped as any tool into Galaxy by using [Galaxy
 	-keyIndex ${ki} 
      </command>
 ```
-A complete example of XML wrapper of a component that will run into a docker container is provided [here](simpleProjector.xml). Note that, in the near future, the `requirements` and `command` elements will be provided into the OpeMinTeD Component description and the XML wrapper of the component will be included into the OpeMinTeD Component description.
+A complete example of XML wrapper of a component that will run into a docker container is provided [here](simpleprojector.xml). Note that, in the near future, the `requirements` and `command` elements will be provided into the OpeMinTeD Component description and the XML wrapper of the component will be included into the OpeMinTeD Component description.
 
 {% blurb style='tip', title='Important notice' %}
 It is the Galaxy instance that manage the life-cycle of the docker containers (e.g., pull images, run images, mount the folders, kill containers, etc...). We assume that required configuration for Galaxy are done on the Galaxy side.
