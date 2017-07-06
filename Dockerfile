@@ -10,20 +10,20 @@ RUN apt-get -yqq update && \
     wget \
     expect \
     xmlstarlet \
-# for the python-based tools
+    # for the python-based tools
     python \
     python-numpy \
     make \
     ruby \
     g++ \
     flex && \
-# java
+    # java
     apt-get install -y  software-properties-common && \
     add-apt-repository ppa:webupd8team/java -y && \
     apt-get update && \
     echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
     apt-get install -y oracle-java8-installer && \
-    apt-get clean
+    rm -rf /var/lib/apt/lists*
 
 ENV java_version oracle-java8
 
