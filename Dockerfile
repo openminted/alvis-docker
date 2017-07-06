@@ -27,13 +27,11 @@ RUN apt-get -yqq update && \
 
 ENV java_version oracle-java8
 
-WORKDIR /opt/
-
 RUN git clone https://github.com/Bibliome/alvisnlp.git
 
 VOLUME data
 
-WORKDIR /opt/alvisnlp/share
+WORKDIR alvisnlp/share
 
 RUN cp default-param-values.xml.template default-param-values.xml
 
