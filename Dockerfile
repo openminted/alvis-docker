@@ -27,9 +27,9 @@ RUN apt-get -yqq update && \
 
 ENV java_version oracle-java8
 
-RUN git clone https://github.com/Bibliome/alvisnlp.git
+RUN git clone https://github.com/Bibliome/alvisnlp.git /alvisnlp
 
-WORKDIR alvisnlp
+WORKDIR /alvisnlp
 
 RUN cp share/default-param-values.xml.template share/default-param-values.xml && \
 # create the external soft dir
