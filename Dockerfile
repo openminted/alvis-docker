@@ -5,22 +5,20 @@ MAINTAINER Mouhamadou Ba <mouhamadou.ba@inra.fr>
 
 # general tools
 RUN apt-get -yqq update && \
-    apt-get -yqq install maven && \
-    apt-get -yqq install git && \
-    apt-get -yqq install wget && \
-    apt-get -yqq install expect &&\
-    apt-get -yqq install xmlstarlet
-
+    apt-get -yqq install maven \
+    git \
+    wget \
+    expect \
+    xmlstarlet \
 # for the python-based tools
-RUN apt-get install -y python && \
-    apt-get install -y python-numpy && \
-    apt-get install -y make && \
-    apt-get install -y ruby && \
-    apt-get install -y g++ && \
-    apt-get install -y flex
-
+    python \
+    python-numpy \
+    make \
+    ruby \
+    g++ \
+    flex && \
 # java
-RUN apt-get install -y  software-properties-common && \
+    apt-get install -y  software-properties-common && \
     add-apt-repository ppa:webupd8team/java -y && \
     apt-get update && \
     echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
