@@ -48,11 +48,11 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     expect tees.expect && \
     export TEES_SETTINGS=$pwd/tees_local_settings.py && \
     xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
-# install tees by answering questions
-#WORKDIR /opt/alvisnlp/psoft/tees
-#RUN expect tees.expect && \
-#    xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
-# SPECIES
+    # install tees by answering questions
+    #WORKDIR /opt/alvisnlp/psoft/tees
+    #RUN expect tees.expect && \
+    #    xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml
+    # SPECIES
     wget http://download.jensenlab.org/species_tagger.tar.gz && \
     tar xvf species_tagger.tar.gz && \
     rm  species_tagger.tar.gz && \
@@ -95,10 +95,10 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     tar xvf tree-tagger-linux-3.2.1.tar.gz && \
     rm tree-tagger-linux-3.2.1.tar.gz && \
     cd ../
-# WapitiLabel 1.5.0
-# WapitiTrain 1.5.0
-# YateaExtractor 0.5*
-# install alvisnlp
+    # WapitiLabel 1.5.0
+    # WapitiTrain 1.5.0
+    # YateaExtractor 0.5*
+    # install alvisnlp
 
 RUN mvn clean install && ./install.sh .
 
