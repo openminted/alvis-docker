@@ -35,8 +35,6 @@ RUN cp share/default-param-values.xml.template share/default-param-values.xml &&
 # create the external soft dir
 mkdir psoft
 ADD tees.expect /opt/alvisnlp/psoft/
-
-
 # install TEES
 WORKDIR /opt/alvisnlp/psoft
 RUN wget https://github.com/jbjorne/TEES/tarball/master && \
