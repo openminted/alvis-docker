@@ -101,6 +101,8 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     #YateaExtractor 0.5*
     #install alvisnlp
 
+WORKDIR /alvisnlp
+
 RUN mvn clean install && ./install.sh .
 
 ENV PATH /alvisnlp/bin:$PATH
