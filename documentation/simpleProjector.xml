@@ -55,11 +55,11 @@
                     simpleprojector
                     --input ${input}
                     --output ${output}
-                    --verbose ${verbose}  
-                    --targetLayerName ${tln} 
-                    --valueFeatures ${vf}
-                    --keyIndex ${ki} 
-                    --plan ${plan}
+                    --param:verbose=${verbose}  
+                    --param:targetLayerName=${tln} 
+                    --param:valueFeatures=${vf}
+                    --param:keyIndex=${ki} 
+                    --param:plan=${plan}
                 </command>
             </componentLoc>
             <operatingSystems>
