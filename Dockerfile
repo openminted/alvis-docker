@@ -47,31 +47,31 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     cd tees && \
     expect tees.expect && \
     export TEES_SETTINGS=$pwd/tees_local_settings.py && \
-    xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml && \
+    xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /alvisnlp/psoft/tees /alvisnlp/share/default-param-values.xml && \
     #install tees by answering questions
-    #WORKDIR /opt/alvisnlp/psoft/tees
+    #WORKDIR /alvisnlp/psoft/tees
     #RUN expect tees.expect && \
-    #xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/psoft/tees /opt/alvisnlp/share/default-param-values.xml && \
+    #xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /alvisnlp/psoft/tees /alvisnlp/share/default-param-values.xml && \
     #SPECIES
     wget http://download.jensenlab.org/species_tagger.tar.gz && \
     tar xvf species_tagger.tar.gz && \
     rm  species_tagger.tar.gz && \
     cd species_tagger && \
     cd ../  && \
-    #RUN xmlstarlet ed -u "/default-param-values/module/teesHome" -v /opt/alvisnlp/tees /opt/alvisnlp/share/default-param-values.xml && \
+    #RUN xmlstarlet ed -u "/default-param-values/module/teesHome" -v /alvisnlp/tees /alvisnlp/share/default-param-values.xml && \
     #install biolg && \
     #RUN wget http://staff.cs.utu.fi/~spyysalo/biolg/biolg-1.1.12.tar.gz && \
     #tar xvf biolg-1.1.12.tar.gz && \
     #rm biolg-1.1.12.tar.gz && \
     #RUN cd ../ && \
-    #RUN xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESClassify]/teesHome" -v /opt/alvisnlp/tees /opt/alvisnlp/share/default-param-values.xml && \
+    #RUN xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESClassify]/teesHome" -v /alvisnlp/tees /alvisnlp/share/default-param-values.xml && \
     #install CCGParser 1.00 && \
     #RUN wget http://www.cl.cam.ac.uk/%7Esc609/resources/candc-downloads/candc-linux-1.00.tgz && \
     #tar xvf candc-linux-1.00.tgz && \
     #rm candc-linux-1.00.tgz && \
     #make 
     #RUN cd ../
-    #RUN xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESClassify]/teesHome" -v /opt/alvisnlp/tees /opt/alvisnlp/share/default-param-values.xml
+    #RUN xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESClassify]/teesHome" -v /alvisnlp/tees /alvisnlp/share/default-param-values.xml
     #CCGPosTagger 1.00 /!\ seem to be the same as CGParser 1.00
     #enju parser /!\ download link does work
     #enju parser 2 /!\ download link does work
@@ -82,14 +82,14 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     cd geniatagger-3.0.2 && \
     make && \
     cd ../ && \
-    xmlstarlet ed --inplace -u "/default-param-values/module/geniaDir" -v /opt/alvisnlp/psoft/geniatagger-3.0.2  /opt/alvisnlp/share/default-param-values.xml && \
+    xmlstarlet ed --inplace -u "/default-param-values/module/geniaDir" -v /alvisnlp/psoft/geniatagger-3.0.2  /alvisnlp/share/default-param-values.xml && \
     #StanfordNER 2014-06-16*
     wget https://nlp.stanford.edu/software/stanford-ner-2016-10-31.zip && \
     unzip stanford-ner-2016-10-31.zip && \
     rm stanford-ner-2016-10-31.zip && \
     cd stanford-ner-2016-10-31/ && \
     cd ../ && \
-    xmlstarlet ed --inplace -u "/default-param-values/module/geniaDir" -v /opt/alvisnlp/psoft/geniatagger-3.0.2  /opt/alvisnlp/share/default-param-values.xml && \
+    xmlstarlet ed --inplace -u "/default-param-values/module/geniaDir" -v /alvisnlp/psoft/geniatagger-3.0.2  /alvisnlp/share/default-param-values.xml && \
     #TEES see abovee
     #treeTagger
     wget http://www.cis.uni-muenchen.de/%7Eschmid/tools/TreeTagger/data/tree-tagger-linux-3.2.1.tar.gz && \
@@ -103,8 +103,8 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
 
 RUN mvn clean install && ./install.sh .
 
-ENV PATH /opt/alvisnlp/bin:$PATH
+ENV PATH /alvisnlp/bin:$PATH
 
-# ENTRYPOINT ["/opt/alvisnlp/bin/alvisnlp"]
+# ENTRYPOINT ["/alvisnlp/bin/alvisnlp"]
 
 CMD ["alvisnlp"]
