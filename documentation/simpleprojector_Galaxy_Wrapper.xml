@@ -21,7 +21,7 @@
 
     <param format="xmi" name="input" type="data" label="dictionary" help="Source of the dictionary."/>
 
-    <param format="txt" name="verbose" value="false" type="boolean" label="verbose" help=""/>
+    <param name="verbose" value="false" type="boolean" label="verbose" help=""/>
 
     <param name="targetLayerName" type="text" label="Target Layer Name" value="concepts" help="Name of the layer that contains the match annotations." />
 
@@ -36,7 +36,7 @@
    
 
   <outputs>
-    <data format="trie" name="output" help="If set, read the compiled dictionary from the specified files. Compiled dictionaries are generally faster for large dictionaries."/>
+    <data format="txt" name="output" help="If set, read the compiled dictionary from the specified files. Compiled dictionaries are generally faster for large dictionaries."/>
   </outputs>
 
   <tests>
