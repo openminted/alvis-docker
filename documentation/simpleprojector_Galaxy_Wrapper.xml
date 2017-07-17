@@ -6,29 +6,28 @@
   <requirements>
 	 
  <command>
-	alvisnlp # the entry point
-	simpleprojector # the component to execute
+	alvisnlp
+	simpleprojector
 	--input ${input}
 	--output ${output}
-	--verbose ${verbose}  
-	--targetLayerName ${tln} 
-	--valueFeatures ${vf}
-	--keyIndex ${ki} 
-	--plan ${plan}
+	--param:targetLayerName=${targetLayerName}
+	--param:valueFeatures=${valueFeatures}
+	--param:keyIndex=${keyIndex}
+	--param:plan=${plan}
   </command>
 
   <inputs>
 
 
-    <param format="txt" name="input" type="data" label="dictionary" help="Source of the dictionary."/>
+    <param format="xmi" name="input" type="data" label="dictionary" help="Source of the dictionary."/>
 
-    <param format="txt" name="verbose" value="false" type="boolean" label="verbose" help=""/>
+    <param name="verbose" value="false" type="boolean" label="verbose" help=""/>
 
-    <param name="tln" type="text" label="Target Layer Name" value="concepts" help="Name of the layer that contains the match annotations." />
+    <param name="targetLayerName" type="text" label="Target Layer Name" value="concepts" help="Name of the layer that contains the match annotations." />
 
-    <param name="vf" type="text" label="Value Features" value="id,entry" help="Target features in match annotations. The values are the columns in the matched entry line." />
+    <param name="valueFeatures" type="text" label="Value Features" value="id,entry" help="Target features in match annotations. The values are the columns in the matched entry line." />
 
-    <param name="ki" type="text" label="Key Index" value="0" help="Specifies the key column index (starting at 0)." />
+    <param name="keyIndex" type="text" label="Key Index" value="0" help="Specifies the key column index (starting at 0)." />
 
     <param format="txt,xml" name="plan" type="data" label="Plan" help="The plan to use." />
 
@@ -37,7 +36,7 @@
    
 
   <outputs>
-    <data format="trie" name="output" help="If set, read the compiled dictionary from the specified files. Compiled dictionaries are generally faster for large dictionaries."/>
+    <data format="txt" name="output" help="If set, read the compiled dictionary from the specified files. Compiled dictionaries are generally faster for large dictionaries."/>
   </outputs>
 
   <tests>
