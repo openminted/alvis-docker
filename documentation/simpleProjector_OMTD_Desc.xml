@@ -6,8 +6,7 @@
     <identificationInfo>
         <resourceNames>
             <resourceName lang="en">Simple Projector</resourceName>
-            <resourceName lang="en">simpleProjector</resourceName>
-        </resourceNames>
+	</resourceNames>
         <descriptions>
             <description lang="en">Projects a simple dictionary on sections.</description>
         </descriptions>
@@ -40,19 +39,18 @@
             </contactGroup>
         </contactGroups>
     </contactInfo>
-
-    <componentType>accessComponent</componentType>
+    <componentType>annotator</componentType>
     <application>false</application>
     <applicationFunction>annotation</applicationFunction>
     <workflow>false</workflow>
-    <workflowDescription>workflowDescription0</workflowDescription>
     <distributionInfos>
         <componentDistributionInfo>
             <componentLoc>
-                <componentDistributionForm>webService</componentDistributionForm>
-                <distributionLocation>NaN</distributionLocation>
-                <command>	
-                    simpleprojector
+                <componentDistributionForm>executableCode</componentDistributionForm>
+                <distributionLocation>bibliome/alvisengine:1.0.0</distributionLocation>
+                <command>
+                    alvisnlp # the entry point
+	            simpleprojector # the component to execute
                     --input ${input}
                     --output ${output}
                     --param:verbose=${verbose}  
@@ -63,7 +61,7 @@
                 </command>
             </componentLoc>
             <operatingSystems>
-                <operatingSystem>os-independent</operatingSystem>
+                <operatingSystem>linux</operatingSystem>
             </operatingSystems>
             <rightsInfo>
                 <licenceInfos>
@@ -75,24 +73,23 @@
         </componentDistributionInfo>
     </distributionInfos>
     <inputContentResourceInfo>
-        <processingResourceTypes>
-            <processingResourceType>corpus</processingResourceType>
-        </processingResourceTypes>
-        <dataFormats>
-            <dataFormatInfo>
-                <dataFormat>text/plain</dataFormat>
-                <mimeType>text/plain</mimeType>
-                <fileExtension>txt</fileExtension>
-                <dataFormatDescription>dataFormatDescription0</dataFormatDescription>
-                <documentationURL>NaN</documentationURL>
-            </dataFormatInfo>
-        </dataFormats>
-        <characterEncodings>
-            <characterEncoding>UTF8</characterEncoding>
-        </characterEncodings>
+	<processingResourceTypes> 
+		 <processingResourceType>corpus</processingResourceType>
+	</processingResourceTypes> 
+
+	<dataFormats> 
+	  <dataFormatInfo> 
+	<dataFormat>application/vnd.xmi+xml</dataFormat> 
+	<mimeType>application/vnd.xmi+xml</mimeType> 
+	<fileExtension>txt</fileExtension> 
+	<dataFormatInfo> 
+	</dataFormats> 
+	<characterEncodings> 
+		<characterEncoding>UTF8</characterEncoding> 
+	</characterEncodings>
         <languages>
             <language>
-                <languageTag>EN</languageTag>
+                <languageTag>en</languageTag>
                 <languageId>en</languageId>
             </language>
         </languages>
@@ -115,38 +112,33 @@
                 <parameterType>boolean</parameterType>
                 <optional>true</optional>
                 <multiValue>false</multiValue>
-                <defaultValue>defaultValue0</defaultValue>
-                <defaultValue>defaultValue1</defaultValue>
             </parameterInfo>
             <parameterInfo>
-                <parameterName>tln</parameterName>
+                <parameterName>targetlayerName</parameterName>
                 <parameterLabel>target Name Layer</parameterLabel>
                 <parameterDescription>Name of the layer that contains the match annotations.</parameterDescription>
                 <parameterType>string</parameterType>
                 <optional>true</optional>
                 <multiValue>false</multiValue>
                 <defaultValue>concepts</defaultValue>
-                <defaultValue>defaultValue3</defaultValue>
             </parameterInfo>
             <parameterInfo>
-                <parameterName>vf</parameterName>
-                <parameterLabel>Value Feature</parameterLabel>
+                <parameterName>valueFeatures</parameterName>
+                <parameterLabel>Value Features</parameterLabel>
                 <parameterDescription>Target features in match annotations. The values are the columns in the matched entry line.</parameterDescription>
                 <parameterType>string</parameterType>
                 <optional>true</optional>
                 <multiValue>false</multiValue>
                 <defaultValue>id,entry</defaultValue>
-                <defaultValue>defaultValue3</defaultValue>
             </parameterInfo>
             <parameterInfo>
-                <parameterName>ki</parameterName>
+                <parameterName>keyIndex</parameterName>
                 <parameterLabel>Key Index</parameterLabel>
                 <parameterDescription>Specifies the key column index (starting at 0).</parameterDescription>
                 <parameterType>integer</parameterType>
                 <optional>true</optional>
                 <multiValue>false</multiValue>
                 <defaultValue>0</defaultValue>
-                <defaultValue>defaultValue3</defaultValue>
             </parameterInfo>
             <parameterInfo>
                 <parameterName>plan</parameterName>
@@ -159,23 +151,24 @@
         </parameterInfos>
     </inputContentResourceInfo>
     <outputResourceInfo>
-        <processingResourceTypes>
-            <processingResourceType>corpus</processingResourceType>
-            <processingResourceType>corpus</processingResourceType>
-        </processingResourceTypes>
-        <dataFormats>
-            <dataFormatInfo>
-                <dataFormat>text/html</dataFormat>
-                <mimeType>text/html</mimeType>
-                <fileExtension>html</fileExtension>
-            </dataFormatInfo>
-        </dataFormats>
-        <characterEncodings>
-            <characterEncoding>UTF8</characterEncoding>
-        </characterEncodings>
+<processingResourceTypes> 
+         <processingResourceType>corpus</processingResourceType>
+</processingResourceTypes>
+
+<dataFormats> 
+     <dataFormatInfo> 
+<dataFormat>web annotation</dataFormat> 
+<mimeType>text/plain</mimeType> 
+<fileExtension>txt</fileExtension> 
+<dataFormatInfo> 
+</dataFormats> 
+
+<characterEncodings> 
+<characterEncoding>UTF8</characterEncoding> 
+</characterEncodings>
         <languages>
             <language>
-                <languageTag>EN</languageTag>
+                <languageTag>en</languageTag>
                 <languageId>en</languageId>
             </language>
         </languages>
