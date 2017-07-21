@@ -1,0 +1,30 @@
+{% set name = "BioLG" %}
+{% set version = "1.1.12" %}
+
+about:
+    home: http://mars.cs.utu.fi/biolg
+    license: GPL-compatible Link Grammar licence
+    summary: BioLG is a modification of the Link Grammar Parser of Sleator and Temperley, adapted for the biomedical domain
+
+package:
+    name: biolg
+    version: {{ version }}
+
+build:
+  number: 0
+
+source:
+  fn: biolg-1.1.12.tar.gz	
+  url: http://staff.cs.utu.fi/~spyysalo/biolg/biolg-1.1.12.tar.gz
+  md5: 3656b8a638384d723bc6a2576a823a86
+
+requirements:
+  build:
+    - gcc
+  run:
+
+test:
+    commands:
+      - 
+ 
+
