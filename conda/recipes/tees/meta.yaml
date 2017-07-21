@@ -1,0 +1,33 @@
+{% set name = "tees" %}
+{% set version = "2.2.1" %}
+
+about:
+    home: http://www.nactem.ac.uk/GENIA/tagger
+    license: Apache Licence 2.0
+    summary:  a free and open source natural language processing system developed for the extraction of events and relations from biomedical text
+
+package:
+    name: tees
+    version: {{ version }}
+
+build:
+  number: 0
+
+source:
+  fn: jbjorne-TEES-1125ab0.tar.gz
+  url: https://github.com/jbjorne/TEES/tarball/master
+  md5: 90a762e816ae48c199614e3ccf552882
+
+requirements:
+  build:
+    - python
+  run:
+    - make
+    - gcc
+    - ruby
+    - flex
+    - expect
+
+test:
+    commands:
+    - python classify.py -m GE11 -i 9668063 -o OUTSTEM
