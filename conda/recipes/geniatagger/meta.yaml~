@@ -1,0 +1,30 @@
+{% set name = "geniatagger" %}
+{% set version = "3.0.2" %}
+
+about:
+    home: http://www.nactem.ac.uk/GENIA/tagger
+    license: Apache Licence 2.0
+    summary: part-of-speech tagging, shallow parsing, and named entity recognition for biomedical text
+
+package:
+    name: geniatagger
+    version: {{ version }}
+
+build:
+  number: 0
+
+source:
+  fn: geniatagger-3.0.2.tar.gz	
+  url: http://www.nactem.ac.uk/tsujii/GENIA/tagger/geniatagger-3.0.2.tar.gz
+  md5: 7ca015f4e223f3820692fdbfba702fd3
+
+requirements:
+  build:
+    - gcc
+  run:
+
+test:
+    commands:
+      - printf "Inhibition of NF-kappaB activation reversed the anti-apoptotic effect of isochamaejasmin." > i.txt ; geniatagger < i.txt > o.txt
+ 
+

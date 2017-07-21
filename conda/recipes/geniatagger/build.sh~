@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cp -r ./models_chunking $PREFIX/
+cp -r ./models_medline $PREFIX/
+cp -r ./models_named_entity $PREFIX/
+cp -r ./morphdic $PREFIX
+make
+cp ./geniatagger $PREFIX/
