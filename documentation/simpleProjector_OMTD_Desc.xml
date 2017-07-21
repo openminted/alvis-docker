@@ -14,7 +14,7 @@
             <resourceShortName lang="en">projector</resourceShortName>
         </resourceShortNames>
         <resourceIdentifiers>
-            <resourceIdentifier resourceIdentifierSchemeName="url">http://bibliome.jouy.inra.fr/demo/AlvisNLP/api/modules/SimpleProjector2</resourceIdentifier>
+            <resourceIdentifier resourceIdentifierSchemeName="docker">default.modules.simpleprojector</resourceIdentifier>
         </resourceIdentifiers>
         <public>false</public>
     </identificationInfo>
@@ -50,14 +50,6 @@
                 <distributionLocation>bibliome/alvisengine:1.0.0</distributionLocation>
                 <command>
                     alvisnlp # the entry point
-	            simpleprojector # the component to execute
-                    --input ${input}
-                    --output ${output}
-                    --param:verbose=${verbose}  
-                    --param:targetLayerName=${tln} 
-                    --param:valueFeatures=${vf}
-                    --param:keyIndex=${ki} 
-                    --param:plan=${plan}
                 </command>
             </componentLoc>
             <operatingSystems>
@@ -76,13 +68,12 @@
 	<processingResourceTypes> 
 		 <processingResourceType>corpus</processingResourceType>
 	</processingResourceTypes> 
-
 	<dataFormats> 
 	  <dataFormatInfo> 
-	<dataFormat>application/vnd.xmi+xml</dataFormat> 
-	<mimeType>application/vnd.xmi+xml</mimeType> 
-	<fileExtension>txt</fileExtension> 
-	<dataFormatInfo> 
+		<dataFormat>application/vnd.xmi+xml</dataFormat> 
+		<mimeType>application/vnd.xmi+xml</mimeType> 
+		<fileExtension>txt</fileExtension> 
+	  <dataFormatInfo> 
 	</dataFormats> 
 	<characterEncodings> 
 		<characterEncoding>UTF8</characterEncoding> 
@@ -151,17 +142,17 @@
         </parameterInfos>
     </inputContentResourceInfo>
     <outputResourceInfo>
-<processingResourceTypes> 
-         <processingResourceType>corpus</processingResourceType>
-</processingResourceTypes>
+	<processingResourceTypes> 
+         	<processingResourceType>corpus</processingResourceType>
+	</processingResourceTypes>
 
-<dataFormats> 
-     <dataFormatInfo> 
-<dataFormat>web annotation</dataFormat> 
-<mimeType>text/plain</mimeType> 
-<fileExtension>txt</fileExtension> 
-<dataFormatInfo> 
-</dataFormats> 
+	<dataFormats> 
+     		<dataFormatInfo> 
+			<dataFormat>web annotation</dataFormat> 
+			<mimeType>text/plain</mimeType> 
+			<fileExtension>txt</fileExtension> 
+		<dataFormatInfo> 
+	</dataFormats> 
 
 <characterEncodings> 
 <characterEncoding>UTF8</characterEncoding> 
@@ -180,18 +171,6 @@
         <annotationLevels>
             <annotationLevel>semanticAnnotation</annotationLevel>
         </annotationLevels>
-        <parameterInfos>
-            <parameterInfo>
-                <parameterName>parameterName2</parameterName>
-                <parameterLabel>parameterLabel2</parameterLabel>
-                <parameterDescription>parameterDescription2</parameterDescription>
-                <parameterType>data</parameterType>
-                <optional>true</optional>
-                <multiValue>false</multiValue>
-                <defaultValue>NaN</defaultValue>
-                <defaultValue>defaultValue5</defaultValue>
-            </parameterInfo>
-        </parameterInfos>
     </outputResourceInfo>
     <componentDependencies>
         <typesystem>
