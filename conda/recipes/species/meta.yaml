@@ -1,0 +1,30 @@
+{% set name = "geniatagger" %}
+{% set version = "1.0.0" %}
+
+about:
+    home: http://species.jensenlab.org
+    license: BSD license
+    summary: a standalone command line application capable of identifying taxonomic mentions in documents and mapping them to corresponding NCBI Taxonomy database entries
+
+package:
+    name: geniatagger
+    version: {{ version }}
+
+build:
+  number: 0
+
+source:
+  fn: species_tagger.tar.gz	
+  url: http://download.jensenlab.org/species_tagger.tar.gz
+  md5: a13fdb5a3aa5ed132d974cd013607891
+
+requirements:
+  build:
+    - gcc
+  run:
+
+test:
+    commands:
+      - 
+ 
+
