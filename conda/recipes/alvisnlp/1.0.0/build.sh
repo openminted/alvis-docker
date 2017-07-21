@@ -7,6 +7,6 @@ mkdir -p $PREFIX/bin
 mvn clean install
 ./install.sh $outdir
 
-ls $outdir
+
 chmod +x $outdir/bin/alvisnlp
 ln -s $outdir/bin/alvisnlp $PREFIX/bin/alvisnlp
