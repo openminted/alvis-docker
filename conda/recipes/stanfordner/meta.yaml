@@ -1,0 +1,31 @@
+{% set name = "stanfordner" %}
+{% set version = "VERSION" %}
+
+about:
+    home: https://nlp.stanford.edu/software/CRF-NER.shtml
+    license: GPL v2+
+    summary: a high-performance machine learning based named entity recognition system, including facilities to train models from supervised training data and pre-trained models for English.
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+build:
+  number: 0
+
+source:
+  fn: stanford-ner-2017-06-09.zip	
+  url: https://nlp.stanford.edu/software/stanford-ner-2017-06-09.zip
+  md5: 26f7951281c4b2745c26545be3233ba8
+
+requirements:
+  build:
+    - openjdk >=8
+  run:
+    - openjdk >=8
+
+test:
+    commands:
+      -
+ 
+
