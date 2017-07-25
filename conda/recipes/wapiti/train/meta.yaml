@@ -1,0 +1,31 @@
+{% set name = "wapiti" %}
+{% set version = "1.5.0" %}
+
+about:
+    home: https://wapiti.limsi.fr/
+    license: BSD Licence
+    summary: Wapiti is a very fast toolkit for segmenting and labeling sequences with discriminative models.
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+build:
+  number: 0
+
+source:
+  fn: wapiti-1.5.0.tar.gz	
+  url: https://wapiti.limsi.fr/wapiti-1.5.0.tar.gz
+  md5: 6ace05fe6e3aef04a923780ed877742e
+
+requirements:
+  build:
+    - gcc
+  run:
+    - gcc
+
+test:
+    commands:
+      -
+ 
+
