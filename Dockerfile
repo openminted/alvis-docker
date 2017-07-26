@@ -21,7 +21,7 @@ RUN apt-get -yqq update && apt-get -yqq install \
     apt-get clean && \
     apt-get install -y  software-properties-common && \
     add-apt-repository ppa:webupd8team/java -y && \
-    apt-get update && \
+    # apt-get update && \
     echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
     apt-get install -y oracle-java8-installer && \
     apt-get clean && \
@@ -84,10 +84,10 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     cd ../ && \
     xmlstarlet ed --inplace -u "/default-param-values/module/geniaDir" -v /alvisnlp/psoft/geniatagger-3.0.2  /alvisnlp/share/default-param-values.xml && \
     #StanfordNER 2014-06-16*
-    wget https://nlp.stanford.edu/software/stanford-ner-2016-10-31.zip && \
-    unzip stanford-ner-2016-10-31.zip && \
-    rm stanford-ner-2016-10-31.zip && \
-    cd stanford-ner-2016-10-31/ && \
+    wget https://nlp.stanford.edu/software/stanford-ner-2014-06-16.zip && \
+    unzip stanford-ner-2014-06-16.zip && \
+    rm stanford-ner-2014-06-16.zip && \
+    cd stanford-ner-2016-06-16/ && \
     cd ../ && \
     xmlstarlet ed --inplace -u "/default-param-values/module/geniaDir" -v /alvisnlp/psoft/geniatagger-3.0.2  /alvisnlp/share/default-param-values.xml && \
     #TEES see abovee
@@ -95,7 +95,15 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     wget http://www.cis.uni-muenchen.de/%7Eschmid/tools/TreeTagger/data/tree-tagger-linux-3.2.1.tar.gz && \
     tar xvf tree-tagger-linux-3.2.1.tar.gz && \
     rm tree-tagger-linux-3.2.1.tar.gz && \
-    cd ../
+    cd ../ && \
+    wget http://search.cpan.org/CPAN/authors/id/T/TH/THHAMON/Lingua-YaTeA-0.622.tar.gz && \
+    tar xvf Lingua-YaTeA-0.622.tar.gz && \
+    rm  Lingua-YaTeA-0.622.tar.gz && \
+    cd Lingua-YaTeA-0.622 && \
+    cpan App::cpanminus && \
+    cpanm Lingua::YaTeA
+    
+
     #WapitiLabel 1.5.0
     #WapitiTrain 1.5.0
     #YateaExtractor 0.5*
