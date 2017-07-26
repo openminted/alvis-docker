@@ -86,7 +86,7 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     wget https://nlp.stanford.edu/software/stanford-ner-2014-06-16.zip && \
     unzip stanford-ner-2014-06-16.zip && \
     rm stanford-ner-2014-06-16.zip && \
-    cd stanford-ner-2016-06-16/ && \
+    cd stanford-ner-2014-06-16/ && \
     cd ../ && \
     xmlstarlet ed --inplace -u "/default-param-values/module/geniaDir" -v /alvisnlp/psoft/geniatagger-3.0.2  /alvisnlp/share/default-param-values.xml && \
     #TEES see abovee
