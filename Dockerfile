@@ -38,9 +38,9 @@ mkdir psoft
 ADD tees.expect /alvisnlp/psoft/
 # install TEES
 WORKDIR /alvisnlp/psoft
-RUN wget https://github.com/jbjorne/TEES/tarball/master && \
-    tar xvf master && \
-    rm -rf master && \
+RUN wget https://github.com/jbjorne/TEES/tarball/master | tar xvf && \
+    # tar xvf master && \
+    # rm -rf master && \
     mv *-TEES-*  tees && \
     cp tees.expect tees/ && \
     cd tees && \
@@ -52,9 +52,9 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     #RUN expect tees.expect && \
     #xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /alvisnlp/psoft/tees /alvisnlp/share/default-param-values.xml && \
     #SPECIES
-    wget http://download.jensenlab.org/species_tagger.tar.gz && \
-    tar xvf species_tagger.tar.gz && \
-    rm  species_tagger.tar.gz && \
+    wget http://download.jensenlab.org/species_tagger.tar.gz | tar xvf && \
+    #tar xvf species_tagger.tar.gz && \
+    #rm  species_tagger.tar.gz && \
     cd species_tagger && \
     cd ../  && \
     #RUN xmlstarlet ed -u "/default-param-values/module/teesHome" -v /alvisnlp/tees /alvisnlp/share/default-param-values.xml && \
@@ -75,38 +75,33 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     #enju parser /!\ download link does work
     #enju parser 2 /!\ download link does work
     #install geniatagger
-    wget http://www.nactem.ac.uk/tsujii/GENIA/tagger/geniatagger-3.0.2.tar.gz && \
-    tar -xvf geniatagger-3.0.2.tar.gz && \
-    rm geniatagger-3.0.2.tar.gz && \
+    wget http://www.nactem.ac.uk/tsujii/GENIA/tagger/geniatagger-3.0.2.tar.gz |  tar xvf && \
+    # tar -xvf geniatagger-3.0.2.tar.gz && \
+    #rm geniatagger-3.0.2.tar.gz && \
     cd geniatagger-3.0.2 && \
     make && \
     cd ../ && \
     xmlstarlet ed --inplace -u "/default-param-values/module/geniaDir" -v /alvisnlp/psoft/geniatagger-3.0.2  /alvisnlp/share/default-param-values.xml && \
     #StanfordNER 2014-06-16*
-    wget https://nlp.stanford.edu/software/stanford-ner-2014-06-16.zip && \
-    unzip stanford-ner-2014-06-16.zip && \
-    rm stanford-ner-2014-06-16.zip && \
+    wget https://nlp.stanford.edu/software/stanford-ner-2014-06-16.zip | unzip  && \
+    #unzip stanford-ner-2014-06-16.zip && \
+    #rm stanford-ner-2014-06-16.zip && \
     cd stanford-ner-2014-06-16/ && \
     cd ../ && \
-    xmlstarlet ed --inplace -u "/default-param-values/module/geniaDir" -v /alvisnlp/psoft/geniatagger-3.0.2  /alvisnlp/share/default-param-values.xml && \
-    #TEES see abovee
-    #treeTagger
-    wget http://www.cis.uni-muenchen.de/%7Eschmid/tools/TreeTagger/data/tree-tagger-linux-3.2.1.tar.gz && \
-    tar xvf tree-tagger-linux-3.2.1.tar.gz && \
-    rm tree-tagger-linux-3.2.1.tar.gz && \
+    xmlstarlet ed --inplace -u "/default-param-values/module/geniaDir" -v /alvisnlp/psoft/stanford-ner-2014-06-16  /alvisnlp/share/default-param-values.xml && \
+    # treeTagger
+    wget http://www.cis.uni-muenchen.de/%7Eschmid/tools/TreeTagger/data/tree-tagger-linux-3.2.1.tar.gz | tar xvf && \
+    #tar xvf tree-tagger-linux-3.2.1.tar.gz && \
+    #rm tree-tagger-linux-3.2.1.tar.gz && \
     cd ../ && \
-    wget http://search.cpan.org/CPAN/authors/id/T/TH/THHAMON/Lingua-YaTeA-0.622.tar.gz && \
-    tar xvf Lingua-YaTeA-0.622.tar.gz && \
-    rm  Lingua-YaTeA-0.622.tar.gz && \
+    # Yatea
+    wget http://search.cpan.org/CPAN/authors/id/T/TH/THHAMON/Lingua-YaTeA-0.622.tar.gz | tar xvf && \
+    #tar xvf Lingua-YaTeA-0.622.tar.gz && \
+    #rm  Lingua-YaTeA-0.622.tar.gz && \
     cd Lingua-YaTeA-0.622 && \
     cpan App::cpanminus && \
     cpanm Lingua::YaTeA
     
-
-    #WapitiLabel 1.5.0
-    #WapitiTrain 1.5.0
-    #YateaExtractor 0.5*
-    #install alvisnlp
 
 WORKDIR /alvisnlp
 
