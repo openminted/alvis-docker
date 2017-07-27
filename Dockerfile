@@ -47,7 +47,7 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     expect tees.expect && \
     export TEES_SETTINGS=$pwd/tees_local_settings.py && \
     xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /alvisnlp/psoft/tees /alvisnlp/share/default-param-values.xml && \
-    cd ..\ && \
+    cd ../ && \
     #install tees by answering questions
     #WORKDIR /alvisnlp/psoft/tees
     #RUN expect tees.expect && \
@@ -102,7 +102,7 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master && \
     cd Lingua-YaTeA-0.622 && \
     cpan App::cpanminus && \
     cpanm Lingua::YaTeA && \
-    cd ..\
+    cd ../
     
 
     #WapitiLabel 1.5.0
