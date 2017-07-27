@@ -38,7 +38,7 @@ mkdir psoft
 ADD tees.expect /alvisnlp/psoft/
 # install TEES
 WORKDIR /alvisnlp/psoft
-RUN wget https://github.com/jbjorne/TEES/tarball/master | tar xvf && \
+RUN wget https://github.com/jbjorne/TEES/tarball/master | tar -xJC /alvisnlp/psoft  && \
     # tar xvf master && \
     # rm -rf master && \
     mv *-TEES-*  tees && \
@@ -52,7 +52,7 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master | tar xvf && \
     #RUN expect tees.expect && \
     #xmlstarlet ed --inplace -u "/default-param-values/module/teesHome" -v /alvisnlp/psoft/tees /alvisnlp/share/default-param-values.xml && \
     #SPECIES
-    wget http://download.jensenlab.org/species_tagger.tar.gz | tar xvf && \
+    wget http://download.jensenlab.org/species_tagger.tar.gz | tar -xJC /alvisnlp/psoft && \
     #tar xvf species_tagger.tar.gz && \
     #rm  species_tagger.tar.gz && \
     cd species_tagger && \
@@ -75,7 +75,7 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master | tar xvf && \
     #enju parser /!\ download link does work
     #enju parser 2 /!\ download link does work
     #install geniatagger
-    wget http://www.nactem.ac.uk/tsujii/GENIA/tagger/geniatagger-3.0.2.tar.gz |  tar xvf && \
+    wget http://www.nactem.ac.uk/tsujii/GENIA/tagger/geniatagger-3.0.2.tar.gz |  tar -xJC /alvisnlp/psoft && \
     # tar -xvf geniatagger-3.0.2.tar.gz && \
     #rm geniatagger-3.0.2.tar.gz && \
     cd geniatagger-3.0.2 && \
@@ -90,12 +90,12 @@ RUN wget https://github.com/jbjorne/TEES/tarball/master | tar xvf && \
     cd ../ && \
     xmlstarlet ed --inplace -u "/default-param-values/module/geniaDir" -v /alvisnlp/psoft/stanford-ner-2014-06-16  /alvisnlp/share/default-param-values.xml && \
     # treeTagger
-    wget http://www.cis.uni-muenchen.de/%7Eschmid/tools/TreeTagger/data/tree-tagger-linux-3.2.1.tar.gz | tar xvf && \
+    wget http://www.cis.uni-muenchen.de/%7Eschmid/tools/TreeTagger/data/tree-tagger-linux-3.2.1.tar.gz | tar -xJC /alvisnlp/psoft && \
     #tar xvf tree-tagger-linux-3.2.1.tar.gz && \
     #rm tree-tagger-linux-3.2.1.tar.gz && \
     cd ../ && \
     # Yatea
-    wget http://search.cpan.org/CPAN/authors/id/T/TH/THHAMON/Lingua-YaTeA-0.622.tar.gz | tar xvf && \
+    wget http://search.cpan.org/CPAN/authors/id/T/TH/THHAMON/Lingua-YaTeA-0.622.tar.gz | tar -xJC /alvisnlp/psoft && \
     #tar xvf Lingua-YaTeA-0.622.tar.gz && \
     #rm  Lingua-YaTeA-0.622.tar.gz && \
     cd Lingua-YaTeA-0.622 && \
