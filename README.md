@@ -65,8 +65,8 @@ The train and classify workflows (called plans into alvis) are based on [GeniaTa
   * [BioLG](http://mars.cs.utu.fi/biolg/) 1.1.12
   * [CCGParser](http://www.cl.cam.ac.uk/~sc609/candc-1.00.html) 1.00
   * [CCGPosTagger](http://www.cl.cam.ac.uk/~sc609/candc-1.00.html) 1.00
-  * [EnjuParser](http://www.nactem.ac.uk/enju/) 2.4.2
-  * [EnjuParser2](http://www.nactem.ac.uk/enju/) 2.4.2
+  * [EnjuParser](https://github.com/mynlp/enju) 2.4.2
+  * [EnjuParser2](https://github.com/mynlp/enju) 2.4.2
   * [GeniaTagger](http://www.nactem.ac.uk/GENIA/tagger/) 3.0.1<sup>*</sup>
   * [StanfordNER](https://nlp.stanford.edu/software/CRF-NER.shtml) 2014-06-16<sup>*</sup>
   * [Species](http://download.jensenlab.org/species_tagger.tar.gz) 1.0
