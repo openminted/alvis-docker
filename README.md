@@ -61,7 +61,7 @@ The train and classify workflows (called plans into alvis) are based on [GeniaTa
 * automatically clone and install alvisnlp with Dockerfile
 * then, install the following external programs in an interactive way 
 
-  * [Species](http://download.jensenlab.org/species_tagger.tar.gz) 1.0
+ 
   * [BioLG](http://mars.cs.utu.fi/biolg/) 1.1.12
   * [CCGParser](http://www.cl.cam.ac.uk/~sc609/candc-1.00.html) 1.00
   * [CCGPosTagger](http://www.cl.cam.ac.uk/~sc609/candc-1.00.html) 1.00
@@ -69,6 +69,7 @@ The train and classify workflows (called plans into alvis) are based on [GeniaTa
   * [EnjuParser2](http://www.nactem.ac.uk/enju/) 2.4.2
   * [GeniaTagger](http://www.nactem.ac.uk/GENIA/tagger/) 3.0.1<sup>*</sup>
   * [StanfordNER](https://nlp.stanford.edu/software/CRF-NER.shtml) 2014-06-16<sup>*</sup>
+  * [Species](http://download.jensenlab.org/species_tagger.tar.gz) 1.0
   * [TEESClassify](https://github.com/jbjorne/TEES/) 2.2.1
   * [TEESTrain](https://github.com/jbjorne/TEES/) 2.2.1
   * [TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) 3.2<sup>*</sup>
