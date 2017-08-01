@@ -56,7 +56,7 @@ WORKDIR /alvisnlp/psoft
  RUN wget http://www.cl.cam.ac.uk/%7Esc609/resources/candc-downloads/candc-linux-1.00.tgz && \
     tar xvf candc-linux-1.00.tgz && \
     rm candc-linux-1.00.tgz && \
-    cd candc-1.00/ && make && cd ../ && \
+    cd candc-1.00/ && make && cd /alvisnlp/psoft && \
     xmlstarlet ed --inplace -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.ccg.CCGParser]/executable" -v /alvisnlp/psoft/candc-1.00/bin/parser /alvisnlp/share/default-param-values.xml && \
     xmlstarlet ed --inplace -d "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.ccg.CCGParser]/parserModel" /alvisnlp/share/default-param-values.xml && \
     xmlstarlet ed --inplace -d "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.ccg.CCGParser]/superModel" /alvisnlp/share/default-param-values.xml && \
@@ -69,19 +69,19 @@ WORKDIR /alvisnlp/psoft
     wget http://www.nactem.ac.uk/tsujii/GENIA/tagger/geniatagger-3.0.2.tar.gz && \
     tar -xvf geniatagger-3.0.2.tar.gz && \
     rm geniatagger-3.0.2.tar.gz && \
-    cd geniatagger-3.0.2 && make && cd ../ && \
+    cd geniatagger-3.0.2 && make && cd /alvisnlp/psoft && \
     xmlstarlet ed --inplace -u "/default-param-values/module/geniaDir" -v /alvisnlp/psoft/geniatagger-3.0.2  /alvisnlp/share/default-param-values.xml && \
     ## installing StanfordNER 2014-06-16*
     wget https://nlp.stanford.edu/software/stanford-ner-2014-06-16.zip && \
     unzip stanford-ner-2014-06-16.zip && \
     rm stanford-ner-2014-06-16.zip && \
-    # not required cd stanford-ner-2014-06-16/ && cd ../ && \
+    # not required cd stanford-ner-2014-06-16/ && /alvisnlp/psoft ../ && \
     xmlstarlet ed --inplace -d "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.stanford.StanfordNER]/classifierFile" /alvisnlp/share/default-param-values.xml && \
     ## installing SPECIES
     wget http://download.jensenlab.org/species_tagger.tar.gz && \
     tar xvf species_tagger.tar.gz && \
     rm  species_tagger.tar.gz && \
-    cd species_tagger && make && cd ../ && \
+    cd species_tagger && make && cd /alvisnlp/psoft && \
     xmlstarlet ed --inplace -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.Species]/speciesDir" -v /alvisnlp/psoft/species_tagger/ /alvisnlp/share/default-param-values.xml && \
     ## installing tees
     wget https://github.com/jbjorne/TEES/tarball/master && \
@@ -89,9 +89,9 @@ WORKDIR /alvisnlp/psoft
     rm -rf master && \
     mv *-TEES-*  tees && \
     cp tees.expect tees/ && \
-    cd tees && \
-    expect tees.expect && \
+    cd tees && expect tees.expect && \
     export TEES_SETTINGS=$pwd/tees_local_settings.py && \
+    cd /alvisnlp/psoft 
     ## installing tees classify
     xmlstarlet ed --inplace -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESClassify]/teesHome" -v /alvisnlp/psoft/tees/ /alvisnlp/share/default-param-values.xml && \
     ## installing tees train
@@ -100,14 +100,14 @@ xmlstarlet ed --inplace -u "/default-param-values/module[@class=org.bibliome.alv
     wget http://www.cis.uni-muenchen.de/%7Eschmid/tools/TreeTagger/data/tree-tagger-linux-3.2.1.tar.gz && \
     mkdir treetagger/ && tar xvf tree-tagger-linux-3.2.1.tar.gz -C treetagger && \
     rm tree-tagger-linux-3.2.1.tar.gz && \
-    cd treetagger/ &&  && cd ../ && \
+    cd treetagger/ && cd /alvisnlp/psoft  && \
     xmlstarlet ed --inplace -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.treetagger.TreeTagger]/treeTaggerExecutable" -v /alvisnlp/psoft/treetagger/bin/tree-tagger  /alvisnlp/share/default-param-values.xml && \
     xmlstarlet ed --inplace -d "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.tees.TEESTrain]/parFile" /alvisnlp/share/default-param-values.xml && \
     ## installing wapiti
     wget https://wapiti.limsi.fr/wapiti-1.5.0.tar.gz && \
     tar xvf wapiti-1.5.0.tar.gz && \
     rm wapiti-1.5.0.tar.gz && \
-    cd  wapiti-1.5.0 && make && make install && cd ../ && \
+    cd  wapiti-1.5.0 && make && make install && cd /alvisnlp/psoft && \
     ## install wapiti label
     xmlstarlet ed --inplace -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.wapiti.WapitiLabel]/wapitiExecutable" -v /usr/local/bin/wapiti /alvisnlp/share/default-param-values.xml && \
     ## install wapiti train
@@ -119,7 +119,7 @@ xmlstarlet ed --inplace -u "/default-param-values/module[@class=org.bibliome.alv
     cd Lingua-YaTeA-0.622 && \
     cpan App::cpanminus && \
     cpanm Lingua::YaTeA && \
-    cd ../ && \
+    cd /alvisnlp/psoft && \
     xmlstarlet ed --inplace -u "/default-param-values/module/yateaExecutable" -v /usr/local/bin/yatea  /alvisnlp/share/default-param-values.xml && \
     xmlstarlet ed --inplace -d "/default-param-values/module/rcFile" /alvisnlp/share/default-param-values.xml && \
     xmlstarlet ed --inplace -d "/default-param-values/module/configDir" /alvisnlp/share/default-param-values.xml && \
