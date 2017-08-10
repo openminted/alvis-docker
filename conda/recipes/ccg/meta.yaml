@@ -1,0 +1,31 @@
+{% set name = "ccg" %}
+{% set version = "1.0.0" %}
+
+about:
+    home: http://www.cl.cam.ac.uk/%7Esc609/candc-1.00.html
+    license: C&C System Licence Agreement
+    summary: 
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+build:
+  number: 0
+
+source:
+  fn: candc-1.00.tgz	
+  url: http://www.cl.cam.ac.uk/%7Esc609/resources/candc-downloads/candc-1.00.tgz
+  md5: 602ecc49716875e1eb1f737d3c62f324
+
+requirements:
+  build:
+    - gcc
+  run: 
+    - gcc
+
+test:
+    commands:
+      -
+ 
+
