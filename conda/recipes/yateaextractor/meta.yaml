@@ -1,0 +1,30 @@
+{% set name = "yatea" %}
+{% set version = "0.6.0" %}
+
+about:
+    home: https://perso.limsi.fr/hamon/YaTeA
+    license: NaN
+    summary: yatea est un extracteur de termes 
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+build:
+  number: 0
+
+source:
+  fn: Lingua-YaTeA-0.622.tar.gz
+  url: http://search.cpan.org/CPAN/authors/id/T/TH/THHAMON/Lingua-YaTeA-0.622.tar.gz
+  md5: 52510da826372fe863adfeb8a0c5a840
+
+requirements:
+  build:
+    - cpan
+  run:
+    - cpan
+    - perl
+test:
+    commands:
+      -
+
