@@ -1,0 +1,29 @@
+{% set name = "treetagger" %}
+{% set version = "3.2.0" %}
+
+about:
+    home: http://www.cis.uni-muenchen.de/%7Eschmid/tools/TreeTagger
+    license: TreeTagger License
+    summary: TreeTagger is a part-of-speech tagger for many languages
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+build:
+  number: 0
+
+source:
+  fn: tree-tagger-linux-3.2.1.tar.gz	
+  url: http://www.cis.uni-muenchen.de/%7Eschmid/tools/TreeTagger/data/tree-tagger-linux-3.2.1.tar.gz
+  md5: 072fbdad8e9805e6f9bb2ab0da810eea
+
+requirements:
+  build:
+  run:
+
+test:
+    commands:
+      -
+ 
+
