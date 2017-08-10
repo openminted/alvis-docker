@@ -1,0 +1,31 @@
+{% set name = "enjuparser" %}
+{% set version = "2.4.2" %}
+
+about:
+    home: https://github.com/mynlp/enju
+    license: Apache License 2.0
+    summary: Enju is a syntactic analyzer for English
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+build:
+  number: 0
+
+source:
+  fn: master.zip
+  url: https://github.com/mynlp/enju/archive/master.zip
+  md5: 0f83549f053780324882f0c47e8b5ac6
+
+requirements:
+  build:
+    - gcc
+  run:
+    - gcc
+
+test:
+    commands:
+      -
+ 
+
