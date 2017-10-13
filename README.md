@@ -10,14 +10,14 @@ A docker image for the [alvisnlp](https://github.com/Bibliome/alvisnlp) engine i
 1. display the alvis help
 
 ```{r, engine='bash', count_lines}
-docker run mandiayba/alvisengine:1.0.0 
+docker run mandiayba/alvisengine:1.0.0 \
        alvisnlp -help
 ```
 
 2. list the modules supported by alvis
 
 ```
-docker run mandiayba/alvisengine 
+docker run mandiayba/alvisengine \
        alvisnlp -supportedModules
 ```
 
@@ -31,25 +31,27 @@ docker run mandiayba/alvisengine
 4. run an alvis workflow that trains a ML model for binary relation extraction from a text corpus
 
 ```
-docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data  -a stderr mandiayba/alvisengine:1.0.0 
+docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data \
+       -a stderr mandiayba/alvisengine:1.0.0 \
        alvisnlp /opt/alvisnlp/data/plans/train.plan
 ```
 
 5. run an alvis workflow that classifies binary relations from a text corpus
 
 ```
-docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data  -a stderr mandiayba/alvisengine:1.0.0 
+docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data \
+          -a stderr mandiayba/alvisengine:1.0.0 \
            alvisnlp /opt/alvisnlp/data/plans/predict.plan
 ```
 
 6. run the train workflow with the main parameters passed to the workflow 
 ```
-docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvisengine:1.0.0 
-           alvisnlp
-           -param train textDir /opt/alvisnlp/data/corpus/train 
-           -param dev textDir /opt/alvisnlp/data/corpus/dev 
-           -param test textDir /opt/alvisnlp/data/corpus/test 
-           -param TEESTrain model /opt/alvisnlp/data/models
+docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr mandiayba/alvisengine:1.0.0 \
+           alvisnlp \
+           -param train textDir /opt/alvisnlp/data/corpus/train \
+           -param dev textDir /opt/alvisnlp/data/corpus/dev \
+           -param test textDir /opt/alvisnlp/data/corpus/test \
+           -param TEESTrain model /opt/alvisnlp/data/models \
            /opt/alvisnlp/data/plans/train.plan
 ```
 
