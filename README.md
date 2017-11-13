@@ -3,7 +3,7 @@ Dockerizing Alvis and its components
 
 ## Use the docker image
 
-A docker image for the [alvisnlp](https://github.com/Bibliome/alvisnlp) engine in command line is present into [Docker Hub](https://hub.docker.com/r/mandiayba/alvisengine)
+A docker image for the [alvisnlp](https://github.com/Bibliome/alvisnlp) engine in command line is available into [Docker Hub](https://hub.docker.com/r/mandiayba/alvisengine)
 
 /!\ Prerequisites are docker installed (>= 1.13.1) and 4Go of free disk space
 
