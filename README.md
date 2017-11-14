@@ -17,14 +17,14 @@ docker run mandiayba/alvisengine:1.0.0 \
 2. list the modules supported by alvis
 
 ```
-docker run mandiayba/alvisengine \
+docker run mandiayba/alvisengine:1.0.0 \
        alvisnlp -supportedModules
 ```
 
 3. display the doc of the module named `SimpleProjector`
 
 ```
-docker run mandiayba/alvisengine 
+docker run mandiayba/alvisengine:1.0.0 \
        alvisnlp -moduleDoc GeniaTagger
 ```
 
