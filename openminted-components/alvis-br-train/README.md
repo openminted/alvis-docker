@@ -15,7 +15,7 @@ the test-data to run this component are into the `test-data` folder
 ## Run in command-line
 
 From the folder contained the README run the following command. You're supposed to have docker installed.
-```sh
+```
 docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
 bibliome/alvis-br-train \ 
 train /alvisnlp/data/corpus/train \
