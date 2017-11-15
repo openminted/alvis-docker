@@ -2,12 +2,7 @@
 
 This component is used to train a SVM model for binary relation extration. It is based on TEES and it uses GeniaTagger. It is defined from alvis plans (see plans into the [test-data/plans folder](test-data/plans)).
 
-## Run
-
-The command to run this component in command line is the following
-
-
-# test-data
+## test-data
 the test-data to run this component are into the `test-data` folder
  
 * corpus is composed of
@@ -17,9 +12,9 @@ the test-data to run this component are into the `test-data` folder
 
 * model is the TEST SVM  model produced
 
-## Run command in command line
+## Run in command-line
 
-From the folder contained the README run the following command
+From the folder contained the README run the following command. You're supposed to have docker installed.
 ```sh
 docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
 bibliome/alvis-br-train \ 
