@@ -49,11 +49,11 @@
     <ms:resourceType>component</ms:resourceType>
     <ms:identificationInfo>
       <ms:resourceNames>
-        <ms:resourceName>train</ms:resourceName>
+        <ms:resourceName>alvis-br-train</ms:resourceName>
       </ms:resourceNames>
       <ms:descriptions>
         <ms:description>
-      This component is used to train a SVM model for binary relation extration. It is based on TEES and it uses GeniaTagger.
+      This component is used to train a SVM model for binary relation extration. It is based on TEES and it uses GeniaTagger. It is defined from an alvis plan.
     </ms:description>
       </ms:descriptions>
       <ms:resourceIdentifiers>
@@ -103,7 +103,7 @@
       <ms:componentDistributionInfo>
         <ms:componentLoc>
 	  <ms:componentDistributionForm>executableCode</ms:componentDistributionForm>
-          <ms:distributionLocation>mandiayba/alvisengine:1.0.0</ms:distributionLocation>
+          <ms:distributionLocation>bibliome/alvis-br-train</ms:distributionLocation>
         </ms:componentLoc>
         <ms:rightsInfo>
           <ms:licenceInfos>
@@ -119,7 +119,7 @@
       </ms:componentDistributionInfo>
     </ms:distributionInfos>
     <ms:inputContentResourceInfo>
-		<!-- params -->
+		<!-- the main input is empty -->
       <ms:dataFormats>
         <ms:dataFormatInfo>
           <ms:mimeType>text/plain</ms:mimeType>
@@ -176,7 +176,7 @@
       </ms:parameterInfos>
     </ms:inputContentResourceInfo>
     <ms:outputResourceInfo>
-		<!-- output main -->
+		<!-- output main is empty -->
       <ms:dataFormats>
         <ms:dataFormatInfo>
           <ms:mimeType>text/plain</ms:mimeType>
