@@ -1,6 +1,6 @@
 # alvis-br-train
 
-This component is used to train a SVM model for binary relation extration. It is based on TEES and it uses GeniaTagger. It is defined from alvis plans (see plans into the [test-data/plans folder](test-data/plans)
+This component is used to train a SVM model for binary relation extration. It is based on TEES and it uses GeniaTagger. It is defined from alvis plans (see plans into the [test-data/plans folder](test-data/plans)).
 
 ## Run
 
@@ -31,4 +31,4 @@ model /alvisnlp/data/models
 
 # OpenMinTeD metadata
 
-The Openminted metadata records for this component are described in this [file](alvis-br-train.metadata.omtd)
+The Openminted metadata records are into the following [XML file](alvis-br-train.metadata.omtd)
