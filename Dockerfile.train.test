@@ -1,0 +1,17 @@
+#FROM maven:3.2-jdk-7-onbuild
+FROM mandiayba/alvisengine:1.0.0 
+MAINTAINER Mouhamadou Ba <mouhamadou.ba@inra.fr>
+
+
+
+WORKDIR /alvisnlp
+
+ADD workdir/scripts /alvisnlp/scripts
+ADD workdir/plans /alvisnlp/plans
+
+
+#ENTRYPOINT ["/alvisnlp/scripts/train.sh"]
+
+RUN ["chmod", "+x", "/alvisnlp/scripts/train.sh"]
+
+CMD ["alvisnlp"]
