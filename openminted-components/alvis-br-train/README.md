@@ -18,9 +18,11 @@ the test-data to run this component are into the `test-data` folder
 * model is the TEST SVM  model produced
 
 ## Run command in command line
-```
-docker run -i --rm -v $PWD/workdir:/alvisnlp/data -a stderr \
-alvis-br-train \ 
+
+From the folder contained the README run the following command
+```sh
+docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
+bibliome/alvis-br-train \ 
 train /alvisnlp/data/corpus/train \
 dev /alvisnlp/data/corpus/dev \
 test /alvisnlp/data/corpus/test \
