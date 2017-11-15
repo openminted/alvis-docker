@@ -19,12 +19,12 @@ the test-data to run this component are into the `test-data` folder
 
 ## Run command in command line
 ```
-docker run -i --rm -v $PWD/workdir:/opt/alvisnlp/data -a stderr \
-alvis-br-train \ 
-train /opt/alvisnlp/data/corpus/train \
-dev /opt/alvisnlp/data/corpus/dev \
-test /opt/alvisnlp/data/corpus/test \
-model /opt/alvisnlp/data/models
+docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
+bibliome/alvis-br-train \ 
+train /alvisnlp/data/corpus/train \
+dev /alvisnlp/data/corpus/dev \
+test /alvisnlp/data/corpus/test \
+model /alvisnlp/data/models
 ```
 
 # OpenMinTeD metadata
