@@ -1,0 +1,6 @@
+ENTITY Bacteria
+ENTITY Geographical
+ENTITY Habitat
+RELATION Lives_In undirected	Bacteria	Geographical,Habitat
+TARGET ENTITY	Bacteria,Geographical,Habitat
+TARGET INTERACTION	Lives_In
