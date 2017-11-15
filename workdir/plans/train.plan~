@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alvisnlp-plan id="tees-train">
+
+  <import>data/plans/read.plan</import>
+  
+  <import>res://org.bibliome.alvisnlp.resources/segmentation.plan</import>
+  
+  <genia class="GeniaTagger">
+    <geniaDir>/opt/alvisnlp/psoft/geniatagger-3.0.2</geniaDir>
+  </genia>
+
+  <tees>
+    <merge-ne-layers class="MergeLayers">
+      <sourceLayerNames>Bacteria,Habitat,Geographical</sourceLayerNames>
+      <targetLayerName>NamedEntities</targetLayerName>
+    </merge-ne-layers>
+    
+    <train class="TEESTrain">
+
+      <teesHome>/opt/alvisnlp/psoft/TEES</teesHome>
+
+      <namedEntityLayerName>NamedEntities</namedEntityLayerName>
+      <neFeatureName>type</neFeatureName>
+
+      <trainSetFeature>train</trainSetFeature>
+      <devSetFeature>dev</devSetFeature>
+      <testSetFeature>test</testSetFeature>
+
+      <relationName>Lives_In</relationName>
+      <relationRole1>Bacteria</relationRole1>
+      <relationRole2>Location</relationRole2>
+
+      <model>models</model>
+
+      <omitSteps>SPLIT-SENTENCES,NER</omitSteps>
+    </train>
+  </tees>
+</alvisnlp-plan>
