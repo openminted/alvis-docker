@@ -16,14 +16,14 @@
 
 COMMAND="alvisnlp"
 if [ "$1" == "alvisnlp" ]; then
-    COMMAND = $1
+    COMMAND=$1
 else
     echo "Bad command"
 fi
 
 ID="train"
 if [ "$2" == "alvis-br-train" ]; then
-     ID = $2
+     ID=$2
 else
      echo "Bad id"
 fi
@@ -31,7 +31,7 @@ fi
 # parameter not used here
 INPUT="input"
 if [ "$3" == "input" ]; then
-    INPUT = $3
+    INPUT=$3
 else
     echo "Bad command input"
 fi
@@ -39,23 +39,24 @@ fi
 # parameter not used here
 OUTPUT="output" 
 if [ "$4" == "output" ]; then
-    OUTPUT = $4
+    OUTPUT=$4
 else
     echo "Bad command output"
 fi
 
-TRAIN = $5
-TRAIN_PATH_VALUE = $6
+TRAIN=$5
+TRAIN_PATH_VALUE=$6
 
-DEV = $7
-DEV_PATH_VALUE = $8
+DEV=$7
+DEV_PATH_VALUE=$8
 
-TEST = $9
-TEST_PATH_VALUE = $10
+TEST=$9
+TEST_PATH_VALUE=$10
 
-MODEL = $11
-MODEL_PATH_VALUE = $12
+MODEL=$11
+MODEL_PATH_VALUE=$12
 
+echo "-param $TRAIN textDir $TRAIN_PATH_VALUE -param $DEV textDir $DEV_PATH_VALUE  -param $TEST textDir $TEST_PATH_VALUE  -param TEESTrain $MODEL $MODEL_PATH_VALUE  /alvisnlp/plans/train.plan"
 
 $COMMAND  -param $TRAIN textDir $TRAIN_PATH_VALUE \
     	-param $DEV textDir $DEV_PATH_VALUE \
