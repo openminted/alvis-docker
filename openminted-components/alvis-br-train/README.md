@@ -10,7 +10,7 @@ the test-data to run this component are into the `test-data` folder
 	* dev set
 	* test set
 
-* model is the TEST SVM  model produced
+* model is the folder where the produced TEES SVM  model is stored
 
 ## Run in command-line
 
