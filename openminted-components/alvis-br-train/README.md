@@ -18,6 +18,8 @@ From the folder contained the README run the following command. You're supposed 
 ```
 docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
 bibliome/alvis-br-train \ 
+input /alvisnlp/data/corpus
+output /alvisnlp/data/models
 train /alvisnlp/data/corpus/train \
 dev /alvisnlp/data/corpus/dev \
 test /alvisnlp/data/corpus/test \
