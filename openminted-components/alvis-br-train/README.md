@@ -29,3 +29,9 @@ model /alvisnlp/data/models
 # OpenMinTeD metadata
 
 The Openminted metadata records are described into the following [XML file](alvis-br-train.metadata.omtd)
+
+# re-build the docker image
+You can re-build the docker image from the dockerfile by running the following command from the folder contained the README
+```
+docker build . -t bibliome/alvis-br-train -f Dockerfile.alvis-br-train
+```
