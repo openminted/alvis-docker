@@ -1,6 +1,6 @@
 # alvis-br-train
 
-This component is used to train a SVM model for binary relation extration. It is based on TEES and it uses GeniaTagger. It is defined from alvis plans (see plans into the [test-data/plans folder](test-data/plans)).
+This component is used to train a SVM model for binary relation extration on text documents. It is based on TEES and it uses GeniaTagger. It is defined using alvisnlp plans (see the plans into the [test-data/plans folder](test-data/plans)).
 
 ## test-data
 the test-data to run this component are into the `test-data` folder
