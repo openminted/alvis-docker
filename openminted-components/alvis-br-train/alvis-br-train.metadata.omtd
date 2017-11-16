@@ -53,11 +53,11 @@
       </ms:resourceNames>
       <ms:descriptions>
         <ms:description>
-      This component is used to train a SVM model for binary relation extration. It is based on TEES and it uses GeniaTagger. It is defined from an alvis plan.
+      This component is used to train a SVM model for binary relation extration on text documents. It is based on TEES and it uses GeniaTagger.
     </ms:description>
       </ms:descriptions>
       <ms:resourceIdentifiers>
-        <ms:resourceIdentifier resourceIdentifierSchemeName="URI">org.bibliome.alvisnlp.modules.tees.train</ms:resourceIdentifier>
+        <ms:resourceIdentifier resourceIdentifierSchemeName="URI">org.bibliome.alvisnlp.modules.tees.alvis-br-train</ms:resourceIdentifier>
       </ms:resourceIdentifiers>
       <ms:public>false</ms:public>
     </ms:identificationInfo>
@@ -119,7 +119,7 @@
       </ms:componentDistributionInfo>
     </ms:distributionInfos>
     <ms:inputContentResourceInfo>
-		<!-- the main input is empty -->
+		<!-- the main input takes a path to the corpus -->
       <ms:dataFormats>
         <ms:dataFormatInfo>
           <ms:mimeType>text/plain</ms:mimeType>
@@ -165,18 +165,9 @@
           <ms:multiValue>false</ms:multiValue>
         </ms:parameterInfo>
       </ms:parameterInfos>
-        <ms:parameterInfo>
-          <ms:parameterName>plan</ms:parameterName>
-          <ms:parameterLabel>an alvis plan</ms:parameterLabel>
-          <ms:parameterDescription> the alvis plan to train a tees (SVM) model </ms:parameterDescription>
-          <ms:parameterType>string</ms:parameterType>
-          <ms:optional>false</ms:optional>
-          <ms:multiValue>false</ms:multiValue>
-        </ms:parameterInfo>
-      </ms:parameterInfos>
     </ms:inputContentResourceInfo>
     <ms:outputResourceInfo>
-		<!-- output main is empty -->
+		<!-- output main takes a path the model produced -->
       <ms:dataFormats>
         <ms:dataFormatInfo>
           <ms:mimeType>text/plain</ms:mimeType>
