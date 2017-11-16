@@ -28,4 +28,4 @@ model /alvisnlp/data/models
 
 # OpenMinTeD metadata
 
-The Openminted metadata records are into the following [XML file](alvis-br-train.metadata.omtd)
+The Openminted metadata records are described into the following [XML file](alvis-br-train.metadata.omtd)
