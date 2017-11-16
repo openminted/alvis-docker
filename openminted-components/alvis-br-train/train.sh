@@ -21,36 +21,43 @@ else
     echo "Bad command"
 fi
 
+ID="train"
+if [ "$2" == "alvis-br-train" ]; then
+     ID = $2
+else
+     echo "Bad id"
+fi
+
 # parameter not used here
 INPUT="input"
-if [ "$2" == "input" ]; then
-    INPUT = $2
+if [ "$3" == "input" ]; then
+    INPUT = $3
 else
     echo "Bad command input"
 fi
 
 # parameter not used here
-INPUT="output" 
-if [ "$3" == "output" ]; then
-    OUTPUT = $3
+OUTPUT="output" 
+if [ "$4" == "output" ]; then
+    OUTPUT = $4
 else
     echo "Bad command output"
 fi
 
-TRAIN = $4
-TRAIN_PATH_VALUE = $5
+TRAIN = $5
+TRAIN_PATH_VALUE = $6
 
-DEV = $6
-DEV_PATH_VALUE = $7
+DEV = $7
+DEV_PATH_VALUE = $8
 
-TEST = $8
-TEST_PATH_VALUE = $9
+TEST = $9
+TEST_PATH_VALUE = $10
 
-MODEL = $10
-MODEL_PATH_VALUE = $11
+MODEL = $11
+MODEL_PATH_VALUE = $12
 
 
-$COMMAND  -param $TRAIN extDir $TRAIN_PATH_VALUE \
+$COMMAND  -param $TRAIN textDir $TRAIN_PATH_VALUE \
     	-param $DEV textDir $DEV_PATH_VALUE \
     	-param $TEST textDir $TEST_PATH_VALUE \
     	-param TEESTrain $MODEL $MODEL_PATH_VALUE \
