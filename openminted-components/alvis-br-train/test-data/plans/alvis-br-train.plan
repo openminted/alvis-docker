@@ -3,26 +3,18 @@
 
   <train class="BioNLPSTReader">
     <textBoundAsAnnotations/>
-    <textDir>/alvisnlp/data/corpus/train</textDir>
-    <a1Dir>/alvisnlp/data/corpus/train</a1Dir>
-    <a2Dir>/alvisnlp/data/corpus/train</a2Dir>
     <constantDocumentFeatures>set=train</constantDocumentFeatures>
   </train>
 
   <dev class="BioNLPSTReader">
     <textBoundAsAnnotations/>
-    <textDir>/alvisnlp/data/corpus/dev</textDir>
-    <a1Dir>/alvisnlp/data/corpus/dev</a1Dir>
-    <a2Dir>/alvisnlp/data/corpus/dev</a2Dir>
     <constantDocumentFeatures>set=dev</constantDocumentFeatures>
   </dev>
 
   <test class="BioNLPSTReader">
     <textBoundAsAnnotations/>
-    <textDir>/alvisnlp/data/corpus/test</textDir>
-    <a1Dir>/alvisnlp/data/corpus/test</a1Dir>
     <constantDocumentFeatures>set=test</constantDocumentFeatures>
-</test>
+  </test>
 
   
   <import>res://org.bibliome.alvisnlp.resources/segmentation.plan</import>
@@ -37,7 +29,7 @@
       <targetLayerName>NamedEntities</targetLayerName>
     </merge-ne-layers>
     
-    <train class="TEESTrain">
+    <tees-train class="TEESTrain">
 
       <teesHome>/opt/alvisnlp/psoft/TEES</teesHome>
 
@@ -52,9 +44,8 @@
       <relationRole1>Bacteria</relationRole1>
       <relationRole2>Location</relationRole2>
 
-      <model>data/models</model>
 
       <omitSteps>SPLIT-SENTENCES,NER</omitSteps>
-    </train>
+    </tees-train>
   </tees>
 </alvisnlp-plan>

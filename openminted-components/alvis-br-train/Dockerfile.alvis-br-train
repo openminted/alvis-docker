@@ -6,12 +6,13 @@ MAINTAINER Mouhamadou Ba <mouhamadou.ba@inra.fr>
 
 WORKDIR /alvisnlp
 
-COPY train.sh /alvisnlp/
+COPY alvis-br-train.sh /alvisnlp/
 ADD test-data/plans /alvisnlp/plans
+ADD test-data/models /alvisnlp/models
 
 
-ENTRYPOINT ["/alvisnlp/train.sh"]
+ENTRYPOINT ["/alvisnlp/alvis-br-train.sh"]
 
-RUN ["chmod", "+x", "/alvisnlp/train.sh"]
+RUN ["chmod", "+x", "/alvisnlp/alvis-br-train.sh"]
 
 #CMD ["alvisnlp"]
