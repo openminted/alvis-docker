@@ -44,17 +44,24 @@ else
     echo "Bad command output"
 fi
 
-TRAIN=$5
-TRAIN_PATH_VALUE=$6
+# set parameters
 
-DEV=$7
-DEV_PATH_VALUE=$8
+parNameString=$(echo $5 | cut -f1 -d=)
+TRAIN_PATH_VALUE=$(echo $5 | cut -f2 -d=)
+TRAIN=$(echo $parNameString | cut -f2 -d:)
 
-TEST=$9
-TEST_PATH_VALUE=$10
+parNameString=$(echo $6 | cut -f1 -d=)
+DEV_PATH_VALUE=$(echo $6 | cut -f2 -d=)
+DEV=$(echo $parNameString | cut -f2 -d:)
 
-MODEL=$11
-MODEL_PATH_VALUE=$12
+parNameString=$(echo $5 | cut -f1 -d=)
+TEST_PATH_VALUE=$(echo $5 | cut -f2 -d=)
+TEST=$(echo $parNameString | cut -f2 -d:)
+
+parNameString=$(echo $5 | cut -f1 -d=)
+MODEL_PATH_VALUE=$(echo $5 | cut -f2 -d=)
+MODEL=$(echo $parNameString | cut -f2 -d:)
+
 
 echo "-param $TRAIN textDir $TRAIN_PATH_VALUE -param $DEV textDir $DEV_PATH_VALUE  -param $TEST textDir $TEST_PATH_VALUE  -param TEESTrain $MODEL $MODEL_PATH_VALUE  /alvisnlp/plans/train.plan"
 
