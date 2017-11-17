@@ -54,12 +54,12 @@ parNameString=$(echo $6 | cut -f1 -d=)
 DEV_PATH_VALUE=$(echo $6 | cut -f2 -d=)
 DEV=$(echo $parNameString | cut -f2 -d:)
 
-parNameString=$(echo $5 | cut -f1 -d=)
-TEST_PATH_VALUE=$(echo $5 | cut -f2 -d=)
+parNameString=$(echo $7 | cut -f1 -d=)
+TEST_PATH_VALUE=$(echo $7 | cut -f2 -d=)
 TEST=$(echo $parNameString | cut -f2 -d:)
 
-parNameString=$(echo $5 | cut -f1 -d=)
-MODEL_PATH_VALUE=$(echo $5 | cut -f2 -d=)
+parNameString=$(echo $8 | cut -f1 -d=)
+MODEL_PATH_VALUE=$(echo $8 | cut -f2 -d=)
 MODEL=$(echo $parNameString | cut -f2 -d:)
 
 
