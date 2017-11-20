@@ -23,13 +23,13 @@
     <geniaDir>/opt/alvisnlp/psoft/geniatagger-3.0.2</geniaDir>
   </genia>
 
-  <tees>
+  <!--tees-->
     <merge-ne-layers class="MergeLayers">
       <sourceLayerNames>Bacteria,Habitat,Geographical</sourceLayerNames>
       <targetLayerName>NamedEntities</targetLayerName>
     </merge-ne-layers>
     
-    <tees-train class="TEESTrain">
+    <ttrain class="TEESTrain">
 
       <teesHome>/opt/alvisnlp/psoft/TEES</teesHome>
 
@@ -44,8 +44,7 @@
       <relationRole1>Bacteria</relationRole1>
       <relationRole2>Location</relationRole2>
 
-
       <omitSteps>SPLIT-SENTENCES,NER</omitSteps>
-    </tees-train>
-  </tees>
+    </ttrain>
+  <!--/tees-->
 </alvisnlp-plan>
