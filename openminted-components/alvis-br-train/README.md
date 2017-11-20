@@ -24,7 +24,7 @@ alvisnlp org.bibliome.alvisnlp.modules.tees.alvis-br-train \
 --param:train=/alvisnlp/data/corpus/train \
 --param:dev=/alvisnlp/data/corpus/dev \
 --param:test=/alvisnlp/data/corpus/test \
---param:model=/alvisnlp/data/models
+--param:modelTargetDir=/alvisnlp/data/models
 ```
 
 # OpenMinTeD metadata
