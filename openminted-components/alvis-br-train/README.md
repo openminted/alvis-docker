@@ -14,7 +14,7 @@ the test-data to run this component are into the `test-data` folder
 
 ## Run in command-line
 
-From the folder contained the README run the following command. You're supposed to have docker installed.
+From the folder contained the README, run the following command. You're supposed to have docker installed.
 ```
 docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
 bibliome/alvis-br-train \
@@ -30,8 +30,8 @@ alvisnlp org.bibliome.alvisnlp.modules.tees.alvis-br-train \
 # OpenMinTeD metadata
 
 The Openminted metadata records are described in the following XML files
-* [OMTD-SHARE records with V2.0.1](alvis-br-train.metadata.omtd.v2.0.1)
-* [OMTD-SHARE records with V3.0.0](alvis-br-train.metadata.omtd.v3.0.0]
+* [OMTD-SHARE records V2.0.1](alvis-br-train.metadata.omtd.v2.0.1)
+* [OMTD-SHARE records V3.0.0](alvis-br-train.metadata.omtd.v3.0.0)
 
 # re-build the docker image
 You can re-build the docker image from the dockerfile by running the following command from the folder contained the README
