@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:componentMetadataRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ms="http://www.meta-share.org/OMTD-SHARE_XMLSchema" xsi:schemaLocation="http://www.meta-share.org/OMTD-SHARE_XMLSchema http://www.meta-share.org/OMTD-SHARE_XMLSchema/v200/OMTD-SHARE-Component.xsd">
+	<ns1:componentInfo>
+		<ns1:resourceType>component</ns1:resourceType>
+		<ns1:identificationInfo>
+			<ns1:resourceNames>
+				<ns1:resourceName>alvis-br-train</ns1:resourceName>
+			</ns1:resourceNames>
+			<ns1:descriptions>
+				<ns1:description>      This component is used to train a SVM model for binary relation extration on text documents. It is based on TEES and it uses GeniaTagger.    </ns1:description>
+			</ns1:descriptions>
+			<ns1:resourceIdentifiers>
+				<ns1:resourceIdentifier resourceIdentifierSchemeName="omtd-docker">org.bibliome.alvisnlp.modules.tees.alvis-br-train</ns1:resourceIdentifier>
+			</ns1:resourceIdentifiers>
+			<ns1:public>false</ns1:public>
+		</ns1:identificationInfo>
+		<ns1:versionInfo>
+			<ns1:version>1.0.0</ns1:version>
+		</ns1:versionInfo>
+		<ns1:contactInfo>
+			<ns1:contactPoint>mandiayba@gmail.com</ns1:contactPoint>
+			<ns1:contactType>contactEmail</ns1:contactType>
+			<ns1:contactPersons>
+				<ns1:contactPerson>
+					<ns1:surname>Ba</ns1:surname>
+					<ns1:givenName>Mouhamadou</ns1:givenName>
+					<ns1:communicationInfo>
+						<ns1:emails>
+							<ns1:email>mandiayba@gmail.com</ns1:email>
+						</ns1:emails>
+					</ns1:communicationInfo>
+					<ns1:affiliations>
+						<ns1:affiliation>
+							<ns1:position>Researcher</ns1:position>
+							<ns1:affiliatedOrganization>
+								<ns1:organizationNames>
+									<ns1:organizationName lang="en">INRA Jouy-en-Josas</ns1:organizationName>
+								</ns1:organizationNames>
+								<ns1:departmentNames>
+									<ns1:departmentName lang="en">Bibliome/MaIAGE</ns1:departmentName>
+								</ns1:departmentNames>
+							</ns1:affiliatedOrganization>
+						</ns1:affiliation>
+					</ns1:affiliations>
+				</ns1:contactPerson>
+			</ns1:contactPersons>
+		</ns1:contactInfo>
+		<ns1:resourceDocumentations>
+			<ns1:resourceDocumentationInfo>
+				<ns1:documentationDescription>https://github.com/openminted/alvis-docker/tree/master/openminted-components/alvis-br-train</ns1:documentationDescription>
+				<ns1:documentationType>onlineHlepURL</ns1:documentationType>
+			</ns1:resourceDocumentationInfo>
+		</ns1:resourceDocumentations>
+		<ns1:application>false</ns1:application>
+		<ns1:functionInfo>
+			<ns1:function>http://omtd-share/trainerOfMachineLearningModels</ns1:function>
+		</ns1:functionInfo>
+		<ns1:distributionInfos>
+			<ns1:componentDistributionInfo>
+					<ns1:componentDistributionForm>dockerImage</ns1:componentDistributionForm>
+					<ns1:distributionLocation>bibliome/alvis-br-train</ns1:distributionLocation>
+					<ns1:command>alvisnlp</ns1:command>
+				</ns1:componentDistributionInfo>
+		</ns1:distributionInfos>
+				<ns1:rightsInfo>
+					<ns1:licenceInfos>
+						<ns1:licenceInfo>
+							<ns1:licence>Apache-2.0</ns1:licence>
+						</ns1:licenceInfo>
+					</ns1:licenceInfos>
+					<ns1:rightsStatement>openAccess</ns1:rightsStatement>
+				</ns1:rightsInfo>
+				<ns1:operatingSystems>
+					<ns1:operatingSystem>linux</ns1:operatingSystem>
+				</ns1:operatingSystems>
+			<ns1:parameterInfos>
+				<ns1:parameterInfo>
+					<ns1:parameterName>train</ns1:parameterName>
+					<ns1:parameterLabel>train directory</ns1:parameterLabel>
+					<ns1:parameterDescription>train directory that contains train set</ns1:parameterDescription>
+					<ns1:optional>false</ns1:optional>
+					<ns1:parameterType>string</ns1:parameterType>
+					<ns1:multiValue>false</ns1:multiValue>
+				</ns1:parameterInfo>
+				<ns1:parameterInfo>
+					<ns1:parameterName>dev</ns1:parameterName>
+					<ns1:parameterLabel>dev directory</ns1:parameterLabel>
+					<ns1:parameterDescription>dev directory that contains dev set</ns1:parameterDescription>
+					<ns1:optional>false</ns1:optional>
+					<ns1:parameterType>string</ns1:parameterType>
+					<ns1:multiValue>false</ns1:multiValue>
+				</ns1:parameterInfo>
+				<ns1:parameterInfo>
+					<ns1:parameterName>test</ns1:parameterName>
+					<ns1:parameterLabel>test directory</ns1:parameterLabel>
+					<ns1:parameterDescription>test directory that contains test set</ns1:parameterDescription>
+					<ns1:optional>false</ns1:optional>
+					<ns1:parameterType>string</ns1:parameterType>
+					<ns1:multiValue>false</ns1:multiValue>
+				</ns1:parameterInfo>
+				<ns1:parameterInfo>
+					<ns1:parameterName>modelTargetDir</ns1:parameterName>
+					<ns1:parameterLabel>model directory</ns1:parameterLabel>
+					<ns1:parameterDescription> the directory where the trained model is saved</ns1:parameterDescription>
+					<ns1:parameterType>string</ns1:parameterType>
+					<ns1:optional>false</ns1:optional>
+					<ns1:multiValue>false</ns1:multiValue>
+				</ns1:parameterInfo>
+			</ns1:parameterInfos>		
+		<ns1:inputContentResourceInfo>
+		<ns1:processingResourceType>corpus</ns1:processingResourceType>
+			<ns1:dataFormats>
+				<ns1:dataFormatInfo>
+					<ns1:mimeType>text/plain</ns1:mimeType>
+				</ns1:dataFormatInfo>
+			</ns1:dataFormats>
+			<ns1:languages>
+				<ns1:language>
+					<ns1:languageTag>EN</ns1:languageTag>
+				</ns1:language>
+			</ns1:languages>
+		</ns1:inputContentResourceInfo>
+		<ns1:outputResourceInfo>
+		<ns1:processingResourceType>languageDescription</ns1:processingResourceType>
+			<ns1:dataFormats>
+				<ns1:dataFormatInfo>
+					<ns1:mimeType>text/plain</ns1:mimeType>
+				</ns1:dataFormatInfo>
+			</ns1:dataFormats>
+			<ns1:languages>
+				<ns1:language>
+					<ns1:languageTag>EN</ns1:languageTag>
+				</ns1:language>
+			</ns1:languages>
+		</ns1:outputResourceInfo>
+		<ns1:componentCreationInfo>
+			<ns1:framework>AlvisNLP</ns1:framework>
+			<ns1:implementationLanguage>Java</ns1:implementationLanguage>
+		</ns1:componentCreationInfo>
+	</ns1:componentInfo>
+</ns1:componentMetadataRecord>
+
