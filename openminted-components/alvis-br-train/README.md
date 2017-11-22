@@ -29,7 +29,9 @@ alvisnlp org.bibliome.alvisnlp.modules.tees.alvis-br-train \
 
 # OpenMinTeD metadata
 
-The Openminted metadata records are described into the following [XML file](alvis-br-train.metadata.omtd)
+The Openminted metadata records are described in the following XML files
+* [OMTD-SHARE records with V2.0.1](alvis-br-train.metadata.omtd.v2.0.1)
+* [OMTD-SHARE records with V3.0.0](alvis-br-train.metadata.omtd.v3.0.0]
 
 # re-build the docker image
 You can re-build the docker image from the dockerfile by running the following command from the folder contained the README
