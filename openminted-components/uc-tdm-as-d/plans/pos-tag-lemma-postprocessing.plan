@@ -1,0 +1,40 @@
+ <alvisnlp-plan id="pos-tag-lemma-postprocessing">
+
+ <!-- Correct some POS tags and lemmas-->
+  <module id="POS-tag-correction-1" class="Action">
+    <target>documents.sections.layer:words[(@pos == "VVG" or @pos == "VVN" or @pos == "VVD") and before:words{-1}.@form == "-"]</target>
+    <action>set:feat:lemma(str:lower(@form))</action>
+    <setFeatures/>
+  </module>
+
+  <module id="POS-tag-correction" class="Action">
+    <target>documents.sections.layer:words[(@pos == "VVG" or @pos == "VVN" or @pos == "VVD") and before:words{-1}.@form == "-"]</target>
+    <action>set:feat:pos("JJ")</action>
+    <setFeatures/>
+  </module>
+
+  <module id="lemma-correction" class="Action">
+    <target>documents.sections.layer:words[(@pos == "NN" or @pos == "JJ") and @form =~ "ing$" ]</target>
+    <action>set:feat:lemma(str:lower(@form))</action>
+    <setFeatures/>
+  </module>
+
+  <module id="lemma-correction-2" class="Action">
+    <target>documents.sections.layer:words[@pos == "JJ" and @form =~ "ed$" ]</target>
+    <action>set:feat:lemma(str:lower(@form))</action>
+    <setFeatures/>
+  </module>
+
+  <module id="POS-tag-correction-2" class="Action">
+    <target>documents.sections.layer:words[@pos == "VV" and before:words{-1}.@pos == "JJ"]</target>
+    <action>set:feat:pos("NN")</action>
+    <setFeatures/>
+  </module>
+
+  <module id="POS-tag-correction-3" class="Action">
+    <target>documents.sections.layer:words[@pos == "VVZ" and before:words{-1}.@pos == "JJ"]</target>
+    <action>set:feat:pos("NNS")</action>
+    <setFeatures/>
+  </module>
+
+</alvisnlp-plan>

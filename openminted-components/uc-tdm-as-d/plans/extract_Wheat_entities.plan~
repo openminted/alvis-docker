@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<alvisnlp-plan id="test-as-d">
+
+<!-- Stopwords -->
+    <module id="stopword-list" class="SimpleProjector2">
+      <dictFile>resources/stopwords_EN.txt</dictFile>
+      <targetLayerName>stopwords</targetLayerName>
+      <valueFeatures>string</valueFeatures>
+      <caseInsensitive/>
+    </module>
+
+    <module id="blacklist" class="SimpleProjector2">
+      <dictFile>resources/blacklist_accessions.txt</dictFile>
+      <targetLayerName>blacklist</targetLayerName>
+      <valueFeatures>string</valueFeatures>
+      <caseInsensitive/>
+    </module>
+
+    <module id="stanford" class="StanfordNER">
+      <classifierFile>/opt/alvisnlp/psoft/stanford-ner/classifiers/english.all.3class.distsim.crf.ser.gz</classifierFile>
+      <labelFeatureName>stanford-label</labelFeatureName>
+      <targetLayerName>stanford</targetLayerName>
+      <searchInContents/>
+    </module>
+
+<!-- Tag Genes : Lexicon + Regexp -->
+  <genes>
+    <!-- TODO : use another list ?? -->
+    <module id="dictionary" class="SimpleProjector2">
+      <dictFile>resources/genes.txt</dictFile>
+      <targetLayerName>genes</targetLayerName>
+      <valueFeatures>,canonical-form</valueFeatures>
+      <constantAnnotationFeatures>type=ne,ne-type=gene</constantAnnotationFeatures>
+    </module>
+
+    <module id="geneRegExp" class="RegExp">
+      <pattern>(\b(?:(B|D|m|R|V|W|H|Aadh|Aco|Acph|Adh|Adk|Alt|Amp|An|Ar|Ba|Bdv|Bg|Bls|Bo|Br|Bs|Bt|Cat|Cdu|Ch|Chr|Cmc|Cre|Cs|Dfq|Dip|Dn|Ep|Eps|Est|Fe|Fhs|Fr|Gai|Gb|Gc|Gli|Glo|Glu|Got|Gpt|Gw|Hg|Hk|Hl|Ibf|Igc|Iha|Isa|Iw|Kb|Kna|Kr|Lec|lg|Lpx|Lr|Mal|Mdh|ms|Ndh|Ne|Ner|Nor|Pan|Pc|Pch|Pde|Per|Pgd|Pgm|Ph|Pm|Pm|Pp|Ppd|Pur|Ra|Rf|Rfd|Rg|Rht|Rkn|Rlnn|Rmg|Sbe|Sd|Sgp|Si|Skdh|Sm|Snb|Sod|Sr|Stb|Su|Tg|Ti|Tin|Tpi|Tri|Tsn|Us|Ut|Vrn|Wsm|Wsp|Wx|Yr))-?([A-Z][a-z]*)?[0-9]{1,5}\b|\b(Aadh|Aco|Acph|Adh|Adk|Alt|Amp|An|Ar|Ba|Bdv|Bg|Bls|Bo|Br|Bs|Bt|Cat|Cdu|Ch|Chr|Cmc|Cre|Cs|Dfq|Dip|Dn|Ep|Eps|Est|Fe|Fhs|Fr|Gai|Gb|Gc|Gli|Glo|Glu|Got|Gpt|Gw|Hg|Hk|Hl|Ibf|Igc|Iha|Isa|Iw|Kb|Kna|Kr|Lec|lg|Lpx|Lr|Mal|Mdh|ms|Ndh|Ne|Ner|Nor|Pan|Pc|Pch|Pde|Per|Pgd|Pgm|Ph|Pm|Pm|Pp|Ppd|Pur|Ra|Rf|Rfd|Rg|Rht|Rkn|Rlnn|Rmg|Sbe|Sd|Sgp|Si|Skdh|Sm|Snb|Sod|Sr|Stb|Su|Tg|Ti|Tin|Tpi|Tri|Tsn|Us|Ut|Vrn|Wsm|Wsp|Wx|Yr)\b)</pattern>
+      <targetLayerName>genes</targetLayerName>
+      <constantAnnotationFeatures>type=ne,ne-type=gene</constantAnnotationFeatures>
+    </module>
+
+    <module id="genes-overlaps" class="RemoveOverlaps">
+      <layerName>genes</layerName>
+    </module>
+
+    <module id="remove-overlap-with-stopwords" class="Action">
+      <target>documents.sections.layer:genes[span:stopwords]</target>
+      <action>remove:genes</action>
+      <removeFromLayer/>
+    </module>
+  </genes>
+
+  <!-- Tag Marker Types : lexicon -->
+  <sequence id="marker-types">
+
+    <module id="dictionary" class="SimpleProjector2">
+      <dictFile>resources/markertypes.txt</dictFile>
+      <targetLayerName>marker-types</targetLayerName>
+      <valueFeatures>,canonical-form</valueFeatures>
+      <constantAnnotationFeatures>type=ne,ne-type=marker-type</constantAnnotationFeatures>
+    </module>
+
+  </sequence>
+
+  <!-- Tag Markers : lexicon + regexp -->
+  <markers>
+
+    <module id="dictionary" class="SimpleProjector2">
+      <!-- <dictFile>resources/Marker_Data_OpenMinTed.csv</dictFile> -->
+      <dictFile>resources/marker_wheat_with_synonyms.csv</dictFile>
+      <targetLayerName>markers</targetLayerName>
+      <keyIndex>1,2</keyIndex>
+      <valueFeatures>id,canonical-form,synonym</valueFeatures>
+      <constantAnnotationFeatures>type=ne,ne-type=marker</constantAnnotationFeatures>
+    </module>
+
+    <marker-regexps>
+      <module id="barley-re" class="RegExp">
+	<pattern>(\b(?i:(abc|abg|awb|bcd|bg|bua|cmwg|crb|gbm|gbr|gbs|labc|mwg|pbi|psb|ris|rwth|uhb|umb|zen))[0-9]{1,5}\b)</pattern>
+	<targetLayerName>markers</targetLayerName>
+	<constantAnnotationFeatures>type=ne,ne-type=marker</constantAnnotationFeatures>
+      </module>
+
+      <module id="other" class="RegExp">
+	<pattern>(\b(?i:(abl|csu|isu|uaz|umc|pse|psf|psm|rmm|uom|cdo|cro|jao|ncs|og|rgc|rgg|rgr|rgs|rgy|rz|ttr|scc|scg|scm|scs|tts|txp|txs|sww))[0-9]{1,5}\b)</pattern>
+	<targetLayerName>markers</targetLayerName>
+	<constantAnnotationFeatures>type=ne,ne-type=marker</constantAnnotationFeatures>
+      </module>
+
+      <module id="unknown" class="RegExp">
+	<pattern>(\b(?i:(ak|awc|bfc|bgl|bnl|bzh|ccsu|cdc|cfa|cfb|cfd|cfe|cfr|cft|cnl|cr|crc|cs|csa|csb|csc|csd|cshv|csih|csiha|csl|cssr|eco|fcc|fcg|fcp|fcu|fdp|ggo|hbd|hbe|hbg|hhu|iag|ipk|kuj|kvl|mgb|msu|mum?|ndsu|npi|ocs|pgh|pkg|psp|pur|rsq|scu|sfr|sfrp|spa|stm|sun|sut|tav|tjc|ttp|ttu|ubp|ucb|ucd|ucg|ucw|umn|unl|unlp|upw|ust|uta|utv|wak|waxc|wgp|whe|wia|wpg|wsu|wye|ycu|zens))[0-9]{1,5}\b)</pattern>
+	<targetLayerName>markers</targetLayerName>
+	<constantAnnotationFeatures>type=ne,ne-type=marker</constantAnnotationFeatures>
+      </module>
+
+      <module id="wheat" class="RegExp">
+	<pattern>(\bX?(?i:(agl|aww|barc|cfp|cmw|cob|crw|cwem|cwm|DuPw|fba|fbb|fwm|gbx|gdm|gdw|glk|gpw|gwm|isc|jaw|jfc|jfg|jfr|jfs|ksu|mst|mta|mtd|nau|ncw|psp|psr|rwg|rwgs|tam|ttw|ubw|uhw|vag|wg|wgc|whs|wmc|wua))[0-9]{1,5}\b)</pattern>
+	<targetLayerName>markers</targetLayerName>
+	<constantAnnotationFeatures>type=ne,ne-type=marker</constantAnnotationFeatures>
+      </module>
+    </marker-regexps>
+
+    <module id="overlaps" class="RemoveOverlaps">
+      <layerName>markers</layerName>
+    </module>
+
+    <module id="remove-overlap-with-stopwords" class="Action">
+      <target>documents.sections.layer:markers[span:stopwords]</target>
+      <action>remove:markers</action>
+      <removeFromLayer/>
+    </module>
+
+  </markers>
+
+ <!-- Wheat accessions -->
+<module id="project-wheat-accessions" class="SimpleProjector2">
+  <dictFile>resources/wheat_accessions_and_synonyms_and_lot_and_synonyms.csv</dictFile>
+  <targetLayerName>accessions</targetLayerName>
+  <keyIndex>1</keyIndex>
+  <caseInsensitive/>
+  <valueFeatures>,accession-name,accession-number,synonym1,synonym2</valueFeatures>
+  <constantAnnotationFeatures>type=ne,ne-type=accession</constantAnnotationFeatures>
+</module>
+
+    <module id="acc-overlaps" class="RemoveOverlaps">
+      <layerName>accessions</layerName>
+    </module>
+
+    <module id="remove-acc-overlap-with-stopwords" class="Action">
+      <target>documents.sections.layer:accessions[span:stopwords or @form =~ "^[\\d\\s\\-]+$"]</target>
+      <action>remove:accessions</action>
+      <removeFromLayer/>
+    </module>
+    
+<!-- Tag organisms : lexicon from URGI + NCBI -->
+
+<organisms>
+    <!-- URGI lexicon -->
+    <module id="dict" class="SimpleProjector2">
+      <targetLayerName>taxa</targetLayerName>
+      <!-- <dictFile>resources/Taxon_Data_Wheat.txt</dictFile> -->
+      <dictFile>resources/taxon_wheat_with_synonyms_tab.csv</dictFile>
+      <matchStartCaseInsensitive/>
+      <keyIndex>1,2</keyIndex>
+      <valueFeatures>taxid,canonical-name,syno,synonyms</valueFeatures>
+      <constantAnnotationFeatures>source=URGI,ne-type=taxon</constantAnnotationFeatures>
+    </module>
+
+    <module id="overlaps" class="RemoveOverlaps">
+      <layerName>taxa</layerName>
+    </module>
+
+    <!-- NCBI lexicon -->
+    <module id="dict2" class="SimpleProjector2">
+      <targetLayerName>NCBITaxa</targetLayerName>
+      <dictFile>resources/taxa+id_full.txt</dictFile>
+      <matchStartCaseInsensitive/>
+      <valueFeatures>,ncbi-taxid,ncbi-canonical-name,ncbi-path,ncbi-pos,ncbi-rank</valueFeatures>
+      <constantAnnotationFeatures>source=NCBI</constantAnnotationFeatures>
+    </module>
+
+    <module id="overlaps-NCBI-taxa" class="RemoveOverlaps">
+      <layerName>NCBITaxa</layerName>
+    </module>
+
+    <module id="remove-overlapping" class="Action">
+      <target>documents.sections.layer:NCBITaxa[overlapping:taxa]</target>
+      <action>remove:NCBITaxa</action>
+      <removeFromLayer/>
+    </module>
+
+    <mapping class="FileMapper2">
+      <target>documents.sections.layer:NCBITaxa</target>
+      <form>@ncbi-canonical-name</form>
+  <!--    <mappingFile>resources/Taxon_Data_Wheat.txt</mappingFile>-->
+      <mappingFile>resources/taxon_wheat_with_synonyms_tab.csv</mappingFile>
+      <targetFeatures>taxid,canonical-name,syno,synonyms</targetFeatures>
+      <keyColumn>1</keyColumn>
+    </mapping>
+
+    <module id="add-mapped-NCBI-taxa" class="Action">
+      <target>documents.sections.layer:NCBITaxa[@canonical-name != ""]</target>
+      <action>add:taxa|set:feat:ne-type("taxon")</action>
+      <addToLayer/>
+      <setFeatures/>
+    </module>
+
+</organisms>    
+
+<!-- Segmentation + pos tagging -->
+
+  <segmentation>
+
+    <!-- Tag URLs -->
+    <module id="URL" class="RegExp">
+      <pattern>(http:\/\/[^\s,\)]+)</pattern>
+	<targetLayerName>urls</targetLayerName>
+	<constantAnnotationFeatures>type=ne,ne-type=url</constantAnnotationFeatures>
+    </module>
+
+    <module id="delete-overlap-with-urls" class="Action">
+      <target>documents.sections.(layer:taxa[overlapping:urls]|layer:genes[overlapping:urls]|layer:markers[overlapping:urls]|layer:markers-type[overlapping:urls])</target>
+      <action>delete</action>
+      <deleteElements/>  
+     </module>
+
+     <!-- Merge Annotations -->
+    <module id="rigid-entities" class="Action">
+      <target>documents.sections.(layer:taxa|layer:genes|layer:markers|layer:markers-type|layer:urls)</target>
+      <action>add:rigid-entities</action>
+      <addToLayer/>
+    </module>
+
+    <!-- Segmentation -->
+    <import href="res://org.bibliome.alvisnlp.resources/segmentation.plan"/>
+
+  </segmentation>
+
+  <genia class="GeniaTagger">
+    <geniaDir>/opt/alvisnlp/psoft/geniatagger-3.0.2</geniaDir>
+    <pos>pos</pos>
+    <lemma>lemma</lemma>
+    <chunk>chunk</chunk>
+    <entity>entity</entity>
+  </genia>
+
+  <!-- Adapt Genia's POS tags to match Treetagger's -->
+  <module id="adapt-have-auxiliary" class="Action">
+    <target>documents.sections.layer:words[@pos =~ "^VB" and @lemma == "have"]</target>
+    <action>set:feat:pos(str:seds(@pos,"^VB","VH"))</action>
+    <setFeatures/>
+  </module>
+
+  <module id="adapt-regular-verbs" class="Action">
+    <target>documents.sections.layer:words[@pos =~ "^VB" and @lemma != "be"]</target>
+    <action>set:feat:pos(str:seds(@pos,"^VB","VV"))</action>
+    <setFeatures/>
+  </module>
+
+  <module id="adapt-proper-nouns" class="Action">
+    <target>documents.sections.layer:words[@pos =~ "^NNP"]</target>
+    <action>set:feat:pos(str:seds(@pos,"^NNP","NP"))</action>
+    <setFeatures/>
+  </module>
+
+  <module id="adapt-pronouns" class="Action">
+    <target>documents.sections.layer:words[@pos =~ "^PRP"]</target>
+    <action>set:feat:pos(str:seds(@pos,"^PRP","PP"))</action>
+    <setFeatures/>
+  </module>
+
+  <module id="add-end-of-sentences" class="Action">
+    <target>documents.sections.layer:words[@pos == "." and end == outside:sentences.end]</target>
+    <action>set:feat:pos("SENT")</action>
+    <setFeatures/>
+  </module>
+
+
+  <!-- Blacklist-accession -->
+   <module id="blacklist-projection" class="SimpleProjector2">
+      <dictFile>resources/blacklist_accessions.txt</dictFile>
+      <targetLayerName>blacklist</targetLayerName>
+      <keyIndex>0</keyIndex>
+      <valueFeatures>string</valueFeatures>
+      <subject layer="words" feature="lemma"/>
+      <caseInsensitive/>
+    </module>
+
+<!-- Patterns for recognizing additional markers -->
+ <extraMarkers>
+    <module id="extraMarkers1" class="PatternMatcher">
+      <overlappingBehaviour>remove</overlappingBehaviour>
+      <layerName>words</layerName>
+      <pattern>
+	[@'ne-type'=="markertype" ]
+	[@form=~"^markers.*$" or @form=~"primers.*" or @form=~"alleles.*" or @form=="locus" or @form=="loci" or @form=~"probes.*"] 
+	[@form=~"pairs.*"]?
+	[@form==","]?
+	(mark:
+	[@form=~"^[a-zA-Z]+[0-9]{1,3}"]
+	)
+      </pattern>
+      <actions>
+	<createAnnotation group="mark" layer="markersALL,extramarkers" features='type="ne", ne-type="marker",subtype="extraMarkers1"'/>
+      </actions>
+    </module>
+
+    <module id="extraMarkers2" class="PatternMatcher">
+      <overlappingBehaviour>remove</overlappingBehaviour>
+      <layerName>words</layerName>
+      <pattern>
+                [@'ne-type'=="markertype" ]
+                [@form=~"^markers.*$" or @form=~"primers.*" or @form=~"alleles.*" or @form=="locus" or @form=="loci" or @form=~"probes.*"] 
+                [@form=~"pairs.*"]?
+                [@form==","]?
+                [@'ne-type'=="marker"]
+                (
+                [@form=="," or @form=="and"]?
+                (mark:
+                [@form=~"^[a-zA-Z]+[0-9]{1,3}"]
+                )
+                )*
+      </pattern>
+      <actions>
+	<createAnnotation group="mark" layer="markersALL,extramarkers" features='type="ne", ne-type="marker",subtype="extraMarkers2"'/>
+      </actions>
+    </module>
+
+    <module id="add-extra-markers" class="Action">
+      <target>documents.sections.layer:extramarkers</target>
+      <action>add:markers</action>
+      <addToLayer/>
+    </module>
+
+  </extraMarkers>
+
+
+<!-- Phenotypes -->
+
+    <!-- Modify some pos tags and lemma in order to maximize term extraction with YaTEA -->
+    <import file="plans/pos-tag-lemma-postprocessing.plan"/>
+
+  <!-- Remove final 's' and lower case words to take care of potential lemmatization errors -->
+  <module id="remove-plural" class="Action">
+    <target>documents.sections.layer:words[str:len(@form) > 1]</target>
+    <action>set:feat:lemma2(str:seds(str:lower(@lemma),"s$",""))</action>
+    <setFeatures/>
+  </module>
+  <module id="remove-plural-2" class="Action">
+    <target>documents.sections.layer:words[@lemma2 == ""]</target>
+    <action>set:feat:lemma2(str:lower(@lemma))</action>
+    <setFeatures/>
+  </module>
+  
+  <module id="yatea" class="YateaExtractor">
+    <workingDir>&outdir;/yatea</workingDir>
+    <configDir>/as-d/plans/config/</configDir>
+    <localeDir>/usr/share/YaTeA/locale</localeDir>
+    <yateaExecutable>/usr/local/bin/yatea</yateaExecutable>
+    <rcFile>plans/yatea.rc</rcFile>
+  </module>
+
+     <!-- Run ToMap -->
+    <import file="plans/tomap-wheat-phenotypes-OMTD.plan"/>
+
+    <module id="add-type-feature" class="Action">
+    <target>documents.sections.layer:phenotypes</target>
+    <action>set:feat:ne-type("Phenotype")</action>
+    <setFeatures/>
+    </module>
+
+    <module id="remove-acc-overlap-persons" class="Action">
+      <target>documents.sections.layer:accessions[(overlapping:stanford and not @context-both =~ "(cultivar|variety|varieties|cv\\.| x )") or span:blacklist or span:genes or inside:genes or outside:genes or span:urls or inside:urls or outside:urls]</target>
+      <action>remove:accessions</action>
+      <removeFromLayer/>
+    </module> 
+
+</alvisnlp-plan>
