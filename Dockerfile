@@ -1,8 +1,8 @@
 #FROM maven:3.2-jdk-7-onbuild
 FROM ubuntu:14.04 
 MAINTAINER Mouhamadou Ba <mouhamadou.ba@inra.fr>
-
-
+#
+#
 # general tools
 RUN apt-get -yqq update && apt-get -yqq install \
     maven \
@@ -27,20 +27,21 @@ RUN apt-get -yqq update && apt-get -yqq install \
     apt-get install -y oracle-java8-installer && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists*
-
+#
 ENV java_version oracle-java8
-
-RUN git clone https://github.com/Bibliome/alvisnlp.git /alvisnlp
-
-WORKDIR /alvisnlp
-
-# compiling and installing alvisnlp
-RUN mvn clean install && ./install.sh . && rm -rf ~/.m2
-
-# create the external soft dir
-RUN mkdir psoft
-ADD tees.expect /alvisnlp/psoft/
-
+#
+## pulling and installing alvisnlp
+RUN git clone https://github.com/Bibliome/alvisnlp.git /alvisnlp && \
+    cd /alvisnlp && \
+    # compiling and installing alvisnlp
+    mvn clean install && \
+    # install alvisnlp
+    ./install.sh . && \
+    # remove maven dependencies
+    rm -rf ~/.m2 && \
+    # create the external soft dir
+    mkdir psoft
+#
 # external softs workdir
 WORKDIR /alvisnlp/psoft
 RUN cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default-param-values.xml && \
@@ -51,9 +52,6 @@ RUN cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default
     #cd biolg-1.1.12/pcre-5.0 && ./configure && cd ../.. && \
     #cd biolg-1.1.12/expat-2.0.0 && ./configure && cd ../.. && \
     #cd biolg-1.1.12 && make && cd ../ && \
-    #xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.biolg.BioLG]/parserPath" -v /alvisnlp/psoft/biolg-1.1.12 /alvisnlp/share/default-param-values.xml && \
-#xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.biolg.BioLG]/lp2lpExecutable" -v /alvisnlp/psoft/biolg-1.1.12 /alvisnlp/share/default-param-values.xml && \
-#xmlstarlet ed -u "/default-param-values/module[@class=org.bibliome.alvisnlp.modules.biolg.BioLG]/lp2lpConf" -v /alvisnlp/psoft/biolg-1.1.12 /alvisnlp/share/default-param-values.xml && \
     ## intalling ccgparser
     wget http://www.cl.cam.ac.uk/%7Esc609/resources/candc-downloads/candc-linux-1.00.tgz && \
     tar xvf candc-linux-1.00.tgz && \
@@ -81,8 +79,11 @@ RUN cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default
     tar xvf master && \
     rm -rf master && \
     mv *-TEES-*  tees && \
-    mv tees.expect tees/ && \
-    cd tees && expect tees.expect && \
+    cd tees/  && \
+    # creating the expect file
+    #wget https://github.com/openminted/alvis-docker/blob/master/tees.expect && \
+    #echo -e 'spawn ./configure.py \nexpect ">" { send "\\n" } \nexpect ">" { send "3\\n" } \nexpect ">" { send "c\\n" } \nexpect ">" { send "c\\n" } \nexpect ">" { send "i\\n" }\nexpect ">" { send "3\\n" } \nexpect ">" { send "i\\n" } \ninteract' > tees.expect && \
+    #expect tees.expect && \
     export TEES_SETTINGS=$pwd/tees_local_settings.py && \
     cd /alvisnlp/psoft && \
     ## installing treeTagger
@@ -90,6 +91,12 @@ RUN cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default
     mkdir treetagger/ && tar xvf tree-tagger-linux-3.2.1.tar.gz -C treetagger && \
     rm tree-tagger-linux-3.2.1.tar.gz && \
     cd treetagger/ && cd /alvisnlp/psoft  && \
+    mkdir treetagger/lib && \ 
+    cd treetagger/lib && \
+    wget http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/english-par-linux-3.2-utf8.bin.gz && \
+    gunzip -N english-par-linux-3.2-utf8.bin.gz && \
+    mv english-utf8.par english.par && \
+    cd /alvisnlp/psoft && \
     ## installing wapiti
     wget https://wapiti.limsi.fr/wapiti-1.5.0.tar.gz && \
     tar xvf wapiti-1.5.0.tar.gz && \
@@ -134,11 +141,11 @@ xmlstarlet ed --inplace -u "/default-param-values/module[@class='org.bibliome.al
     xmlstarlet ed -d "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.yatea.YateaExtractor']/configDir" | \
     xmlstarlet ed -d "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.yatea.YateaExtractor']/localeDir" | \
     tee /alvisnlp/share/default-param-values.xml
-
+#
 WORKDIR /alvisnlp
-
+#
 ENV PATH /alvisnlp/bin:$PATH
-
+#
 # ENTRYPOINT ["/alvisnlp/bin/alvisnlp"]
-
+#
 CMD ["alvisnlp"]
