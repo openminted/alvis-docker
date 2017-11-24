@@ -60,8 +60,7 @@ The train and classify workflows (called plans into alvis) are based on [GeniaTa
 
 ## The docker image creation
 
-* automatically clone and install alvisnlp with Dockerfile
-* then, install the following external programs in an interactive way 
+* automatically clone and install alvisnlp with Dockerfile by addding the following external programs: 
 
  
   * [BioLG](http://mars.cs.utu.fi/biolg/) 1.1.12
