@@ -1,8 +1,8 @@
 #FROM maven:3.2-jdk-7-onbuild
 FROM ubuntu:14.04 
 MAINTAINER Mouhamadou Ba <mouhamadou.ba@inra.fr>
-
-
+#
+#
 # general tools
 RUN apt-get -yqq update && apt-get -yqq install \
     maven \
@@ -27,20 +27,20 @@ RUN apt-get -yqq update && apt-get -yqq install \
     apt-get install -y oracle-java8-installer && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists*
-
+#
 ENV java_version oracle-java8
-
+#
 RUN git clone https://github.com/Bibliome/alvisnlp.git /alvisnlp
-
+#
 WORKDIR /alvisnlp
-
+#
 # compiling and installing alvisnlp
 RUN mvn clean install && ./install.sh . && rm -rf ~/.m2
-
+#
 # create the external soft dir
 RUN mkdir psoft
 ADD tees.expect /alvisnlp/psoft/
-
+#
 # external softs workdir
 WORKDIR /alvisnlp/psoft
 RUN cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default-param-values.xml && \
@@ -134,11 +134,11 @@ xmlstarlet ed --inplace -u "/default-param-values/module[@class='org.bibliome.al
     xmlstarlet ed -d "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.yatea.YateaExtractor']/configDir" | \
     xmlstarlet ed -d "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.yatea.YateaExtractor']/localeDir" | \
     tee /alvisnlp/share/default-param-values.xml
-
+#
 WORKDIR /alvisnlp
-
+#
 ENV PATH /alvisnlp/bin:$PATH
-
+#
 # ENTRYPOINT ["/alvisnlp/bin/alvisnlp"]
-
+#
 CMD ["alvisnlp"]
