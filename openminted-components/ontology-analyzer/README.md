@@ -14,7 +14,7 @@ the test-data to run this component are into the `test-data` folder
 ## Run in command-line
 
 From the folder contained the README, run the following command. You're supposed to have docker installed.
-> Note that, OpenMinTeD will generate this command from the metadata records and also from the input/output/parameter values provided by the user when he runs the component. 
+> Note that, OpenMinTeD will generate this command from the metadata records and also from the input/output/parameter values provided by the user when (s)he runs the component. 
 
 ```
 docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
