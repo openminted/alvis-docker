@@ -26,7 +26,7 @@ alvisnlp org.bibliome.alvisnlp.modules.phenotype-ontology-analyzer \
 # OpenMinTeD metadata
 
 The Openminted metadata records are described in the following XML files
-* [OMTD-SHARE records V3.0.0](phenotype-ontology-analyzer.metadata.omtd.v3.0.0)
+* [OMTD-SHARE records V3.0.0](ontology-analyzer.metadata.omtd.v3.0.0)
 
 # re-build the docker image
 You can re-build the docker image from the dockerfile by running the following command from the folder contained the README
