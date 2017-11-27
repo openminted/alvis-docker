@@ -3,7 +3,7 @@
 This component is used to train a SVM model for binary relation extration on text documents. It is based on TEES and it uses GeniaTagger. It is defined using alvisnlp plans (see the plans into the [test-data/plans folder](test-data/plans)).
 
 ## Test data
-the test-data to run this component are into the `test-data` folder
+The test data to run this component are into the `test-data` folder
  
 * corpus is composed of
 	* train set
