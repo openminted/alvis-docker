@@ -2,7 +2,7 @@
 
 This component is used to train a SVM model for binary relation extration on text documents. It is based on TEES and it uses GeniaTagger. It is defined using alvisnlp plans (see the plans into the [test-data/plans folder](test-data/plans)).
 
-## test-data
+## Test data
 the test-data to run this component are into the `test-data` folder
  
 * corpus is composed of
@@ -12,7 +12,7 @@ the test-data to run this component are into the `test-data` folder
 
 * model is the folder where the produced TEES SVM  model is stored
 
-## Run in command-line
+## Run from the command line
 
 From the folder contained the README, run the following command. You're supposed to have docker installed.
 > Note that, OpenMinTeD will generate this command from the metadata records and also from the input/output/parameter values provided by the user when (s)he runs the component. 
