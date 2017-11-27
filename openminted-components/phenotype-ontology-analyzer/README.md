@@ -17,7 +17,7 @@ From the folder contained the README, run the following command. You're supposed
 
 ```
 docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
-bibliome/phenotype-ontology-analyzer \
+bibliome/ontology-analyzer \
 alvisnlp org.bibliome.alvisnlp.modules.phenotype-ontology-analyzer \
 --input /alvisnlp/data/ontology/OntoBiotope-Phenotype-v2.obo \
 --output /alvisnlp/data/result/OntoBiotope-Phenotype.tomap
