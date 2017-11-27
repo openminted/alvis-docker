@@ -31,5 +31,5 @@ The Openminted metadata records are described in the following XML files
 # re-build the docker image
 You can re-build the docker image from the dockerfile by running the following command from the folder contained the README
 ```
-docker build . -t bibliome/phenotype-ontology-analyzer -f Dockerfile.phenotype-ontology-analyzer
+docker build . -t bibliome/ontology-analyzer -f Dockerfile.ontology-analyzer
 ```
