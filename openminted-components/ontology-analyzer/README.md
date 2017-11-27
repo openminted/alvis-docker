@@ -4,9 +4,8 @@ This component processes an ontology (in OBO format)
 in order to use with the ToMap component. It analyzes the structure of
 the ontology terms and outputs the result in XML format. It is defined using alvisnlp plans (see the plans into the [test-data/plans folder](test-data/plans)).
 
-## test-data
-the test-data to run this component are into the `test-data` folder
- 
+## Test data
+
 * ontology contains an example of ontology to process
 
 * an example of output is stored into the result folder
