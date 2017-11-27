@@ -9,7 +9,7 @@ the test-data to run this component are into the `test-data` folder
  
 * ontology contains an example of ontology to process
 
-* the output is into the result folder
+* an example of output is stored into the result folder
 
 ## Run in command-line
 
