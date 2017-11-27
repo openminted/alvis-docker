@@ -1,0 +1,858 @@
+format-version: 1.2
+date: 05:07:2016 11:00
+saved-by: claire
+auto-generated-by: OBO-Edit 2.3.1
+synonymtypedef: ACROSYNEXACTCAT "Acronym (exact)" EXACT
+synonymtypedef: ACROSYNRELATEDCAT "Acronym (related)" RELATED
+synonymtypedef: TRANSSYNEXACTCAT "Translation (exact)" EXACT
+synonymtypedef: TRANSSYNRELATEDCAT "Translation (related)" RELATED
+synonymtypedef: TYPOSYNEXACTCAT "Typographic variant (exact)" EXACT
+synonymtypedef: TYPOSYNRELATEDCAT "Typographic variant (related)" RELATED
+default-namespace: default_namespace
+
+[Term]
+id: MoPh:00000418
+name: root nodulating 
+is_a: MoPh:00000489 ! endophyte 
+is_a: MoPh:00000527 ! plant symbiont 
+
+[Term]
+id: MoPh:00000437
+name: psychophile 
+namespace: MOPheno
+is_a: MoPh:00000457 ! phenotype wrt habitat temperature
+
+[Term]
+id: MoPh:00000438
+name: thermophile 
+namespace: MOPheno
+is_a: MoPh:00000457 ! phenotype wrt habitat temperature
+
+[Term]
+id: MoPh:00000439
+name: mesophile 
+namespace: MOPheno
+is_a: MoPh:00000457 ! phenotype wrt habitat temperature
+
+[Term]
+id: MoPh:00000440
+name: hyperthermophile 
+namespace: MOPheno
+is_a: MoPh:00000457 ! phenotype wrt habitat temperature
+
+[Term]
+id: MoPh:00000441
+name: non halophile 
+namespace: MOPheno
+is_a: MoPh:00000459 ! phenotype wrt habitat salinity
+
+[Term]
+id: MoPh:00000442
+name: moderate halophile 
+namespace: MOPheno
+is_a: MoPh:00000459 ! phenotype wrt habitat salinity
+
+[Term]
+id: MoPh:00000443
+name: meso-halophile 
+namespace: MOPheno
+is_a: MoPh:00000459 ! phenotype wrt habitat salinity
+
+[Term]
+id: MoPh:00000444
+name: extreme halophile 
+namespace: MOPheno
+is_a: MoPh:00000459 ! phenotype wrt habitat salinity
+
+[Term]
+id: MoPh:00000445
+name: alkaliphile 
+namespace: MOPheno
+synonym: "alkaliphilic " EXACT [TyDI:24725]
+synonym: "alkalophile " EXACT [TyDI:24726]
+is_a: MoPh:00000458 ! phenotype wrt habitat acidity
+
+[Term]
+id: MoPh:00000447
+name: acidophile 
+namespace: MOPheno
+synonym: "acidophilic " EXACT [TyDI:24712]
+is_a: MoPh:00000458 ! phenotype wrt habitat acidity
+
+[Term]
+id: MoPh:00000448
+name: aerobe 
+namespace: MOPheno
+is_a: MoPh:00000460 ! phenotype wrt habitat oxygen
+
+[Term]
+id: MoPh:00000449
+name: facultative anaerobe 
+namespace: MOPheno
+is_a: MoPh:00000460 ! phenotype wrt habitat oxygen
+
+[Term]
+id: MoPh:00000451
+name: obligate anaerobe 
+namespace: MOPheno
+is_a: MoPh:00000461 ! anaerobe 
+
+[Term]
+id: MoPh:00000452
+name: obligate aerobe 
+namespace: MOPheno
+is_a: MoPh:00000448 ! aerobe 
+
+[Term]
+id: MoPh:00000453
+name: facultative aerobe 
+namespace: MOPheno
+is_a: MoPh:00000460 ! phenotype wrt habitat oxygen
+
+[Term]
+id: MoPh:00000454
+name: microaerophile 
+namespace: MOPheno
+is_a: MoPh:00000460 ! phenotype wrt habitat oxygen
+
+[Term]
+id: MoPh:00000455
+name: aerotolerant 
+namespace: MOPheno
+is_a: MoPh:00000460 ! phenotype wrt habitat oxygen
+
+[Term]
+id: MoPh:00000457
+name: phenotype wrt habitat temperature
+namespace: MOPheno
+is_a: MoPh:00000520 ! phenotype
+
+[Term]
+id: MoPh:00000458
+name: phenotype wrt habitat acidity
+namespace: MOPheno
+is_a: MoPh:00000520 ! phenotype
+
+[Term]
+id: MoPh:00000459
+name: phenotype wrt habitat salinity
+namespace: MOPheno
+is_a: MoPh:00000520 ! phenotype
+
+[Term]
+id: MoPh:00000460
+name: phenotype wrt habitat oxygen
+namespace: MOPheno
+is_a: MoPh:00000520 ! phenotype
+
+[Term]
+id: MoPh:00000461
+name: anaerobe 
+namespace: MOPheno
+is_a: MoPh:00000460 ! phenotype wrt habitat oxygen
+
+[Term]
+id: MoPh:00000462
+name: phenotype wrt energy source
+namespace: MOPheno
+is_a: MoPh:00000520 ! phenotype
+
+[Term]
+id: MoPh:00000463
+name: chemo hetero organotroph 
+namespace: MOPheno
+def: "MERGED DEFINITION:\nTARGET DEFINITION: exploit reduced carbon compounds as energy sources, such as carbohydrates, fats, and proteins from plants and animals\n--------------------\nSOURCE DEFINITION: exploit reduced carbon compounds as energy sources, such as carbohydrates, fats, and proteins from plants and animals" []
+synonym: "chemo organo heterotroph " EXACT [TyDI:24131]
+synonym: "chemoorganoheterotroph " EXACT [TyDI:24130]
+synonym: "organotroph " EXACT [TyDI:24129]
+is_a: MoPh:00001257 ! chemo heterotroph 
+
+[Term]
+id: MoPh:00000464
+name: chemo lithotroph 
+namespace: MOPheno
+def: "Chemolithotrophs use the above-mentioned inorganic compounds for aerobic or anaerobic respiration. The energy produced by the oxidation of these compounds is enough for ATP production. Some of the electrons derived from the inorganic donors also need to be channeled into biosynthesis. Mostly, additional energy has to be invested to transform these reducing equivalents to the forms and redox potentials needed mostly NADH or NADPH, which occurs by reverse electron transfer reactions.\nhttp://www.museumstuff.com/learn/topics/chemolithotrophy::sub::Biochemistry" []
+synonym: "chemolithotroph " EXACT [TyDI:24118]
+is_a: MoPh:00001278 ! chemotroph 
+
+[Term]
+id: MoPh:00000479
+name: phenotype wrt motility
+namespace: MOPheno
+is_a: MoPh:00000520 ! phenotype
+
+[Term]
+id: MoPh:00000480
+name: motile 
+namespace: MOPheno
+is_a: MoPh:00000479 ! phenotype wrt motility
+
+[Term]
+id: MoPh:00000481
+name: sessile 
+namespace: MOPheno
+is_a: MoPh:00000479 ! phenotype wrt motility
+
+[Term]
+id: MoPh:00000482
+name: adherent 
+namespace: MOPheno
+is_a: MoPh:00000481 ! sessile 
+
+[Term]
+id: MoPh:00000489
+name: endophyte 
+namespace: MOPheno
+synonym: "endophyte" RELATED [TyDI:24230]
+synonym: "endophytic " EXACT [TyDI:24231]
+is_a: MoPh:00000525 ! plant hosted 
+
+[Term]
+id: MoPh:00000493
+name: biotrophic 
+namespace: MOPheno
+def: "Biotrophic bacteria rely on their host's surviving." []
+synonym: "obligate biotrophic " EXACT [TyDI:24366]
+is_a: MoPh:00001733 ! parasite 
+
+[Term]
+id: MoPh:00000494
+name: obligate phytopathogen
+namespace: MOPheno
+is_a: MoPh:00000525 ! plant hosted 
+is_a: MoPh:00000534 ! phytopathogen 
+
+[Term]
+id: MoPh:00000506
+name: non motile 
+namespace: MOPheno
+is_a: MoPh:00000479 ! phenotype wrt motility
+
+[Term]
+id: MoPh:00000513
+name: human pathogen 
+namespace: MOPheno
+is_a: MoPh:00000530 ! animal pathogen 
+
+[Term]
+id: MoPh:00000514
+name: insect pathogen 
+namespace: MOPheno
+is_a: MoPh:00000530 ! animal pathogen 
+
+[Term]
+id: MoPh:00000520
+name: phenotype
+namespace: MOPheno
+synonym: "bacterium" EXACT [TyDI:25902]
+
+[Term]
+id: MoPh:00000521
+name: hosted 
+namespace: MOPheno
+is_a: MoPh:00000520 ! phenotype
+
+[Term]
+id: MoPh:00000524
+name: animal hosted 
+namespace: MOPheno
+is_a: MoPh:00000521 ! hosted 
+
+[Term]
+id: MoPh:00000525
+name: plant hosted 
+namespace: MOPheno
+is_a: MoPh:00000521 ! hosted 
+
+[Term]
+id: MoPh:00000526
+name: commensal 
+namespace: MOPheno
+is_a: MoPh:00000521 ! hosted 
+
+[Term]
+id: MoPh:00000527
+name: plant symbiont 
+namespace: MOPheno
+is_a: MoPh:00000525 ! plant hosted 
+
+[Term]
+id: MoPh:00000528
+name: pathogen 
+namespace: MOPheno
+is_a: MoPh:00000521 ! hosted 
+
+[Term]
+id: MoPh:00000529
+name: opportunist 
+namespace: MOPheno
+is_a: MoPh:00000521 ! hosted 
+
+[Term]
+id: MoPh:00000530
+name: animal pathogen 
+namespace: MOPheno
+is_a: MoPh:00000524 ! animal hosted 
+is_a: MoPh:00000528 ! pathogen 
+
+[Term]
+id: MoPh:00000531
+name: animal opportunist 
+namespace: MOPheno
+is_a: MoPh:00000524 ! animal hosted 
+
+[Term]
+id: MoPh:00000532
+name: animal commensal 
+namespace: MOPheno
+is_a: MoPh:00000524 ! animal hosted 
+
+[Term]
+id: MoPh:00000533
+name: plant opportunist 
+namespace: MOPheno
+is_a: MoPh:00000525 ! plant hosted 
+
+[Term]
+id: MoPh:00000534
+name: phytopathogen 
+namespace: MOPheno
+is_a: MoPh:00000525 ! plant hosted 
+is_a: MoPh:00000528 ! pathogen 
+
+[Term]
+id: MoPh:00000535
+name: plant commensal 
+namespace: MOPheno
+is_a: MoPh:00000525 ! plant hosted 
+
+[Term]
+id: MoPh:00000536
+name: plant obligate symbiont 
+namespace: MOPheno
+is_a: MoPh:00000527 ! plant symbiont 
+
+[Term]
+id: MoPh:00000537
+name: plant facultative symbiont 
+namespace: MOPheno
+is_a: MoPh:00000527 ! plant symbiont 
+
+[Term]
+id: MoPh:00000538
+name: animal symbiont 
+namespace: MOPheno
+is_a: MoPh:00000532 ! animal commensal 
+
+[Term]
+id: MoPh:00000539
+name: animal facultative symbiont 
+namespace: MOPheno
+is_a: MoPh:00000538 ! animal symbiont 
+
+[Term]
+id: MoPh:00000540
+name: animal obligate symbiont 
+namespace: MOPheno
+is_a: MoPh:00000538 ! animal symbiont 
+
+[Term]
+id: MoPh:00001253
+name: extremely acidophilic 
+namespace: MOPheno
+is_a: MoPh:00000458 ! phenotype wrt habitat acidity
+created_by: claire
+creation_date: 2011-01-28T03:04:48Z
+
+[Term]
+id: MoPh:00001254
+name: autotroph 
+namespace: MOPheno
+is_a: MoPh:00000462 ! phenotype wrt energy source
+created_by: claire
+creation_date: 2011-01-28T03:13:08Z
+
+[Term]
+id: MoPh:00001255
+name: chemo litho autotroph 
+namespace: MOPheno
+def: "A lithoautotroph is a microbe which derives energy from reduced compounds of mineral origin" []
+synonym: "lithoautotroph " EXACT [TyDI:25492]
+is_a: MoPh:00000464 ! chemo lithotroph 
+is_a: MoPh:00001254 ! autotroph 
+created_by: claire
+creation_date: 2011-01-28T03:15:01Z
+
+[Term]
+id: MoPh:00001256
+name: heterotroph
+namespace: MOPheno
+is_a: MoPh:00000462 ! phenotype wrt energy source
+created_by: claire
+creation_date: 2011-01-28T03:25:00Z
+
+[Term]
+id: MoPh:00001257
+name: chemo heterotroph 
+namespace: MOPheno
+def: "Chemoheterotrophs produce ATP by oxidizing chemical substances." []
+synonym: "chemoheterotroph " EXACT [TyDI:25497]
+is_a: MoPh:00001256 ! heterotroph
+created_by: claire
+creation_date: 2011-01-28T03:25:29Z
+
+[Term]
+id: MoPh:00001258
+name: photo heterotroph 
+namespace: MOPheno
+def: "produce ATP from light and use organic compounds to build structures.\nThey consume little or none of the energy produced during photosynthesis to reduce NADP+ to NADPH for use in the Calvin cycle, as they do not need to use the Calvin cycle if carbohydrates are available in their diets" []
+synonym: "photoheterotroph " EXACT [TyDI:25508]
+is_a: MoPh:00001256 ! heterotroph
+is_a: MoPh:00001279 ! phototroph 
+created_by: claire
+creation_date: 2011-01-28T03:26:07Z
+
+[Term]
+id: MoPh:00001259
+name: chemo litho heterotroph 
+namespace: MOPheno
+def: "Lithoheterotrophs do not have the possibility to fix carbon dioxide and must consume additional organic compounds in order to break them apart and use their carbon." []
+synonym: "chemolithoheterotroph " EXACT [TyDI:25502]
+synonym: "litho heterotroph " EXACT [TyDI:25504]
+synonym: "lithoheterotroph " EXACT [TyDI:25505]
+synonym: "lithotrophic heterotroph " EXACT [TyDI:25503]
+is_a: MoPh:00000464 ! chemo lithotroph 
+is_a: MoPh:00001257 ! chemo heterotroph 
+created_by: claire
+creation_date: 2011-01-28T03:29:35Z
+
+[Term]
+id: MoPh:00001262
+name: facultative chemo lithotroph 
+namespace: MOPheno
+def: "can utilize either carbon dioxide or organic carbon as the carbon source" []
+synonym: "facultative chemolithotroph " EXACT [TyDI:26203]
+is_a: MoPh:00001278 ! chemotroph 
+created_by: claire
+creation_date: 2011-01-28T03:45:58Z
+
+[Term]
+id: MoPh:00001263
+name: photo autotroph 
+namespace: MOPheno
+def: "energy from light, carbon from CO2" []
+synonym: "photoautotroph " EXACT [TyDI:26206]
+is_a: MoPh:00001254 ! autotroph 
+is_a: MoPh:00001279 ! phototroph 
+created_by: claire
+creation_date: 2011-01-28T04:01:12Z
+
+[Term]
+id: MoPh:00001264
+name: carboxydotroph 
+namespace: MOPheno
+def: "generate energy by oxidation of CO to CO2" []
+synonym: "carboxydotrophic " EXACT [TyDI:26209]
+is_a: MoPh:00000462 ! phenotype wrt energy source
+created_by: claire
+creation_date: 2011-01-28T04:18:05Z
+
+[Term]
+id: MoPh:00001269
+name: phenotype wrt pressure
+namespace: MOPheno
+is_a: MoPh:00000520 ! bacteria
+created_by: claire
+creation_date: 2011-01-28T04:49:23Z
+
+[Term]
+id: MoPh:00001270
+name: piezophile 
+namespace: MOPheno
+synonym: "barophile " EXACT [TyDI:26145]
+is_a: MoPh:00001269 ! phenotype wrt pressure
+created_by: claire
+creation_date: 2011-01-28T04:49:44Z
+
+[Term]
+id: MoPh:00001273
+name: obligate piezophile 
+namespace: MOPheno
+synonym: "obligate barophile " EXACT [TyDI:26142]
+is_a: MoPh:00001270 ! piezophile 
+created_by: claire
+creation_date: 2011-01-28T05:02:04Z
+
+[Term]
+id: MoPh:00001274
+name: piezosensitive 
+namespace: MOPheno
+is_a: MoPh:00001269 ! phenotype wrt pressure
+created_by: claire
+creation_date: 2011-01-28T05:10:47Z
+
+[Term]
+id: MoPh:00001275
+name: piezotolerant 
+namespace: MOPheno
+synonym: "barotolerant " EXACT [TyDI:26163]
+is_a: MoPh:00001269 ! phenotype wrt pressure
+is_a: MoPh:00001270 ! piezophile 
+created_by: claire
+creation_date: 2011-01-28T05:11:04Z
+
+[Term]
+id: MoPh:00001278
+name: chemotroph 
+namespace: MOPheno
+is_a: MoPh:00000462 ! phenotype wrt energy source
+created_by: claire
+creation_date: 2011-01-28T06:39:10Z
+
+[Term]
+id: MoPh:00001279
+name: phototroph 
+namespace: MOPheno
+is_a: MoPh:00000462 ! phenotype wrt energy source
+created_by: claire
+creation_date: 2011-01-28T06:40:08Z
+
+[Term]
+id: MoPh:00001280
+name: phenotype wrt nutrient abundance
+namespace: MOPheno
+is_a: MoPh:00000520 ! phenotype
+created_by: claire
+creation_date: 2011-01-28T06:43:35Z
+
+[Term]
+id: MoPh:00001281
+name: copiotrophic 
+namespace: MOPheno
+synonym: "copiotroph " EXACT [TyDI:26096]
+is_a: MoPh:00001280 ! phenotype wrt nutrient abundance
+created_by: claire
+creation_date: 2011-01-28T06:44:10Z
+
+[Term]
+id: MoPh:00001282
+name: oligotrophic 
+namespace: MOPheno
+synonym: "oligotroph " EXACT [TyDI:26099]
+is_a: MoPh:00001280 ! phenotype wrt nutrient abundance
+created_by: claire
+creation_date: 2011-01-28T06:44:32Z
+
+[Term]
+id: MoPh:00001284
+name: diazotroph 
+namespace: MOPheno
+def: "Diazotrophs are bacteria that fix atmospheric nitrogen gas into a more usable form such as ammonia" []
+is_a: MoPh:00000462 ! phenotype wrt energy source
+created_by: claire
+creation_date: 2011-01-28T06:46:20Z
+
+[Term]
+id: MoPh:00001287
+name: free-living diazotroph 
+namespace: MOPheno
+is_a: MoPh:00001284 ! diazotroph 
+created_by: claire
+creation_date: 2011-01-28T06:48:13Z
+
+[Term]
+id: MoPh:00001288
+name: symbiotic diazotroph 
+namespace: MOPheno
+is_a: MoPh:00001284 ! diazotroph 
+created_by: claire
+creation_date: 2011-01-28T06:48:33Z
+
+[Term]
+id: MoPh:00001289
+name: natron-alkaliphilic 
+namespace: MOPheno
+is_a: MoPh:00000445 ! alkaliphile 
+created_by: claire
+creation_date: 2011-01-31T10:35:32Z
+
+[Term]
+id: MoPh:00001296
+name: chlorophototroph 
+namespace: MOPheno
+is_a: MoPh:00001279 ! phototroph 
+created_by: claire
+creation_date: 2011-01-31T04:10:48Z
+
+[Term]
+id: MoPh:00001298
+name: methanotroph 
+namespace: MOPheno
+def: "Methanotrophs (sometimes called methanophiles) are bacteria that are able to metabolize methane as their only source of carbon and energy" []
+synonym: "methane-oxidizing " EXACT [TyDI:26087]
+synonym: "methanophile " EXACT [TyDI:26085]
+synonym: "methanotrophic " RELATED [TyDI:26086]
+is_a: MoPh:00001299 ! methylotroph 
+created_by: claire
+creation_date: 2011-01-31T04:13:33Z
+
+[Term]
+id: MoPh:00001299
+name: methylotroph 
+namespace: MOPheno
+is_a: MoPh:00000462 ! phenotype wrt energy source
+created_by: claire
+creation_date: 2011-01-31T04:15:34Z
+
+[Term]
+id: MoPh:00001300
+name: methanol oxyding 
+namespace: MOPheno
+is_a: MoPh:00001299 ! methylotroph 
+created_by: claire
+creation_date: 2011-01-31T04:17:46Z
+
+[Term]
+id: MoPh:00001301
+name: mixotroph 
+namespace: MOPheno
+def: "A mixotroph is a microorganism that can use a mix of different sources of energy and carbon. Possible are alternations between photo- and chemotrophy, between litho- and organotrophy, between auto- and heterotrophy or a combination of it." []
+is_a: MoPh:00000462 ! phenotype wrt energy source
+created_by: claire
+creation_date: 2011-01-31T04:19:04Z
+
+[Term]
+id: MoPh:00001302
+name: photolithoautotroph 
+namespace: MOPheno
+is_a: MoPh:00000464 ! chemo lithotroph 
+is_a: MoPh:00001279 ! phototroph 
+created_by: claire
+creation_date: 2011-01-31T04:20:55Z
+
+[Term]
+id: MoPh:00001303
+name: phenotype wrt activity
+namespace: MOPheno
+is_a: MoPh:00000520 ! phenotype
+created_by: claire
+creation_date: 2011-01-31T04:23:52Z
+
+[Term]
+id: MoPh:00001304
+name: algicidal 
+namespace: MOPheno
+is_a: MoPh:00001303 ! phenotype wrt activity
+created_by: claire
+creation_date: 2011-01-31T04:25:02Z
+
+[Term]
+id: MoPh:00001305
+name: alkalitolerant 
+namespace: MOPheno
+is_a: MoPh:00000458 ! phenotype wrt habitat acidity
+created_by: claire
+creation_date: 2011-01-31T04:25:44Z
+
+[Term]
+id: MoPh:00001306
+name: hemolytic 
+namespace: MOPheno
+is_a: MoPh:00001303 ! phenotype wrt activity
+created_by: claire
+creation_date: 2011-01-31T04:28:22Z
+
+[Term]
+id: MoPh:00001307
+name: alpha-hemolytic 
+namespace: MOPheno
+is_a: MoPh:00001306 ! hemolytic 
+created_by: claire
+creation_date: 2011-01-31T04:30:10Z
+
+[Term]
+id: MoPh:00001308
+name: amylase production
+namespace: MOPheno
+is_a: MoPh:00001303 ! phenotype wrt activity
+created_by: claire
+creation_date: 2011-01-31T04:30:59Z
+
+[Term]
+id: MoPh:00001310
+name: anoxygenic 
+namespace: MOPheno
+is_a: MoPh:00001303 ! phenotype wrt activity
+created_by: claire
+creation_date: 2011-01-31T04:36:05Z
+
+[Term]
+id: MoPh:00001311
+name: anti-rotaviral 
+namespace: MOPheno
+is_a: MoPh:00001303 ! phenotype wrt activity
+created_by: claire
+creation_date: 2011-01-31T04:38:29Z
+
+[Term]
+id: MoPh:00001312
+name: antimicrobial 
+namespace: MOPheno
+is_a: MoPh:00001303 ! phenotype wrt activity
+created_by: claire
+creation_date: 2011-01-31T04:39:06Z
+
+[Term]
+id: MoPh:00001313
+name: phenotype wrt stress
+namespace: MOPheno
+is_a: MoPh:00000520 ! phenotype
+created_by: claire
+creation_date: 2011-01-31T04:40:12Z
+
+[Term]
+id: MoPh:00001314
+name: antibiotic resistant 
+namespace: MOPheno
+is_a: MoPh:00001313 ! phenotype wrt stress
+created_by: claire
+creation_date: 2011-01-31T04:40:31Z
+
+[Term]
+id: MoPh:00001315
+name: arsenic metabolizer 
+namespace: MOPheno
+is_a: MoPh:00000462 ! phenotype wrt energy source
+created_by: claire
+creation_date: 2011-01-31T04:42:08Z
+
+[Term]
+id: MoPh:00001317
+name: bacteriolytic 
+namespace: MOPheno
+is_a: MoPh:00001312 ! antimicrobial phenotype
+created_by: claire
+creation_date: 2011-01-31T04:44:11Z
+
+[Term]
+id: MoPh:00001318
+name: beta-hemolytic 
+namespace: MOPheno
+is_a: MoPh:00001306 ! hemolytic 
+created_by: claire
+creation_date: 2011-01-31T04:54:42Z
+
+[Term]
+id: MoPh:00001320
+name: bioluminescent 
+namespace: MOPheno
+is_a: MoPh:00001303 ! phenotype wrt activity
+created_by: claire
+creation_date: 2011-01-31T05:01:14Z
+
+[Term]
+id: MoPh:00001722
+name: vancomycin resistant 
+namespace: MOPheno
+is_a: MoPh:00001314 ! antibiotic resistant 
+created_by: claire
+creation_date: 2011-10-04T05:00:35Z
+
+[Term]
+id: MoPh:00001723
+name: ciprofloxacin resistant 
+namespace: MOPheno
+is_a: MoPh:00001314 ! antibiotic resistant 
+created_by: claire
+creation_date: 2011-10-04T05:01:47Z
+
+[Term]
+id: MoPh:00001724
+name: moxifloxacin resistant 
+namespace: MOPheno
+is_a: MoPh:00001314 ! antibiotic resistant 
+created_by: claire
+creation_date: 2011-10-04T05:03:32Z
+
+[Term]
+id: MoPh:00001725
+name: meticillin resistant 
+namespace: MOPheno
+is_a: MoPh:00001314 ! antibiotic resistant 
+created_by: claire
+creation_date: 2011-10-04T05:04:06Z
+
+[Term]
+id: MoPh:00001726
+name: metal resistant 
+namespace: MOPheno
+is_a: MoPh:00001313 ! phenotype wrt stress
+created_by: claire
+creation_date: 2011-10-04T05:05:51Z
+
+[Term]
+id: MoPh:00001727
+name: phenotype wrt community behaviour
+namespace: MOPheno
+is_a: MoPh:00000520 ! phenotype
+created_by: claire
+creation_date: 2011-10-04T05:07:08Z
+
+[Term]
+id: MoPh:00001728
+name: biofilm forming 
+namespace: MOPheno
+is_a: MoPh:00001727 ! phenotype wrt community behaviour
+created_by: claire
+creation_date: 2011-10-04T05:08:01Z
+
+[Term]
+id: MoPh:00001729
+name: non-biofilm forming 
+namespace: MOPheno
+is_a: MoPh:00001727 ! phenotype wrt community behaviour
+created_by: claire
+creation_date: 2011-10-04T05:08:59Z
+
+[Term]
+id: MoPh:00001730
+name: phenotype wrt color
+namespace: MOPheno
+is_a: MoPh:00000520 ! phenotype
+created_by: claire
+creation_date: 2011-10-04T05:13:19Z
+
+[Term]
+id: MoPh:00001732
+name: necrotrophic 
+namespace: MOPheno
+def: "Necrotrophic bacteria kill their host." []
+is_a: MoPh:00001733 ! parasite 
+created_by: claire
+creation_date: 2012-07-04T04:53:11Z
+
+[Term]
+id: MoPh:00001733
+name: parasite 
+namespace: MOPheno
+def: "Wikipedia : A parasitic relationship is one in which one member of the association benefits while the other is harmed." []
+is_a: MoPh:00000521 ! hosted 
+created_by: claire
+creation_date: 2012-07-04T04:54:29Z
+
+[Term]
+id: MoPh:00001734
+name: endoparasite 
+namespace: MOPheno
+is_a: MoPh:00001733 ! parasite 
+created_by: claire
+creation_date: 2012-07-04T04:56:45Z
+
+[Term]
+id: MoPh:00001735
+name: ectoparasite 
+namespace: MOPheno
+is_a: MoPh:00001733 ! parasite 
+created_by: claire
+creation_date: 2012-07-04T04:57:00Z
+

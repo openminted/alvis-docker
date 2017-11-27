@@ -1,0 +1,41 @@
+<alvisnlp-plan id="strains-pass-1">
+  <module id="spRegExp" class="RegExp">
+    <pattern>sp\.|spp\.|ssp\.|subsp\.</pattern>
+    <targetLayerName>spRegExp</targetLayerName>
+  </module>
+  
+  <module id="strainRegExp1" class="RegExp">
+    <pattern>(?&lt;=[Ss]train\s)(([A-Z]+\-?[0-9]+([A-Z][a-zA-Z]*)*))</pattern>
+    <targetLayerName>strainRE1</targetLayerName>
+    <constantAnnotationFeatures>subtype=strain</constantAnnotationFeatures>
+  </module>
+  
+  <module id="strainRegExp2" class="RegExp">
+    <pattern>(?&lt;=[Ss]train\s)((ATCC|DSMZ|family|mc)[\- ]?[0-9]+)</pattern>
+    <targetLayerName>strainRE2</targetLayerName>
+    <constantAnnotationFeatures>subtype=strain</constantAnnotationFeatures>
+  </module>
+  
+  <module id="strainRegExp3" class="RegExp">
+    <pattern>(?&lt;=[Ss]train\s)([A-Z]+\([0-9a-zA-Z]+\)([A-Z][a-zA-Z]*)*)</pattern>
+    <targetLayerName>strainRE3</targetLayerName>
+    <constantAnnotationFeatures>subtype=strain</constantAnnotationFeatures>
+  </module>
+  
+  <module id="strainRegExp4" class="RegExp">
+    <pattern>(?&lt;=[Ss]train\s)(([A-Z][A-Z]+|_strain_|Ra?|Rd|Rx|no) ?([\-\.\/]?[0-9]+[a-zA-Z0-9]?)*)</pattern>
+    <targetLayerName>strainRE4</targetLayerName>
+    <constantAnnotationFeatures>subtype=strain</constantAnnotationFeatures>
+  </module>
+  
+  <module id="strainRegExp5" class="RegExp">
+    <pattern>(?&lt;=[Ss]train\s)(([A-Za-z]+[\/\-][0-9]+))</pattern>
+    <targetLayerName>strainRE5</targetLayerName>
+    <constantAnnotationFeatures>subtype=strain</constantAnnotationFeatures>
+  </module>
+
+  <module id="mergeStrains" class="MergeLayers">
+    <sourceLayerNames>strainRE1, strainRE2, strainRE3, strainRE4, strainRE5</sourceLayerNames>
+    <targetLayerName>strainRE</targetLayerName>
+  </module>
+</alvisnlp-plan>

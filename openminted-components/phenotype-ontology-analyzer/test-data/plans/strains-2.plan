@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alvisnlp-plan id="strains-pass-2">
+  <sequence id="strains">
+    <module id="strainPattern1" class="PatternMatcher">
+      <layerName>words</layerName>
+      <pattern>
+    	(bact:
+    	  [@microorganism]
+    	)
+    	[@form=="strain" or @form=="Strain"]
+    	(strain:
+    	[@subtype=="strain"]
+    	)
+      </pattern>
+      <actions>
+    	<createAnnotation layer="strains" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+    	<createAnnotation group="strain" layer="shortNames" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+      </actions>
+    </module>
+    
+    <module id="strainPattern2" class="PatternMatcher">
+      <layerName>words</layerName>
+      <pattern>
+	(bact:
+	  [@microorganism]
+	)
+	[@form=="sp." or @form=="spp." or @form=="sp" or @form=="spp"]
+	[@form=="strain" or @form=="Strain"]
+	(strain:
+	[@subtype=="strain"]
+	)
+      </pattern>
+      <actions>
+	<createAnnotation layer="strains" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+	<createAnnotation group="strain" layer="shortNames" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+      </actions>
+    </module>
+    
+    <module id="strainPattern3" class="PatternMatcher">	
+      <layerName>words</layerName>
+      <pattern>
+	(bact:
+	  [@microorganism]
+	)
+	[@form=="strain" or @form=="Strain"]
+	(strain:
+	[@subtype=="strain"]
+	)
+	[@form=~"^[A-Z]$"]
+      </pattern>
+      <actions>
+	<createAnnotation layer="strains" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+	<createAnnotation group="strain" layer="shortNames" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+      </actions>
+    </module>
+    
+    <module id="strainPattern4" class="PatternMatcher">
+      <layerName>words</layerName>
+      <pattern>
+	(bact:
+	  [@microorganism]
+	)
+	[@form=="sp." or @form=="spp." or @form=="sp" or @form=="spp"]
+	[@form=="strain" or @form=="Strain"]
+	(strain:
+	[@subtype=="strain"]
+	)
+	[@form=~"^[A-Z]$"]
+      </pattern>
+      <actions>
+	<createAnnotation layer="strains" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+	<createAnnotation group="strain" layer="shortNames" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+      </actions>
+    </module>
+    
+    <!-- XXX cannot find original bacteria
+    <module id="strainPattern5" class="PatternMatcher">
+      <layerName>words</layerName>
+      <pattern>
+	[(not @form=="sp.") and (not @form=="spp.") and (not @form=="sp") and (not @form=="spp") and (not @type)]
+	(strain:
+	[(not @type) and @form=~"^[A-Z]+[0-9]*$"]
+	)
+	[@form=="strain"]
+      </pattern>
+      <actions>
+	<createAnnotation group="strain" layer="shortNames"/>
+      </actions>
+    </module>
+    
+    <module id="strainPattern6" class="PatternMatcher">
+      <layerName>words</layerName>
+      <pattern>
+	[(not @form=="sp.") and (not @form=="spp.") and (not @form=="sp") and (not @form=="spp") and (not @type)]
+	(strain:
+	[(not @type) and @form=~"^[A-Z]+[0-9]*$"]
+	[(not @type) and @form=~"^[0-9]+[/]?[0-9]*$"]
+	)
+	[@form=="strain"]
+      </pattern>
+      <actions>
+	<createAnnotation group="strain" layer="shortNames"/>
+      </actions>
+    </module>	
+    -->    
+    
+    <module id="groupPattern" class="PatternMatcher">
+      <layerName>words</layerName>
+      <pattern>
+	(bact:
+	  [@microorganism]
+	)
+	[@form=="group" or @form=="Group"]
+      </pattern>
+      <actions>
+	<createAnnotation layer="group" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+      </actions>
+    </module>
+    
+    
+    <module id="ofPattern" class="PatternMatcher">
+      <layerName>words</layerName>
+      <pattern>
+	[@form=~"^[A-Z]+[0-9]*$" and (not @form=="DNA") and (not @form=="RNA")]	
+	[@form=="of"]
+	(bact:
+	  [@microorganism]
+	)
+      </pattern>
+      <actions>
+	<createAnnotation layer="of" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+      </actions>
+    </module>	    
+    
+    
+    
+    <!-- <module id="resistentPattern1" class="PatternMatcher"> -->
+    <!--   <layerName>words</layerName> -->
+    <!--   <pattern> -->
+    <!-- 	[true] -->
+    <!-- 	[@form=~"^Resistant" or @form=~"^resistant"] -->
+    <!-- 	(bact: -->
+    <!-- 	  [@microorganism] -->
+    <!-- 	) -->
+    <!--   </pattern> -->
+    <!--   <actions> -->
+    <!-- 	<createAnnotation layer="resistent" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/> -->
+    <!--   </actions> -->
+    <!-- </module> -->
+    
+    
+    <!-- <module id="resistentPattern2" class="PatternMatcher"> -->
+    <!--   <layerName>words</layerName> -->
+    <!--   <pattern> -->
+    <!-- 	[@form=~"^[A-Za-z]+-resistant$" or @form=~"^[A-Za-z]+-Resistant$"] -->
+    <!-- 	(bact: -->
+    <!-- 	  [@microorganism] -->
+    <!-- 	) -->
+    <!--   </pattern> -->
+    <!--   <actions> -->
+    <!-- 	<createAnnotation layer="resistent" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/> -->
+    <!--   </actions> -->
+    <!-- </module> -->
+    
+    
+    <module id="sspPattern1" class="PatternMatcher">
+      <layerName>words</layerName>
+      <pattern>
+	(bact:
+	  [@microorganism]
+	)
+	[@form=="ssp." or @form=="ssp" or @form=="subsp." or @form=="subsp"]
+	[true]
+      </pattern>
+      <actions>
+	<createAnnotation layer="ssp" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+      </actions>
+    </module>
+    
+    
+    <module id="sspPattern" class="PatternMatcher">
+      <layerName>words</layerName>
+      <pattern>
+	(bact:
+	  [@microorganism]
+	)
+	[@form=="ssp." or @form=="ssp" or @form=="subsp." or @form=="subsp"]
+	[true]
+	[@form=~"[A-Z]+"]
+      </pattern>
+      <actions>
+	<createAnnotation layer="ssp" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+      </actions>
+    </module>
+    
+    
+    <module id="serogroupPattern1" class="PatternMatcher">
+      <layerName>words</layerName>
+      <pattern>
+	(bact:
+	  [@microorganism]
+	)
+	[@form=="serogroup"]
+	[true]
+      </pattern>
+      <actions>
+	<createAnnotation layer="serogroup" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+      </actions>	  
+    </module>
+
+    <module id="mergeStrainPatterns" class="MergeLayers">
+      <sourceLayerNames>strains,of,group,resistent,ssp,serogroup,shortNames</sourceLayerNames>
+      <targetLayerName>finalStrains</targetLayerName>
+    </module>
+
+    <module id="projectStrains" class="ElementProjector2">
+      <caseInsensitive/>
+      <targetLayerName>newStrains</targetLayerName>
+      <entries>documents.sections.layer:finalStrains</entries>
+      <key>@form</key>
+      <action>
+        set:feat:taxid(entry.@taxid)
+      | set:feat:canonical-name(entry.@canonical-name)
+      | set:feat:path(entry.@path)
+      | set:feat:rank(entry.@rank)
+      | set:feat:strain-doc-id(entry.document.@id)
+      </action>
+      <setFeatures/>
+      <constantAnnotationFeatures>eos=not-eos,ne-type=species,pos=NP</constantAnnotationFeatures>
+    </module>
+
+    <module id="keep-same-doc-strains" class="Action">
+      <target>documents as d.sections.layer:newStrains[d.@id != @strain-doc-id]</target>
+      <action>remove:newStrains</action>
+      <removeFromLayer/>
+    </module>
+  </sequence>
+
+  <sequence id="appositions">
+    <module id="appositionPattern" class="PatternMatcher">
+      <layerName>words</layerName>
+      <pattern>
+	(bact:
+	  [@microorganism]
+	)
+	[@form=="("]
+	(appos:
+	  [@form=~"^[A-Z][A-Za-z]+[0-9]*$"]
+	)
+	[@form==")" or @form==";"]
+      </pattern>
+      <actions>
+	<createAnnotation group="appos" layer="appositions" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+      </actions>
+    </module>
+    
+    <module id="appositionPattern2" class="PatternMatcher">
+      <layerName>words</layerName>
+      <pattern>
+	(bact:
+	  [@microorganism]
+	)
+	[@form=="("]
+	(appos:
+	  [@form=~"^[A-Z][A-Za-z]+[0-9]*$"]
+	  [@form=~"^[A-Z][A-Za-z]+[0-9]*$" or @form=~"^[0-9]+[/]?[0-9]*$"]
+	)
+	[@form==")" or @form==";"]
+      </pattern>
+      <actions>
+	<createAnnotation group="appos" layer="appositions" features="taxid=group:bact.@taxid,canonical-name=group:bact.@canonical-name,path=group:bact.@path,rank=group:bact.@rank"/>
+      </actions>
+    </module>
+
+    <module id="projectAppositions" class="ElementProjector2">
+      <!-- <caseInsensitive/> -->
+      <targetLayerName>appos</targetLayerName>
+      <entries>documents.sections.layer:appositions</entries>
+      <key>@form</key>
+      <action>
+	set:feat:taxid(entry.@taxid)
+      | set:feat:canonical-name(entry.@canonical-name)
+      | set:feat:path(entry.@path)
+      | set:feat:rank(entry.@rank)
+      | set:feat:appos-doc-id(entry.document.@id)
+      </action>
+      <setFeatures/>
+      <constantAnnotationFeatures>type=Bacteria,eos=not-eos,ne-type=species,pos=NP</constantAnnotationFeatures>
+    </module>
+
+    <module id="keep-same-doc-appos" class="Action">
+      <target>documents as d.sections.layer:appos[d.@id != @appos-doc-id]</target>
+      <action>remove:appos</action>
+      <removeFromLayer/>
+    </module>
+  </sequence>
+
+  <!--
+  <module id="species2" class="SimpleProjector2">
+    <caseInsensitive/>
+    <valueFeatures>microbe</valueFeatures>
+    <dictFile>resources/microbes_v4.txt</dictFile>
+    <targetLayerName>species__additional</targetLayerName>
+    <constantAnnotationFeatures>type=Bacteria,eos=not-eos,ne-type=species,pos=NP</constantAnnotationFeatures>
+  </module>
+  -->
+
+  <module id="finalize" class="MergeLayers">
+    <sourceLayerNames>species__additional,appos,newStrains</sourceLayerNames>
+    <targetLayerName>taxa</targetLayerName>
+  </module>
+
+  <module id="removeBacteria" class="Action">
+    <target>documents.sections.layer:taxa[@form =~ "^bacteri(a|um)$"]</target>
+    <action>remove:taxa</action>
+    <removeFromLayer/>
+  </module>
+  
+  <module id="remove-overlaps" class="RemoveOverlaps">
+    <layerName>taxa</layerName>
+  </module>
+
+</alvisnlp-plan>

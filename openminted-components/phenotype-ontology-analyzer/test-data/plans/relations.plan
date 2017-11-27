@@ -1,0 +1,84 @@
+<alvisnlp-plan id="relations">
+
+  <sequence id="anaphora">
+    <module id="antecedent" class="MergeLayers">
+      <sourceLayerNames>microorganism</sourceLayerNames>
+      <targetLayerName>antecedent</targetLayerName>
+    </module>
+
+    <import file="plans/anaphora.plan"/>
+  </sequence>
+
+  <sequence id="predictions">
+    <!-- XXX foodborne, soilborne, all water and soil -->
+    <sequence id="localization-relations">
+      <module id="triggers" class="Action">
+    	<target>documents.sections.layer:words[@form =~ "^(parasit|attack|coloniz|flora|infect|inhabit|invade|important|host|environment|niche|habitat|effect|contamin|ecolog|toward|presen|subject|induce|implicate|ingest|grow|detect|found|live|spread|survive|unable|commensal|isolate|symbio|relationship|present|discover|observ|econom|disease|virulence|chronic|symptom|syndrome|severe|fever|caus|treat|prevalence|outbreak|epidem|ill|pathogen|phytopathogen|infest|ingest|fed|eat)"]</target>
+    	<action>add:triggers</action>
+    	<addToLayer/>
+      </module>
+
+      <module id="create-relation" class="Action">
+    	<target>documents.sections</target>
+    	<action>new:relation:CooccurrenceLocalization</action>
+    	<createRelations/>
+      </module>
+
+      <module id="create-tuples" class="Action">
+      	<target>documents.sections.layer:sentences[inside:triggers]</target>
+      	<action>
+      	  inside:microorganism as b.
+      	  target.inside:locations as l.
+      	  section.relations:CooccurrenceLocalization.new:tuple.(set:arg:Bacterium(b)|set:arg:Localization(l))
+      	</action>
+      	<createTuples/>
+      	<setArguments/>
+      </module>
+
+      <module id="create-tuples-anaphora" class="Action">
+  	<target>documents.sections.layer:sentences[inside:triggers and not inside:microorganism]</target>
+  	<action>
+  	  inside:anaphora.tuples:coreferences:Anaphora.(args:Ante|args:AnteTwo) as b.
+  	  target.inside:locations as l.
+  	  section.relations:CooccurrenceLocalization.new:tuple.(set:arg:Bacterium(b)|set:arg:Localization(l))
+  	</action>
+  	<createTuples/>
+  	<setArguments/>
+      </module>
+    </sequence>
+  </sequence>
+
+<phenotype-relations>
+
+  <module id="create-relation" class="Action">
+    <target>documents.sections</target>
+    <action>new:relation:PhenotypeRelation</action>
+    <createRelations/>
+  </module>
+
+  <create-tuple class="Action">
+    <target>documents.sections.layer:sentences</target>
+    <action>
+      target.inside:phenotypes as p.
+      target.inside:microorganism as m.
+      section.relations:PhenotypeRelation.new:tuple.(set:arg:Microorganism(m)|set:arg:Phenotype(p))
+    </action>
+    <createTuples/>
+    <setArguments/>
+  </create-tuple>
+
+  <module id="create-tuples-anaphora" class="Action">
+    <target>documents.sections.layer:sentences[not inside:microorganism]</target>
+    <action>
+      inside:anaphora.tuples:coreferences:Anaphora.(args:Ante|args:AnteTwo) as m.
+      target.inside:phenotypes as p.
+      section.relations:PhenotypeRelation.new:tuple.(set:arg:Microorganism(m)|set:arg:Phenotype(p))
+    </action>
+    <createTuples/>
+    <setArguments/>
+  </module>
+
+</phenotype-relations>
+
+
+</alvisnlp-plan>

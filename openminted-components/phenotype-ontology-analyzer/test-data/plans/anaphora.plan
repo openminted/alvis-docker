@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--********************BIOTOPE ANAPHORA RESOLUTION PLAN *********************************************************-->
+<!--
+    This plan requires that the text has undergone word and sentence segmentation (layers: words and sentences).
+    It requires a layer "antecedent" that contains all of the bacteria that have been annotated.
+    A layer "antecedent" is created from the bacteria layer, from which all instances of the annotations
+    beginning with a small cap letter as well as the word 'bacterium'/'bacteria' are removed.
+-->
+<alvisnlp-plan id="biotope-anaphora-resolution">
+
+  <sequence id="clean-antecedent">
+    <!-- Remove all of the bacteria annotations that only have small caps. -->
+    <module id="remove-all-lowercase" class="Action">
+      <target>documents.sections.layer:antecedent[not @form =~ "[A-Z]"]</target>
+      <action>remove:antecedent</action>
+      <removeFromLayer/>
+    </module>
+
+    <!-- Remove all of the 'bacteria' annotation. -->
+    <module id="remove-generic" class="Action">
+      <target>documents.sections.layer:antecedent[@form == "bacteria" or @form == "bacterium" or @form == "Bacteria" or @form == "Bacterium" or @form == "microorganism" or @form == "microorganism" or @form == "micro-organism" or @form == "micro-organisms"]</target>
+      <action>remove:antecedent</action>
+      <removeFromLayer/>
+    </module>
+
+    <module id="set-org-type" class="Action">
+      <target>documents.sections.layer:antecedent</target>
+      <action>set:feat:org-type("organism")</action>
+      <setFeatures/>
+    </module>
+  </sequence>
+
+  <!-- Anaphora resolution -->
+  <sequence id="coreferences">
+    <sequence id="mono-anaphora">
+      <module id="anaphora" class="SimpleProjector2">
+	<dictFile>resources/anaphoraLexicon.txt</dictFile>
+	<targetLayerName>mono-anaphora</targetLayerName>
+	<subject layer="words" feature="form"/>
+	<caseInsensitive>true</caseInsensitive>
+	<constantAnnotationFeatures>anaphora-type=mono-anaphora</constantAnnotationFeatures>
+	<valueFeatures>__dump</valueFeatures>
+      </module>
+
+      <sequence id="prepare-all-org">
+	<module id="create" class="MergeLayers">
+	  <sourceLayerNames>mono-anaphora,antecedent,words</sourceLayerNames>
+	  <targetLayerName>all-org</targetLayerName>
+	</module>
+	
+	<module id="remove-overlaps" class="RemoveOverlaps">
+	  <layerName>all-org</layerName>
+	</module>
+      </sequence>
+
+      <module id="remove-anaphora-in-antecedent" class="Action">
+	<target>documents.sections.layer:mono-anaphora[outside:antecedent]</target>
+	<action>remove:mono-anaphora|remove:all-org|set:feat:anaphora-type("null")</action>
+	<removeFromLayer/>
+	<setFeatures/>
+      </module>
+
+      <module id="this_org" class="PatternMatcher">
+	<layerName>all-org</layerName>
+	<pattern>
+	  [@form=="This" or @form=="this" or @form=="These" or @form=="these"]
+	  (anaph:
+	  [@org-type == "organism"]
+	  )
+	</pattern>
+	<actions>
+	  <removeAnnotations group="anaph" layer="antecedent,all-org"/>
+	  <createAnnotation layer="mono-anaphora,all-org" features="anaphora-type=&quot;mono-anaphora&quot;"/>
+	</actions>
+      </module>
+
+      <module id="lowercase-organisms" class="PatternMatcher">
+	<layerName>all-org</layerName>
+	<pattern>
+	  [(not @form == "the") and (not @form == "The")]
+	  (anaph:
+	  [@org-type == "organism" and @form =~ "^[a-z]"]
+	  )
+	</pattern>
+	<actions>
+	  <removeAnnotations group="anaph" layer="antecedent,all-org"/>
+	  <createAnnotation group="anaph" layer="mono-anaphora,all-org" features="anaphora-type=&quot;mono-anaphora&quot;"/>
+	</actions>
+      </module>
+
+      <module id="remove-anaphor_of_organism" class="PatternMatcher"> 
+	<layerName>all-org</layerName>
+	<pattern>
+	  [@pos == "DT"]?
+	  (anaph:
+	  [@anaphora-type == "mono-anaphora"]
+	  )
+	  [@form == "of"]
+	  [@pos == "DT"]?
+	  [@org-type == "organism"]
+	</pattern>
+	<actions>
+	  <removeAnnotations group="anaph" layer="mono-anaphora,all-org"/>
+	  <setFeatures group="anaph" features="anaphora-type=&quot;null&quot;"/>
+	</actions>
+      </module>
+
+<!--
+      <module id="remove-anaphor_of_anaphor" class="PatternMatcher">    
+	<layerName>all-org</layerName>
+	<pattern>
+	  [@pos == "DT"]?
+	  (anaphOne:
+	  [@anaphora-type == "mono-anaphora"]
+	  )
+	  [@form == "of"]
+	  [@pos == "DT"]?
+	  (anaphTwo:
+	  [@anaphora-type == "mono-anaphora"]
+	  )
+	</pattern>
+	<actions>
+	  <createAnnotation layer="mono-anaphora,all-org" features="org-type=&quot;mono-anaphora&quot;"/>
+	  <removeAnnotations group="anaphTwo" layer="mono-anaphora,all-org"/>
+	  <removeAnnotations group="anaphOne" layer="mono-anaphora,all-org"/>
+	  <setFeatures group="anaphOne" features="anaphora-type=&quot;null&quot;"/>
+	  <setFeatures group="anaphTwo" features="anaphora-type=&quot;null&quot;"/>
+	</actions>
+      </module>
+-->
+
+      <module id="remove-false-nominal-anaphora-1" class="PatternMatcher">
+	<layerName>all-org</layerName>
+	<pattern>
+	  (anaph:
+	  [@anaphora-type == "mono-anaphora"]
+	  )
+	  [@org-type == "organism"]
+	</pattern>
+	<actions>
+	  <removeAnnotations group="anaph" layer="mono-anaphora,all-org"/>
+	  <setFeatures group="anaph" features="anaphora-type=&quot;null&quot;"/>
+	</actions>
+      </module>
+
+
+      <module id="remove-false-nominal-anaphora-2" class="PatternMatcher">
+	<layerName>all-org</layerName>
+	<pattern>
+	  [@org-type == "organism"]
+	  (anaph:
+	  [@anaphora-type == "mono-anaphora" and (@form =~ "^strain(s)?$" or @form =~ "^bacteri(um|a)$")]
+	  )
+	</pattern>
+	<actions>
+	  <removeAnnotations group="anaph" layer="mono-anaphora,all-org"/>
+	  <setFeatures group="anaph" features="anaphora-type=&quot;null&quot;"/>
+	</actions>
+      </module>
+
+      <module id="remove-referential-it-1" class="PatternMatcher">
+	<layerName>all-org</layerName>
+	<pattern>
+	  [@form=="make" or @form=="makes" or @form=="made" or @form=="making"]
+	  (refIt:
+	  [@anaphora-type == "mono-anaphora"]
+	  )
+	  [@form == "possible" or @form == "necessary"] <!-- XXX -->
+	</pattern>
+	<actions>
+	  <removeAnnotations group="refIt" layer="mono-anaphora,all-org"/>
+	  <setFeatures group="refIt" features="anaphora-type=&quot;null&quot;"/>
+	</actions>
+      </module>
+
+      <module id="remove-referential-it-2" class="PatternMatcher">
+	<layerName>all-org</layerName>
+	<pattern>
+	  (refIt:
+	  [@form=="it" and @anaphora-type=="mono-anaphora"]
+	  )
+	  [@form=="is" or @form=="was"]
+	  [@form=="thought" or @form=="shown"] <!-- XXX -->
+	</pattern>
+	<actions>
+	  <removeAnnotations group="refIt" layer="mono-anaphora,all-org"/>
+	  <setFeatures group="refIt" features="anaphora-type=&quot;null&quot;"/>
+	</actions>
+      </module>
+
+      <module id="infectedHost" class="PatternMatcher">
+	<active>false</active><!-- XXX deactivated -->
+	<layerName>all-org</layerName>
+	<pattern>
+	  (anaph:
+	  [@form=="infected" or @form=="Infected" or @form=="infection" or @form=="infections" or @form=="Infection" or @form=="Infections"]
+	  )
+	</pattern>
+	<actions>
+	  <createAnnotation group="anaph" layer="mono-anaphora,all-org" features="anaphora-type=&quot;mono-anaphora&quot;,type=&quot;anaph&quot;"/>
+	</actions>
+      </module>
+
+      <module id="remove-all-org-overlaps" class="RemoveOverlaps">
+	<layerName>all-org</layerName>
+      </module>
+
+    </sequence>
+
+
+    <sequence id="higherTaxaAnaphora">
+      <active>false</active><!-- XXX deactivated -->
+
+      <module id="taxon-anaphora" class="Action">
+	<target>documents.sections.layer:antecedent as target.$[@form =~ "^[A-Z][a-z]+$" and before:antecedent[@form ^= str:sub(target.@form, 0, 1) and @path ^= (target.@path ^ "/")]]</target>
+	<action>set:feat:anaphora-type("taxon-anaphora")|setlayer:add:taxon-anaphora|setlayer:remove:antecedent</action>
+	<setFeatures/>
+	<addToLayer/>
+	<removeFromLayer/>
+      </module>
+
+      <module id="create-all-taxon-org" class="MergeLayers">
+	<sourceLayerNames>taxon-anaphora,antecedent,words</sourceLayerNames>
+	<targetLayerName>all-taxon-org</targetLayerName>
+      </module>
+      
+      <module id="remove-all-taxon-org-overlaps" class="RemoveOverlaps">
+	<layerName>all-taxon-org</layerName>
+      </module>
+
+      <module id="remove-false-taxon-anaphora-1" class="PatternMatcher">
+	<layerName>all-taxon-org</layerName>
+	<pattern>
+	  [@form == "genus" or @form == "the" or @form == "The"]
+	  (anaph:
+	  [@anaphora-type == "taxon-anaphora"]
+	  )
+	</pattern>
+	<actions>
+	  <removeAnnotations group="anaph" layer="taxon-anaphora,all-taxon-org"/>
+	  <createAnnotation group="anaph" layer="antecedent,all-taxon-org" features="org-type=&quot;organism&quot;"/>
+	</actions>
+      </module>
+
+      <module id="remove-false-taxon-anaphora-2" class="PatternMatcher">
+	<layerName>all-taxon-org</layerName>
+	<pattern>
+	  (anaph:
+	  [@anaphora-type == "taxon-anaphora" and outside:sentences[start == element.start]]
+	  )
+	  [@form=="."]
+	</pattern>
+	<actions>
+	  <removeAnnotations group="anaph" layer="taxon-anaphora,all-taxon-org"/>
+	  <createAnnotation group="anaph" layer="antecedent,all-taxon-org" features="org-type=&quot;organism&quot;"/>
+	</actions>
+      </module>
+      
+      <module id="remove-anaphTaxonBacteria3-overlaps" class="RemoveOverlaps">
+	<layerName>all-taxon-org</layerName>
+      </module>
+      
+    </sequence>
+
+    
+    <sequence id="multi-ante-anaphora">
+      <module id="bi-anaphora" class="SimpleProjector2">
+	<dictFile>resources/biAnaphoraLexicon.txt</dictFile>
+	<targetLayerName>bi-anaphora</targetLayerName>
+	<subject layer="words" feature="form"/>
+	<caseInsensitive>true</caseInsensitive>
+	<constantAnnotationFeatures>anaphora-type=bi-anaphora</constantAnnotationFeatures>
+	<valueFeatures>__dump</valueFeatures>
+      </module>
+
+      <module id="create-all-anaphora-org" class="MergeLayers">
+	<sourceLayerNames>mono-anaphora,bi-anaphora,taxon-anaphora,antecedent,words</sourceLayerNames>
+	<targetLayerName>all-anaphora-org</targetLayerName>
+      </module>
+      
+      <module id="remove-all-anaphora-org-overlaps" class="RemoveOverlaps">
+	<layerName>all-anaphora-org</layerName>
+      </module>
+
+      <!--
+      <module id="these_two_JJ" class="PatternMatcher">
+	<layerName>all-anaphora-org</layerName>
+	<pattern>
+	  [@form =~ "^(T|t)he(se)?$"]?
+	  [@form == "two"]
+	  [@pos == "JJ"]*
+	  (anaph:
+	  [@anaphora-type == "mono-anaphora"]
+	  )
+	</pattern>
+	<actions>
+	  <createAnnotation layer="bi-anaphora,all-anaphora-org" features="anaphora-type=&quot;bi-anaphora&quot;"/>
+	  <removeAnnotations group="anaph" layer="mono-anaphora,all-anaphora-org"/>
+	</actions>
+      </module>
+      -->
+
+      <!--
+      <module id="both_these_JJ" class="PatternMatcher">
+	<layerName>all-anaphora-org</layerName>
+	<pattern>
+	  [@form =~ "^(B|b)oth$"]
+	  [@form =~ "^the(se)?$"]?
+	  [@pos == "JJ"]*
+	  (anaph:
+	  [@anaphora-type == "mono-anaphora"]
+	  )
+	</pattern>
+	<actions>
+	  <createAnnotation layer="bi-anaphora,all-anaphora-org" features="anaphora-type=&quot;bi-anaphora&quot;"/>
+	  <removeAnnotations group="anaph" layer="mono-anaphora,all-anaphora-org"/>
+	</actions>
+      </module>
+      -->
+    </sequence>
+
+    <module id="merge-all-anaphora" class="MergeLayers">
+      <sourceLayerNames>mono-anaphora,taxon-anaphora,bi-anaphora</sourceLayerNames>
+      <targetLayerName>anaphora</targetLayerName>
+    </module>
+    
+    <module id="remove-all-anaphora-overlaps" class="RemoveOverlaps">
+      <layerName>anaphora</layerName>
+    </module>
+  </sequence>
+
+  <sequence id="anchor">
+    <module id="antecedents" class="AnchorTuples">
+      <anchor>layer:sentences.inside:mono-anaphora</anchor>
+      <relationName>coreferences</relationName>
+      <anchorRole>Anaphora</anchorRole>
+      <arguments>
+	<entry key="AnteSentence0">outside:sentences.inside:antecedent[start &lt; anchor().start]{0}</entry>
+	<entry key="AnteSentence1">outside:sentences.before:sentences{-1}.inside:antecedent[start &lt; anchor().start]{0}</entry>
+	<entry key="AnteSentence2">outside:sentences.before:sentences{-2}.inside:antecedent[start &lt; anchor().start]{0}</entry>
+	<entry key="AnteSentence3">outside:sentences.before:sentences{-3}.inside:antecedent[start &lt; anchor().start]{0}</entry>
+	<entry key="AnteParagraph0">outside:paragraphs.inside:antecedent[start &lt; anchor().start]{0}</entry>
+	<entry key="AnteParagraph1">outside:paragraphs.before:paragraphs{-1}.inside:antecedent[start &lt; anchor().start]{-1}</entry>
+	<entry key="AnteFirstSentence">document.sections{0}.layer:sentences{0}.inside:antecedent[start &lt; anchor().start]{0}</entry>
+	<entry key="AntePanic">document.sections{0}.layer:antecedent{0}</entry>
+      </arguments>
+    </module>
+
+
+    <module id="bi-antecedents" class="AnchorTuples">
+      <anchor>layer:sentences.inside:bi-anaphora</anchor>
+      <relationName>coreferences</relationName>
+      <anchorRole>Anaphora</anchorRole>
+      <arguments>
+	<entry key="AnteOneSentence0">outside:sentences.inside:antecedent[start &lt; anchor().start]{0}</entry>
+	<entry key="AnteTwoSentence0">outside:sentences.inside:antecedent[start &lt; anchor().start]{1}</entry>
+	<entry key="AnteOneSentence1">outside:sentences.before:sentences{-1}.inside:antecedent[start &lt; anchor().start]{0}</entry>
+	<entry key="AnteTwoSentence1">outside:sentences.before:sentences{-1}.inside:antecedent[start &lt; anchor().start]{1}</entry>
+	<entry key="AnteOneSentence2">outside:sentences.before:sentences{-2}.inside:antecedent[start &lt; anchor().start]{0}</entry>
+	<entry key="AnteTwoSentence2">outside:sentences.before:sentences{-2}.inside:antecedent[start &lt; anchor().start]{1}</entry> 
+	<entry key="AnteOneSentence3">outside:sentences.before:sentences{-3}.inside:antecedent[start &lt; anchor().start]{0}</entry>
+	<entry key="AnteTwoSentence3">outside:sentences.before:sentences{-3}.inside:antecedent[start &lt; anchor().start]{1}</entry>
+	<entry key="AnteOneParagraph0">outside:paragraphs.inside:antecedent[start &lt; anchor().start]{0}</entry>
+	<entry key="AnteTwoParagraph0">outside:paragraphs.inside:antecedent[start &lt; anchor().start]{1}</entry>
+	<entry key="AnteOneParagraph1">outside:paragraphs.before:paragraphs{-1}.inside:antecedent[start &lt; anchor().start]{-2}</entry>
+	<entry key="AnteTwoParagraph1">outside:paragraphs.before:paragraphs{-1}.inside:antecedent[start &lt; anchor().start]{-1}</entry>
+	<entry key="AnteOneFirstSentence">document.sections{0}.layer:sentences{0}.inside:antecedent[start &lt; anchor().start]{0}</entry>
+	<entry key="AnteTwoFirstSentence">document.sections{0}.layer:sentences{0}.inside:antecedent[start &lt; anchor().start]{1}</entry>
+      </arguments>
+    </module>
+
+    <module id="higher-taxa" class="AnchorTuples">
+      <anchor>layer:taxon-anaphora</anchor>
+      <relationName>coreferences</relationName>
+      <anchorRole>Anaphora</anchorRole>
+      <arguments>
+	<entry key="AntePreviousLowerTaxon">before:antecedent[@path ^= (anchor.@path ^ "/")]{-1}</entry>
+      </arguments>
+    </module>
+
+    <module id="antecedentChoice" class="AntecedentChoice"/>
+    
+
+
+  </sequence>
+
+
+
+</alvisnlp-plan>
