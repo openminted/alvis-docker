@@ -1,4 +1,4 @@
-# alvis-br-train
+# ontology-analyzer
 
 This component processes an ontology (in OBO format)
 in order to use with the ToMap component. It analyzes the structure of
