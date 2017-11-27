@@ -1,0 +1,241 @@
+<alvisnlp-plan id="entities">
+  <module id="read" class="XMLReader2">
+    <!-- <sourcePath>corpus/&corpus;/batch/&batch;/batch.xml</sourcePath> -->
+    <sourcePath>&inputfile;</sourcePath>
+    <xslTransform>plans/microbes-pubmed2alvisnlp.xslt</xslTransform>
+  </module>
+
+  <mesh-path class="FileMapper2">
+    <mappingFile>resources/2017MeshTree.txt</mappingFile>
+    <target>documents.(sections:mesh|sections:chemical)</target>
+    <form>@UI</form>
+    <targetFeatures>mesh-path,,mesh-name</targetFeatures>
+    <keyColumn>1</keyColumn>
+  </mesh-path>
+
+  <module id="set-url" class="Action">
+    <target>documents</target>
+    <action>set:feat:url("http://www.ncbi.nlm.nih.gov/pubmed/" ^ @id)</action>
+    <setFeatures/>
+  </module>
+
+  <!-- Get year -->
+  <module id="set-year" class="Action">
+    <target>documents[@year == "" and not @date == ""]</target>
+    <action>set:feat:year(str:seds(@date,"^(\\d+) .+$","$1"))</action>
+    <setFeatures/>
+  </module>
+
+  <import file="plans/entities.plan"/>
+
+  <import file="plans/relations.plan"/>
+
+  <sequence id="output">
+
+    <module id="microorganisms" class="TabularExport">
+      <outDir>&outdir;</outDir>
+      <files>$</files>
+      <fileName>"microorganisms.txt"</fileName>
+      <lines>documents.sections.layer:microorganism</lines>
+      <columns separator=";">
+    	section.document.@id;
+    	section.@name;
+    	start ^ "-" ^ end;
+    	@form;
+    	@taxid;
+    	@canonical-name;
+    	@path;
+    	@rank
+      </columns>
+    </module>
+
+    <module id="habitats" class="TabularExport">
+      <outDir>&outdir;</outDir>
+      <files>$</files>
+      <fileName>"habitats.txt"</fileName>
+      <lines>documents.sections.layer:habitats</lines>
+      <columns separator=";">
+    	section.document.@id;
+    	section.@name;
+    	start ^ "-" ^ end;
+    	@form;
+    	@concept-id;
+    	@concept-name;
+    	@concept-path;
+    	@explain_concept-synonym;
+    	@explain_significant-head;
+    	@score
+      </columns>
+    </module>
+
+    <module id="phenotypes" class="TabularExport">
+      <outDir>&outdir;</outDir>
+      <files>$</files>
+      <fileName>"phenotypes.txt"</fileName>
+      <lines>documents.sections.layer:phenotypes</lines>
+      <columns separator=";">
+    	section.document.@id;
+    	section.@name;
+    	start ^ "-" ^ end;
+    	@form;
+    	@concept-id;
+    	@concept-name;
+    	@concept-path;
+    	@explain_concept-synonym;
+    	@explain_significant-head;
+    	@score
+      </columns>
+    </module>
+
+    <module id="relations" class="TabularExport">
+      <outDir>&outdir;</outDir>
+      <files>$</files>
+      <fileName>"relations.txt"</fileName>
+      <lines>documents.sections.relations:CooccurrenceLocalization.tuples</lines>
+      <columns separator=";">
+    	section.document.@id;
+    	section.@name;
+    	args:Bacterium.@taxid;
+    	args:Bacterium.@form;
+    	args:Bacterium.@canonical-name;
+    	args:Bacterium.@path;
+    	args:Localization.@concept-id;
+    	args:Localization.@form;
+    	args:Localization.@concept-name;
+    	args:Localization.@concept-path
+      </columns>
+    </module>
+
+    <module id="relations-pheno" class="TabularExport">
+      <outDir>&outdir;</outDir>
+      <files>$</files>
+      <fileName>"phenotype-relations.txt"</fileName>
+      <lines>documents.sections.relations:PhenotypeRelation.tuples</lines>
+      <columns separator=";">
+    	section.document.@id;
+    	section.@name;
+    	args:Microorganism.@taxid;
+    	args:Microorganism.@form;
+	args:Microorganism.@lemma-string;
+    	args:Microorganism.@canonical-name;
+    	args:Microorganism.@path;
+    	args:Phenotype.@concept-id;
+    	args:Phenotype.@form;
+	args:Phenotype.@lemma-string;
+    	args:Phenotype.@concept-name;
+    	args:Phenotype.@concept-path
+      </columns>
+    </module>
+
+  </sequence>
+
+  <module id="index" class="AlvisIRIndexer">
+    <indexDir>&outdir;/index</indexDir>
+    <tokenPositionGap>1024</tokenPositionGap>
+    <fieldNames>title,abstract,author,full-author,pmid,year,journal,mesh,url</fieldNames>
+    <relations>
+      <livesin>taxon,habitat</livesin>
+      <exhibits>taxon,phenotype</exhibits>
+    </relations>
+    <propertyKeys/>
+    <documents>
+      <fields>
+  	<instances>sections:title | sections:abstract</instances>
+  	<annotations>
+  	  <instances>layer:microorganism</instances>
+  	  <text>"{taxon}" ^ @path ^ "/"</text>
+  	</annotations>
+  	<annotations>
+  	  <instances>layer:sentences</instances>
+  	  <text>"{SENT}"</text>
+  	</annotations>
+  	<annotations>
+  	  <instances>layer:habitats</instances>
+  	  <text>"{habitat}" ^ @concept-path ^ "/"</text>
+  	</annotations>
+  	<annotations>
+  	  <instances>layer:phenotypes</instances>
+  	  <text>"{phenotype}" ^ @concept-path ^ "/"</text>
+  	</annotations>
+  	<annotations>
+  	  <instances>relations:CooccurrenceLocalization.tuples</instances>
+  	  <fragments>
+  	    <instances>sort:ival(args, start)</instances>
+  	  </fragments>
+  	  <text>"{livesin}{taxon}" ^ args:Bacterium.@path ^ "/~{habitat}" ^ args:Localization.@concept-path ^ "/"</text>
+  	  <arguments>
+  	    <taxon>args:Bacterium.id:unique</taxon>
+  	    <habitat>args:Localization.id:unique</habitat>
+  	  </arguments>
+  	</annotations>
+  	<annotations>
+  	  <instances>relations:CooccurrenceLocalization.tuples</instances>
+  	  <fragments>
+  	    <instances>sort:ival(args, start)</instances>
+  	  </fragments>
+  	  <text>"{livesin}" ^ args:Bacterium.@form ^ "/~" ^ args:Localization.@form ^ "/"</text>
+  	  <arguments>
+  	    <taxon>args:Bacterium.id:unique</taxon>
+  	    <habitat>args:Localization.id:unique</habitat>
+  	  </arguments>
+  	</annotations>
+  	<annotations>
+  	  <instances>relations:PhenotypeRelation.tuples</instances>
+  	  <fragments>
+  	    <instances>sort:ival(args, start)</instances>
+  	  </fragments>
+  	  <text>"{exhibits}{taxon}" ^ args:Microorganism.@path ^ "/~{phenotype}" ^ args:Phenotype.@concept-path ^ "/"</text>
+  	  <arguments>
+  	    <taxon>args:Microorganism.id:unique</taxon>
+  	    <phenotype>args:Phenotype.id:unique</phenotype>
+  	  </arguments>
+  	</annotations>
+  	<annotations>
+  	  <instances>relations:PhenotypeRelation.tuples</instances>
+  	  <fragments>
+  	    <instances>sort:ival(args, start)</instances>
+  	  </fragments>
+  	  <text>"{exhibits}" ^ args:Microorganism.@form ^ "/~" ^ args:Phenotype.@form ^ "/"</text>
+  	  <arguments>
+  	    <taxon>args:Microorganism.id:unique</taxon>
+  	    <phenotype>args:Phenotype.id:unique</phenotype>
+  	  </arguments>
+  	</annotations>
+      </fields>
+      <fields>
+  	<instances>nav:features:mesh-name</instances>
+  	<field-name>"mesh"</field-name>
+  	<keyword>@value</keyword>
+      </fields>
+      <fields>
+  	<instances>sections:author</instances>
+      </fields>
+      <fields>
+  	<instances>sections:author</instances>
+  	<field-name>"full-author"</field-name>
+  	<keyword>contents</keyword>
+      </fields>
+      <fields>
+  	<instances>$</instances>
+  	<field-name>"pmid"</field-name>
+  	<keyword>@id</keyword>
+      </fields>
+      <fields>
+  	<instances>$[@year]</instances>
+  	<field-name>"year"</field-name>
+  	<keyword>@year</keyword>
+      </fields>
+      <fields>
+  	<instances>$[@journal]</instances>
+  	<field-name>"journal"</field-name>
+  	<keyword>@journal</keyword>
+      </fields>
+      <fields>
+        <instances>$[@url]</instances>
+        <field-name>"url"</field-name>
+        <keyword>document.@url</keyword>
+      </fields>
+    </documents>
+  </module>
+
+</alvisnlp-plan>
