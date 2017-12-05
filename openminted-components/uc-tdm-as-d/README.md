@@ -19,7 +19,7 @@ alvisnlp org.bibliome.alvisnlp.modules.uc-tmd-as-d \
 --output /alvisnlp/data/output
 ```
 
-#```docker run -i --rm -v $PWD/test-data/:/as-d/data ldeleger/uc-tdm-as-d-docker alvisnlp -J "-Xmx30g" -entity inputfile /as-d/data/corpus/test.txt -entity outdir /as-d/data/output plans/tag_WoS_abstracts.plan```
+[//] ```docker run -i --rm -v $PWD/test-data/:/as-d/data ldeleger/uc-tdm-as-d-docker alvisnlp -J "-Xmx30g" -entity inputfile /as-d/data/corpus/test.txt -entity outdir /as-d/data/output plans/tag_WoS_abstracts.plan```
 
 ## OpenMinteD metadata
 
