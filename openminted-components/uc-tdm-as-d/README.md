@@ -13,7 +13,7 @@ To run the workflow (from the folder containing the README):
 
 ```
 docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
-bibliome/ontology-analyzer \
+bibliome/uc-tdm-as-d \
 alvisnlp org.bibliome.alvisnlp.modules.uc-tmd-as-d \
 --input /alvisnlp/data/corpus/test.txt \
 --output /alvisnlp/data/output
