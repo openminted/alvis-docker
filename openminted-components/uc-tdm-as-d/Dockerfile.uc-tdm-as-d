@@ -1,0 +1,18 @@
+#FROM maven:3.2-jdk-7-onbuild
+FROM ldeleger/uc-tdm-as-d-docker
+MAINTAINER Mouhamadou Ba <mouhamadou.ba@inra.fr>
+
+
+
+WORKDIR /alvisnlp
+
+COPY uc-tdm-as-d.sh /alvisnlp/
+#ADD test-data/plans /alvisnlp/plans
+#ADD test-data/models /alvisnlp/models
+
+
+ENTRYPOINT ["/alvisnlp/uc-tdm-as-d.sh"]
+
+RUN ["chmod", "+x", "/alvisnlp/uc-tdm-as-d.sh"]
+
+#CMD ["alvisnlp"]
