@@ -27,4 +27,4 @@ The OpenMinteD metadata are recorded in the following [XML file](uc-tdm-as-d-doc
 
 ## Re-build the docker image
 
-```docker build . -t ldeleger/uc-tdm-as-d-docker -f Dockerfile```
+```docker build . -t bibliome/uc-tdm-as-d -f Dockerfile.uc-tdm-as-d```
