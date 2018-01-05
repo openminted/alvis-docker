@@ -1,4 +1,4 @@
-# uc-tdm-AS-D-docker
+# uc-tdm-AS-D
 
 This component is the workflow for the OpenMinTeD AS-D use case.
 
