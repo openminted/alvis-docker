@@ -48,7 +48,7 @@ OUTPUT_VALUE=$6
 
 
 $COMMAND -verbose -J "-Xmx30g" \
-        -entity $INPUT $INPUT_VALUE \
-	-entity $OUTPUT $OUTPUT_VALUE \
-    	/alvisnlp/plans/tag_WoS_abstracts.plan
+        -alias $INPUT $INPUT_VALUE \
+	-entity outdir $OUTPUT_VALUE \
+    	 plans/tag_WoS_abstracts.plan
 
