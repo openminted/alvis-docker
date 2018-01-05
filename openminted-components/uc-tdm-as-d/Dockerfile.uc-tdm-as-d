@@ -4,15 +4,15 @@ MAINTAINER Mouhamadou Ba <mouhamadou.ba@inra.fr>
 
 
 
-WORKDIR /alvisnlp
+WORKDIR /as-d
 
-COPY uc-tdm-as-d.sh /alvisnlp/
-#ADD test-data/plans /alvisnlp/plans
+COPY uc-tdm-as-d.sh /as-d/
+#ADD plans /alvisnlp/plans
 #ADD test-data/models /alvisnlp/models
 
 
-ENTRYPOINT ["/alvisnlp/uc-tdm-as-d.sh"]
+ENTRYPOINT ["/as-d/uc-tdm-as-d.sh"]
 
-RUN ["chmod", "+x", "/alvisnlp/uc-tdm-as-d.sh"]
+RUN ["chmod", "+x", "/as-d/uc-tdm-as-d.sh"]
 
 #CMD ["alvisnlp"]
