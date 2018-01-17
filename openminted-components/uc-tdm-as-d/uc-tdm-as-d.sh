@@ -50,5 +50,5 @@ OUTPUT_VALUE=$6
 $COMMAND -verbose -J "-Xmx30g" \
         -alias $INPUT $INPUT_VALUE \
 	-entity outdir $OUTPUT_VALUE \
-    	 plans/tag_WoS_abstracts.plan
+    	 plans/tag_pubmed.plan
 
