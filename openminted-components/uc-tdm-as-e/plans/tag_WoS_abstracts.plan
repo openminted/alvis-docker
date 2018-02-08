@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<alvisnlp-plan id="test-as-d">
+
+<!-- Read abstracts -->
+<module id="read-wos-abstracts" class="WebOfKnowledgeReader">
+    <source>&inputfile;</source>
+</module>
+<module id="renametitle" class="Action">
+  <target>documents.sections:TI</target>
+  <action>set:feat:sectionname("title")</action>
+  <setFeatures/>
+</module>
+<module id="renameabstract" class="Action">
+  <target>documents.sections:AB</target>
+  <action>set:feat:sectionname("abstract")</action>
+  <setFeatures/>
+</module>
+
+<!-- Extract relevant entities -->
+<import file="plans/extract_Wheat_entities.plan"/>
+
+<!-- Add list of entities (canonical forms, synonyms...) to each document -->
+<module id="add-list-of-entities-to-doc" class="Action">
+  <target>documents</target>
+  <action>set:feat:entities(str:seds(str:seds(str:seds(
+  str:join:' , '(sort:nsval(document.sections[@sectionname == "title" or @sectionname == "abstract"].layer:genes[@canonical-form != @form],@canonical-form),@canonical-form) ^ " , " ^ 
+  str:join:' , '(sort:nsval(document.sections[@sectionname == "title" or @sectionname == "abstract"].layer:markers[@canonical-form != @form],@canonical-form),@canonical-form) ^ " , " ^ 
+  str:join:' , '(sort:nsval(document.sections[@sectionname == "title" or @sectionname == "abstract"].layer:markers[@synonym != @form],@synonym),@synonym) ^ " , " ^ 
+  str:join:' , '(sort:nsval(document.sections[@sectionname == "title" or @sectionname == "abstract"].layer:taxa[@canonical-name != @form],@canonical-name),@canonical-name) ^ " , " ^ 
+  str:join:' , '(sort:nsval(document.sections[@sectionname == "title" or @sectionname == "abstract"].layer:taxa[@synonym],@synonym),@synonym) ^ " , " ^
+  str:join:' , '(sort:nsval(document.sections[@sectionname == "title" or @sectionname == "abstract"].layer:accessions[@accession-name != @form],@accession-name),@accession-name) ^ " , " ^
+  str:join:' , '(sort:nsval(document.sections[@sectionname == "title" or @sectionname == "abstract"].layer:accessions[@synonym1],@synonym1),@synonym1) ^ " , " ^ 
+  str:join:' , '(sort:nsval(document.sections[@sectionname == "title" or @sectionname == "abstract"].layer:accessions[@synonym2],@synonym2),@synonym2),
+  "(\\s+,)+"," ,"),
+  "^(\\s*, )+",""),
+  " ,\\s*$","")
+  )
+  </action>
+  <setFeatures/>
+</module>
+
+<!-- Print results -->
+<write class="XMLWriter2">
+  <outDir>&outdir;</outDir>
+  <roots>$</roots>
+  <fileName>"tagged_abstracts.csv"</fileName>
+  <xslTransform>plans/urgiExport.xslt</xslTransform>
+  <indent>false</indent>
+</write>
+
+<!-- Index for AlvisIR -->
+  <module id="index" class="AlvisIRIndexer">
+    <indexDir>&outdir;/index</indexDir>
+    <tokenPositionGap>128</tokenPositionGap>
+    <fieldNames>title,abstract,author,full-author,doi,year,journal,mesh</fieldNames>
+    <propertyKeys/>
+    <documents>
+      <fields>
+  	<instances>sections[@sectionname=="title"] | sections[@sectionname=="abstract"]</instances>
+  	<field-name>@sectionname</field-name>
+  	<annotations>
+  	  <instances>layer:taxa</instances>
+  	  <text>"{taxon}" ^ @taxid ^ "/"</text>
+  	</annotations>
+  	<annotations>
+  	  <instances>layer:genes</instances>
+  	  <text>"{gene}" ^ @canonical-form ^ "/"</text>
+  	</annotations>
+  	<annotations>
+  	  <instances>layer:markers</instances>
+  	  <text>"{marker}" ^ @canonical-form ^ "/"</text>
+  	</annotations>
+	<annotations>
+  	  <instances>layer:varieties</instances>
+  	  <text>"{variety}" ^ @form ^ "/"</text>
+  	</annotations>
+  	<annotations>
+  	  <instances>layer:sentences</instances>
+  	  <text>"{SENT}"</text>
+  	</annotations>
+  	<annotations>
+  	  <instances>layer:phenotypes</instances>
+  	  <text>"{phenotype}" ^ @concept-path ^ "/"</text>
+  	</annotations>
+      </fields>
+      <fields>
+	<instances>document.nav:features:AU</instances>
+  	<field-name>"author"</field-name>
+  	<keyword>@value</keyword>
+      </fields>
+      <fields>
+  	<instances>$[@DI]</instances>
+  	<field-name>"doi"</field-name>
+  	<keyword>@DI</keyword>
+      </fields>
+      <fields>
+  	<instances>$[@PY]</instances>
+  	<field-name>"year"</field-name>
+  	<keyword>@PY</keyword>
+      </fields>
+      <fields>
+  	<instances>$[@JI]</instances>
+  	<field-name>"journal"</field-name>
+  	<keyword>@JI</keyword>
+      </fields>
+    </documents>
+  </module>
+
+</alvisnlp-plan>

@@ -1,0 +1,391 @@
+<alvisnlp-plan id="tomap">
+
+  <!-- run ToMap (using previously obtained BioYatea results)-->
+  
+  <!-- ToMap on lemmas -->
+  <module id="tomap" class="TomapProjector">
+    <yateaFile inhibitCheck="true">&outdir;/yatea/corpus/default/xml/candidates.xml</yateaFile>
+    <targetLayerName>phenotypes</targetLayerName>
+    <conceptFeature>concept-id</conceptFeature>
+    <explanationFeaturePrefix>explain_</explanationFeaturePrefix>
+    <tomapClassifier graylist="resources/graylist_wheat.txt" whole-proxy-distance="false" empty-words="resources/stopwords_EN.ttg">resources/WheatPhenotypeOntology.tomap</tomapClassifier>
+    <lemmaKeys/>
+    <subject layer="words" feature="lemma"/>
+    <scoreFeature>score</scoreFeature>
+  </module>
+
+  <module id="concept-names" class="OBOMapper">
+    <oboFiles>resources/WheatPhenotypeOntology.obo</oboFiles>
+    <idKeys/>
+    <target>documents.sections.layer:phenotypes</target>
+    <form>@concept-id</form>
+    <nameFeature>concept-name</nameFeature>
+    <pathFeature>concept-path</pathFeature>
+  </module>
+
+  <!-- Repeat ToMap using "customized" lemmas -->
+  <!-- <sequence id="tomap-on-alternative-lemmas"> -->
+
+  <!--   <module id="tomap" class="TomapProjector"> -->
+  <!--     <yateaFile inhibitCheck="true">yatea/corpus/default/xml/candidates.xml</yateaFile> -->
+  <!--     <targetLayerName>phenotypes2</targetLayerName> -->
+  <!--     <conceptFeature>concept-id</conceptFeature> -->
+  <!--     <explanationFeaturePrefix>explain_</explanationFeaturePrefix> -->
+  <!--     <tomapClassifier graylist="resources/graylist_wheat.txt" whole-proxy-distance="false">resources/WheatPhenotypeOntology.tomap</tomapClassifier> -->
+  <!--     <lemmaKeys/> -->
+  <!--     <subject layer="words" feature="lemma2"/> -->
+  <!--     <scoreFeature>score</scoreFeature> -->
+  <!--   </module> -->
+
+  <!--   <module id="concept-names" class="OBOMapper"> -->
+  <!--     <oboFiles>resources/WheatPhenotypeOntology.obo</oboFiles> -->
+  <!--     <idKeys/> -->
+  <!--     <target>documents.sections.layer:phenotypes2</target> -->
+  <!--     <form>@concept-id</form> -->
+  <!--     <nameFeature>concept-name</nameFeature> -->
+  <!--     <pathFeature>concept-path</pathFeature> -->
+  <!--   </module> -->
+
+    <!-- Add only those that are not already in layer 'phenotypes'-->
+  <!--   <module id="add-phenotypes" class="Action"> -->
+  <!--     <target>documents.sections.layer:phenotypes2[not span:phenotypes]</target> -->
+  <!--     <action>add:phenotypes</action> -->
+  <!--     <addToLayer/> -->
+  <!--   </module> -->
+
+  <!-- </sequence> -->
+
+  <!-- Repeat ToMap without lemmaKeys option -->
+  <!-- <sequence id="tomap-no-lemmakeys"> -->
+
+  <!--   <module id="tomap" class="TomapProjector"> -->
+  <!--     <yateaFile inhibitCheck="true">yatea/corpus/default/xml/candidates.xml</yateaFile> -->
+  <!--     <targetLayerName>phenotypes3</targetLayerName> -->
+  <!--     <conceptFeature>concept-id</conceptFeature> -->
+  <!--     <explanationFeaturePrefix>explain_</explanationFeaturePrefix> -->
+  <!--     <tomapClassifier graylist="resources/graylist_wheat.txt" whole-proxy-distance="false">resources/WheatPhenotypeOntology.tomap</tomapClassifier> -->
+  <!--     <subject layer="words" feature="lemma"/> -->
+  <!--     <scoreFeature>score</scoreFeature> -->
+  <!--   </module> -->
+
+  <!--   <module id="concept-names" class="OBOMapper"> -->
+  <!--     <oboFiles>resources/WheatPhenotypeOntology.obo</oboFiles> -->
+  <!--     <idKeys/> -->
+  <!--     <target>documents.sections.layer:phenotypes3</target> -->
+  <!--     <form>@concept-id</form> -->
+  <!--     <nameFeature>concept-name</nameFeature> -->
+  <!--     <pathFeature>concept-path</pathFeature> -->
+  <!--   </module> -->
+
+    <!-- Add only those that are not already in layer 'phenotypes'-->
+  <!--   <module id="add-phenotypes" class="Action"> -->
+  <!--     <target>documents.sections.layer:phenotypes3[not span:phenotypes]</target> -->
+  <!--     <action>add:phenotypes</action> -->
+  <!--     <addToLayer/> -->
+  <!--   </module> -->
+
+  <!-- </sequence> -->
+
+<!-- <module id="delete-line-break" class="Action"> -->
+<!--     <target>documents.sections.layer:phenotypes[@form =~ "\\n"]</target> -->
+<!--     <action>remove:phenotypes</action> -->
+<!--     <removeFromLayer/> -->
+<!--  </module> -->
+
+<module id="delete-env-conditions" class="Action">
+    <target>documents.sections.layer:phenotypes[@concept-path =~ "(ID:0000183|ID:0000291)"]</target>
+    <action>add:env-conditions|remove:phenotypes</action>
+    <removeFromLayer/>
+    <addToLayer/>
+ </module>
+
+<module id="delete-env-conditions-2" class="Action">
+    <target>documents.sections.layer:phenotypes[span:env-conditions]</target>
+    <action>remove:phenotypes</action>
+    <removeFromLayer/>
+ </module>
+
+<!-- Postprocessing (required to filter and choose a candidate later on) -->
+
+  <!-- Projet BioYatea results -->
+  <module id="bioyatea-projection" class="YateaProjector">
+    <targetLayerName>yateaTerms</targetLayerName>
+    <yateaFile inhibitCheck="yes">&outdir;/yatea/corpus/default/xml/candidates.xml</yateaFile> <!-- ??? -->
+    <subject layer="words"/>
+  </module>
+
+  <!-- Generate lemmatized string for predicted phenotypes and for yatea terms-->
+  <module id="get-lemmas-for-predicted-phenotypes" class="Action">
+    <target>documents.sections.layer:phenotypes</target>
+    <action>set:feat:lemma-string(str:join(overlapping:words[start != target.end],@lemma," "))</action>
+    <setFeatures/>
+  </module>
+  <module id="get-lemmas-for-yateaTerms" class="Action">
+    <target>documents.sections.layer:yateaTerms</target>
+    <action>set:feat:lemma-string(str:join(overlapping:words[start != target.end],@lemma," "))</action>
+    <setFeatures/>
+  </module>
+
+  <!-- Get head id and (lemmatized) string for predicted phenotypes -->
+  <module id="get-head-id" class="Action">
+    <target>documents.sections.layer:phenotypes</target>
+    <action>set:feat:head-id(span:yateaTerms.@head)</action>
+    <setFeatures/>
+  </module>
+  <module id="get-full-head" class="Action">
+    <target>documents.sections.layer:phenotypes</target>
+    <action>set:feat:full-head(overlapping:yateaTerms[@term-id == target.@head-id].@lemma-string)</action>
+    <setFeatures/>
+  </module>
+
+  <!-- Get single-word syntactic head -->
+  <module id="get-mono-head" class="Action">
+    <target>documents.sections.layer:phenotypes</target>
+    <action>set:feat:head(span:yateaTerms.@mono-head)</action>
+    <setFeatures/>
+  </module>
+  <module id="get-mono-head2" class="Action">
+    <target>documents.sections.layer:phenotypes[@head == ""]</target>
+    <action>set:feat:head(@head-id)</action>
+    <setFeatures/>
+  </module>
+  <module id="get-mono-head-string" class="Action">
+    <target>documents.sections.layer:phenotypes</target>
+    <action>set:feat:head-string(overlapping:yateaTerms[@term-id == target.@head].@lemma-string)</action>
+    <setFeatures/>
+  </module>
+
+  <!-- Tag terms that fully include their mapped concept -->
+  <module id="inclusion" class="Action">
+    <target>documents.sections.layer:phenotypes</target>
+    <action>set:feat:included(@full-head != "" and (@concept-name == @full-head or @explain_concept-synonym == @full-head))</action>
+    <setFeatures/>
+  </module>
+
+<!-- Rules for phenotypes -->
+
+  <!-- Blacklist of syntactic heads -->
+  <module id="delete-blacklisted-heads" class="Action">
+    <target>documents.sections.layer:phenotypes[(@explain_significant-head in "resources/blacklisted-phenotypes-heads.txt" or @head-string in "resources/blacklisted-phenotypes-heads.txt") and not (@concept-name =~ " " and @lemma-string ?= @concept-name)]</target>
+    <action>delete</action>
+    <deleteElements/>
+  </module>
+
+
+<!-- Choose a concept when multiple concepts have been mapped to a term -->
+
+  <sequence id="choose-candidate">
+    <!-- 1. Keep only the highest scored concepts -->
+    <module id="keep-highest-score" class="Action">
+      <target>documents.sections.layer:phenotypes</target>
+      <action>set:feat:highest(not span:phenotypes[@score > target.@score])</action>
+      <setFeatures/>
+    </module>
+    <!-- 2. Select candidates which (lemmatized) string matches a concept preferred name as opposed to those that match a concept synonym (this is for disambiguation of exact matches only)-->
+    <module id="select-one-candidate-1" class="Action">
+      <target>documents.sections.layer:phenotypes[@highest == "true"]</target>
+      <action>set:feat:selected1(@lemma-string == @concept-name or not span:phenotypes[@highest == "true" and @lemma-string == @concept-name])</action>
+      <setFeatures/>
+    </module>
+    <!-- 3. Lexical inclusion : select in priority concepts that are included in the extracted habitat -->
+    <module id="select-included" class="Action">
+      <target>documents.sections.layer:phenotypes[@selected1 == "true"]</target>
+      <action>set:feat:selected2(@included == "true" or not span:phenotypes[@selected1 == "true" and @included == "true"])</action>
+      <setFeatures/>
+    </module>
+   <!-- 5. Select most generic candidate -->
+  <module id="select-generic" class="Action">
+    <target>documents.sections.layer:phenotypes[@selected2 == "true"]</target>
+    <action>set:feat:selected3(not span:phenotypes[@selected2 == "true" and str:len(target.@concept-path) > str:len(@concept-path)])</action>
+    <setFeatures/>
+  </module>
+    <!-- 4. Random : sort the candidates and choose the first one-->
+    <module id="temp-id" class="Action">
+      <target>documents.sections</target>
+      <action>id:enumerate:tempid(sort:sval(layer:phenotypes[@selected3 == "true"],@concept-name))</action>
+      <setFeatures/>
+    </module>
+    <module id="select-one-candidate" class="Action">
+      <target>documents.sections.layer:phenotypes[@selected3 == "true"]</target>
+      <action>set:feat:selected(not span:phenotypes[@selected3 == "true" and target.@tempid > @tempid])</action>
+      <setFeatures/>
+    </module>
+  </sequence>
+
+  
+<!-- Filtering of embedded terms -->
+
+  <!-- remove terms nested in terms mapped with a more specific concept -->
+  <sequence id="remove-embedded-generic">
+    <module id="keep" class="Action"> 
+     <target>documents.sections.layer:phenotypes[@selected == "true"]</target>
+      <action>set:feat:no-parent(not outside:phenotypes[@selected == "true" and @concept-path ?= target.@concept-id])</action>
+      <setFeatures/>
+    </module>
+    <module id="delete" class="Action">
+      <target>documents.sections.layer:phenotypes[@no-parent == "false"]</target>
+      <action>delete</action>
+      <deleteElements/>
+    </module>
+  </sequence>
+
+  <!-- remove terms nested in terms with the same (significant) head -->
+  <sequence id="remove-embedded-in-term-with-same-significant-head">
+    <module id="keep" class="Action">
+      <target>documents.sections.layer:phenotypes[@selected == "true"]</target>
+      <action>set:feat:diff-head(not outside:phenotypes[@selected == "true" and @explain_significant-head == target.@explain_significant-head and not @explain_significant-head == ""])</action>
+      <setFeatures/>
+    </module>
+    <module id="delete" class="Action">
+      <target>documents.sections.layer:phenotypes[@diff-head == "false"]</target>
+      <action>delete</action>
+      <deleteElements/>
+    </module>
+  </sequence>
+
+  <!-- remove terms nested in terms with the same (mono-word) head -->
+  <sequence id="remove-embedded-in-term-with-same-head">
+    <module id="keep" class="Action">
+      <target>documents.sections.layer:phenotypes[@selected == "true"]</target>
+      <action>set:feat:diff-head(not outside:phenotypes[@selected == "true" and @head == target.@head and not @head == ""])</action>
+      <setFeatures/>
+    </module>
+    <module id="delete" class="Action">
+      <target>documents.sections.layer:phenotypes[@diff-head != "true"]</target>
+      <action>delete</action>
+      <deleteElements/>
+    </module>
+  </sequence>
+
+<!-- Additional filtering -->
+
+ <module id="flag-blacklisted-terms" class="PatternMatcher">
+      <layerName>words</layerName>
+      <pattern>
+ 	(to-delete: [@lemma in "resources/modifier_blacklist.txt" or @form in "resources/modifier_blacklist.txt" or @ne-type=="gene" or @ne-type == "taxon"]*
+ 	[@lemma in "resources/blacklist_phenotypes.txt" or @form in "resources/blacklist_phenotypes.txt"]
+ 	[@lemma in "resources/modifier_blacklist.txt" or @form in "resources/modifier_blacklist.txt"]*)
+      </pattern>
+      <actions>
+ 	<createAnnotation group="to-delete" layer="to-delete"/>
+      </actions>
+    </module>
+
+ <module id="delete-flagged-terms" class="Action">
+    <target>documents.sections.layer:phenotypes[@selected == "true" and (span:to-delete or outside:to-delete)]</target>
+    <action>delete</action>
+    <deleteElements/>
+  </module>
+
+  <!-- remove single-word terms with certain POS (currently only "VVN")-->
+  <module id="delete-VVN" class="Action">
+    <target>documents.sections.layer:phenotypes[@selected == "true" and span:words.@pos == "VVN"]</target>
+    <action>delete</action>
+    <deleteElements/>
+  </module>
+
+  <!-- remove terms with scores under a certain threshold (0.15) -->
+  <module id="delete-low-score" class="Action">
+    <target>documents.sections.layer:phenotypes[@selected == "true" and 0.15 > @score]</target>
+    <action>delete</action>
+    <deleteElements/>
+  </module>
+
+
+  <!-- final step : delete not selected -->
+  <module id="delete-not-selected" class="Action">
+    <target>documents.sections.layer:phenotypes[not @selected == "true"]</target>
+    <action>delete</action>
+    <deleteElements/>
+  </module>
+
+<!-- exact match -->
+    <module id="exact-match" class="OBOProjector">
+      <oboFiles>resources/WheatPhenotypeOntology.obo</oboFiles>
+      <targetLayerName>exact-pheno</targetLayerName>
+      <nameFeature>concept-name</nameFeature>
+      <pathFeature>concept-path</pathFeature>
+      <idFeature>concept-id</idFeature>
+      <matchStartCaseInsensitive/>
+      <subject layer="words" feature="lemma"/>
+    </module>
+
+<module id="delete-env-conditions-3" class="Action">
+    <target>documents.sections.layer:exact-pheno[@concept-path =~ "(ID:0000183|ID:0000291)"]</target>
+    <action>remove:exact-pheno</action>
+    <removeFromLayer/> 
+ </module>
+
+ <module id="exact-pheno-overlaps" class="RemoveOverlaps">
+      <layerName>exact-pheno</layerName>
+ </module>
+
+ <module id="remove-single-terms-and-embedded"  class="Action">
+      <target>documents.sections.layer:exact-pheno[(not @form =~  " ") or outside:phenotypes]</target>
+    <action>remove:exact-pheno</action>
+    <removeFromLayer/> 
+ </module>
+
+ <module id="remove-pheno-inside-exact-match"  class="Action">
+      <target>documents.sections.layer:phenotypes[outside:exact-pheno]</target>
+    <action>remove:phenotypes</action>
+    <removeFromLayer/> 
+ </module>
+
+ <module id="add-exact-match"  class="Action">
+      <target>documents.sections.layer:exact-pheno</target>
+    <action>add:phenotypes</action>
+    <addToLayer/>
+ </module>
+
+ <!-- <module id="flag-overlapping"  class="Action"> -->
+ <!--      <target>documents.sections.layer:phenotypes[overlapping:phenotypes.end != end or overlapping:phenotypes.start != start]</target> -->
+ <!--    <action>set:feat:overlap("true")</action> -->
+ <!--    <setFeatures/> -->
+ <!-- </module> -->
+
+ <module id="flag-overlapping-2" class="PatternMatcher">
+      <layerName>words</layerName>
+      <pattern>
+	([outside:phenotypes]+)
+      </pattern>
+      <actions>
+ 	<createAnnotation layer="to-merge"/>
+      </actions>
+</module>
+ <module id="remove-to-merge-spanning-existing-pheno"  class="Action">
+      <target>documents.sections.layer:to-merge[span:phenotypes]</target>
+    <action>remove:to-merge</action>
+    <removeFromLayer/> 
+ </module>
+
+ <module id="remove-pheno-starting-overlap"  class="Action">
+      <target>documents.sections.layer:phenotypes[outside:to-merge.@form ^= @form]</target>
+    <action>remove:phenotypes</action>
+    <removeFromLayer/>
+ </module>
+
+ <module id="get-overlapping-pheno-features"  class="Action">
+      <target>documents.sections.layer:to-merge[inside:phenotypes]</target>
+    <action>set:feat:concept-id(inside:phenotypes.@concept-id)|set:feat:concept-name(inside:phenotypes.@concept-name)|set:feat:concept-path(inside:phenotypes.@concept-path)|set:feat:selected("true")</action>
+    <setFeatures/>
+ </module>
+
+ <module id="remove-pheno-overlap"  class="Action">
+      <target>documents.sections.layer:phenotypes[outside:to-merge]</target>
+    <action>remove:phenotypes</action>
+    <removeFromLayer/>
+ </module>
+
+ <module id="add-to-merge"  class="Action">
+     <target>documents.sections.layer:to-merge</target>
+    <action>add:phenotypes</action>
+    <addToLayer/>
+ </module>
+
+
+</alvisnlp-plan>
+
+
+
+
