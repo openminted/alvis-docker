@@ -1,4 +1,4 @@
-# uc-tdm-AS-D
+# uc-tdm-AS-E
 
 This component is the workflow for the OpenMinTeD AS-E use case.
 
@@ -15,11 +15,22 @@ To run the workflow (from the folder containing the README):
 docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
 bibliome/uc-tdm-as-e \
 alvisnlp org.bibliome.alvisnlp.modules.uc-tmd-as-e \
---input /alvisnlp/data/corpus/test.xml \
---output /alvisnlp/data/output
+--input /alvisnlp/data/corpus/pubmed_result-2.xml \
+--output /alvisnlp/data/output/entities.txt  \
+--param:readhtml=/alvisnlp/data/corpus/fulltext/html \
+--param:readWoK=/alvisnlp/data/corpus/corpus2000_12012017.txt \
+--param:exportDocument=/alvisnlp/data/output/sectionsWOK+PubMed.txt \
+--param:output-fixed-relations=/alvisnlp/data/output/relationsgroup.txt
 ```
 
-<!--- ```sudo docker run -i --rm -v $PWD/test-data/:/as-e/data as-e-docker alvisnlp -verbose -J "-Xmx30g" -alias readPubMed /as-e/data/alvisir2_corpus/pubmed_result-2.xml -alias readhtml /as-e/data/alvisir2_corpus/fulltext/html -alias readWoK /as-e/data/alvisir2_corpus/corpus2000_12012017.txt -alias exportDocument /as-e/data/output/sectionsWOK+PubMed.txt -alias output-fixed-relations /as-e/data/output/relationsgroup.txt -alias output-fixed-entities /as-e/data/output/entities.txt /as-e/plan/entities.plan
+<!--- ```sudo docker run -i --rm -v $PWD/test-data/:/as-e/data as-e-docker alvisnlp -verbose -J "-Xmx30g" 
+-alias readPubMed /as-e/data/alvisir2_corpus/pubmed_result-2.xml \
+-alias readhtml /as-e/data/alvisir2_corpus/fulltext/html \
+-alias readWoK /as-e/data/alvisir2_corpus/corpus2000_12012017.txt \
+-alias exportDocument /as-e/data/output/sectionsWOK+PubMed.txt \
+-alias output-fixed-relations /as-e/data/output/relationsgroup.txt \
+-alias output-fixed-entities /as-e/data/output/entities.txt \
+/as-e/plan/entities.plan
 ``` --->
 
 ## OpenMinteD metadata
