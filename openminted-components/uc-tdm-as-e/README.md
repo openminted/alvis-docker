@@ -16,11 +16,12 @@ docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
 bibliome/uc-tdm-as-e \
 alvisnlp org.bibliome.alvisnlp.modules.uc-tmd-as-e \
 --input /alvisnlp/data/corpus/pubmed_result_2.xml \
---output /alvisnlp/data/output/entities.txt  \
+--output entities.txt  \
 --param:readhtml=/alvisnlp/data/corpus/fulltext/html \
 --param:readWoK=/alvisnlp/data/corpus/corpus2000_12012017.txt \
---param:exportDocument=/alvisnlp/data/output/sectionsWOK+PubMed.txt \
---param:output_fixed_relations=/alvisnlp/data/output/relationsgroup.txt
+--param:exportDocument=sectionsWOK+PubMed.txt \
+--param:output_fixed_relations=relationsgroup.txt \
+--param:outputDir=/alvisnlp/data/output/
 ```
 
 <!--- ```sudo docker run -i --rm -v $PWD/test-data/:/as-e/data as-e-docker alvisnlp -verbose -J "-Xmx30g" 
