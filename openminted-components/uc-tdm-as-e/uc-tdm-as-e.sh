@@ -23,7 +23,7 @@
 #--param:readhtml=/alvisnlp/data/corpus/fulltext/html \
 #--param:readWoK=/alvisnlp/data/corpus/corpus2000_12012017.txt \
 #--param:exportDocument=/alvisnlp/data/output/sectionsWOK+PubMed.txt \
-#--param:output-fixed-relations=/alvisnlp/data/output/relationsgroup.txt
+#--param:output_fixed_relations=/alvisnlp/data/output/relationsgroup.txt
 #```
 
 COMMAND="alvisnlp"
@@ -73,9 +73,12 @@ exportDocument_VALUE=$(echo $9 | cut -f2 -d=)
 exportDocument=$(echo $parNameString | cut -f2 -d:)
 
 parNameString=$(echo $10 | cut -f1 -d=)
-output-fixed-relations_VALUE=$(echo $10 | cut -f2 -d=)
-output-fixed-relations=$(echo $parNameString | cut -f2 -d:)
+output_fixed_relations_VALUE=$(echo $10 | cut -f2 -d=)
+output_fixed_relations=$(echo $parNameString | cut -f2 -d:)
 
+parNameString=$(echo $11 | cut -f1 -d=)
+outputDir_VALUE=$(echo $11 | cut -f2 -d=)
+outputDir=$(echo $parNameString | cut -f2 -d:)
 
 #<!--- ```sudo docker run -i --rm -v $PWD/test-data/:/as-e/data as-e-docker alvisnlp -verbose -J "-Xmx30g" 
 #-alias readPubMed /as-e/data/alvisir2_corpus/pubmed_result-2.xml \
@@ -86,11 +89,12 @@ output-fixed-relations=$(echo $parNameString | cut -f2 -d:)
 #-alias output-fixed-entities /as-e/data/output/entities.txt \
 #/as-e/plan/entities.plan
 #``` --->
-$COMMAND -verbose -J "-Xmx30g" \
-        -alias readPubMed $INPUT_VALUE \
-	-alias output-fixed-entities $OUTPUT_VALUE \
-	-alias $readhtml $readhtml_VALUE \
-    	-alias $readWoK  $readWoK_VALUE \
-	-alias $exportDocument $exportDocument_VALUE \
-	-alias $output-fixed-relations $output-fixed-relations_VALUE \
+$COMMAND -verbose  \
+        --alias readPubMed $INPUT_VALUE \
+	--alias output_fixed_entities '"$OUTPUT_VALUE"' \
+	--alias $readhtml $readhtml_VALUE \
+    	--alias $readWoK  $readWoK_VALUE \
+	--alias $exportDocument '"$exportDocument_VALUE"' \
+	--alias ${output_fixed_relations} '"${output_fixed_relations_VALUE}"' \
+        $outputDir  $outputDir_VALUE
 	/as-e/plan/entities.plan
