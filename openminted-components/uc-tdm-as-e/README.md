@@ -3,8 +3,8 @@ Recognizes Gene, Protein and RNA of Arabidopsis thaliana. It normalizes them wit
 
 ## test-data
 The test-data folder contains data to run the workflow. More specifically:
-* corpus/ contains a text sample that can be used as input.
-* output/ is where the output of the workflow will be created.
+* corpus/ contains the input data (i.g., pubmed corpus)
+* output/ is where the output of the will be strored.
 
 ## Run in command-line
 
