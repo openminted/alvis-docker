@@ -1,4 +1,4 @@
-# uc-tdm-AS-C
+# Habitat-Phenotype Relation Extractor for Microbes
 
 Recognizes microorganism taxa, their habitats and their phenotypes. It categorizes them with ontologies (NCBI taxonomy and OntoBiotope ontology). It identifies lives-in relationships between taxa and habitats, and exhibits relationships between taxa and phenotypes. It is the workflow for the OpenMinTeD AS-C use case.
 
