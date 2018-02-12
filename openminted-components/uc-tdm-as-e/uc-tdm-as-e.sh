@@ -82,7 +82,7 @@ outputDir=$(echo $parNameString | cut -f2 -d:)
 
 set -o xtrace
 
-$COMMAND -verbose  \
+$COMMAND -verbose -J "-Xmx30g"  \
         -alias readPubMed $INPUT_VALUE \
 	-alias output_fixed_entities "\"$OUTPUT_VALUE\"" \
 	-alias $readhtml $readhtml_VALUE \
