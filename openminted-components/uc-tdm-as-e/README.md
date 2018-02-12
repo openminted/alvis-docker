@@ -1,4 +1,4 @@
-# uc-tdm-AS-E
+# Arabidopsis Gene Regulation Extractor
 Recognizes Gene, Protein and RNA of A. thaliana . It normalizes them with Gene Locus and identifies interacts_with relationships between Gene and Protein. It encapsulates the workflow for the OpenMinTeD AS-E use case.
 
 ## test-data
