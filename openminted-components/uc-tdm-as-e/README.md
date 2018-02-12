@@ -10,7 +10,8 @@ The test-data folder contains data to run the workflow. More specifically:
 * output/ is where the output of the will be strored.
     * entities.txt is the main output file with Gene, Protein and RNA entities annotations
     * savedrecs.txt is an output parameter to export metadata of the documents
-    * relationsgroup.txt is an output file with relations between entities annotations 
+    * relationsgroup.txt is an output file with relations between entities annotations
+    * /alvisnlp/data/output/ is the output directory
 
 ## Run in command-line
 
