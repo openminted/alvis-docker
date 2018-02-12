@@ -15,16 +15,6 @@
 # limitations under the License.
 
 
-#docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
-#bibliome/uc-tdm-as-e \
-#alvisnlp org.bibliome.alvisnlp.modules.uc-tmd-as-e \
-#--input /alvisnlp/data/corpus/pubmed_result-2.xml \
-#--output /alvisnlp/data/output/entities.txt  \
-#--param:readhtml=/alvisnlp/data/corpus/fulltext/html \
-#--param:readWoK=/alvisnlp/data/corpus/corpus2000_12012017.txt \
-#--param:exportDocument=/alvisnlp/data/output/sectionsWOK+PubMed.txt \
-#--param:output_fixed_relations=/alvisnlp/data/output/relationsgroup.txt
-#```
 
 COMMAND="alvisnlp"
 if [ "$1" == "alvisnlp" ]; then
@@ -72,12 +62,12 @@ parNameString=$(echo $9 | cut -f1 -d=)
 exportDocument_VALUE=$(echo $9 | cut -f2 -d=)
 exportDocument=$(echo $parNameString | cut -f2 -d:)
 
-parNameString=$(echo $10 | cut -f1 -d=)
-output_fixed_relations_VALUE=$(echo $10 | cut -f2 -d=)
+parNameString=$(echo ${10} | cut -f1 -d=)
+output_fixed_relations_VALUE=$(echo ${10} | cut -f2 -d=)
 output_fixed_relations=$(echo $parNameString | cut -f2 -d:)
 
-parNameString=$(echo $11 | cut -f1 -d=)
-outputDir_VALUE=$(echo $11 | cut -f2 -d=)
+parNameString=$(echo ${11} | cut -f1 -d=)
+outputDir_VALUE=$(echo ${11} | cut -f2 -d=)
 outputDir=$(echo $parNameString | cut -f2 -d:)
 
 #<!--- ```sudo docker run -i --rm -v $PWD/test-data/:/as-e/data as-e-docker alvisnlp -verbose -J "-Xmx30g" 
@@ -89,12 +79,15 @@ outputDir=$(echo $parNameString | cut -f2 -d:)
 #-alias output-fixed-entities /as-e/data/output/entities.txt \
 #/as-e/plan/entities.plan
 #``` --->
+
+set -o xtrace
+
 $COMMAND -verbose  \
-        --alias readPubMed $INPUT_VALUE \
-	--alias output_fixed_entities '"$OUTPUT_VALUE"' \
-	--alias $readhtml $readhtml_VALUE \
-    	--alias $readWoK  $readWoK_VALUE \
-	--alias $exportDocument '"$exportDocument_VALUE"' \
-	--alias ${output_fixed_relations} '"${output_fixed_relations_VALUE}"' \
-        $outputDir  $outputDir_VALUE
+        -alias readPubMed $INPUT_VALUE \
+	-alias output_fixed_entities "\"$OUTPUT_VALUE\"" \
+	-alias $readhtml $readhtml_VALUE \
+    	-alias $readWoK  $readWoK_VALUE \
+	-alias $exportDocument "\"${exportDocument_VALUE}\"" \
+	-alias ${output_fixed_relations} "\"${output_fixed_relations_VALUE}\"" \
+        -entity outdir  ${outputDir_VALUE} \
 	/as-e/plan/entities.plan
