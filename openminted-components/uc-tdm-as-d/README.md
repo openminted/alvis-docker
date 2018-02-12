@@ -1,4 +1,4 @@
-# uc-tdm-AS-D
+# Wheat Phenotypic Information Extractor
 
 Recognizes phenotypes, genes, markers, and wheat-related taxa. It categorizes the phenotypes with the Wheat Trait Ontology. It encapsulates the workflow for the OpenMinTeD AS-D use case.
 
