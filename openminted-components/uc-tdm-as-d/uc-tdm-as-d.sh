@@ -46,6 +46,7 @@ else
 fi
 OUTPUT_VALUE=$6
 
+set -o xtrace
 
 $COMMAND -verbose -J "-Xmx30g" \
         -alias $INPUT $INPUT_VALUE \
