@@ -4,7 +4,13 @@ Recognizes Gene, Protein and RNA of Arabidopsis thaliana. It normalizes them wit
 ## test-data
 The test-data folder contains data to run the workflow. More specifically:
 * corpus/ contains the input data (i.g., pubmed corpus)
+    * pubmed_result_2.xml is an input corpus from PubMed abstract.
+    * fulltext/html is a corpus from any html file.
+    * corpus2000_12012017.txt is a corpus from Web Of Knowledge website.
 * output/ is where the output of the will be strored.
+    * entities.txt is the main output file with Gene, Protein and RNA entities annotations
+    * savedrecs.txt is an output parameter to export metadata of the documents
+    * relationsgroup.txt is an output file with relations between entities annotations 
 
 ## Run in command-line
 
