@@ -1,6 +1,5 @@
 # uc-tdm-AS-E
-
-This component is the workflow for the OpenMinTeD AS-E use case.
+recognizes phenotypes, genes, markers, and wheat-related taxa. It categorizes the phenotypes with the Wheat Trait Ontology. It is the workflow for the OpenMinTeD AS-E use case.
 
 ## test-data
 The test-data folder contains data to run the workflow. More specifically:
