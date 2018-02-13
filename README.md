@@ -2,7 +2,7 @@
 Dockerizing Alvis and its components
 
 ## OpenMinTeD compatible components
-Find the OpenMinteD compatible components [here](https://github.com/openminted/alvis-docker/tree/master/openminted-components)
+Find the OpenMinteD compatible components [here](https://github.com/openminted/alvis-docker/tree/master/openminted-components).
 
 The components are wrapped following the [OpenMinTeD guidelines](https://guidelines.openminted.eu/sharing-components-as-dockerised-images.html).
 
