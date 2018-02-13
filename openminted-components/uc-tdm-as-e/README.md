@@ -14,9 +14,7 @@ The test-data folder contains data to run the workflow. More specifically:
     * /alvisnlp/data/output/ is the output directory
 
 ## Run in command-line
-
 To run the workflow (from the folder containing the README):
-
 ```
 docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
 bibliome/uc-tdm-as-e \
@@ -29,6 +27,21 @@ alvisnlp org.bibliome.alvisnlp.modules.uc-tmd-as-e \
 --param:output_fixed_relations=relationsgroup.txt \
 --param:outputDir=/alvisnlp/data/output/
 ```
+
+<!---
+In a general way , the OMTD command for this component will look like this:
+docker run -i --rm -v $PWD/test-data:[FOLDER/WHERE/TO/MOUNT] -a stderr \
+bibliome/uc-tdm-as-e \
+alvisnlp org.bibliome.alvisnlp.modules.uc-tmd-as-e \
+--input [FOLDER/WHERE/TO/MOUNT]/corpus/pubmed_result_2.xml \
+--output entities.txt  \
+--param:readhtml=[FOLDER/TO/MOUNT]/corpus/fulltext/html \
+--param:readWoK=[FOLDER/TO/MOUNT]/corpus/corpus2000_12012017.txt \
+--param:exportDocument=sectionsWOK+PubMed.txt \
+--param:output_fixed_relations=relationsgroup.txt \
+--param:outputDir=[FOLDER/TO/MOUNT]/output/
+```
+--->
 
 <!--- ```sudo docker run -i --rm -v $PWD/test-data/:/as-e/data as-e-docker alvisnlp -verbose -J "-Xmx30g" 
 -alias readPubMed /as-e/data/alvisir2_corpus/pubmed_result-2.xml \
