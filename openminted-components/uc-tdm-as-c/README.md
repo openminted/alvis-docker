@@ -23,7 +23,7 @@ alvisnlp org.bibliome.alvisnlp.modules.uc-tmd-as-c \
 
 ## OpenMinteD metadata
 
-The OpenMinteD metadata are recorded in the following [XML file](uc-tdm-as-c.omtd.v3.0.0)
+The OpenMinteD metadata are recorded in the following [XML file](uc-tdm-as-c.omtd.v3.0.2)
 
 ## Re-build the docker image
 
