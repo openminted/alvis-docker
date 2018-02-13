@@ -36,9 +36,9 @@ case $key in
     shift # past argument
     shift # past value
     ;;
-    -param*)
+    --param*)
     parString=$(echo $1 | cut -f1 -d=)
-    paramVALUE=$(echo $1 | cut -f2 -d=)
+    paramValue=$(echo $1 | cut -f2 -d=)
     paramName=$(echo $parString | cut -f2 -d:)
     alvisParams=$alvisParams"  -alias "$paramName" "$paramValue
     shift # past argument
@@ -58,4 +58,4 @@ echo "alvisParams:"$alvisParams
 
 # Call executor  
 set -o xtrace
-$command -verbose -alias readPubMed $inDir -outdir $outDir  -className $alvisParams 
+$command -verbose -alias input $inDir -entity outdir $outDir $alvisParams plans/tag_pubmed.plan
