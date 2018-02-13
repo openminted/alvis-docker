@@ -79,7 +79,7 @@ The train and classify workflows (called plans into alvis) are based on [GeniaTa
   * [Species](http://download.jensenlab.org/species_tagger.tar.gz) 1.0
   * [TEESClassify](https://github.com/jbjorne/TEES/) 2.2.1
   * [TEESTrain](https://github.com/jbjorne/TEES/) 2.2.1
-  * [TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) 3.2<sup>*</sup>
+  <!--* [TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) 3.2<sup>*</sup>-->
   * [WapitiLabel](https://wapiti.limsi.fr/) 1.5.0
   * [WapitiTrain](https://wapiti.limsi.fr/) 1.5.0
   * [YateaExtractor](https://perso.limsi.fr/hamon/YaTeA/) 0.5<sup>*</sup>
