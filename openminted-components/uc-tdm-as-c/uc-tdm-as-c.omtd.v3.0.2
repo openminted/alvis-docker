@@ -7,7 +7,7 @@
 				<ms:resourceName>Habitat-Phenotype Relation Extractor for Microbes</ms:resourceName>
 			</ms:resourceNames>
 			<ms:descriptions>
-				<ms:description>Recognizes Gene, Protein and RNA of Arabidopsis thaliana. It normalizes them with Gene Locus and identifies interacts_with relationships between Gene and Protein.</ms:description>
+				<ms:description>Recognizes microorganism taxa, their habitats and their phenotypes. It categorizes them with ontologies (NCBI taxonomy and OntoBiotope ontology). It identifies lives-in relationships between taxa and habitats, and exhibits relationships between taxa and phenotypes. </ms:description>
 			</ms:descriptions>
 			<ms:resourceIdentifiers>
 				<ms:resourceIdentifier resourceIdentifierSchemeName="OMTD-docker">org.bibliome.alvisnlp.modules.tees.uc-tdm.as-c</ms:resourceIdentifier>
@@ -70,41 +70,7 @@
 						</ms:licenceInfo>
 					</ms:licenceInfos>
 					<ms:rightsStatement>openAccess</ms:rightsStatement>
-				</ms:rightsInfo>
-			<ms:parameterInfos>
-				<ms:parameterInfo>
-					<ms:parameterName>train</ms:parameterName>
-					<ms:parameterLabel>train directory</ms:parameterLabel>
-					<ms:parameterDescription>train directory that contains train set</ms:parameterDescription>
-					<ms:parameterType>string</ms:parameterType>
-					<ms:optional>false</ms:optional>
-					<ms:multiValue>false</ms:multiValue>
-				</ms:parameterInfo>
-				<ms:parameterInfo>
-					<ms:parameterName>dev</ms:parameterName>
-					<ms:parameterLabel>dev directory</ms:parameterLabel>
-					<ms:parameterDescription>dev directory that contains dev set</ms:parameterDescription>
-					<ms:parameterType>string</ms:parameterType>
-					<ms:optional>false</ms:optional>
-					<ms:multiValue>false</ms:multiValue>
-				</ms:parameterInfo>
-				<ms:parameterInfo>
-					<ms:parameterName>test</ms:parameterName>
-					<ms:parameterLabel>test directory</ms:parameterLabel>
-					<ms:parameterDescription>test directory that contains test set</ms:parameterDescription>
-					<ms:parameterType>string</ms:parameterType>
-					<ms:optional>false</ms:optional>
-					<ms:multiValue>false</ms:multiValue>
-				</ms:parameterInfo>
-				<ms:parameterInfo>
-					<ms:parameterName>modelTargetDir</ms:parameterName>
-					<ms:parameterLabel>model directory</ms:parameterLabel>
-					<ms:parameterDescription> the directory where the trained model is saved</ms:parameterDescription>
-					<ms:parameterType>string</ms:parameterType>
-					<ms:optional>false</ms:optional>
-					<ms:multiValue>false</ms:multiValue>
-				</ms:parameterInfo>
-			</ms:parameterInfos>		
+				</ms:rightsInfo>		
 		<ms:inputContentResourceInfo>
 		<ms:processingResourceType>corpus</ms:processingResourceType>
 			<ms:dataFormats>
