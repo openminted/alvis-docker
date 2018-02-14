@@ -6,13 +6,13 @@ MAINTAINER Mouhamadou Ba <mouhamadou.ba@inra.fr>
 
 WORKDIR /as-c
 
-COPY uc-tdm-as-c.sh /as-c/
+COPY start_script.sh /as-c/
 #ADD plans /alvisnlp/plans
 #ADD test-data/models /alvisnlp/models
 
 
-ENTRYPOINT ["/as-c/uc-tdm-as-c.sh"]
+ENTRYPOINT ["/as-c/start_script.sh"]
 
-RUN ["chmod", "+x", "/as-c/uc-tdm-as-c.sh"]
+RUN ["chmod", "+x", "/as-c/start_script.sh"]
 
 #CMD ["alvisnlp"]
