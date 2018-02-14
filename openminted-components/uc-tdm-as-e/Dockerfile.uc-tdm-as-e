@@ -5,8 +5,8 @@ MAINTAINER Mouhamadou Ba <mouhamadou.ba@inra.fr>
 
 WORKDIR /as-e
 
-COPY uc-tdm-as-e.sh /as-e/
+COPY start_script.sh /as-e/
 
-ENTRYPOINT ["/as-e/uc-tdm-as-e.sh"]
+ENTRYPOINT ["/as-e/start_script.sh"]
 
-RUN ["chmod", "+x", "/as-e/uc-tdm-as-e.sh"]
+RUN ["chmod", "+x", "/as-e/start_script.sh"]
