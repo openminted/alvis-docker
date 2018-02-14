@@ -58,4 +58,4 @@ echo "alvisParams:"$alvisParams
 
 # Call executor  
 set -o xtrace
-$command -verbose -alias input $inDir -entity outdir $outDir $alvisParams plans/tag_pubmed.plan
+$command -verbose -alias readPubMed $inDir -entity outputDir $outDir $alvisParams /as-e/plan/entities.plan
