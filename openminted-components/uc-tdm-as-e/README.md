@@ -8,10 +8,10 @@ The test-data folder contains data to run the workflow. More specifically:
     * fulltext/html is a corpus from any html file.
     * corpus2000_12012017.txt is a corpus from Web Of Knowledge website.
 * output/ is where the output of the will be strored.
-    * entities.txt is the main output file with Gene, Protein and RNA entities annotations
-    * savedrecs.txt is an output parameter to export metadata of the documents
-    * relationsgroup.txt is an output file with relations between entities annotations
     * /alvisnlp/data/output/ is the output directory
+      * entities.txt is the main output file with Gene, Protein and RNA entities annotations
+      * savedrecs.txt is an output parameter to export metadata of the documents
+      * relationsgroup.txt is an output file with relations between entities annotations
 
 ## Run in command-line
 To run the workflow (from the folder containing the README):
@@ -20,12 +20,9 @@ docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
 bibliome/uc-tdm-as-e \
 alvisnlp org.bibliome.alvisnlp.modules.uc-tmd-as-e \
 --input /alvisnlp/data/corpus/pubmed_result_2.xml \
---output entities.txt  \
+--output /alvisnlp/data/output  \
 --param:readhtml=/alvisnlp/data/corpus/fulltext/html \
---param:readWoK=/alvisnlp/data/corpus/corpus2000_12012017.txt \
---param:exportDocument=sectionsWOK+PubMed.txt \
---param:output_fixed_relations=relationsgroup.txt \
---param:outputDir=/alvisnlp/data/output/
+--param:readWoK=/alvisnlp/data/corpus/corpus2000_12012017.txt
 ```
 
 <!---
