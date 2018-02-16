@@ -32,7 +32,7 @@ ENV java_version oracle-java8
 #
 #<<<<<<< HEAD
 ## pulling and installing alvisnlp
-RUN git clone https://github.com/Bibliome/alvisnlp.git /alvisnlp && \
+RUN git clone -b docker-sources https://github.com/Bibliome/alvisnlp.git /alvisnlp && \
     cd /alvisnlp && \
     # compiling and installing alvisnlp
     mvn clean install && \
