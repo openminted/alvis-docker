@@ -42,8 +42,6 @@ RUN git clone -b docker-sources https://github.com/Bibliome/alvisnlp.git /alvisn
     # create the external soft dir
     mkdir psoft
 
-WORKDIR /alvisnlp
-
 # external softs workdir
 WORKDIR /alvisnlp/psoft
 RUN cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default-param-values.xml && \
