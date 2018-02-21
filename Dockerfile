@@ -27,10 +27,9 @@ RUN apt-get -yqq update && apt-get -yqq install \
     apt-get install -y oracle-java8-installer && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists*
-#
+
 ENV java_version oracle-java8
-#
-#<<<<<<< HEAD
+
 ## pulling and installing alvisnlp
 RUN git clone -b docker-sources https://github.com/Bibliome/alvisnlp.git /alvisnlp && \
     cd /alvisnlp && \
@@ -42,19 +41,9 @@ RUN git clone -b docker-sources https://github.com/Bibliome/alvisnlp.git /alvisn
     rm -rf ~/.m2 && \
     # create the external soft dir
     mkdir psoft
-#=======
-#RUN git clone https://github.com/Bibliome/alvisnlp.git /alvisnlp
-#
+
 WORKDIR /alvisnlp
-#
-# compiling and installing alvisnlp
-#RUN mvn clean install && ./install.sh . && rm -rf ~/.m2
-#
-# create the external soft dir
-#RUN mkdir psoft
-#ADD tees.expect /alvisnlp/psoft/
-#>>>>>>> 64aea937a168dd6418cb674100391a88c84f2bff
-#
+
 # external softs workdir
 WORKDIR /alvisnlp/psoft
 RUN cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default-param-values.xml && \
