@@ -113,34 +113,40 @@ RUN cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default
     ## params values setting
     cat /alvisnlp/share/default-param-values.xml | \
     ## ccg parser params values setting
-    xmlstarlet ed -u "//module[@class='org.bibliome.alvisnlp.modules.ccg.CCGParser']/executable" -v /alvisnlp/psoft/candc-1.00/bin/parser | \
-    xmlstarlet ed -d "//module[@class='org.bibliome.alvisnlp.modules.ccg.CCGParser']/parserModel" | \
-    xmlstarlet ed -d "//module[@class='org.bibliome.alvisnlp.modules.ccg.CCGParser']/superModel" | \
+    xmlstarlet ed -u "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.ccg.CCGParser']/executable" -v /alvisnlp/psoft/candc-1.00/bin/parser | \
+    xmlstarlet ed -d "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.ccg.CCGParser']/parserModel" | \
+    xmlstarlet ed -d "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.ccg.CCGParser']/superModel" | \
     ## ccg postagger params values setting
-    xmlstarlet ed -u "//module[@class='org.bibliome.alvisnlp.modules.ccg.CCGPosTagger']/executable" -v /alvisnlp/psoft/candc-1.00/bin/pos | \
-    xmlstarlet ed -d "//module[@class='org.bibliome.alvisnlp.modules.ccg.CCGPosTagger']/model" | \
+    xmlstarlet ed -u "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.ccg.CCGPosTagger']/executable" -v /alvisnlp/psoft/candc-1.00/bin/pos | \
+    xmlstarlet ed -d "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.ccg.CCGPosTagger']/model" | \
     ## geniatagger params values setting
-    xmlstarlet ed -u "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.geniatagger.GeniaTagger']/geniaDir" -v /alvisnlp/psoft/geniatagger-3.0.2  | \
+    xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.modules.bibliomefactory.geniatagger.GeniaTagger']/geniaDir" -v /alvisnlp/psoft/geniatagger-3.0.2  | \
     ## species tagger param setting
-    xmlstarlet ed -u "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.Species']/speciesDir" -v /alvisnlp/psoft/species_tagger/ | \
+    xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.Species']/speciesDir" -v /alvisnlp/psoft/species_tagger/ | \
     ## stanford param values setting
     xmlstarlet ed -d "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.stanford.StanfordNER']/classifierFile" | \
     ## tees classify params values setting
-    xmlstarlet ed -u "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.tees.TEESClassify']/teesHome" -v /alvisnlp/psoft/tees/ | \
+    xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.tees.TEESClassify']/teesHome" -v /alvisnlp/psoft/tees/ | \
     ## tees train params values setting
-xmlstarlet ed --inplace -u "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.tees.TEESTrain']/teesHome" -v /alvisnlp/psoft/tees/ | \
+    xmlstarlet ed --inplace -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.tees.TEESTrain']/teesHome" -v /alvisnlp/psoft/tees/ | \
     ## wapiti label params values setting
-    xmlstarlet ed -u "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.wapiti.WapitiLabel']/wapitiExecutable" -v /usr/local/bin/wapiti | \
+    xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.wapiti.WapitiLabel']/wapitiExecutable" -v /usr/local/bin/wapiti | \
     ## wapiti train params values setting
-    xmlstarlet ed -u "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.wapiti.WapitiTrain']/wapitiExecutable" -v /usr/local/bin/wapiti | \
-    xmlstarlet ed -u "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.treetagger.TreeTagger']/treeTaggerExecutable" -v /alvisnlp/psoft/treetagger/bin/tree-tagger  | \
+    xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.wapiti.WapitiTrain']/wapitiExecutable" -v /usr/local/bin/wapiti | \
+    ## treetagger
+    xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.treetagger.TreeTagger']/treeTaggerExecutable" -v /alvisnlp/psoft/treetagger/bin/tree-tagger  | \
+    xmlstarlet ed -d "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.treetagger.TreeTagger']/parFile" | \
     ## yatea params values setting
-    xmlstarlet ed -d "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.treetagger.TreeTagger']/parFile" | \
-    xmlstarlet ed -u "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.yatea.YateaExtractor']/yateaExecutable" -v /usr/local/bin/yatea  | \
-    xmlstarlet ed -u "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.yatea.YateaExtractor']/rcFile" -v res://yatea.rc | \
-    #xmlstarlet ed -d #/default-param-values/module[@class=org.bibliome.alvisnlp.modules.yatea.YateaExtractor]/rcFile | \
-    xmlstarlet ed -d "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.yatea.YateaExtractor']/configDir" | \
-    xmlstarlet ed -d "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.yatea.YateaExtractor']/localeDir" | \
+    xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.yatea.YateaExtractor']/yateaExecutable" -v /usr/local/bin/yatea  | \
+    xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.yatea.YateaExtractor']/rcFile" -v res://yatea.rc | \
+    #xmlstarlet ed -d /default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.yatea.YateaExtractor']/rcFile" | \
+    xmlstarlet ed -d "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.yatea.YateaExtractor']/configDir" | \
+    xmlstarlet ed -d "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.yatea.YateaExtractor']/localeDir" | \
+    ## tomap params 
+    xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.tomap.TomapTrain']/yateaExecutable" -v /usr/local/bin/yatea | \
+    xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.tomap.TomapTrain']/rcFile" -v res://yatea.rc | \
+    xmlstarlet ed -d "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.tomap.TomapTrain']/configDir" | \
+    xmlstarlet ed -d "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.tomap.TomapTrain']/localeDir" | \
     tee /alvisnlp/share/default-param-values.xml
 #
 WORKDIR /alvisnlp
