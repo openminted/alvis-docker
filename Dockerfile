@@ -137,7 +137,8 @@ xmlstarlet ed --inplace -u "/default-param-values/module[@class='org.bibliome.al
     ## yatea params values setting
     xmlstarlet ed -d "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.treetagger.TreeTagger']/parFile" | \
     xmlstarlet ed -u "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.yatea.YateaExtractor']/yateaExecutable" -v /usr/local/bin/yatea  | \
-    xmlstarlet ed -d "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.yatea.YateaExtractor']/rcFile" | \
+    xmlstarlet ed -u "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.yatea.YateaExtractor']/rcFile" -v res://yatea.rc | \
+    #xmlstarlet ed -d #/default-param-values/module[@class=org.bibliome.alvisnlp.modules.yatea.YateaExtractor]/rcFile | \
     xmlstarlet ed -d "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.yatea.YateaExtractor']/configDir" | \
     xmlstarlet ed -d "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.yatea.YateaExtractor']/localeDir" | \
     tee /alvisnlp/share/default-param-values.xml
