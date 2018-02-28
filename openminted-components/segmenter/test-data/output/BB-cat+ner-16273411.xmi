@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:tcas="http:///uima/tcas.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:cas="http:///uima/cas.ecore" xmlns:types="http:///fr/inra/maiage/bibliome/alvisnlp/bibliomefactory/modules/uima/types.ecore" xmi:version="2.0">
+    <cas:NULL xmi:id="0"/>
+    <tcas:DocumentAnnotation xmi:id="8" sofa="1" begin="0" end="712" language="x-unspecified"/>
+    <types:DocumentProxy xmi:id="13" sofa="1" id="BB-cat+ner-16273411" features="18" sections="24"/>
+    <cas:Sofa xmi:id="1" sofaNum="1" sofaID="_InitialView" mimeType="text" sofaString="Early pregnancy loss and neonatal deaths associated with Klebsiella pneumonia infection: a mini review of possible occupational health risk.&#10;Recurrent pregnancy loss is a disease of grave psychological and economic concern. The etiology in the vast majority of the cases is unknown or at best poorly understood. Although Klebsiella pneumonia infections have been reported in humans and animals during pregnancy, there is hardly any information to indicate whether or not these infections may be responsible for early pregnancy loss. We present a review of literature and report for the first time in humans, Klebsiella pneumonia infection in placenta of a 38-year-old secondary recurrent aborter (parity 2 + 3).&#10;"/>
+    <types:FeatureProxy xmi:id="18" key="set" value="dev"/>
+    <types:SectionProxy xmi:id="24" sofa="1" begin="0" end="712" name="text" features="" layers="55 106 125 139 146 152 158 164 170 176 182 188 194 200 206 1554 1704 1712 3524 3685" relations="3718 3788 3915 3943 3971"/>
+    <types:LayerProxy xmi:id="55" sofa="1" name="Bacteria" annotations="59"/>
+    <cas:FSArray xmi:id="59" elements="34 41 48"/>
+    <types:AnnotationProxy xmi:id="34" sofa="1" begin="57" end="77" features=""/>
+    <types:AnnotationProxy xmi:id="41" sofa="1" begin="321" end="341" features=""/>
+    <types:AnnotationProxy xmi:id="48" sofa="1" begin="608" end="628" features=""/>
+    <types:LayerProxy xmi:id="106" sofa="1" name="Habitat" annotations="110"/>
+    <cas:FSArray xmi:id="110" elements="64 71 78 85 92 99"/>
+    <types:AnnotationProxy xmi:id="64" sofa="1" begin="25" end="33" features=""/>
+    <types:AnnotationProxy xmi:id="71" sofa="1" begin="375" end="381" features=""/>
+    <types:AnnotationProxy xmi:id="78" sofa="1" begin="386" end="393" features=""/>
+    <types:AnnotationProxy xmi:id="85" sofa="1" begin="600" end="606" features=""/>
+    <types:AnnotationProxy xmi:id="92" sofa="1" begin="642" end="695" features=""/>
+    <types:AnnotationProxy xmi:id="99" sofa="1" begin="656" end="695" features=""/>
+    <types:LayerProxy xmi:id="125" sofa="1" name="Title" annotations="129"/>
+    <cas:FSArray xmi:id="129" elements="118"/>
+    <types:AnnotationProxy xmi:id="118" sofa="1" begin="0" end="140" features=""/>
+    <types:LayerProxy xmi:id="139" sofa="1" name="Paragraph" annotations="143"/>
+    <cas:FSArray xmi:id="143" elements="132"/>
+    <types:AnnotationProxy xmi:id="132" sofa="1" begin="141" end="711" features=""/>
+    <types:LayerProxy xmi:id="146" sofa="1" name="seg__latin" annotations="150"/>
+    <cas:FSArray xmi:id="150" elements=""/>
+    <types:LayerProxy xmi:id="152" sofa="1" name="numbers__signed-decimals" annotations="156"/>
+    <cas:FSArray xmi:id="156" elements=""/>
+    <types:LayerProxy xmi:id="158" sofa="1" name="numbers__fractions" annotations="162"/>
+    <cas:FSArray xmi:id="162" elements=""/>
+    <types:LayerProxy xmi:id="164" sofa="1" name="numbers__ranges" annotations="168"/>
+    <cas:FSArray xmi:id="168" elements=""/>
+    <types:LayerProxy xmi:id="170" sofa="1" name="dates__iso" annotations="174"/>
+    <cas:FSArray xmi:id="174" elements=""/>
+    <types:LayerProxy xmi:id="176" sofa="1" name="dates__american" annotations="180"/>
+    <cas:FSArray xmi:id="180" elements=""/>
+    <types:LayerProxy xmi:id="182" sofa="1" name="dates__british" annotations="186"/>
+    <cas:FSArray xmi:id="186" elements=""/>
+    <types:LayerProxy xmi:id="188" sofa="1" name="numbers" annotations="192"/>
+    <cas:FSArray xmi:id="192" elements=""/>
+    <types:LayerProxy xmi:id="194" sofa="1" name="dates" annotations="198"/>
+    <cas:FSArray xmi:id="198" elements=""/>
+    <types:LayerProxy xmi:id="200" sofa="1" name="seg__hanging-hyphens" annotations="204"/>
+    <cas:FSArray xmi:id="204" elements=""/>
+    <types:LayerProxy xmi:id="206" sofa="1" name="seg__pre-fixed" annotations="210"/>
+    <cas:FSArray xmi:id="210" elements=""/>
+    <types:LayerProxy xmi:id="1554" sofa="1" name="seg__pre-words" annotations="1558"/>
+    <cas:FSArray xmi:id="1558" elements="212 223 234 245 256 267 278 289 300 311 322 333 344 355 366 377 388 399 410 421 432 443 454 465 476 487 498 509 520 531 542 553 564 575 586 597 608 619 630 641 652 663 674 685 696 707 718 729 740 751 762 773 784 795 806 817 828 839 850 861 872 883 894 905 916 927 938 949 960 971 982 993 1004 1015 1026 1037 1048 1059 1070 1081 1092 1103 1114 1125 1136 1147 1158 1169 1180 1191 1202 1213 1224 1235 1246 1257 1268 1279 1290 1301 1312 1323 1334 1345 1356 1367 1378 1389 1400 1411 1422 1433 1444 1455 1466 1477 1488 1499 1510 1521 1532 1543"/>
+    <types:AnnotationProxy xmi:id="212" sofa="1" begin="0" end="5" features="217"/>
+    <types:FeatureProxy xmi:id="217" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="223" sofa="1" begin="6" end="15" features="228"/>
+    <types:FeatureProxy xmi:id="228" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="234" sofa="1" begin="16" end="20" features="239"/>
+    <types:FeatureProxy xmi:id="239" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="245" sofa="1" begin="21" end="24" features="250"/>
+    <types:FeatureProxy xmi:id="250" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="256" sofa="1" begin="25" end="33" features="261"/>
+    <types:FeatureProxy xmi:id="261" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="267" sofa="1" begin="34" end="40" features="272"/>
+    <types:FeatureProxy xmi:id="272" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="278" sofa="1" begin="41" end="51" features="283"/>
+    <types:FeatureProxy xmi:id="283" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="289" sofa="1" begin="52" end="56" features="294"/>
+    <types:FeatureProxy xmi:id="294" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="300" sofa="1" begin="57" end="67" features="305"/>
+    <types:FeatureProxy xmi:id="305" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="311" sofa="1" begin="68" end="77" features="316"/>
+    <types:FeatureProxy xmi:id="316" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="322" sofa="1" begin="78" end="87" features="327"/>
+    <types:FeatureProxy xmi:id="327" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="333" sofa="1" begin="87" end="88" features="338"/>
+    <types:FeatureProxy xmi:id="338" key="wordType" value="punctuation"/>
+    <types:AnnotationProxy xmi:id="344" sofa="1" begin="89" end="90" features="349"/>
+    <types:FeatureProxy xmi:id="349" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="355" sofa="1" begin="91" end="95" features="360"/>
+    <types:FeatureProxy xmi:id="360" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="366" sofa="1" begin="96" end="102" features="371"/>
+    <types:FeatureProxy xmi:id="371" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="377" sofa="1" begin="103" end="105" features="382"/>
+    <types:FeatureProxy xmi:id="382" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="388" sofa="1" begin="106" end="114" features="393"/>
+    <types:FeatureProxy xmi:id="393" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="399" sofa="1" begin="115" end="127" features="404"/>
+    <types:FeatureProxy xmi:id="404" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="410" sofa="1" begin="128" end="134" features="415"/>
+    <types:FeatureProxy xmi:id="415" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="421" sofa="1" begin="135" end="139" features="426"/>
+    <types:FeatureProxy xmi:id="426" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="432" sofa="1" begin="139" end="140" features="437"/>
+    <types:FeatureProxy xmi:id="437" key="wordType" value="punctuation"/>
+    <types:AnnotationProxy xmi:id="443" sofa="1" begin="141" end="150" features="448"/>
+    <types:FeatureProxy xmi:id="448" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="454" sofa="1" begin="151" end="160" features="459"/>
+    <types:FeatureProxy xmi:id="459" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="465" sofa="1" begin="161" end="165" features="470"/>
+    <types:FeatureProxy xmi:id="470" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="476" sofa="1" begin="166" end="168" features="481"/>
+    <types:FeatureProxy xmi:id="481" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="487" sofa="1" begin="169" end="170" features="492"/>
+    <types:FeatureProxy xmi:id="492" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="498" sofa="1" begin="171" end="178" features="503"/>
+    <types:FeatureProxy xmi:id="503" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="509" sofa="1" begin="179" end="181" features="514"/>
+    <types:FeatureProxy xmi:id="514" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="520" sofa="1" begin="182" end="187" features="525"/>
+    <types:FeatureProxy xmi:id="525" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="531" sofa="1" begin="188" end="201" features="536"/>
+    <types:FeatureProxy xmi:id="536" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="542" sofa="1" begin="202" end="205" features="547"/>
+    <types:FeatureProxy xmi:id="547" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="553" sofa="1" begin="206" end="214" features="558"/>
+    <types:FeatureProxy xmi:id="558" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="564" sofa="1" begin="215" end="222" features="569"/>
+    <types:FeatureProxy xmi:id="569" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="575" sofa="1" begin="222" end="223" features="580"/>
+    <types:FeatureProxy xmi:id="580" key="wordType" value="punctuation"/>
+    <types:AnnotationProxy xmi:id="586" sofa="1" begin="224" end="227" features="591"/>
+    <types:FeatureProxy xmi:id="591" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="597" sofa="1" begin="228" end="236" features="602"/>
+    <types:FeatureProxy xmi:id="602" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="608" sofa="1" begin="237" end="239" features="613"/>
+    <types:FeatureProxy xmi:id="613" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="619" sofa="1" begin="240" end="243" features="624"/>
+    <types:FeatureProxy xmi:id="624" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="630" sofa="1" begin="244" end="248" features="635"/>
+    <types:FeatureProxy xmi:id="635" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="641" sofa="1" begin="249" end="257" features="646"/>
+    <types:FeatureProxy xmi:id="646" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="652" sofa="1" begin="258" end="260" features="657"/>
+    <types:FeatureProxy xmi:id="657" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="663" sofa="1" begin="261" end="264" features="668"/>
+    <types:FeatureProxy xmi:id="668" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="674" sofa="1" begin="265" end="270" features="679"/>
+    <types:FeatureProxy xmi:id="679" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="685" sofa="1" begin="271" end="273" features="690"/>
+    <types:FeatureProxy xmi:id="690" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="696" sofa="1" begin="274" end="281" features="701"/>
+    <types:FeatureProxy xmi:id="701" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="707" sofa="1" begin="282" end="284" features="712"/>
+    <types:FeatureProxy xmi:id="712" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="718" sofa="1" begin="285" end="287" features="723"/>
+    <types:FeatureProxy xmi:id="723" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="729" sofa="1" begin="288" end="292" features="734"/>
+    <types:FeatureProxy xmi:id="734" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="740" sofa="1" begin="293" end="299" features="745"/>
+    <types:FeatureProxy xmi:id="745" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="751" sofa="1" begin="300" end="310" features="756"/>
+    <types:FeatureProxy xmi:id="756" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="762" sofa="1" begin="310" end="311" features="767"/>
+    <types:FeatureProxy xmi:id="767" key="wordType" value="punctuation"/>
+    <types:AnnotationProxy xmi:id="773" sofa="1" begin="312" end="320" features="778"/>
+    <types:FeatureProxy xmi:id="778" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="784" sofa="1" begin="321" end="331" features="789"/>
+    <types:FeatureProxy xmi:id="789" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="795" sofa="1" begin="332" end="341" features="800"/>
+    <types:FeatureProxy xmi:id="800" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="806" sofa="1" begin="342" end="352" features="811"/>
+    <types:FeatureProxy xmi:id="811" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="817" sofa="1" begin="353" end="357" features="822"/>
+    <types:FeatureProxy xmi:id="822" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="828" sofa="1" begin="358" end="362" features="833"/>
+    <types:FeatureProxy xmi:id="833" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="839" sofa="1" begin="363" end="371" features="844"/>
+    <types:FeatureProxy xmi:id="844" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="850" sofa="1" begin="372" end="374" features="855"/>
+    <types:FeatureProxy xmi:id="855" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="861" sofa="1" begin="375" end="381" features="866"/>
+    <types:FeatureProxy xmi:id="866" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="872" sofa="1" begin="382" end="385" features="877"/>
+    <types:FeatureProxy xmi:id="877" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="883" sofa="1" begin="386" end="393" features="888"/>
+    <types:FeatureProxy xmi:id="888" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="894" sofa="1" begin="394" end="400" features="899"/>
+    <types:FeatureProxy xmi:id="899" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="905" sofa="1" begin="401" end="410" features="910"/>
+    <types:FeatureProxy xmi:id="910" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="916" sofa="1" begin="410" end="411" features="921"/>
+    <types:FeatureProxy xmi:id="921" key="wordType" value="punctuation"/>
+    <types:AnnotationProxy xmi:id="927" sofa="1" begin="412" end="417" features="932"/>
+    <types:FeatureProxy xmi:id="932" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="938" sofa="1" begin="418" end="420" features="943"/>
+    <types:FeatureProxy xmi:id="943" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="949" sofa="1" begin="421" end="427" features="954"/>
+    <types:FeatureProxy xmi:id="954" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="960" sofa="1" begin="428" end="431" features="965"/>
+    <types:FeatureProxy xmi:id="965" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="971" sofa="1" begin="432" end="443" features="976"/>
+    <types:FeatureProxy xmi:id="976" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="982" sofa="1" begin="444" end="446" features="987"/>
+    <types:FeatureProxy xmi:id="987" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="993" sofa="1" begin="447" end="455" features="998"/>
+    <types:FeatureProxy xmi:id="998" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1004" sofa="1" begin="456" end="463" features="1009"/>
+    <types:FeatureProxy xmi:id="1009" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1015" sofa="1" begin="464" end="466" features="1020"/>
+    <types:FeatureProxy xmi:id="1020" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1026" sofa="1" begin="467" end="470" features="1031"/>
+    <types:FeatureProxy xmi:id="1031" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1037" sofa="1" begin="471" end="476" features="1042"/>
+    <types:FeatureProxy xmi:id="1042" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1048" sofa="1" begin="477" end="487" features="1053"/>
+    <types:FeatureProxy xmi:id="1053" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1059" sofa="1" begin="488" end="491" features="1064"/>
+    <types:FeatureProxy xmi:id="1064" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1070" sofa="1" begin="492" end="494" features="1075"/>
+    <types:FeatureProxy xmi:id="1075" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1081" sofa="1" begin="495" end="506" features="1086"/>
+    <types:FeatureProxy xmi:id="1086" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1092" sofa="1" begin="507" end="510" features="1097"/>
+    <types:FeatureProxy xmi:id="1097" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1103" sofa="1" begin="511" end="516" features="1108"/>
+    <types:FeatureProxy xmi:id="1108" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1114" sofa="1" begin="517" end="526" features="1119"/>
+    <types:FeatureProxy xmi:id="1119" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1125" sofa="1" begin="527" end="531" features="1130"/>
+    <types:FeatureProxy xmi:id="1130" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1136" sofa="1" begin="531" end="532" features="1141"/>
+    <types:FeatureProxy xmi:id="1141" key="wordType" value="punctuation"/>
+    <types:AnnotationProxy xmi:id="1147" sofa="1" begin="533" end="535" features="1152"/>
+    <types:FeatureProxy xmi:id="1152" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1158" sofa="1" begin="536" end="543" features="1163"/>
+    <types:FeatureProxy xmi:id="1163" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1169" sofa="1" begin="544" end="545" features="1174"/>
+    <types:FeatureProxy xmi:id="1174" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1180" sofa="1" begin="546" end="552" features="1185"/>
+    <types:FeatureProxy xmi:id="1185" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1191" sofa="1" begin="553" end="555" features="1196"/>
+    <types:FeatureProxy xmi:id="1196" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1202" sofa="1" begin="556" end="566" features="1207"/>
+    <types:FeatureProxy xmi:id="1207" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1213" sofa="1" begin="567" end="570" features="1218"/>
+    <types:FeatureProxy xmi:id="1218" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1224" sofa="1" begin="571" end="577" features="1229"/>
+    <types:FeatureProxy xmi:id="1229" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1235" sofa="1" begin="578" end="581" features="1240"/>
+    <types:FeatureProxy xmi:id="1240" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1246" sofa="1" begin="582" end="585" features="1251"/>
+    <types:FeatureProxy xmi:id="1251" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1257" sofa="1" begin="586" end="591" features="1262"/>
+    <types:FeatureProxy xmi:id="1262" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1268" sofa="1" begin="592" end="596" features="1273"/>
+    <types:FeatureProxy xmi:id="1273" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1279" sofa="1" begin="597" end="599" features="1284"/>
+    <types:FeatureProxy xmi:id="1284" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1290" sofa="1" begin="600" end="606" features="1295"/>
+    <types:FeatureProxy xmi:id="1295" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1301" sofa="1" begin="606" end="607" features="1306"/>
+    <types:FeatureProxy xmi:id="1306" key="wordType" value="punctuation"/>
+    <types:AnnotationProxy xmi:id="1312" sofa="1" begin="608" end="618" features="1317"/>
+    <types:FeatureProxy xmi:id="1317" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1323" sofa="1" begin="619" end="628" features="1328"/>
+    <types:FeatureProxy xmi:id="1328" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1334" sofa="1" begin="629" end="638" features="1339"/>
+    <types:FeatureProxy xmi:id="1339" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1345" sofa="1" begin="639" end="641" features="1350"/>
+    <types:FeatureProxy xmi:id="1350" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1356" sofa="1" begin="642" end="650" features="1361"/>
+    <types:FeatureProxy xmi:id="1361" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1367" sofa="1" begin="651" end="653" features="1372"/>
+    <types:FeatureProxy xmi:id="1372" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1378" sofa="1" begin="654" end="655" features="1383"/>
+    <types:FeatureProxy xmi:id="1383" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1389" sofa="1" begin="656" end="658" features="1394"/>
+    <types:FeatureProxy xmi:id="1394" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1400" sofa="1" begin="658" end="659" features="1405"/>
+    <types:FeatureProxy xmi:id="1405" key="wordType" value="punctuation"/>
+    <types:AnnotationProxy xmi:id="1411" sofa="1" begin="659" end="663" features="1416"/>
+    <types:FeatureProxy xmi:id="1416" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1422" sofa="1" begin="663" end="664" features="1427"/>
+    <types:FeatureProxy xmi:id="1427" key="wordType" value="punctuation"/>
+    <types:AnnotationProxy xmi:id="1433" sofa="1" begin="664" end="667" features="1438"/>
+    <types:FeatureProxy xmi:id="1438" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1444" sofa="1" begin="668" end="677" features="1449"/>
+    <types:FeatureProxy xmi:id="1449" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1455" sofa="1" begin="678" end="687" features="1460"/>
+    <types:FeatureProxy xmi:id="1460" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1466" sofa="1" begin="688" end="695" features="1471"/>
+    <types:FeatureProxy xmi:id="1471" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1477" sofa="1" begin="696" end="697" features="1482"/>
+    <types:FeatureProxy xmi:id="1482" key="wordType" value="punctuation"/>
+    <types:AnnotationProxy xmi:id="1488" sofa="1" begin="697" end="703" features="1493"/>
+    <types:FeatureProxy xmi:id="1493" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1499" sofa="1" begin="704" end="705" features="1504"/>
+    <types:FeatureProxy xmi:id="1504" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1510" sofa="1" begin="706" end="707" features="1515"/>
+    <types:FeatureProxy xmi:id="1515" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1521" sofa="1" begin="708" end="709" features="1526"/>
+    <types:FeatureProxy xmi:id="1526" key="wordType" value="word"/>
+    <types:AnnotationProxy xmi:id="1532" sofa="1" begin="709" end="710" features="1537"/>
+    <types:FeatureProxy xmi:id="1537" key="wordType" value="punctuation"/>
+    <types:AnnotationProxy xmi:id="1543" sofa="1" begin="710" end="711" features="1548"/>
+    <types:FeatureProxy xmi:id="1548" key="wordType" value="punctuation"/>
+    <types:LayerProxy xmi:id="1704" sofa="1" name="seg__hyphenated" annotations="1708"/>
+    <cas:FSArray xmi:id="1708" elements="1682 1689"/>
+    <types:AnnotationProxy xmi:id="1682" sofa="1" begin="656" end="663" features=""/>
+    <types:AnnotationProxy xmi:id="1689" sofa="1" begin="659" end="667" features="1694 1697"/>
+    <types:FeatureProxy xmi:id="1694" key="wordType" value="fixed"/>
+    <types:FeatureProxy xmi:id="1697" key="eos" value="not-eos"/>
+    <types:LayerProxy xmi:id="1712" sofa="1" name="seg__fixed" annotations="1716"/>
+    <cas:FSArray xmi:id="1716" elements="1689"/>
+    <types:LayerProxy xmi:id="3524" sofa="1" name="words" annotations="3528"/>
+    <cas:FSArray xmi:id="3528" elements="1719 1734 1749 1764 1779 1794 1809 1824 1839 1854 1869 1884 1899 1914 1929 1944 1959 1974 1989 2004 2019 2038 2053 2068 2083 2098 2113 2128 2143 2158 2173 2188 2203 2218 2237 2252 2267 2282 2297 2312 2327 2342 2357 2372 2387 2402 2417 2432 2447 2462 2477 2496 2511 2526 2541 2556 2571 2586 2601 2616 2631 2646 2661 2676 2691 2706 2721 2736 2751 2766 2781 2796 2811 2826 2841 2856 2871 2886 2901 2916 2931 2946 2961 2976 2991 3010 3025 3040 3055 3070 3085 3100 3115 3130 3145 3160 3175 3190 3205 3220 3235 3250 3265 3280 3295 3310 3325 3340 3355 1689 3370 3385 3400 3415 3430 3445 3460 3475 3490 3505"/>
+    <types:AnnotationProxy xmi:id="1719" sofa="1" begin="0" end="5" features="1724 1727"/>
+    <types:FeatureProxy xmi:id="1724" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1727" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1734" sofa="1" begin="6" end="15" features="1739 1742"/>
+    <types:FeatureProxy xmi:id="1739" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1742" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1749" sofa="1" begin="16" end="20" features="1754 1757"/>
+    <types:FeatureProxy xmi:id="1754" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1757" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1764" sofa="1" begin="21" end="24" features="1769 1772"/>
+    <types:FeatureProxy xmi:id="1769" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1772" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1779" sofa="1" begin="25" end="33" features="1784 1787"/>
+    <types:FeatureProxy xmi:id="1784" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1787" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1794" sofa="1" begin="34" end="40" features="1799 1802"/>
+    <types:FeatureProxy xmi:id="1799" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1802" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1809" sofa="1" begin="41" end="51" features="1814 1817"/>
+    <types:FeatureProxy xmi:id="1814" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1817" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1824" sofa="1" begin="52" end="56" features="1829 1832"/>
+    <types:FeatureProxy xmi:id="1829" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1832" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1839" sofa="1" begin="57" end="67" features="1844 1847"/>
+    <types:FeatureProxy xmi:id="1844" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1847" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1854" sofa="1" begin="68" end="77" features="1859 1862"/>
+    <types:FeatureProxy xmi:id="1859" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1862" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1869" sofa="1" begin="78" end="87" features="1874 1877"/>
+    <types:FeatureProxy xmi:id="1874" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1877" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1884" sofa="1" begin="87" end="88" features="1889 1892"/>
+    <types:FeatureProxy xmi:id="1889" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="1892" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1899" sofa="1" begin="89" end="90" features="1904 1907"/>
+    <types:FeatureProxy xmi:id="1904" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1907" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1914" sofa="1" begin="91" end="95" features="1919 1922"/>
+    <types:FeatureProxy xmi:id="1919" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1922" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1929" sofa="1" begin="96" end="102" features="1934 1937"/>
+    <types:FeatureProxy xmi:id="1934" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1937" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1944" sofa="1" begin="103" end="105" features="1949 1952"/>
+    <types:FeatureProxy xmi:id="1949" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1952" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1959" sofa="1" begin="106" end="114" features="1964 1967"/>
+    <types:FeatureProxy xmi:id="1964" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1967" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1974" sofa="1" begin="115" end="127" features="1979 1982"/>
+    <types:FeatureProxy xmi:id="1979" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1982" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="1989" sofa="1" begin="128" end="134" features="1994 1997"/>
+    <types:FeatureProxy xmi:id="1994" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1997" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2004" sofa="1" begin="135" end="139" features="2009 2012"/>
+    <types:FeatureProxy xmi:id="2009" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2012" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2019" sofa="1" begin="139" end="140" features="2024 2027 2030"/>
+    <types:FeatureProxy xmi:id="2024" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="2027" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="2030" key="eos" value="eos"/>
+    <types:AnnotationProxy xmi:id="2038" sofa="1" begin="141" end="150" features="2043 2046"/>
+    <types:FeatureProxy xmi:id="2043" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2046" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2053" sofa="1" begin="151" end="160" features="2058 2061"/>
+    <types:FeatureProxy xmi:id="2058" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2061" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2068" sofa="1" begin="161" end="165" features="2073 2076"/>
+    <types:FeatureProxy xmi:id="2073" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2076" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2083" sofa="1" begin="166" end="168" features="2088 2091"/>
+    <types:FeatureProxy xmi:id="2088" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2091" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2098" sofa="1" begin="169" end="170" features="2103 2106"/>
+    <types:FeatureProxy xmi:id="2103" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2106" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2113" sofa="1" begin="171" end="178" features="2118 2121"/>
+    <types:FeatureProxy xmi:id="2118" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2121" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2128" sofa="1" begin="179" end="181" features="2133 2136"/>
+    <types:FeatureProxy xmi:id="2133" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2136" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2143" sofa="1" begin="182" end="187" features="2148 2151"/>
+    <types:FeatureProxy xmi:id="2148" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2151" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2158" sofa="1" begin="188" end="201" features="2163 2166"/>
+    <types:FeatureProxy xmi:id="2163" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2166" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2173" sofa="1" begin="202" end="205" features="2178 2181"/>
+    <types:FeatureProxy xmi:id="2178" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2181" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2188" sofa="1" begin="206" end="214" features="2193 2196"/>
+    <types:FeatureProxy xmi:id="2193" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2196" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2203" sofa="1" begin="215" end="222" features="2208 2211"/>
+    <types:FeatureProxy xmi:id="2208" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2211" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2218" sofa="1" begin="222" end="223" features="2223 2226 2229"/>
+    <types:FeatureProxy xmi:id="2223" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="2226" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="2229" key="eos" value="eos"/>
+    <types:AnnotationProxy xmi:id="2237" sofa="1" begin="224" end="227" features="2242 2245"/>
+    <types:FeatureProxy xmi:id="2242" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2245" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2252" sofa="1" begin="228" end="236" features="2257 2260"/>
+    <types:FeatureProxy xmi:id="2257" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2260" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2267" sofa="1" begin="237" end="239" features="2272 2275"/>
+    <types:FeatureProxy xmi:id="2272" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2275" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2282" sofa="1" begin="240" end="243" features="2287 2290"/>
+    <types:FeatureProxy xmi:id="2287" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2290" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2297" sofa="1" begin="244" end="248" features="2302 2305"/>
+    <types:FeatureProxy xmi:id="2302" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2305" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2312" sofa="1" begin="249" end="257" features="2317 2320"/>
+    <types:FeatureProxy xmi:id="2317" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2320" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2327" sofa="1" begin="258" end="260" features="2332 2335"/>
+    <types:FeatureProxy xmi:id="2332" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2335" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2342" sofa="1" begin="261" end="264" features="2347 2350"/>
+    <types:FeatureProxy xmi:id="2347" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2350" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2357" sofa="1" begin="265" end="270" features="2362 2365"/>
+    <types:FeatureProxy xmi:id="2362" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2365" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2372" sofa="1" begin="271" end="273" features="2377 2380"/>
+    <types:FeatureProxy xmi:id="2377" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2380" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2387" sofa="1" begin="274" end="281" features="2392 2395"/>
+    <types:FeatureProxy xmi:id="2392" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2395" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2402" sofa="1" begin="282" end="284" features="2407 2410"/>
+    <types:FeatureProxy xmi:id="2407" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2410" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2417" sofa="1" begin="285" end="287" features="2422 2425"/>
+    <types:FeatureProxy xmi:id="2422" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2425" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2432" sofa="1" begin="288" end="292" features="2437 2440"/>
+    <types:FeatureProxy xmi:id="2437" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2440" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2447" sofa="1" begin="293" end="299" features="2452 2455"/>
+    <types:FeatureProxy xmi:id="2452" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2455" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2462" sofa="1" begin="300" end="310" features="2467 2470"/>
+    <types:FeatureProxy xmi:id="2467" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2470" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2477" sofa="1" begin="310" end="311" features="2482 2485 2488"/>
+    <types:FeatureProxy xmi:id="2482" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="2485" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="2488" key="eos" value="eos"/>
+    <types:AnnotationProxy xmi:id="2496" sofa="1" begin="312" end="320" features="2501 2504"/>
+    <types:FeatureProxy xmi:id="2501" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2504" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2511" sofa="1" begin="321" end="331" features="2516 2519"/>
+    <types:FeatureProxy xmi:id="2516" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2519" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2526" sofa="1" begin="332" end="341" features="2531 2534"/>
+    <types:FeatureProxy xmi:id="2531" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2534" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2541" sofa="1" begin="342" end="352" features="2546 2549"/>
+    <types:FeatureProxy xmi:id="2546" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2549" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2556" sofa="1" begin="353" end="357" features="2561 2564"/>
+    <types:FeatureProxy xmi:id="2561" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2564" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2571" sofa="1" begin="358" end="362" features="2576 2579"/>
+    <types:FeatureProxy xmi:id="2576" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2579" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2586" sofa="1" begin="363" end="371" features="2591 2594"/>
+    <types:FeatureProxy xmi:id="2591" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2594" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2601" sofa="1" begin="372" end="374" features="2606 2609"/>
+    <types:FeatureProxy xmi:id="2606" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2609" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2616" sofa="1" begin="375" end="381" features="2621 2624"/>
+    <types:FeatureProxy xmi:id="2621" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2624" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2631" sofa="1" begin="382" end="385" features="2636 2639"/>
+    <types:FeatureProxy xmi:id="2636" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2639" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2646" sofa="1" begin="386" end="393" features="2651 2654"/>
+    <types:FeatureProxy xmi:id="2651" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2654" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2661" sofa="1" begin="394" end="400" features="2666 2669"/>
+    <types:FeatureProxy xmi:id="2666" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2669" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2676" sofa="1" begin="401" end="410" features="2681 2684"/>
+    <types:FeatureProxy xmi:id="2681" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2684" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2691" sofa="1" begin="410" end="411" features="2696 2699"/>
+    <types:FeatureProxy xmi:id="2696" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="2699" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2706" sofa="1" begin="412" end="417" features="2711 2714"/>
+    <types:FeatureProxy xmi:id="2711" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2714" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2721" sofa="1" begin="418" end="420" features="2726 2729"/>
+    <types:FeatureProxy xmi:id="2726" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2729" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2736" sofa="1" begin="421" end="427" features="2741 2744"/>
+    <types:FeatureProxy xmi:id="2741" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2744" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2751" sofa="1" begin="428" end="431" features="2756 2759"/>
+    <types:FeatureProxy xmi:id="2756" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2759" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2766" sofa="1" begin="432" end="443" features="2771 2774"/>
+    <types:FeatureProxy xmi:id="2771" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2774" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2781" sofa="1" begin="444" end="446" features="2786 2789"/>
+    <types:FeatureProxy xmi:id="2786" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2789" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2796" sofa="1" begin="447" end="455" features="2801 2804"/>
+    <types:FeatureProxy xmi:id="2801" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2804" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2811" sofa="1" begin="456" end="463" features="2816 2819"/>
+    <types:FeatureProxy xmi:id="2816" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2819" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2826" sofa="1" begin="464" end="466" features="2831 2834"/>
+    <types:FeatureProxy xmi:id="2831" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2834" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2841" sofa="1" begin="467" end="470" features="2846 2849"/>
+    <types:FeatureProxy xmi:id="2846" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2849" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2856" sofa="1" begin="471" end="476" features="2861 2864"/>
+    <types:FeatureProxy xmi:id="2861" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2864" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2871" sofa="1" begin="477" end="487" features="2876 2879"/>
+    <types:FeatureProxy xmi:id="2876" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2879" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2886" sofa="1" begin="488" end="491" features="2891 2894"/>
+    <types:FeatureProxy xmi:id="2891" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2894" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2901" sofa="1" begin="492" end="494" features="2906 2909"/>
+    <types:FeatureProxy xmi:id="2906" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2909" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2916" sofa="1" begin="495" end="506" features="2921 2924"/>
+    <types:FeatureProxy xmi:id="2921" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2924" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2931" sofa="1" begin="507" end="510" features="2936 2939"/>
+    <types:FeatureProxy xmi:id="2936" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2939" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2946" sofa="1" begin="511" end="516" features="2951 2954"/>
+    <types:FeatureProxy xmi:id="2951" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2954" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2961" sofa="1" begin="517" end="526" features="2966 2969"/>
+    <types:FeatureProxy xmi:id="2966" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2969" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2976" sofa="1" begin="527" end="531" features="2981 2984"/>
+    <types:FeatureProxy xmi:id="2981" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2984" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="2991" sofa="1" begin="531" end="532" features="2996 2999 3002"/>
+    <types:FeatureProxy xmi:id="2996" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="2999" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="3002" key="eos" value="eos"/>
+    <types:AnnotationProxy xmi:id="3010" sofa="1" begin="533" end="535" features="3015 3018"/>
+    <types:FeatureProxy xmi:id="3015" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3018" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3025" sofa="1" begin="536" end="543" features="3030 3033"/>
+    <types:FeatureProxy xmi:id="3030" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3033" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3040" sofa="1" begin="544" end="545" features="3045 3048"/>
+    <types:FeatureProxy xmi:id="3045" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3048" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3055" sofa="1" begin="546" end="552" features="3060 3063"/>
+    <types:FeatureProxy xmi:id="3060" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3063" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3070" sofa="1" begin="553" end="555" features="3075 3078"/>
+    <types:FeatureProxy xmi:id="3075" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3078" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3085" sofa="1" begin="556" end="566" features="3090 3093"/>
+    <types:FeatureProxy xmi:id="3090" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3093" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3100" sofa="1" begin="567" end="570" features="3105 3108"/>
+    <types:FeatureProxy xmi:id="3105" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3108" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3115" sofa="1" begin="571" end="577" features="3120 3123"/>
+    <types:FeatureProxy xmi:id="3120" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3123" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3130" sofa="1" begin="578" end="581" features="3135 3138"/>
+    <types:FeatureProxy xmi:id="3135" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3138" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3145" sofa="1" begin="582" end="585" features="3150 3153"/>
+    <types:FeatureProxy xmi:id="3150" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3153" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3160" sofa="1" begin="586" end="591" features="3165 3168"/>
+    <types:FeatureProxy xmi:id="3165" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3168" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3175" sofa="1" begin="592" end="596" features="3180 3183"/>
+    <types:FeatureProxy xmi:id="3180" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3183" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3190" sofa="1" begin="597" end="599" features="3195 3198"/>
+    <types:FeatureProxy xmi:id="3195" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3198" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3205" sofa="1" begin="600" end="606" features="3210 3213"/>
+    <types:FeatureProxy xmi:id="3210" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3213" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3220" sofa="1" begin="606" end="607" features="3225 3228"/>
+    <types:FeatureProxy xmi:id="3225" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="3228" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3235" sofa="1" begin="608" end="618" features="3240 3243"/>
+    <types:FeatureProxy xmi:id="3240" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3243" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3250" sofa="1" begin="619" end="628" features="3255 3258"/>
+    <types:FeatureProxy xmi:id="3255" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3258" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3265" sofa="1" begin="629" end="638" features="3270 3273"/>
+    <types:FeatureProxy xmi:id="3270" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3273" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3280" sofa="1" begin="639" end="641" features="3285 3288"/>
+    <types:FeatureProxy xmi:id="3285" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3288" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3295" sofa="1" begin="642" end="650" features="3300 3303"/>
+    <types:FeatureProxy xmi:id="3300" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3303" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3310" sofa="1" begin="651" end="653" features="3315 3318"/>
+    <types:FeatureProxy xmi:id="3315" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3318" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3325" sofa="1" begin="654" end="655" features="3330 3333"/>
+    <types:FeatureProxy xmi:id="3330" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3333" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3340" sofa="1" begin="656" end="658" features="3345 3348"/>
+    <types:FeatureProxy xmi:id="3345" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3348" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3355" sofa="1" begin="658" end="659" features="3360 3363"/>
+    <types:FeatureProxy xmi:id="3360" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="3363" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3370" sofa="1" begin="668" end="677" features="3375 3378"/>
+    <types:FeatureProxy xmi:id="3375" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3378" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3385" sofa="1" begin="678" end="687" features="3390 3393"/>
+    <types:FeatureProxy xmi:id="3390" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3393" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3400" sofa="1" begin="688" end="695" features="3405 3408"/>
+    <types:FeatureProxy xmi:id="3405" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3408" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3415" sofa="1" begin="696" end="697" features="3420 3423"/>
+    <types:FeatureProxy xmi:id="3420" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="3423" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3430" sofa="1" begin="697" end="703" features="3435 3438"/>
+    <types:FeatureProxy xmi:id="3435" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3438" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3445" sofa="1" begin="704" end="705" features="3450 3453"/>
+    <types:FeatureProxy xmi:id="3450" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3453" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3460" sofa="1" begin="706" end="707" features="3465 3468"/>
+    <types:FeatureProxy xmi:id="3465" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3468" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3475" sofa="1" begin="708" end="709" features="3480 3483"/>
+    <types:FeatureProxy xmi:id="3480" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3483" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3490" sofa="1" begin="709" end="710" features="3495 3498"/>
+    <types:FeatureProxy xmi:id="3495" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="3498" key="eos" value="not-eos"/>
+    <types:AnnotationProxy xmi:id="3505" sofa="1" begin="710" end="711" features="3510 3513 3516"/>
+    <types:FeatureProxy xmi:id="3510" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="3513" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="3516" key="eos" value="eos"/>
+    <types:LayerProxy xmi:id="3685" sofa="1" name="sentences" annotations="3689"/>
+    <cas:FSArray xmi:id="3689" elements="3650 3657 3664 3671 3678"/>
+    <types:AnnotationProxy xmi:id="3650" sofa="1" begin="0" end="140" features=""/>
+    <types:AnnotationProxy xmi:id="3657" sofa="1" begin="141" end="223" features=""/>
+    <types:AnnotationProxy xmi:id="3664" sofa="1" begin="224" end="311" features=""/>
+    <types:AnnotationProxy xmi:id="3671" sofa="1" begin="312" end="532" features=""/>
+    <types:AnnotationProxy xmi:id="3678" sofa="1" begin="533" end="711" features=""/>
+    <types:RelationProxy xmi:id="3718" sofa="1" features="3723" tuples="3729 3747 3765" name="Bacteria"/>
+    <types:FeatureProxy xmi:id="3723" key="kind" value="text"/>
+    <types:TupleProxy xmi:id="3729" sofa="1" features="3733 3736 3739" arguments="3983"/>
+    <types:FeatureProxy xmi:id="3733" key="id" value="T4"/>
+    <types:FeatureProxy xmi:id="3736" key="type" value="Bacteria"/>
+    <types:FeatureProxy xmi:id="3739" key="NCBI_Taxonomy" value="573"/>
+    <cas:FSArray xmi:id="3983" elements="3980"/>
+    <types:ArgumentProxy xmi:id="3980" role="frag0" argument="34"/>
+    <types:TupleProxy xmi:id="3747" sofa="1" features="3751 3754 3757" arguments="3989"/>
+    <types:FeatureProxy xmi:id="3751" key="id" value="T5"/>
+    <types:FeatureProxy xmi:id="3754" key="type" value="Bacteria"/>
+    <types:FeatureProxy xmi:id="3757" key="NCBI_Taxonomy" value="573"/>
+    <cas:FSArray xmi:id="3989" elements="3986"/>
+    <types:ArgumentProxy xmi:id="3986" role="frag0" argument="41"/>
+    <types:TupleProxy xmi:id="3765" sofa="1" features="3769 3772 3775" arguments="3995"/>
+    <types:FeatureProxy xmi:id="3769" key="id" value="T9"/>
+    <types:FeatureProxy xmi:id="3772" key="type" value="Bacteria"/>
+    <types:FeatureProxy xmi:id="3775" key="NCBI_Taxonomy" value="573"/>
+    <cas:FSArray xmi:id="3995" elements="3992"/>
+    <types:ArgumentProxy xmi:id="3992" role="frag0" argument="48"/>
+    <types:RelationProxy xmi:id="3788" sofa="1" features="3793" tuples="3799 3817 3835 3853 3871 3889" name="Habitat"/>
+    <types:FeatureProxy xmi:id="3793" key="kind" value="text"/>
+    <types:TupleProxy xmi:id="3799" sofa="1" features="3803 3806 3809" arguments="4001"/>
+    <types:FeatureProxy xmi:id="3803" key="id" value="T6"/>
+    <types:FeatureProxy xmi:id="3806" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="3809" key="OntoBiotope" value="OBT:001804"/>
+    <cas:FSArray xmi:id="4001" elements="3998"/>
+    <types:ArgumentProxy xmi:id="3998" role="frag0" argument="71"/>
+    <types:TupleProxy xmi:id="3817" sofa="1" features="3821 3824 3827" arguments="4007"/>
+    <types:FeatureProxy xmi:id="3821" key="id" value="T7"/>
+    <types:FeatureProxy xmi:id="3824" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="3827" key="OntoBiotope" value="OBT:000218"/>
+    <cas:FSArray xmi:id="4007" elements="4004"/>
+    <types:ArgumentProxy xmi:id="4004" role="frag0" argument="78"/>
+    <types:TupleProxy xmi:id="3835" sofa="1" features="3839 3842 3845" arguments="4013"/>
+    <types:FeatureProxy xmi:id="3839" key="id" value="T8"/>
+    <types:FeatureProxy xmi:id="3842" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="3845" key="OntoBiotope" value="OBT:001804"/>
+    <cas:FSArray xmi:id="4013" elements="4010"/>
+    <types:ArgumentProxy xmi:id="4010" role="frag0" argument="85"/>
+    <types:TupleProxy xmi:id="3853" sofa="1" features="3857 3860 3863" arguments="4019"/>
+    <types:FeatureProxy xmi:id="3857" key="id" value="T10"/>
+    <types:FeatureProxy xmi:id="3860" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="3863" key="OntoBiotope" value="OBT:000577"/>
+    <cas:FSArray xmi:id="4019" elements="4016"/>
+    <types:ArgumentProxy xmi:id="4016" role="frag0" argument="92"/>
+    <types:TupleProxy xmi:id="3871" sofa="1" features="3875 3878 3881" arguments="4025"/>
+    <types:FeatureProxy xmi:id="3875" key="id" value="T11"/>
+    <types:FeatureProxy xmi:id="3878" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="3881" key="OntoBiotope" value="OBT:002297"/>
+    <cas:FSArray xmi:id="4025" elements="4022"/>
+    <types:ArgumentProxy xmi:id="4022" role="frag0" argument="99"/>
+    <types:TupleProxy xmi:id="3889" sofa="1" features="3893 3896 3899" arguments="4031"/>
+    <types:FeatureProxy xmi:id="3893" key="id" value="T3"/>
+    <types:FeatureProxy xmi:id="3896" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="3899" key="OntoBiotope" value="OBT:002293"/>
+    <cas:FSArray xmi:id="4031" elements="4028"/>
+    <types:ArgumentProxy xmi:id="4028" role="frag0" argument="64"/>
+    <types:RelationProxy xmi:id="3915" sofa="1" features="3920" tuples="3926" name="Title"/>
+    <types:FeatureProxy xmi:id="3920" key="kind" value="text"/>
+    <types:TupleProxy xmi:id="3926" sofa="1" features="3930 3933" arguments="4037"/>
+    <types:FeatureProxy xmi:id="3930" key="id" value="T1"/>
+    <types:FeatureProxy xmi:id="3933" key="type" value="Title"/>
+    <cas:FSArray xmi:id="4037" elements="4034"/>
+    <types:ArgumentProxy xmi:id="4034" role="frag0" argument="118"/>
+    <types:RelationProxy xmi:id="3943" sofa="1" features="3948" tuples="3954" name="Paragraph"/>
+    <types:FeatureProxy xmi:id="3948" key="kind" value="text"/>
+    <types:TupleProxy xmi:id="3954" sofa="1" features="3958 3961" arguments="4043"/>
+    <types:FeatureProxy xmi:id="3958" key="id" value="T2"/>
+    <types:FeatureProxy xmi:id="3961" key="type" value="Paragraph"/>
+    <cas:FSArray xmi:id="4043" elements="4040"/>
+    <types:ArgumentProxy xmi:id="4040" role="frag0" argument="132"/>
+    <types:RelationProxy xmi:id="3971" sofa="1" features="" tuples="" name="equiv"/>
+    <cas:View sofa="1" members="8 13"/>
+</xmi:XMI>
