@@ -1,0 +1,15 @@
+<alvisnlp-plan id="OMTD_GeniaTagger">
+  <param name="input">
+    <alias module="read" param="source"/>
+  </param>
+
+  <read class="XMIImport"/>
+
+  <genia-tagger class="GeniaTagger">
+    <treeTaggerTagset/>
+  </genia-tagger>
+
+  <write class="XMIExport">
+    <outDir>.</outDir>
+  </write>
+</alvisnlp-plan>
