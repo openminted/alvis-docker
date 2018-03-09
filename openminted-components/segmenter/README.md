@@ -1,6 +1,6 @@
 # alvis-br-train
 
-A segmenter (see the plans into the [test-data/plans folder](test-data/plans)).
+Performs word segmentation.
 
 ## Test data
 The test data to run this component are into the `test-data` folder
