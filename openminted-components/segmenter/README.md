@@ -7,7 +7,7 @@ The test data to run this component are into the `test-data` folder
  
 * corpus is composed of xmi files
 
-* model is the folder where the produced TEES SVM  model is stored
+* output is the folder where the produced files are stored
 
 ## Run from the command line
 
@@ -24,11 +24,11 @@ alvisnlp alvis.segmentation.plan \
 
 # OpenMinTeD metadata
 
-The Openminted metadata records are described in the following XML files
-* [OMTD-SHARE records V3.0.0](alvis-br-train.metadata.omtd.v3.0.2)
+The Openminted metadata records are described in the following XML files based on [OMTD-SHARE](https://openminted.github.io/releases/omtd-share/)
+* [OMTD-SHARE records V3.0.0](segmenter.metadata.omtd.v3.0.2)
 
 # re-build the docker image
 You can re-build the docker image from the dockerfile by running the following command from the folder contained the README
 ```
-docker build . -t bibliome/alvis-br-train -f Dockerfile.alvis-br-train
+docker build . -t bibliome/segmenter -f Dockerfile.segmenter
 ```
