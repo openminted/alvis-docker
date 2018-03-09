@@ -1,6 +1,6 @@
 # alvis-br-train
 
-Performs word segmentation.
+Performs segmentation, detects sentence boundaries and creates one annotation for each sentence.
 
 ## Test data
 The test data to run this component are into the `test-data` folder
