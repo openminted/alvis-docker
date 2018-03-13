@@ -1,3 +1,4 @@
+set timeout 20
 spawn ./configure.py
 expect ">" { send "2\n" }
 expect ">" { send "3\n" }
