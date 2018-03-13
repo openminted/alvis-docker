@@ -1,11 +1,25 @@
 #!/usr/bin/expect
 set timeout 20
+
 spawn ./configure.py
-expect ">" { send "2\n" }
-expect ">" { send "3\n" }
-expect ">" { send "c\n" }
-expect ">" { send "c\n" }
-expect ">" { send "i\n" }
-expect ">" { send "i\n" }
-interact
+
+expect ">" 
+send "2\r"
+
+expect ">" 
+send "3\r" 
+
+expect ">" 
+send "c\r"
+
+expect ">" 
+send "c\r"
+
+expect ">"
+send "i\r"
+
+expect ">"
+send "i\r"
+
+expect eof
 
