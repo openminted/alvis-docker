@@ -4,7 +4,7 @@ expect ">" { send "2\n" }
 expect ">" { send "3\n" }
 expect ">" { send "c\n" }
 expect ">" { send "c\n" }
-expect ">" { send "\n" }
-expect ">" { send "\n" }
+expect "==\n>" { send "i\n" }
+expect "==\n>" { send "i\n" }
 interact
 
