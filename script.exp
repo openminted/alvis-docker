@@ -45,9 +45,7 @@ if {$force_conservative} {
 set timeout -1
 spawn ./configure.py
 match_max 100000
-expect -exact "No local settings loaded.\r
-\r
-================================ Configure TEES ================================\r
+expect -exact "================================ Configure TEES ================================\r
 Welcome to using the Turku Event Extraction System (TEES)! In order to work,\r
 TEES depends on a number of other programs, which have to be set up before use.\r
 \r
@@ -73,10 +71,7 @@ selectable one.\r
 ================================================================================\r
 >"
 send -- "2\r"
-expect -exact "2\r
-\r
-\r
-================================ Configure TEES ================================\r
+expect -exact "================================ Configure TEES ================================\r
 Welcome to using the Turku Event Extraction System (TEES)! In order to work,\r
 TEES depends on a number of other programs, which have to be set up before use.\r
 \r
@@ -102,10 +97,7 @@ selectable one.\r
 ================================================================================\r
 >"
 send -- "3\r"
-expect -exact "3\r
-\r
-\r
-================================ Configure TEES ================================\r
+expect -exact "================================ Configure TEES ================================\r
 Welcome to using the Turku Event Extraction System (TEES)! In order to work,\r
 TEES depends on a number of other programs, which have to be set up before use.\r
 \r
@@ -131,10 +123,7 @@ selectable one.\r
 ================================================================================\r
 >"
 send -- "c\r"
-expect -exact "c\r
-\r
-\r
-============================== Install Directory ==============================\r
+expect -exact "============================== Install Directory ==============================\r
 1. By default, all data and tools will be installed to one directory, the\r
 DATAPATH. You can later set the installation directory individually for each\r
 component, or you can change the default path now.\r
@@ -153,11 +142,7 @@ configuration file will be created.\r
 ================================================================================\r
 >"
 send -- "c\r"
-expect -exact "c\r
-\r
-Initializing local settings file /home/mba/.tees_local_settings.py\r
-\r
-================================== Classifier ==================================\r
+expect -exact "================================== Classifier ==================================\r
 TEES uses the SVM Multiclass classifer by Thorsten Joachims for all\r
 classification tasks. You can optionally choose to compile it from source if the\r
 precompiled Linux-binary does not work on your system.\r
