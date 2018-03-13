@@ -123,23 +123,7 @@ selectable one.\r
 ================================================================================\r
 >"
 send -- "c\r"
-expect -exact "============================== Install Directory ==============================\r
-1. By default, all data and tools will be installed to one directory, the\r
-DATAPATH. You can later set the installation directory individually for each\r
-component, or you can change the default path now.\r
-\r
-2. TEES reads its configuration from a file defined by the environment variable\r
-\"TEES_SETTINGS\". This environment variable must be set, and point to a\r
-configuration file for TEES to work. By editing this configuration file you can\r
-configure TEES in addition (or instead of) using this configuration program.\r
-\r
-The \"TEES_SETTINGS\" environment variable is not set, so a new local\r
-configuration file will be created.\r
---------------------------------------------------------------------------------\r
-    1) Change DATAPATH (/home/mba/.tees)\r
-    2) Change TEES_SETTINGS (/home/mba/.tees_local_settings.py)\r
- *  c) Continue\r
-================================================================================\r
+expect -exact "================================================================================\r
 >"
 send -- "c\r"
 expect -exact "================================== Classifier ==================================\r
