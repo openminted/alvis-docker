@@ -10,6 +10,7 @@ RUN apt-get -yqq update && apt-get -yqq install \
     expect \
     wget \
     xmlstarlet \
+    zip \
     # for the python-based tools
     python \
     python-numpy \
@@ -39,6 +40,8 @@ RUN git clone -b docker-sources https://github.com/Bibliome/alvisnlp.git /alvisn
     ./install.sh . && \
     # remove maven dependencies
     rm -rf ~/.m2 && \
+    # remove extras
+    rm -rf doc* alvisnlp-test test-alvisnlp.sh && \
     # create the external soft dir
     mkdir psoft
 
@@ -81,9 +84,9 @@ RUN cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default
     mv *-TEES-*  tees && \
     cd tees/  && \
     # creating the expect file
-    #wget https://github.com/openminted/alvis-docker/blob/master/tees.expect && \
-    #echo -e 'spawn ./configure.py \nexpect ">" { send "\\n" } \nexpect ">" { send "3\\n" } \nexpect ">" { send "c\\n" } \nexpect ">" { send "c\\n" } \nexpect ">" { send "i\\n" }\nexpect ">" { send "3\\n" } \nexpect ">" { send "i\\n" } \ninteract' > tees.expect && \
-    #expect tees.expect && \
+    wget https://raw.githubusercontent.com/openminted/alvis-docker/master/script.exp && \
+    chmod +x script.exp && \
+    ./script.exp && \
     export TEES_SETTINGS=$pwd/tees_local_settings.py && \
     cd /alvisnlp/psoft && \
     ## installing treeTagger
@@ -120,15 +123,15 @@ RUN cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default
     xmlstarlet ed -u "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.ccg.CCGPosTagger']/executable" -v /alvisnlp/psoft/candc-1.00/bin/pos | \
     xmlstarlet ed -d "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.ccg.CCGPosTagger']/model" | \
     ## geniatagger params values setting
-    xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.modules.bibliomefactory.geniatagger.GeniaTagger']/geniaDir" -v /alvisnlp/psoft/geniatagger-3.0.2  | \
+    xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.geniatagger.GeniaTagger']/geniaDir" -v /alvisnlp/psoft/geniatagger-3.0.2  | \
     ## species tagger param setting
     xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.Species']/speciesDir" -v /alvisnlp/psoft/species_tagger/ | \
     ## stanford param values setting
-    xmlstarlet ed -d "/default-param-values/module[@class='org.bibliome.alvisnlp.modules.stanford.StanfordNER']/classifierFile" | \
+    xmlstarlet ed -d "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.stanford.StanfordNER']/classifierFile" | \
     ## tees classify params values setting
     xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.tees.TEESClassify']/teesHome" -v /alvisnlp/psoft/tees/ | \
     ## tees train params values setting
-    xmlstarlet ed --inplace -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.tees.TEESTrain']/teesHome" -v /alvisnlp/psoft/tees/ | \
+    xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.tees.TEESTrain']/teesHome" -v /alvisnlp/psoft/tees/ | \
     ## wapiti label params values setting
     xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.wapiti.WapitiLabel']/wapitiExecutable" -v /usr/local/bin/wapiti | \
     ## wapiti train params values setting
