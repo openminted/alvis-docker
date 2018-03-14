@@ -1,14 +1,4 @@
-```command
-docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
-bibliome/alvis-br-train \
-alvisnlp org.bibliome.alvisnlp.modules.tees.alvis-br-train \
---input /alvisnlp/data/corpus \
---output /alvisnlp/data/models \
---param:train=/alvisnlp/data/corpus/train \
---param:dev=/alvisnlp/data/corpus/dev \
---param:test=/alvisnlp/data/corpus/test \
---param:modelTargetDir=/alvisnlp/data/models
-```# Internal Guidelines for OMTD acceptable Components / use case execution
+# Internal Guidelines for OMTD acceptable Components / use case execution
 
 #### Objective
 Objective: This document aims to provide  guidelines and best practices for exposing on OpenMinTed components based on AlvisNLP/ML.
@@ -129,10 +119,6 @@ Plans actually provide the whole plan fr executing the use cases; Use cases comp
  **Files:** ExecutableFile, File, InputDirectory, InputFile, OutputDirectory, OutputFile, SourceStream, TargetStream, WorkingDirectory
 **Misc: ** Pattern, any type that has a straight forwardd string conversion
 **Ensemble:** Array and Mapping
-
-
-
-
 
 + A thought should be provided on deciding which resources should be kept internal to the component and which ones thrown as parameters. Following are some gudelines / tactics for such.
 
