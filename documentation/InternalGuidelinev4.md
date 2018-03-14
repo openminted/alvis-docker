@@ -9,7 +9,8 @@ Following points / items need to be taken care before executing an OpenminTeD pl
  3. Dockerfile creation
  4. Metadata creation
  5. Registration on on OMTD
- 
+
+In below we emphasize on the few eminent parts of the process in a bit detail.
  
 #### 1. Dockerization
 The whole process of dockerizing a component or use case takes a list off steps one by one as described in below.
@@ -58,6 +59,15 @@ PUSH is the command for pushing and image or repository to the registry / docker
 #### 2. Metadata
 The metadata should either be provided in XML format or it could be entered through the OpenMinTeD form when registering the component / use case; but for good practice preparing the xml file is advised.
 Here is the [link](https://guidelines.openminted.eu/the_omtd-share_metadata_schema.html) to the metadta schema and related documentaion. 
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+Disclaimer 
+------------------------------------------------------------------------------------------------------------------------------------------------
+This message (including any attachments) contains confidential information intended for a specific individual and purpose, and is protected by law. If you are not the intended recipient, you should delete this message. 
+
+Any disclosure, copying, or distribution of this message, or the taking of any action based on it, is strictly prohibited. [v.E.1]
+------------------------------------------------------------------------------------------------------------------------------------------------
 There are many properties which specifies the resources to be brought in. Three kinds of specifications on these properties are followed :
 ######
 + Manadatory
