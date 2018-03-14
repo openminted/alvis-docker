@@ -3,16 +3,14 @@
 #### Objective
 Objective: This document aims to provide  guidelines and best practices for exposing on OpenMinTed components based on AlvisNLP/ML.
 
-Following points / items need to be taken care before executing an OpenminTeD platform acceptable componenets component / use cae in the OpenMinTeD platform.
  1. Plan specifications and resource management
  2. Test data preparation
  3. Dockerfile creation
  4. Metadata creation
  5. Registration on on OMTD
 
-In below we emphasize on the few eminent parts of the process in a bit detail.
  
-#### 1. Dockerization
+#### 1. Dockerization <!--- put them in the declared order ---> 
 The whole process of dockerizing a component or use case takes a list off steps one by one as described in below.
 ##### i.  Install docker
 Docker is a container platform provider to address  almost every application across the hybrid cloud and very effective and efficieent.
@@ -66,10 +64,8 @@ There are many properties which specifies the resources to be brought in. Three 
 + Recommended
 + Optional
 
- The details of these could be found in the link provided last.
 
-
-A template for this is included in the Appendix I section of this document.
+A template for this is included in the Appendix I section of this document. <!--- put the appendix in the repo --->
 
 #### 3. Test data 
 A ‘test-data’ folder should be created under the base / home directory of the dockerized project component / use case and all the test data should be placed inside that folder.
@@ -99,38 +95,39 @@ alvisnlp org.bibliome.alvisnlp.modules.tees.alvis-br-train \
 ```
 
 #### 4. Plans
-Plans actually provide the whole plan fr executing the use cases; Use cases comprise of one component or sequential ensemble of multiple components. Practically one component should be coded as a plan for the basic one componenet plans. The plan contains the AlvisNlp component specifications, resources and parameters. Following are some guidelines for creating plans.
+The OpenMinTeD component is coded as an ALvisNLP/ML plan. The plan contains the AlvisNLP/ML component specifications, resources and parameters. Following are some guidelines for creating plans.
 
-+ The plan should begin with an XMI reader at the beginning and XMI writer at the end. here is the [link](https://bibliome.github.io/alvisnlp/reference/module/fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.uima.XMIImport) to the XMIImport and here is the [link](https://bibliome.github.io/alvisnlp/reference/module/fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.uima.XMIExport) for the XMIExport.
-+ The parameters can’t be embedded anywhere inside the plan ; they need to be isolated in a section.
++ The plan should begin with an XMI reader and XMI writer at the end. here is the [link](https://bibliome.github.io/alvisnlp/reference/module/fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.uima.XMIImport) to the XMIImport and here is the [link](https://bibliome.github.io/alvisnlp/reference/module/fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.uima.XMIExport) for the XMIExport. <!--- use the actual module names ---> <!--- put links in the text, avoid linking words like "here" and "link" ---> <!--- names of code things between backticks ` ` --->
 
-+ The aliases from the parameters needs to be declared clearly. Component parameters are exposed as plan-level parameters.
++ The aliases from the parameters needs to be declared clearly. Component parameters are exposed as plan-level parameters. <!--- link to the alias documentation --->
 
 + Make sure each parameter follows the OMTD acceptable formats. TFollowing are the accpetable parameter types.
  **Primitves:**  Boolean, Character, Double, Integer, Long, String .
  **Files:** ExecutableFile, File, InputDirectory, InputFile, OutputDirectory, OutputFile, SourceStream, TargetStream, WorkingDirectory
 **Misc: ** Pattern, any type that has a straight forwardd string conversion
-**Ensemble:** Array and Mapping
+**Ensemble:** Array and Mapping <!--- format as embedded lists --->
 
 + While declaring / making external resources available, a folder under working home directory named as resources (as $home/resources/) needs to be created and all the resource files should be stored there. This relative path of $home/resources/ would be ported to OMTD platform.
 These are resources indispensable for any use of the component.
-Internal resources will never be exposed to the user in OMTD.
+Internal resources will never be exposed to the user in OMTD. <!--- I think examples would make things more clear here --->
 
 + A thought should be provided on deciding which resources should be kept internal to the component and which ones thrown as parameters. Following are some gudelines / tactics for such.
 
 **Evaluate the input/output:**
-- There must be an alias named “input” for the “source” parameter of the XMIImport module. 
+- There must be an alias named “input” for the “source” parameter of the XMIImport module. <!--- code words between backticks --->
+
 Reference Code:
-```command 
+```xml 
 <param name="input">
     <alias module="read" param="source"/>
   </param>
 
 <read class="XMIImport" />
-```
+``` <!--- the example should be complete: alvisnlp-plan, input, ellipsis, output --->
 
 - Output files/dirs should not be exposed as parameters. But output files/directories should be relative.
-**Parameters exposed as alias should:**
+
+**Parameters exposed as alias should:** <!--- this section about params should be closer to the points above about params --->
 
 - have a significant impact on the component behavior (avoid parameter fine-tuning)
 
