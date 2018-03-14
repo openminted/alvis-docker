@@ -94,6 +94,7 @@ To **run the test**, the following format of **docker command** is used : docker
 
 For example here is an specific execution command for the test-data for the alvis-br-train component following the above format :
 
+```command
 docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
 bibliome/alvis-br-train \
 alvisnlp org.bibliome.alvisnlp.modules.tees.alvis-br-train \
@@ -103,6 +104,7 @@ alvisnlp org.bibliome.alvisnlp.modules.tees.alvis-br-train \
 --param:dev=/alvisnlp/data/corpus/dev \
 --param:test=/alvisnlp/data/corpus/test \
 --param:modelTargetDir=/alvisnlp/data/models
+```
 
 #### 4. Plans
 Plans actually provide the whole plan fr executing the use cases; Use cases comprise of one component or sequential ensemble of multiple components. Practically one component should be coded as a plan for the basic one componenet plans. The plan contains the AlvisNlp component specifications, resources and parameters. Following are some guidelines for creating plans.
