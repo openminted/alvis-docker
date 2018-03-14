@@ -1,6 +1,6 @@
-#Internal Guidelines for OMTD acceptable Components / use case execution
+# Internal Guidelines for OMTD acceptable Components / use case execution
 
-####Objective
+#### Objective
 Objective: This document aims to provide  guidelines and best practices for exposing on OpenMinTed components based on AlvisNLP/ML.
 
 Following points / items need to be taken care before executing an OpenminTeD platform acceptable componenets component / use cae in the OpenMinTeD platform.
@@ -21,7 +21,7 @@ Installation of docker based is needed and detailed installation guidelines are 
 
 Dockerfile contains the set of instructions needed for dockerization and create a docker image. 
 The recommended practice is to create a dockerfile based on the basic AlvisNLP component (generic one) or create based on some component which in turn hierarchially based on the generic one.
-######A. Build upon the generic AlvisNLP docker
+###### A. Build upon the generic AlvisNLP docker
 Following is the primitive most code for building a docker based on genreric most AlvisNLP component based docker
 
 
@@ -37,7 +37,7 @@ Following is the primitive most code for building a docker based on genreric mos
     CMD ["alvisnlp"]
     
 
-######B. Build upon existing existing AlvisNLP suite component based docker
+###### B. Build upon existing existing AlvisNLP suite component based docker
 This is the hierarchical building process where the basic one at the end of the hierarchy is the generic AlvisNLP component.
 This type is advised to build for complex and advanced use cases which needs multiple AlvisNLP components and intricate parameters and resources in ensemble.
 
@@ -55,7 +55,7 @@ BUILD command is used for generating docker image and here is the [link](https:/
 Testing of the generated docker image is done through test-data and regarding this is explained in the "test" section in bellow.
 ##### vi. Registeration on DockerHub
 PUSH is the command for pushing and image or repository to the registry / dockerhub. Here is the [link](https://docs.docker.com/engine/reference/commandline/push/) for details on the command.
-####2. Metadata
+#### 2. Metadata
 The metadata should either be provided in XML format or it could be entered through the OpenMinTeD form when registering the component / use case; but for good practice preparing the xml file is advised.
 Here is the [link](https://guidelines.openminted.eu/the_omtd-share_metadata_schema.html) to the metadta schema and related documentaion. 
 There are many properties which specifies the resources to be brought in. Three kinds of specifications on these properties are followed :
@@ -69,7 +69,7 @@ There are many properties which specifies the resources to be brought in. Three 
 
 A template for this is included in the Appendix I section of this document.
 
-####3. Test data 
+#### 3. Test data 
 A ‘test-data’ folder should be created under the base / home directory of the dockerized project component / use case and all the test data should be placed inside that folder.
 
 After dockerization of the component / use case the test could be run using the above mentioned 'test-data'.
@@ -94,7 +94,7 @@ alvisnlp org.bibliome.alvisnlp.modules.tees.alvis-br-train \
 --param:test=/alvisnlp/data/corpus/test \
 --param:modelTargetDir=/alvisnlp/data/models
 
-####4. Plans
+#### 4. Plans
 Plans actually provide the whole plan fr executing the use cases; Use cases comprise of one component or sequential ensemble of multiple components. Practically one component should be coded as a plan for the basic one componenet plans. The plan contains the AlvisNlp component specifications, resources and parameters. Following are some guidelines for creating plans.
 
 + The plan should begin with an XMI reader at the beginning and XMI writer at the end. here is the [link](https://bibliome.github.io/alvisnlp/reference/module/fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.uima.XMIImport) to the XMIImport and here is the [link](https://bibliome.github.io/alvisnlp/reference/module/fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.uima.XMIExport) for the XMIExport.
