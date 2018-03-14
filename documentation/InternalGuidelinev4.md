@@ -45,7 +45,7 @@ This type is advised to build for complex and advanced use cases which needs mul
 
 ##### iii. Commands to insert internal resources
 Two commands are used inserting internal resources : ADD and Copy.
-
+https://github.com/openminted/alvis-docker/edit/master/documentation/InternalGuidelinev4.md
 The ADD instruction copies new files, directories or remote file URLs from source and adds them to the filesystem of the image at the path provided as destination where as the COPY command copies new files or directories from source and adds them to the filesystem of the container at the path provided as destination.
 
 Here is the [link](https://docs.docker.com/engine/reference/builder/#add) for ADD  command in detail, while here is the [link](https://docs.docker.com/engine/reference/builder/#copy) for the COPY.
@@ -112,6 +112,10 @@ Plans actually provide the whole plan fr executing the use cases; Use cases comp
 **Misc: ** Pattern, any type that has a straight forwardd string conversion
 **Ensemble:** Array and Mapping
 
++ While declaring / making external resources available, a folder under working home directory named as resources (as $home/resources/) needs to be created and all the resource files should be stored there. This relative path of $home/resources/ would be ported to OMTD platform.
+These are resources indispensable for any use of the component.
+Internal resources will never be exposed to the user in OMTD.
+
 + A thought should be provided on deciding which resources should be kept internal to the component and which ones thrown as parameters. Following are some gudelines / tactics for such.
 
 **Evaluate the input/output:**
@@ -124,18 +128,7 @@ Plans actually provide the whole plan fr executing the use cases; Use cases comp
 
 - make sense to a user, record the expertise level necessary to understand the parameter
 
-- resource parameters should clearly record the file formats and size limits
-
-+ While declaring / making external resources available, a folder under working home directory named as resources (as $home/resources/) needs to be created and all the resource files should be stored there. This relative path of $home/resources/ would be ported to OMTD platform.
-These are resources indispensable for any use of the component.
-Internal resources will never be exposed to the user in OMTD.
-
-
-
-
-
-
-
+- resource parameters should clearly record the file formats and size limit.
 
 
 
