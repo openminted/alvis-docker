@@ -119,7 +119,15 @@ Internal resources will never be exposed to the user in OMTD.
 + A thought should be provided on deciding which resources should be kept internal to the component and which ones thrown as parameters. Following are some gudelines / tactics for such.
 
 **Evaluate the input/output:**
-- There must be an alias named “input” for the “source” parameter of the XMIImport module. **(Include code) ???**
+- There must be an alias named “input” for the “source” parameter of the XMIImport module. 
+Reference Code:
+```command 
+<param name="input">
+    <alias module="read" param="source"/>
+  </param>
+
+<read class="XMIImport" />
+```
 
 - Output files/dirs should not be exposed as parameters. But output files/directories should be relative.
 **Parameters exposed as alias should:**
