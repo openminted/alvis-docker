@@ -60,14 +60,6 @@ PUSH is the command for pushing and image or repository to the registry / docker
 The metadata should either be provided in XML format or it could be entered through the OpenMinTeD form when registering the component / use case; but for good practice preparing the xml file is advised.
 Here is the [link](https://guidelines.openminted.eu/the_omtd-share_metadata_schema.html) to the metadta schema and related documentaion. 
 
-
-------------------------------------------------------------------------------------------------------------------------------------------------
-Disclaimer 
-------------------------------------------------------------------------------------------------------------------------------------------------
-This message (including any attachments) contains confidential information intended for a specific individual and purpose, and is protected by law. If you are not the intended recipient, you should delete this message. 
-
-Any disclosure, copying, or distribution of this message, or the taking of any action based on it, is strictly prohibited. [v.E.1]
-------------------------------------------------------------------------------------------------------------------------------------------------
 There are many properties which specifies the resources to be brought in. Three kinds of specifications on these properties are followed :
 ######
 + Manadatory
@@ -123,16 +115,16 @@ Plans actually provide the whole plan fr executing the use cases; Use cases comp
 + A thought should be provided on deciding which resources should be kept internal to the component and which ones thrown as parameters. Following are some gudelines / tactics for such.
 
 **Evaluate the input/output:**
--There must be an alias named “input” for the “source” parameter of the XMIImport module. **(Include code) ???**
+- There must be an alias named “input” for the “source” parameter of the XMIImport module. **(Include code) ???**
 
--Output files/dirs should not be exposed as parameters. But output files/directories should be relative.
+- Output files/dirs should not be exposed as parameters. But output files/directories should be relative.
 **Parameters exposed as alias should:**
 
--have a significant impact on the component behavior (avoid parameter fine-tuning)
+- have a significant impact on the component behavior (avoid parameter fine-tuning)
 
--make sense to a user, record the expertise level necessary to understand the parameter
+- make sense to a user, record the expertise level necessary to understand the parameter
 
--resource parameters should clearly record the file formats and size limits
+- resource parameters should clearly record the file formats and size limits
 
 + While declaring / making external resources available, a folder under working home directory named as resources (as $home/resources/) needs to be created and all the resource files should be stored there. This relative path of $home/resources/ would be ported to OMTD platform.
 These are resources indispensable for any use of the component.
