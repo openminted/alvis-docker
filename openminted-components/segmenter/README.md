@@ -1,5 +1,4 @@
-# alvis-br-train
-
+# segmenter
 Performs segmentation, detects sentence boundaries and creates one annotation for each sentence.
 
 ## Test data
