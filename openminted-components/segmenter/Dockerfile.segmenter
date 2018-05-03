@@ -1,5 +1,5 @@
 #FROM maven:3.2-jdk-7-onbuild
-FROM bibliome/alvisengine:2.1.0 
+FROM bibliome/alvisengine
 MAINTAINER Mouhamadou Ba <mouhamadou.ba@inra.fr>
 
 
@@ -9,4 +9,4 @@ WORKDIR /alvisnlp
 COPY test-data/plans/alvis.segmentation.plan /alvisnlp/
 
 
-CMD ["alvisnlp"]
+# CMD ["alvisnlp"]
