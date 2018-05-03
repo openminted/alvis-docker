@@ -1,7 +1,13 @@
 # Arabidopsis Gene Regulation Extractor
 Recognizes Gene, Protein and RNA of Arabidopsis thaliana. It normalizes them with Gene Locus and identifies interacts_with relationships between Gene and Protein. It encapsulates the workflow for the OpenMinTeD AS-E use case.
 
+
 ## test-data
+The test-data folder contains data to run the workflow. More specifically:
+* corpus/ contains a xmi file that can be used as input.
+* output/ is where the output of the workflow will be created.
+
+<!--- ## test-data
 The test-data folder contains data to run the workflow. More specifically:
 * corpus/ contains the input data (i.g., pubmed corpus)
     * pubmed_result_2.xml is an input corpus from PubMed abstract.
@@ -12,10 +18,21 @@ The test-data folder contains data to run the workflow. More specifically:
       * entities.txt is the main output file with Gene, Protein and RNA entities annotations
       * savedrecs.txt is an output parameter to export metadata of the documents
       * relationsgroup.txt is an output file with relations between entities annotations
+--->
 
 ## Run in command-line
 To run the workflow (from the folder containing the README):
+
 ```
+docker run -m 12g -i -v $PWD/test-data:/alvisnlp/data \
+bibliome/uc-tdm-as-e \
+alvisnlp -J "-Xmx30g" -verbose /as-e/plan/entities-xmi.plan \
+--input /alvisnlp/data/corpus/xmi \
+--output /alvisnlp/data/output
+```
+
+
+<!---```
 docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
 bibliome/uc-tdm-as-e \
 alvisnlp org.bibliome.alvisnlp.modules.uc-tmd-as-e \
@@ -24,6 +41,7 @@ alvisnlp org.bibliome.alvisnlp.modules.uc-tmd-as-e \
 --param:readhtml=/alvisnlp/data/corpus/fulltext/html \
 --param:readWoK=/alvisnlp/data/corpus/corpus2000_12012017.txt
 ```
+--->
 
 <!---
 In a general way , the OMTD command for this component will look like this:
@@ -52,7 +70,7 @@ alvisnlp org.bibliome.alvisnlp.modules.uc-tmd-as-e \
 
 ## OpenMinteD metadata
 
-The OpenMinteD metadata are recorded in the following [XML file](uc-tdm-as-e.omtd.v3.0.2.xml)
+The OpenMinteD metadata are recorded in the following [XML file](arabidopsis-gene-regulation-extractor.xml)
 
 ## Re-build the docker image
 
