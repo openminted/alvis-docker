@@ -4,7 +4,7 @@ Recognizes microorganism taxa, their habitats and their phenotypes. It categoriz
 
 ## test-data
 The test-data folder contains data to run the workflow. More specifically:
-* corpus/ contains a text sample that can be used as input.
+* corpus/ contains a xmi file that can be used as input.
 * output/ is where the output of the workflow will be created.
 
 ## Run in command-line
@@ -12,18 +12,28 @@ The test-data folder contains data to run the workflow. More specifically:
 To run the workflow (from the folder containing the README):
 
 ```
+docker run -m 12g -i -v $PWD/test-data:/alvisnlp/data \
+bibliome/uc-tdm-as-c \ 
+alvisnlp -verbose \
+/as-c/plans/tag_xmi.plan \
+--input /alvisnlp/data/corpus \
+--output /alvisnlp/data/output
+```
+
+<!--- ```
 docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
 bibliome/uc-tdm-as-c \
 alvisnlp org.bibliome.alvisnlp.modules.uc-tmd-as-c \
 --input /alvisnlp/data/corpus/test.xml \
 --output /alvisnlp/data/output
 ```
+--->
 
 <!--- ```docker run -i --rm -v $PWD/test-data/:/as-d/data ldeleger/uc-tdm-as-d-docker alvisnlp -J "-Xmx30g" -entity inputfile /as-d/data/corpus/test.txt -entity outdir /as-d/data/output plans/tag_WoS_abstracts.plan``` --->
 
 ## OpenMinteD metadata
 
-The OpenMinteD metadata are recorded in the following [XML file](uc-tdm-as-c.omtd.v3.0.2.xml)
+The OpenMinteD metadata are recorded in the following [XML file](habitat-phenotype-relation-extractor-for-microbes.xml)
 
 ## Re-build the docker image
 
