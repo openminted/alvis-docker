@@ -2,8 +2,7 @@
 <ns0:componentMetadataRecord
     xmlns:ns0="http://www.meta-share.org/OMTD-SHARE_XMLSchema">
     <ns0:metadataHeaderInfo>
-        <ns0:metadataRecordIdentifier metadataIdentifierSchemeName="OMTD">86177e51-5f48-43f8-b0be-2b319a5f7eab</ns0:metadataRecordIdentifier>
-        <ns0:metadataCreationDate>2018-03-15Z</ns0:metadataCreationDate>
+       <ns0:metadataCreationDate>2018-03-15Z</ns0:metadataCreationDate>
         <ns0:metadataCreators>
             <ns0:metadataCreator>
                 <ns0:surname>Ba</ns0:surname>
@@ -26,13 +25,13 @@
                 </ns0:affiliation>
             </ns0:metadataCreator>
         </ns0:metadataCreators>
-        <ns0:metadataLastDateUpdated>2018-03-15Z</ns0:metadataLastDateUpdated>
+        <ns0:metadataLastDateUpdated>2018-04-19Z</ns0:metadataLastDateUpdated>
     </ns0:metadataHeaderInfo>
     <ns0:componentInfo>
         <ns0:resourceType>component</ns0:resourceType>
         <ns0:identificationInfo>
             <ns0:resourceNames>
-                <ns0:resourceName lang="en">Wheat Phenotypic Information Extractor</ns0:resourceName>
+                <ns0:resourceName lang="en">Alvis Wheat Phenotypic Information Extractor</ns0:resourceName>
             </ns0:resourceNames>
             <ns0:descriptions>
                 <ns0:description lang="en">Recognizes phenotypes, genes, markers, and wheat-related taxa. It categorizes the phenotypes with the Wheat Trait Ontology.</ns0:description>
@@ -40,7 +39,7 @@
             <ns0:resourceIdentifiers>
                 <ns0:resourceIdentifier resourceIdentifierSchemeName="OMTD-docker">org.bibliome.alvisnlp.modules.uc-tmd-as-d</ns0:resourceIdentifier>
             </ns0:resourceIdentifiers>
-            <ns0:public>false</ns0:public>
+            <ns0:public>true</ns0:public>
         </ns0:identificationInfo>
         <ns0:versionInfo>
             <ns0:version>1.0.0</ns0:version>
@@ -85,7 +84,7 @@
             <ns0:componentDistributionInfo>
                 <ns0:componentDistributionForm>dockerImage</ns0:componentDistributionForm>
                 <ns0:distributionLocation>bibliome/uc-tdm-as-d</ns0:distributionLocation>
-                <ns0:command>alvisnlp /as-d/plans/tag_xmi.plan</ns0:command>
+                <ns0:command>alvisnlp -J-Xmx8g  -verbose /as-d/plans/tag_xmi.plan</ns0:command>
             </ns0:componentDistributionInfo>
         </ns0:distributionInfos>
         <ns0:rightsInfo>
@@ -118,6 +117,13 @@
                 <ns0:language>en</ns0:language>
             </ns0:languages>
         </ns0:outputResourceInfo>
+        <ns0:componentDependencies>
+            <ns0:typesystem>
+                <ns0:resourceNames>
+                    <ns0:resourceName lang="en">Alvis Type System</ns0:resourceName>
+                </ns0:resourceNames>
+            </ns0:typesystem>
+        </ns0:componentDependencies>
         <ns0:componentCreationInfo>
             <ns0:framework>AlvisNLP</ns0:framework>
             <ns0:TDMMethod>http://w3id.org/meta-share/omtd-share/TdmMethod</ns0:TDMMethod>
