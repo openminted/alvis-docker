@@ -2,7 +2,8 @@
 <ns0:componentMetadataRecord
     xmlns:ns0="http://www.meta-share.org/OMTD-SHARE_XMLSchema">
     <ns0:metadataHeaderInfo>
-        <ns0:metadataCreationDate>2018-05-04Z</ns0:metadataCreationDate>
+        <ns0:metadataRecordIdentifier metadataIdentifierSchemeName="OMTD">7c833caf-4e47-4c1c-baa6-ba09c0038aa0</ns0:metadataRecordIdentifier>
+        <ns0:metadataCreationDate>2018-02-12Z</ns0:metadataCreationDate>
         <ns0:metadataCreators>
             <ns0:metadataCreator>
                 <ns0:surname>Ba</ns0:surname>
@@ -25,21 +26,21 @@
                 </ns0:affiliation>
             </ns0:metadataCreator>
         </ns0:metadataCreators>
-        <ns0:metadataLastDateUpdated>2018-05-04Z</ns0:metadataLastDateUpdated>
+        <ns0:metadataLastDateUpdated>2018-04-09Z</ns0:metadataLastDateUpdated>
     </ns0:metadataHeaderInfo>
     <ns0:componentInfo>
         <ns0:resourceType>component</ns0:resourceType>
         <ns0:identificationInfo>
             <ns0:resourceNames>
-                <ns0:resourceName lang="en">alvis segmenter 2</ns0:resourceName>
+                <ns0:resourceName lang="en">Arabidopsis Gene Regulation Extractor</ns0:resourceName>
             </ns0:resourceNames>
             <ns0:descriptions>
-                <ns0:description lang="en">performs segmentation, detects sentence boundaries and creates annotations (word, sentence) for each sentence.</ns0:description>
+                <ns0:description lang="en">Recognizes Gene, Protein and RNA of Arabidopsis thaliana. It normalizes them with Gene Locus and identifies interacts_with relationships between Gene and Protein.</ns0:description>
             </ns0:descriptions>
             <ns0:resourceIdentifiers>
-                <ns0:resourceIdentifier resourceIdentifierSchemeName="OMTD-docker">org.bibliome.alvisnlp.modules.segmenter</ns0:resourceIdentifier>
+                <ns0:resourceIdentifier resourceIdentifierSchemeName="OMTD-docker">org.bibliome.alvisnlp.modules.tees.uc-tdm-as-d</ns0:resourceIdentifier>
             </ns0:resourceIdentifiers>
-            <ns0:public>true</ns0:public>
+            <ns0:public>false</ns0:public>
         </ns0:identificationInfo>
         <ns0:versionInfo>
             <ns0:version>1.0.0</ns0:version>
@@ -72,19 +73,19 @@
         </ns0:contactInfo>
         <ns0:resourceDocumentations>
             <ns0:resourceDocumentationInfo>
-                <ns0:documentationDescription>https://github.com/openminted/alvis-docker/tree/master/openminted-components/segmenter</ns0:documentationDescription>
+                <ns0:documentationDescription>https://github.com/openminted/alvis-docker/tree/master/openminted-components/alvis-br-train</ns0:documentationDescription>
                 <ns0:documentationType>onLineHelpURL</ns0:documentationType>
             </ns0:resourceDocumentationInfo>
         </ns0:resourceDocumentations>
         <ns0:application>false</ns0:application>
         <ns0:functionInfo>
-            <ns0:function>http://w3id.org/meta-share/omtd-share/Segmenter</ns0:function>
+            <ns0:function>http://w3id.org/meta-share/omtd-share/Annotator</ns0:function>
         </ns0:functionInfo>
         <ns0:distributionInfos>
             <ns0:componentDistributionInfo>
                 <ns0:componentDistributionForm>dockerImage</ns0:componentDistributionForm>
-                <ns0:distributionLocation>bibliome/segmenter:1.0.0</ns0:distributionLocation>
-                <ns0:command>alvisnlp  -verbose  /alvisnlp/alvis.segmentation.plan</ns0:command>
+                <ns0:distributionLocation>bibliome/uc-tdm-as-e</ns0:distributionLocation>
+                <ns0:command>alvisnlp   /as-e/plan/entities-xmi.plan</ns0:command>
             </ns0:componentDistributionInfo>
         </ns0:distributionInfos>
         <ns0:rightsInfo>
@@ -95,7 +96,16 @@
             </ns0:licenceInfos>
             <ns0:rightsStatement>openAccess</ns0:rightsStatement>
         </ns0:rightsInfo>
-        <ns0:parameterInfos/>
+        <ns0:parameterInfos>
+            <ns0:parameterInfo>
+                <ns0:parameterName>output</ns0:parameterName>
+                <ns0:parameterLabel>entity output location</ns0:parameterLabel>
+                <ns0:parameterDescription>the directory that contains the generated output</ns0:parameterDescription>
+                <ns0:parameterType>string</ns0:parameterType>
+                <ns0:optional>false</ns0:optional>
+                <ns0:multiValue>false</ns0:multiValue>
+            </ns0:parameterInfo>
+        </ns0:parameterInfos>
         <ns0:inputContentResourceInfo>
             <ns0:processingResourceType>corpus</ns0:processingResourceType>
             <ns0:dataFormats>
@@ -117,21 +127,12 @@
             <ns0:languages>
                 <ns0:language>en</ns0:language>
             </ns0:languages>
-            <ns0:annotationTypes>
-                <ns0:annotationTypeInfo>
-                    <ns0:annotationType>http://w3id.org/meta-share/omtd-share/StructuralAnnotationType</ns0:annotationType>
-                </ns0:annotationTypeInfo>
-            </ns0:annotationTypes>
         </ns0:outputResourceInfo>
-        <ns0:previousAnnotationTypesPolicy>drop</ns0:previousAnnotationTypesPolicy>
         <ns0:componentDependencies>
             <ns0:typesystem>
                 <ns0:resourceNames>
-                    <ns0:resourceName lang="en">Alvis Type System</ns0:resourceName>
+                    <ns0:resourceName lang="en">alvis type system</ns0:resourceName>
                 </ns0:resourceNames>
-                <ns0:resourceIdentifiers>
-                    <ns0:resourceIdentifier resourceIdentifierSchemeName="other">https://github.com/Bibliome/alvisnlp/blob/master/alvisnlp-bibliome/src/main/resources/fr/inra/maiage/bibliome/alvisnlp/bibliomefactory/modules/uima/uima-document.xml</ns0:resourceIdentifier>
-                </ns0:resourceIdentifiers>
             </ns0:typesystem>
         </ns0:componentDependencies>
         <ns0:componentCreationInfo>
