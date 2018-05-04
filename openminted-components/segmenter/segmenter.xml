@@ -2,7 +2,7 @@
 <ns0:componentMetadataRecord
     xmlns:ns0="http://www.meta-share.org/OMTD-SHARE_XMLSchema">
     <ns0:metadataHeaderInfo>
-        <ns0:metadataCreationDate>2018-04-25Z</ns0:metadataCreationDate>
+        <ns0:metadataCreationDate>2018-05-04Z</ns0:metadataCreationDate>
         <ns0:metadataCreators>
             <ns0:metadataCreator>
                 <ns0:surname>Ba</ns0:surname>
@@ -25,13 +25,13 @@
                 </ns0:affiliation>
             </ns0:metadataCreator>
         </ns0:metadataCreators>
-        <ns0:metadataLastDateUpdated>2018-04-25Z</ns0:metadataLastDateUpdated>
+        <ns0:metadataLastDateUpdated>2018-05-04Z</ns0:metadataLastDateUpdated>
     </ns0:metadataHeaderInfo>
     <ns0:componentInfo>
         <ns0:resourceType>component</ns0:resourceType>
         <ns0:identificationInfo>
             <ns0:resourceNames>
-                <ns0:resourceName lang="en">alvis segmenter</ns0:resourceName>
+                <ns0:resourceName lang="en">alvis segmenter 2</ns0:resourceName>
             </ns0:resourceNames>
             <ns0:descriptions>
                 <ns0:description lang="en">performs segmentation, detects sentence boundaries and creates annotations (word, sentence) for each sentence.</ns0:description>
@@ -83,8 +83,8 @@
         <ns0:distributionInfos>
             <ns0:componentDistributionInfo>
                 <ns0:componentDistributionForm>dockerImage</ns0:componentDistributionForm>
-                <ns0:distributionLocation>bibliome/segmenter</ns0:distributionLocation>
-                <ns0:command>alvisnlp  /alvisnlp/alvis.segmentation.plan</ns0:command>
+                <ns0:distributionLocation>bibliome/segmenter:1.0.0</ns0:distributionLocation>
+                <ns0:command>alvisnlp  -verbose  /alvisnlp/alvis.segmentation.plan</ns0:command>
             </ns0:componentDistributionInfo>
         </ns0:distributionInfos>
         <ns0:rightsInfo>
