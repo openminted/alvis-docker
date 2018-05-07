@@ -5,15 +5,22 @@
 
   <read class="XMIImport"/>
 
+  <import>res://segmentation.plan</import>
+
+  <tt class="TreeTagger">
+    <noUnknownLemma/>
+  </tt>
+
   <yatea class="YateaExtractor">
     <workingDir>yatea</workingDir>
   </yatea>
-  
+
   <tomap class="TomapProjector">
-    <tomapClassifier></tomapClassifier><!--XXX-->
-    <yateaFile inhibitCheck="true">yatea/corpus/default/xml/candidates.xml</yateaFile>
-    <targetLayerName>tomap</targetLayerName>
-    <conceptFeature>tomap</conceptFeature>
+    <tomapClassifier>OntoBiotope_BioNLP-ST-2016-Habitat.tomap</tomapClassifier>
+    <yateaFile output-feed="true">yatea/corpus/default/xml/candidates.xml</yateaFile>
+    <targetLayerName>named-entities</targetLayerName>
+    <conceptFeature>xref</conceptFeature>
+    <constantAnnotationFeatures>ne-type=habitat</constantAnnotationFeatures>
   </tomap>
   
   <write class="XMIExport">
