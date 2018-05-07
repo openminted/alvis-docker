@@ -23,8 +23,8 @@ alvisnlp org.bibliome.alvisnlp.modules.uc-tmd-as-d \
 
 ```
 docker run -m 8g -i -v $PWD/test-data:/alvisnlp/data \
-bibliome/uc-tdm-as-d \ 
-alvisnlp -verbose /as-d/plans/tag_xmi.plan  \
+bibliome/uc-tdm-as-d \
+alvisnlp -verbose /as-d/plans/tag_xmi.plan \
 --input /alvisnlp/data/corpus/xmi \
 --output /alvisnlp/data/output
 ```
