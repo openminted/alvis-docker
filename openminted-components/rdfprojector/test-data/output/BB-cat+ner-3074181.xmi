@@ -1,0 +1,2206 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:tcas="http:///uima/tcas.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:cas="http:///uima/cas.ecore" xmlns:types="http:///fr/inra/maiage/bibliome/alvisnlp/bibliomefactory/modules/uima/types.ecore" xmi:version="2.0">
+    <cas:NULL xmi:id="0"/>
+    <tcas:DocumentAnnotation xmi:id="8" sofa="1" begin="0" end="1978" language="x-unspecified"/>
+    <types:DocumentProxy xmi:id="13" sofa="1" id="BB-cat+ner-3074181" features="18" sections="24"/>
+    <cas:Sofa xmi:id="1" sofaNum="1" sofaID="_InitialView" mimeType="text" sofaString="[Experimental and clinical studies of flomoxef in the field of obstetrics and gynecology. Representative Committee Members of the Research Team for Infections in the Field of Obstetrics and Gynecology].&#10;Flomoxef (FMOX) has a broad antibacterial spectrum against Gram-positive and Gram-negative bacteria; especially its potent antibacterial activity against Staphylococcus aureus is a significant advantage that may not be found with other cephem compounds. In our determination of its antibacterial potency against various clinical isolates obtained from clinical materials (amniotic fluid, intrauterine secretions, exudates of the pelvic dead space) of patients with various infections, we obtained results representing specific features of this drug. From the results, the drug may be expected to produce an excellent effect in the treatment of various infections. Our study on drug concentrations in body fluids and genital tissues demonstrated a good transfer of this drug into various tissues; in every tissue examined, the drug administered by the usual method in the usual dose yielded a concentration exceeding MIC for principal pathogens, thus promising a good clinical response. Indeed a high clinical efficacy rate of 90.1% (good to very good responses) was obtained in a clinical trial involving 222 cases. Administration of the drug in 2 g quantity daily produced a high response rate of 92.8%. It was especially noteworthy that a good response was obtained in 30 of 32 cases (93.8%) in which other cephem compounds had failed. In evaluation of the bacteriological effect, furthermore, the drug showed an excellent rate of bacterial elimination. In conclusion, this drug is expected to be greatly useful in the light of its good transfer into genital tissues and its strong antibacterial activities against Gram-positive cocci, Gram-negative bacteria and anaerobes as well as against multiple bacterial infections predominating among women with genital infections.&#10;"/>
+    <types:FeatureProxy xmi:id="18" key="set" value="train"/>
+    <types:SectionProxy xmi:id="24" sofa="1" begin="0" end="1978" name="text" features="" layers="41 55 69 181 9366 9785" relations="9810 9838 9866 9898 10204"/>
+    <types:LayerProxy xmi:id="41" sofa="1" name="Title" annotations="45"/>
+    <cas:FSArray xmi:id="45" elements="34"/>
+    <types:AnnotationProxy xmi:id="34" sofa="1" begin="0" end="202" features=""/>
+    <types:LayerProxy xmi:id="55" sofa="1" name="Paragraph" annotations="59"/>
+    <cas:FSArray xmi:id="59" elements="48"/>
+    <types:AnnotationProxy xmi:id="48" sofa="1" begin="203" end="1977" features=""/>
+    <types:LayerProxy xmi:id="69" sofa="1" name="Bacteria" annotations="73"/>
+    <cas:FSArray xmi:id="73" elements="62"/>
+    <types:AnnotationProxy xmi:id="62" sofa="1" begin="357" end="378" features=""/>
+    <types:LayerProxy xmi:id="181" sofa="1" name="Habitat" annotations="185"/>
+    <cas:FSArray xmi:id="185" elements="76 83 90 97 104 111 118 125 132 139 146 153 160 167 174"/>
+    <types:AnnotationProxy xmi:id="76" sofa="1" begin="523" end="531" features=""/>
+    <types:AnnotationProxy xmi:id="83" sofa="1" begin="555" end="686" features=""/>
+    <types:AnnotationProxy xmi:id="90" sofa="1" begin="575" end="589" features=""/>
+    <types:AnnotationProxy xmi:id="97" sofa="1" begin="591" end="614" features=""/>
+    <types:AnnotationProxy xmi:id="104" sofa="1" begin="591" end="603" features=""/>
+    <types:AnnotationProxy xmi:id="111" sofa="1" begin="616" end="649" features=""/>
+    <types:AnnotationProxy xmi:id="118" sofa="1" begin="632" end="649" features=""/>
+    <types:AnnotationProxy xmi:id="125" sofa="1" begin="654" end="686" features=""/>
+    <types:AnnotationProxy xmi:id="132" sofa="1" begin="903" end="914" features=""/>
+    <types:AnnotationProxy xmi:id="139" sofa="1" begin="903" end="907" features=""/>
+    <types:AnnotationProxy xmi:id="146" sofa="1" begin="919" end="934" features=""/>
+    <types:AnnotationProxy xmi:id="153" sofa="1" begin="919" end="926" features=""/>
+    <types:AnnotationProxy xmi:id="160" sofa="1" begin="1756" end="1771" features=""/>
+    <types:AnnotationProxy xmi:id="167" sofa="1" begin="1947" end="1976" features=""/>
+    <types:AnnotationProxy xmi:id="174" sofa="1" begin="1958" end="1965" features=""/>
+    <types:LayerProxy xmi:id="9366" sofa="1" name="words" annotations="9370"/>
+    <cas:FSArray xmi:id="9370" elements="202 229 256 283 310 337 364 391 418 445 472 499 526 553 580 611 638 665 692 719 746 773 800 827 854 881 908 935 962 989 1016 1043 1070 1101 1128 1155 1182 1209 1236 1263 1290 1317 1344 1371 1398 1425 1452 1479 1506 1533 1560 1587 1614 1641 1668 1695 1722 1749 1776 1803 1830 1857 1884 1911 1938 1965 1992 2019 2046 2073 2100 2127 2154 2181 2212 2239 2266 2293 2320 2347 2374 2401 2428 2455 2482 2509 2536 2563 2590 2617 2644 2671 2698 2725 2752 2779 2806 2833 2860 2887 2914 2941 2968 2995 3022 3049 3076 3103 3130 3157 3184 3211 3238 3265 3292 3319 3346 3373 3400 3431 3458 3485 3512 3539 3566 3593 3620 3647 3674 3701 3728 3755 3782 3809 3836 3863 3890 3917 3944 3971 4002 4029 4056 4083 4110 4137 4164 4191 4218 4245 4272 4299 4326 4353 4380 4407 4434 4461 4488 4515 4542 4569 4596 4623 4650 4677 4704 4731 4758 4785 4812 4839 4866 4893 4920 4947 4974 5001 5028 5055 5082 5109 5136 5163 5190 5217 5244 5271 5298 5325 5352 5379 5406 5433 5464 5491 5518 5545 5572 5599 5626 5653 5696 5723 5750 5777 5804 5831 5858 5885 5912 5939 5966 5993 6020 6047 6074 6101 6128 6155 6186 6213 6240 6267 6294 6321 6348 6375 6402 6429 6456 6483 6510 6537 6564 6591 6634 6661 6692 6719 6746 6773 6800 6827 6854 6881 6908 6935 6962 6989 7016 7043 7070 7097 7124 7167 7194 7221 7248 7275 7302 7329 7356 7383 7410 7441 7468 7495 7522 7549 7576 7603 7630 7657 7684 7711 7738 7765 7792 7819 7846 7873 7900 7927 7958 7985 8012 8039 8066 8093 8120 8147 8174 8201 8228 8255 8282 8309 8336 8363 8390 8417 8444 8471 8498 8525 8552 8579 8606 8633 8660 8687 8714 8741 8768 8795 8822 8849 8876 8903 8930 8957 8984 9011 9038 9065 9092 9119 9146 9173 9200 9227 9254 9281 9308 9335"/>
+    <types:AnnotationProxy xmi:id="202" sofa="1" begin="0" end="1" features="207 210 213 216 219"/>
+    <types:FeatureProxy xmi:id="207" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="210" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="213" key="lemma" value="["/>
+    <types:FeatureProxy xmi:id="216" key="pos" value="("/>
+    <types:FeatureProxy xmi:id="219" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="229" sofa="1" begin="1" end="13" features="234 237 240 243 246"/>
+    <types:FeatureProxy xmi:id="234" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="237" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="240" key="lemma" value="Experimental"/>
+    <types:FeatureProxy xmi:id="243" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="246" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="256" sofa="1" begin="14" end="17" features="261 264 267 270 273"/>
+    <types:FeatureProxy xmi:id="261" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="264" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="267" key="lemma" value="and"/>
+    <types:FeatureProxy xmi:id="270" key="pos" value="CC"/>
+    <types:FeatureProxy xmi:id="273" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="283" sofa="1" begin="18" end="26" features="288 291 294 297 300"/>
+    <types:FeatureProxy xmi:id="288" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="291" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="294" key="lemma" value="clinical"/>
+    <types:FeatureProxy xmi:id="297" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="300" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="310" sofa="1" begin="27" end="34" features="315 318 321 324 327"/>
+    <types:FeatureProxy xmi:id="315" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="318" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="321" key="lemma" value="study"/>
+    <types:FeatureProxy xmi:id="324" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="327" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="337" sofa="1" begin="35" end="37" features="342 345 348 351 354"/>
+    <types:FeatureProxy xmi:id="342" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="345" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="348" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="351" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="354" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="364" sofa="1" begin="38" end="46" features="369 372 375 378 381"/>
+    <types:FeatureProxy xmi:id="369" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="372" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="375" key="lemma" value="flomoxef"/>
+    <types:FeatureProxy xmi:id="378" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="381" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="391" sofa="1" begin="47" end="49" features="396 399 402 405 408"/>
+    <types:FeatureProxy xmi:id="396" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="399" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="402" key="lemma" value="in"/>
+    <types:FeatureProxy xmi:id="405" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="408" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="418" sofa="1" begin="50" end="53" features="423 426 429 432 435"/>
+    <types:FeatureProxy xmi:id="423" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="426" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="429" key="lemma" value="the"/>
+    <types:FeatureProxy xmi:id="432" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="435" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="445" sofa="1" begin="54" end="59" features="450 453 456 459 462"/>
+    <types:FeatureProxy xmi:id="450" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="453" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="456" key="lemma" value="field"/>
+    <types:FeatureProxy xmi:id="459" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="462" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="472" sofa="1" begin="60" end="62" features="477 480 483 486 489"/>
+    <types:FeatureProxy xmi:id="477" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="480" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="483" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="486" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="489" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="499" sofa="1" begin="63" end="73" features="504 507 510 513 516"/>
+    <types:FeatureProxy xmi:id="504" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="507" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="510" key="lemma" value="obstetric"/>
+    <types:FeatureProxy xmi:id="513" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="516" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="526" sofa="1" begin="74" end="77" features="531 534 537 540 543"/>
+    <types:FeatureProxy xmi:id="531" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="534" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="537" key="lemma" value="and"/>
+    <types:FeatureProxy xmi:id="540" key="pos" value="CC"/>
+    <types:FeatureProxy xmi:id="543" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="553" sofa="1" begin="78" end="88" features="558 561 564 567 570"/>
+    <types:FeatureProxy xmi:id="558" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="561" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="564" key="lemma" value="gynecology"/>
+    <types:FeatureProxy xmi:id="567" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="570" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="580" sofa="1" begin="88" end="89" features="585 588 591 594 597 600"/>
+    <types:FeatureProxy xmi:id="585" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="588" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="591" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="594" key="lemma" value="."/>
+    <types:FeatureProxy xmi:id="597" key="pos" value="SENT"/>
+    <types:FeatureProxy xmi:id="600" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="611" sofa="1" begin="90" end="104" features="616 619 622 625 628"/>
+    <types:FeatureProxy xmi:id="616" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="619" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="622" key="lemma" value="Representative"/>
+    <types:FeatureProxy xmi:id="625" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="628" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="638" sofa="1" begin="105" end="114" features="643 646 649 652 655"/>
+    <types:FeatureProxy xmi:id="643" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="646" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="649" key="lemma" value="Committee"/>
+    <types:FeatureProxy xmi:id="652" key="pos" value="NP"/>
+    <types:FeatureProxy xmi:id="655" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="665" sofa="1" begin="115" end="122" features="670 673 676 679 682"/>
+    <types:FeatureProxy xmi:id="670" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="673" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="676" key="lemma" value="Members"/>
+    <types:FeatureProxy xmi:id="679" key="pos" value="NP"/>
+    <types:FeatureProxy xmi:id="682" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="692" sofa="1" begin="123" end="125" features="697 700 703 706 709"/>
+    <types:FeatureProxy xmi:id="697" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="700" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="703" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="706" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="709" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="719" sofa="1" begin="126" end="129" features="724 727 730 733 736"/>
+    <types:FeatureProxy xmi:id="724" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="727" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="730" key="lemma" value="the"/>
+    <types:FeatureProxy xmi:id="733" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="736" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="746" sofa="1" begin="130" end="138" features="751 754 757 760 763"/>
+    <types:FeatureProxy xmi:id="751" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="754" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="757" key="lemma" value="Research"/>
+    <types:FeatureProxy xmi:id="760" key="pos" value="NP"/>
+    <types:FeatureProxy xmi:id="763" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="773" sofa="1" begin="139" end="143" features="778 781 784 787 790"/>
+    <types:FeatureProxy xmi:id="778" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="781" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="784" key="lemma" value="Team"/>
+    <types:FeatureProxy xmi:id="787" key="pos" value="NP"/>
+    <types:FeatureProxy xmi:id="790" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="800" sofa="1" begin="144" end="147" features="805 808 811 814 817"/>
+    <types:FeatureProxy xmi:id="805" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="808" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="811" key="lemma" value="for"/>
+    <types:FeatureProxy xmi:id="814" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="817" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="827" sofa="1" begin="148" end="158" features="832 835 838 841 844"/>
+    <types:FeatureProxy xmi:id="832" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="835" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="838" key="lemma" value="Infection"/>
+    <types:FeatureProxy xmi:id="841" key="pos" value="NPS"/>
+    <types:FeatureProxy xmi:id="844" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="854" sofa="1" begin="159" end="161" features="859 862 865 868 871"/>
+    <types:FeatureProxy xmi:id="859" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="862" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="865" key="lemma" value="in"/>
+    <types:FeatureProxy xmi:id="868" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="871" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="881" sofa="1" begin="162" end="165" features="886 889 892 895 898"/>
+    <types:FeatureProxy xmi:id="886" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="889" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="892" key="lemma" value="the"/>
+    <types:FeatureProxy xmi:id="895" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="898" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="908" sofa="1" begin="166" end="171" features="913 916 919 922 925"/>
+    <types:FeatureProxy xmi:id="913" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="916" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="919" key="lemma" value="Field"/>
+    <types:FeatureProxy xmi:id="922" key="pos" value="NP"/>
+    <types:FeatureProxy xmi:id="925" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="935" sofa="1" begin="172" end="174" features="940 943 946 949 952"/>
+    <types:FeatureProxy xmi:id="940" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="943" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="946" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="949" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="952" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="962" sofa="1" begin="175" end="185" features="967 970 973 976 979"/>
+    <types:FeatureProxy xmi:id="967" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="970" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="973" key="lemma" value="Obstetrics"/>
+    <types:FeatureProxy xmi:id="976" key="pos" value="NP"/>
+    <types:FeatureProxy xmi:id="979" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="989" sofa="1" begin="186" end="189" features="994 997 1000 1003 1006"/>
+    <types:FeatureProxy xmi:id="994" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="997" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1000" key="lemma" value="and"/>
+    <types:FeatureProxy xmi:id="1003" key="pos" value="CC"/>
+    <types:FeatureProxy xmi:id="1006" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1016" sofa="1" begin="190" end="200" features="1021 1024 1027 1030 1033"/>
+    <types:FeatureProxy xmi:id="1021" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1024" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1027" key="lemma" value="Gynecology"/>
+    <types:FeatureProxy xmi:id="1030" key="pos" value="NP"/>
+    <types:FeatureProxy xmi:id="1033" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1043" sofa="1" begin="200" end="201" features="1048 1051 1054 1057 1060"/>
+    <types:FeatureProxy xmi:id="1048" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="1051" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1054" key="lemma" value="]"/>
+    <types:FeatureProxy xmi:id="1057" key="pos" value=")"/>
+    <types:FeatureProxy xmi:id="1060" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1070" sofa="1" begin="201" end="202" features="1075 1078 1081 1084 1087 1090"/>
+    <types:FeatureProxy xmi:id="1075" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="1078" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="1081" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="1084" key="lemma" value="."/>
+    <types:FeatureProxy xmi:id="1087" key="pos" value="SENT"/>
+    <types:FeatureProxy xmi:id="1090" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1101" sofa="1" begin="203" end="211" features="1106 1109 1112 1115 1118"/>
+    <types:FeatureProxy xmi:id="1106" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1109" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1112" key="lemma" value="Flomoxef"/>
+    <types:FeatureProxy xmi:id="1115" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="1118" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1128" sofa="1" begin="212" end="213" features="1133 1136 1139 1142 1145"/>
+    <types:FeatureProxy xmi:id="1133" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="1136" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1139" key="lemma" value="("/>
+    <types:FeatureProxy xmi:id="1142" key="pos" value="("/>
+    <types:FeatureProxy xmi:id="1145" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1155" sofa="1" begin="213" end="217" features="1160 1163 1166 1169 1172"/>
+    <types:FeatureProxy xmi:id="1160" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1163" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1166" key="lemma" value="FMOX"/>
+    <types:FeatureProxy xmi:id="1169" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="1172" key="genia-entity" value="B-protein"/>
+    <types:AnnotationProxy xmi:id="1182" sofa="1" begin="217" end="218" features="1187 1190 1193 1196 1199"/>
+    <types:FeatureProxy xmi:id="1187" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="1190" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1193" key="lemma" value=")"/>
+    <types:FeatureProxy xmi:id="1196" key="pos" value=")"/>
+    <types:FeatureProxy xmi:id="1199" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1209" sofa="1" begin="219" end="222" features="1214 1217 1220 1223 1226"/>
+    <types:FeatureProxy xmi:id="1214" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1217" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1220" key="lemma" value="have"/>
+    <types:FeatureProxy xmi:id="1223" key="pos" value="VHZ"/>
+    <types:FeatureProxy xmi:id="1226" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1236" sofa="1" begin="223" end="224" features="1241 1244 1247 1250 1253"/>
+    <types:FeatureProxy xmi:id="1241" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1244" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1247" key="lemma" value="a"/>
+    <types:FeatureProxy xmi:id="1250" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="1253" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1263" sofa="1" begin="225" end="230" features="1268 1271 1274 1277 1280"/>
+    <types:FeatureProxy xmi:id="1268" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1271" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1274" key="lemma" value="broad"/>
+    <types:FeatureProxy xmi:id="1277" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="1280" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1290" sofa="1" begin="231" end="244" features="1295 1298 1301 1304 1307"/>
+    <types:FeatureProxy xmi:id="1295" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1298" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1301" key="lemma" value="antibacterial"/>
+    <types:FeatureProxy xmi:id="1304" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="1307" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1317" sofa="1" begin="245" end="253" features="1322 1325 1328 1331 1334"/>
+    <types:FeatureProxy xmi:id="1322" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1325" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1328" key="lemma" value="spectrum"/>
+    <types:FeatureProxy xmi:id="1331" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="1334" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1344" sofa="1" begin="254" end="261" features="1349 1352 1355 1358 1361"/>
+    <types:FeatureProxy xmi:id="1349" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1352" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1355" key="lemma" value="against"/>
+    <types:FeatureProxy xmi:id="1358" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="1361" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1371" sofa="1" begin="262" end="266" features="1376 1379 1382 1385 1388"/>
+    <types:FeatureProxy xmi:id="1376" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1379" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1382" key="lemma" value="Gram"/>
+    <types:FeatureProxy xmi:id="1385" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="1388" key="genia-entity" value="B-protein"/>
+    <types:AnnotationProxy xmi:id="1398" sofa="1" begin="266" end="267" features="1403 1406 1409 1412 1415"/>
+    <types:FeatureProxy xmi:id="1403" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="1406" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1409" key="lemma" value="-"/>
+    <types:FeatureProxy xmi:id="1412" key="pos" value="HYPH"/>
+    <types:FeatureProxy xmi:id="1415" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1425" sofa="1" begin="267" end="275" features="1430 1433 1436 1439 1442"/>
+    <types:FeatureProxy xmi:id="1430" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1433" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1436" key="lemma" value="positive"/>
+    <types:FeatureProxy xmi:id="1439" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="1442" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1452" sofa="1" begin="276" end="279" features="1457 1460 1463 1466 1469"/>
+    <types:FeatureProxy xmi:id="1457" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1460" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1463" key="lemma" value="and"/>
+    <types:FeatureProxy xmi:id="1466" key="pos" value="CC"/>
+    <types:FeatureProxy xmi:id="1469" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1479" sofa="1" begin="280" end="284" features="1484 1487 1490 1493 1496"/>
+    <types:FeatureProxy xmi:id="1484" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1487" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1490" key="lemma" value="Gram"/>
+    <types:FeatureProxy xmi:id="1493" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="1496" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1506" sofa="1" begin="284" end="285" features="1511 1514 1517 1520 1523"/>
+    <types:FeatureProxy xmi:id="1511" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="1514" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1517" key="lemma" value="-"/>
+    <types:FeatureProxy xmi:id="1520" key="pos" value="HYPH"/>
+    <types:FeatureProxy xmi:id="1523" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1533" sofa="1" begin="285" end="293" features="1538 1541 1544 1547 1550"/>
+    <types:FeatureProxy xmi:id="1538" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1541" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1544" key="lemma" value="negative"/>
+    <types:FeatureProxy xmi:id="1547" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="1550" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1560" sofa="1" begin="294" end="302" features="1565 1568 1571 1574 1577"/>
+    <types:FeatureProxy xmi:id="1565" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1568" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1571" key="lemma" value="bacteria"/>
+    <types:FeatureProxy xmi:id="1574" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="1577" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1587" sofa="1" begin="302" end="303" features="1592 1595 1598 1601 1604"/>
+    <types:FeatureProxy xmi:id="1592" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="1595" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1598" key="lemma" value=";"/>
+    <types:FeatureProxy xmi:id="1601" key="pos" value=":"/>
+    <types:FeatureProxy xmi:id="1604" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1614" sofa="1" begin="304" end="314" features="1619 1622 1625 1628 1631"/>
+    <types:FeatureProxy xmi:id="1619" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1622" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1625" key="lemma" value="especially"/>
+    <types:FeatureProxy xmi:id="1628" key="pos" value="RB"/>
+    <types:FeatureProxy xmi:id="1631" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1641" sofa="1" begin="315" end="318" features="1646 1649 1652 1655 1658"/>
+    <types:FeatureProxy xmi:id="1646" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1649" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1652" key="lemma" value="its"/>
+    <types:FeatureProxy xmi:id="1655" key="pos" value="PP$"/>
+    <types:FeatureProxy xmi:id="1658" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1668" sofa="1" begin="319" end="325" features="1673 1676 1679 1682 1685"/>
+    <types:FeatureProxy xmi:id="1673" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1676" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1679" key="lemma" value="potent"/>
+    <types:FeatureProxy xmi:id="1682" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="1685" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1695" sofa="1" begin="326" end="339" features="1700 1703 1706 1709 1712"/>
+    <types:FeatureProxy xmi:id="1700" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1703" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1706" key="lemma" value="antibacterial"/>
+    <types:FeatureProxy xmi:id="1709" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="1712" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1722" sofa="1" begin="340" end="348" features="1727 1730 1733 1736 1739"/>
+    <types:FeatureProxy xmi:id="1727" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1730" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1733" key="lemma" value="activity"/>
+    <types:FeatureProxy xmi:id="1736" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="1739" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1749" sofa="1" begin="349" end="356" features="1754 1757 1760 1763 1766"/>
+    <types:FeatureProxy xmi:id="1754" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1757" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1760" key="lemma" value="against"/>
+    <types:FeatureProxy xmi:id="1763" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="1766" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1776" sofa="1" begin="357" end="371" features="1781 1784 1787 1790 1793"/>
+    <types:FeatureProxy xmi:id="1781" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1784" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1787" key="lemma" value="Staphylococcus"/>
+    <types:FeatureProxy xmi:id="1790" key="pos" value="FW"/>
+    <types:FeatureProxy xmi:id="1793" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1803" sofa="1" begin="372" end="378" features="1808 1811 1814 1817 1820"/>
+    <types:FeatureProxy xmi:id="1808" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1811" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1814" key="lemma" value="aureus"/>
+    <types:FeatureProxy xmi:id="1817" key="pos" value="FW"/>
+    <types:FeatureProxy xmi:id="1820" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1830" sofa="1" begin="379" end="381" features="1835 1838 1841 1844 1847"/>
+    <types:FeatureProxy xmi:id="1835" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1838" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1841" key="lemma" value="be"/>
+    <types:FeatureProxy xmi:id="1844" key="pos" value="VVZ"/>
+    <types:FeatureProxy xmi:id="1847" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1857" sofa="1" begin="382" end="383" features="1862 1865 1868 1871 1874"/>
+    <types:FeatureProxy xmi:id="1862" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1865" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1868" key="lemma" value="a"/>
+    <types:FeatureProxy xmi:id="1871" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="1874" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1884" sofa="1" begin="384" end="395" features="1889 1892 1895 1898 1901"/>
+    <types:FeatureProxy xmi:id="1889" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1892" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1895" key="lemma" value="significant"/>
+    <types:FeatureProxy xmi:id="1898" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="1901" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1911" sofa="1" begin="396" end="405" features="1916 1919 1922 1925 1928"/>
+    <types:FeatureProxy xmi:id="1916" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1919" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1922" key="lemma" value="advantage"/>
+    <types:FeatureProxy xmi:id="1925" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="1928" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1938" sofa="1" begin="406" end="410" features="1943 1946 1949 1952 1955"/>
+    <types:FeatureProxy xmi:id="1943" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1946" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1949" key="lemma" value="that"/>
+    <types:FeatureProxy xmi:id="1952" key="pos" value="WDT"/>
+    <types:FeatureProxy xmi:id="1955" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1965" sofa="1" begin="411" end="414" features="1970 1973 1976 1979 1982"/>
+    <types:FeatureProxy xmi:id="1970" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="1973" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="1976" key="lemma" value="may"/>
+    <types:FeatureProxy xmi:id="1979" key="pos" value="MD"/>
+    <types:FeatureProxy xmi:id="1982" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="1992" sofa="1" begin="415" end="418" features="1997 2000 2003 2006 2009"/>
+    <types:FeatureProxy xmi:id="1997" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2000" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2003" key="lemma" value="not"/>
+    <types:FeatureProxy xmi:id="2006" key="pos" value="RB"/>
+    <types:FeatureProxy xmi:id="2009" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2019" sofa="1" begin="419" end="421" features="2024 2027 2030 2033 2036"/>
+    <types:FeatureProxy xmi:id="2024" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2027" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2030" key="lemma" value="be"/>
+    <types:FeatureProxy xmi:id="2033" key="pos" value="VV"/>
+    <types:FeatureProxy xmi:id="2036" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2046" sofa="1" begin="422" end="427" features="2051 2054 2057 2060 2063"/>
+    <types:FeatureProxy xmi:id="2051" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2054" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2057" key="lemma" value="find"/>
+    <types:FeatureProxy xmi:id="2060" key="pos" value="VBN"/>
+    <types:FeatureProxy xmi:id="2063" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2073" sofa="1" begin="428" end="432" features="2078 2081 2084 2087 2090"/>
+    <types:FeatureProxy xmi:id="2078" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2081" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2084" key="lemma" value="with"/>
+    <types:FeatureProxy xmi:id="2087" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="2090" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2100" sofa="1" begin="433" end="438" features="2105 2108 2111 2114 2117"/>
+    <types:FeatureProxy xmi:id="2105" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2108" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2111" key="lemma" value="other"/>
+    <types:FeatureProxy xmi:id="2114" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="2117" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2127" sofa="1" begin="439" end="445" features="2132 2135 2138 2141 2144"/>
+    <types:FeatureProxy xmi:id="2132" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2135" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2138" key="lemma" value="cephem"/>
+    <types:FeatureProxy xmi:id="2141" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="2144" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2154" sofa="1" begin="446" end="455" features="2159 2162 2165 2168 2171"/>
+    <types:FeatureProxy xmi:id="2159" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2162" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2165" key="lemma" value="compound"/>
+    <types:FeatureProxy xmi:id="2168" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="2171" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2181" sofa="1" begin="455" end="456" features="2186 2189 2192 2195 2198 2201"/>
+    <types:FeatureProxy xmi:id="2186" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="2189" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="2192" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="2195" key="lemma" value="."/>
+    <types:FeatureProxy xmi:id="2198" key="pos" value="SENT"/>
+    <types:FeatureProxy xmi:id="2201" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2212" sofa="1" begin="457" end="459" features="2217 2220 2223 2226 2229"/>
+    <types:FeatureProxy xmi:id="2217" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2220" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2223" key="lemma" value="In"/>
+    <types:FeatureProxy xmi:id="2226" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="2229" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2239" sofa="1" begin="460" end="463" features="2244 2247 2250 2253 2256"/>
+    <types:FeatureProxy xmi:id="2244" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2247" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2250" key="lemma" value="our"/>
+    <types:FeatureProxy xmi:id="2253" key="pos" value="PP$"/>
+    <types:FeatureProxy xmi:id="2256" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2266" sofa="1" begin="464" end="477" features="2271 2274 2277 2280 2283"/>
+    <types:FeatureProxy xmi:id="2271" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2274" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2277" key="lemma" value="determination"/>
+    <types:FeatureProxy xmi:id="2280" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="2283" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2293" sofa="1" begin="478" end="480" features="2298 2301 2304 2307 2310"/>
+    <types:FeatureProxy xmi:id="2298" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2301" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2304" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="2307" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="2310" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2320" sofa="1" begin="481" end="484" features="2325 2328 2331 2334 2337"/>
+    <types:FeatureProxy xmi:id="2325" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2328" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2331" key="lemma" value="its"/>
+    <types:FeatureProxy xmi:id="2334" key="pos" value="PP$"/>
+    <types:FeatureProxy xmi:id="2337" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2347" sofa="1" begin="485" end="498" features="2352 2355 2358 2361 2364"/>
+    <types:FeatureProxy xmi:id="2352" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2355" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2358" key="lemma" value="antibacterial"/>
+    <types:FeatureProxy xmi:id="2361" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="2364" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2374" sofa="1" begin="499" end="506" features="2379 2382 2385 2388 2391"/>
+    <types:FeatureProxy xmi:id="2379" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2382" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2385" key="lemma" value="potency"/>
+    <types:FeatureProxy xmi:id="2388" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="2391" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2401" sofa="1" begin="507" end="514" features="2406 2409 2412 2415 2418"/>
+    <types:FeatureProxy xmi:id="2406" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2409" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2412" key="lemma" value="against"/>
+    <types:FeatureProxy xmi:id="2415" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="2418" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2428" sofa="1" begin="515" end="522" features="2433 2436 2439 2442 2445"/>
+    <types:FeatureProxy xmi:id="2433" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2436" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2439" key="lemma" value="various"/>
+    <types:FeatureProxy xmi:id="2442" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="2445" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2455" sofa="1" begin="523" end="531" features="2460 2463 2466 2469 2472"/>
+    <types:FeatureProxy xmi:id="2460" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2463" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2466" key="lemma" value="clinical"/>
+    <types:FeatureProxy xmi:id="2469" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="2472" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2482" sofa="1" begin="532" end="540" features="2487 2490 2493 2496 2499"/>
+    <types:FeatureProxy xmi:id="2487" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2490" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2493" key="lemma" value="isolate"/>
+    <types:FeatureProxy xmi:id="2496" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="2499" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2509" sofa="1" begin="541" end="549" features="2514 2517 2520 2523 2526"/>
+    <types:FeatureProxy xmi:id="2514" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2517" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2520" key="lemma" value="obtain"/>
+    <types:FeatureProxy xmi:id="2523" key="pos" value="VBN"/>
+    <types:FeatureProxy xmi:id="2526" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2536" sofa="1" begin="550" end="554" features="2541 2544 2547 2550 2553"/>
+    <types:FeatureProxy xmi:id="2541" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2544" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2547" key="lemma" value="from"/>
+    <types:FeatureProxy xmi:id="2550" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="2553" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2563" sofa="1" begin="555" end="563" features="2568 2571 2574 2577 2580"/>
+    <types:FeatureProxy xmi:id="2568" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2571" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2574" key="lemma" value="clinical"/>
+    <types:FeatureProxy xmi:id="2577" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="2580" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2590" sofa="1" begin="564" end="573" features="2595 2598 2601 2604 2607"/>
+    <types:FeatureProxy xmi:id="2595" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2598" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2601" key="lemma" value="material"/>
+    <types:FeatureProxy xmi:id="2604" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="2607" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2617" sofa="1" begin="574" end="575" features="2622 2625 2628 2631 2634"/>
+    <types:FeatureProxy xmi:id="2622" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="2625" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2628" key="lemma" value="("/>
+    <types:FeatureProxy xmi:id="2631" key="pos" value="("/>
+    <types:FeatureProxy xmi:id="2634" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2644" sofa="1" begin="575" end="583" features="2649 2652 2655 2658 2661"/>
+    <types:FeatureProxy xmi:id="2649" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2652" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2655" key="lemma" value="amniotic"/>
+    <types:FeatureProxy xmi:id="2658" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="2661" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2671" sofa="1" begin="584" end="589" features="2676 2679 2682 2685 2688"/>
+    <types:FeatureProxy xmi:id="2676" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2679" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2682" key="lemma" value="fluid"/>
+    <types:FeatureProxy xmi:id="2685" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="2688" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2698" sofa="1" begin="589" end="590" features="2703 2706 2709 2712 2715"/>
+    <types:FeatureProxy xmi:id="2703" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="2706" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2709" key="lemma" value=","/>
+    <types:FeatureProxy xmi:id="2712" key="pos" value=","/>
+    <types:FeatureProxy xmi:id="2715" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2725" sofa="1" begin="591" end="603" features="2730 2733 2736 2739 2742"/>
+    <types:FeatureProxy xmi:id="2730" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2733" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2736" key="lemma" value="intrauterine"/>
+    <types:FeatureProxy xmi:id="2739" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="2742" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2752" sofa="1" begin="604" end="614" features="2757 2760 2763 2766 2769"/>
+    <types:FeatureProxy xmi:id="2757" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2760" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2763" key="lemma" value="secretion"/>
+    <types:FeatureProxy xmi:id="2766" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="2769" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2779" sofa="1" begin="614" end="615" features="2784 2787 2790 2793 2796"/>
+    <types:FeatureProxy xmi:id="2784" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="2787" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2790" key="lemma" value=","/>
+    <types:FeatureProxy xmi:id="2793" key="pos" value=","/>
+    <types:FeatureProxy xmi:id="2796" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2806" sofa="1" begin="616" end="624" features="2811 2814 2817 2820 2823"/>
+    <types:FeatureProxy xmi:id="2811" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2814" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2817" key="lemma" value="exudate"/>
+    <types:FeatureProxy xmi:id="2820" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="2823" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2833" sofa="1" begin="625" end="627" features="2838 2841 2844 2847 2850"/>
+    <types:FeatureProxy xmi:id="2838" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2841" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2844" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="2847" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="2850" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2860" sofa="1" begin="628" end="631" features="2865 2868 2871 2874 2877"/>
+    <types:FeatureProxy xmi:id="2865" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2868" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2871" key="lemma" value="the"/>
+    <types:FeatureProxy xmi:id="2874" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="2877" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2887" sofa="1" begin="632" end="638" features="2892 2895 2898 2901 2904"/>
+    <types:FeatureProxy xmi:id="2892" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2895" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2898" key="lemma" value="pelvic"/>
+    <types:FeatureProxy xmi:id="2901" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="2904" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2914" sofa="1" begin="639" end="643" features="2919 2922 2925 2928 2931"/>
+    <types:FeatureProxy xmi:id="2919" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2922" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2925" key="lemma" value="dead"/>
+    <types:FeatureProxy xmi:id="2928" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="2931" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2941" sofa="1" begin="644" end="649" features="2946 2949 2952 2955 2958"/>
+    <types:FeatureProxy xmi:id="2946" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="2949" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2952" key="lemma" value="space"/>
+    <types:FeatureProxy xmi:id="2955" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="2958" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2968" sofa="1" begin="649" end="650" features="2973 2976 2979 2982 2985"/>
+    <types:FeatureProxy xmi:id="2973" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="2976" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="2979" key="lemma" value=")"/>
+    <types:FeatureProxy xmi:id="2982" key="pos" value=")"/>
+    <types:FeatureProxy xmi:id="2985" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="2995" sofa="1" begin="651" end="653" features="3000 3003 3006 3009 3012"/>
+    <types:FeatureProxy xmi:id="3000" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3003" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3006" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="3009" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="3012" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3022" sofa="1" begin="654" end="662" features="3027 3030 3033 3036 3039"/>
+    <types:FeatureProxy xmi:id="3027" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3030" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3033" key="lemma" value="patient"/>
+    <types:FeatureProxy xmi:id="3036" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="3039" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3049" sofa="1" begin="663" end="667" features="3054 3057 3060 3063 3066"/>
+    <types:FeatureProxy xmi:id="3054" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3057" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3060" key="lemma" value="with"/>
+    <types:FeatureProxy xmi:id="3063" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="3066" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3076" sofa="1" begin="668" end="675" features="3081 3084 3087 3090 3093"/>
+    <types:FeatureProxy xmi:id="3081" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3084" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3087" key="lemma" value="various"/>
+    <types:FeatureProxy xmi:id="3090" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="3093" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3103" sofa="1" begin="676" end="686" features="3108 3111 3114 3117 3120"/>
+    <types:FeatureProxy xmi:id="3108" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3111" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3114" key="lemma" value="infection"/>
+    <types:FeatureProxy xmi:id="3117" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="3120" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3130" sofa="1" begin="686" end="687" features="3135 3138 3141 3144 3147"/>
+    <types:FeatureProxy xmi:id="3135" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="3138" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3141" key="lemma" value=","/>
+    <types:FeatureProxy xmi:id="3144" key="pos" value=","/>
+    <types:FeatureProxy xmi:id="3147" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3157" sofa="1" begin="688" end="690" features="3162 3165 3168 3171 3174"/>
+    <types:FeatureProxy xmi:id="3162" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3165" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3168" key="lemma" value="we"/>
+    <types:FeatureProxy xmi:id="3171" key="pos" value="PP"/>
+    <types:FeatureProxy xmi:id="3174" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3184" sofa="1" begin="691" end="699" features="3189 3192 3195 3198 3201"/>
+    <types:FeatureProxy xmi:id="3189" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3192" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3195" key="lemma" value="obtain"/>
+    <types:FeatureProxy xmi:id="3198" key="pos" value="VBD"/>
+    <types:FeatureProxy xmi:id="3201" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3211" sofa="1" begin="700" end="707" features="3216 3219 3222 3225 3228"/>
+    <types:FeatureProxy xmi:id="3216" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3219" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3222" key="lemma" value="result"/>
+    <types:FeatureProxy xmi:id="3225" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="3228" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3238" sofa="1" begin="708" end="720" features="3243 3246 3249 3252 3255"/>
+    <types:FeatureProxy xmi:id="3243" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3246" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3249" key="lemma" value="represent"/>
+    <types:FeatureProxy xmi:id="3252" key="pos" value="VBG"/>
+    <types:FeatureProxy xmi:id="3255" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3265" sofa="1" begin="721" end="729" features="3270 3273 3276 3279 3282"/>
+    <types:FeatureProxy xmi:id="3270" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3273" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3276" key="lemma" value="specific"/>
+    <types:FeatureProxy xmi:id="3279" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="3282" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3292" sofa="1" begin="730" end="738" features="3297 3300 3303 3306 3309"/>
+    <types:FeatureProxy xmi:id="3297" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3300" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3303" key="lemma" value="feature"/>
+    <types:FeatureProxy xmi:id="3306" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="3309" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3319" sofa="1" begin="739" end="741" features="3324 3327 3330 3333 3336"/>
+    <types:FeatureProxy xmi:id="3324" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3327" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3330" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="3333" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="3336" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3346" sofa="1" begin="742" end="746" features="3351 3354 3357 3360 3363"/>
+    <types:FeatureProxy xmi:id="3351" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3354" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3357" key="lemma" value="this"/>
+    <types:FeatureProxy xmi:id="3360" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="3363" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3373" sofa="1" begin="747" end="751" features="3378 3381 3384 3387 3390"/>
+    <types:FeatureProxy xmi:id="3378" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3381" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3384" key="lemma" value="drug"/>
+    <types:FeatureProxy xmi:id="3387" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="3390" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3400" sofa="1" begin="751" end="752" features="3405 3408 3411 3414 3417 3420"/>
+    <types:FeatureProxy xmi:id="3405" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="3408" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="3411" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="3414" key="lemma" value="."/>
+    <types:FeatureProxy xmi:id="3417" key="pos" value="SENT"/>
+    <types:FeatureProxy xmi:id="3420" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3431" sofa="1" begin="753" end="757" features="3436 3439 3442 3445 3448"/>
+    <types:FeatureProxy xmi:id="3436" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3439" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3442" key="lemma" value="From"/>
+    <types:FeatureProxy xmi:id="3445" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="3448" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3458" sofa="1" begin="758" end="761" features="3463 3466 3469 3472 3475"/>
+    <types:FeatureProxy xmi:id="3463" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3466" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3469" key="lemma" value="the"/>
+    <types:FeatureProxy xmi:id="3472" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="3475" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3485" sofa="1" begin="762" end="769" features="3490 3493 3496 3499 3502"/>
+    <types:FeatureProxy xmi:id="3490" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3493" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3496" key="lemma" value="result"/>
+    <types:FeatureProxy xmi:id="3499" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="3502" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3512" sofa="1" begin="769" end="770" features="3517 3520 3523 3526 3529"/>
+    <types:FeatureProxy xmi:id="3517" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="3520" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3523" key="lemma" value=","/>
+    <types:FeatureProxy xmi:id="3526" key="pos" value=","/>
+    <types:FeatureProxy xmi:id="3529" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3539" sofa="1" begin="771" end="774" features="3544 3547 3550 3553 3556"/>
+    <types:FeatureProxy xmi:id="3544" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3547" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3550" key="lemma" value="the"/>
+    <types:FeatureProxy xmi:id="3553" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="3556" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3566" sofa="1" begin="775" end="779" features="3571 3574 3577 3580 3583"/>
+    <types:FeatureProxy xmi:id="3571" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3574" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3577" key="lemma" value="drug"/>
+    <types:FeatureProxy xmi:id="3580" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="3583" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3593" sofa="1" begin="780" end="783" features="3598 3601 3604 3607 3610"/>
+    <types:FeatureProxy xmi:id="3598" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3601" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3604" key="lemma" value="may"/>
+    <types:FeatureProxy xmi:id="3607" key="pos" value="MD"/>
+    <types:FeatureProxy xmi:id="3610" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3620" sofa="1" begin="784" end="786" features="3625 3628 3631 3634 3637"/>
+    <types:FeatureProxy xmi:id="3625" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3628" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3631" key="lemma" value="be"/>
+    <types:FeatureProxy xmi:id="3634" key="pos" value="VV"/>
+    <types:FeatureProxy xmi:id="3637" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3647" sofa="1" begin="787" end="795" features="3652 3655 3658 3661 3664"/>
+    <types:FeatureProxy xmi:id="3652" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3655" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3658" key="lemma" value="expect"/>
+    <types:FeatureProxy xmi:id="3661" key="pos" value="VBN"/>
+    <types:FeatureProxy xmi:id="3664" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3674" sofa="1" begin="796" end="798" features="3679 3682 3685 3688 3691"/>
+    <types:FeatureProxy xmi:id="3679" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3682" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3685" key="lemma" value="to"/>
+    <types:FeatureProxy xmi:id="3688" key="pos" value="TO"/>
+    <types:FeatureProxy xmi:id="3691" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3701" sofa="1" begin="799" end="806" features="3706 3709 3712 3715 3718"/>
+    <types:FeatureProxy xmi:id="3706" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3709" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3712" key="lemma" value="produce"/>
+    <types:FeatureProxy xmi:id="3715" key="pos" value="VB"/>
+    <types:FeatureProxy xmi:id="3718" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3728" sofa="1" begin="807" end="809" features="3733 3736 3739 3742 3745"/>
+    <types:FeatureProxy xmi:id="3733" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3736" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3739" key="lemma" value="an"/>
+    <types:FeatureProxy xmi:id="3742" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="3745" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3755" sofa="1" begin="810" end="819" features="3760 3763 3766 3769 3772"/>
+    <types:FeatureProxy xmi:id="3760" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3763" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3766" key="lemma" value="excellent"/>
+    <types:FeatureProxy xmi:id="3769" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="3772" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3782" sofa="1" begin="820" end="826" features="3787 3790 3793 3796 3799"/>
+    <types:FeatureProxy xmi:id="3787" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3790" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3793" key="lemma" value="effect"/>
+    <types:FeatureProxy xmi:id="3796" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="3799" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3809" sofa="1" begin="827" end="829" features="3814 3817 3820 3823 3826"/>
+    <types:FeatureProxy xmi:id="3814" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3817" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3820" key="lemma" value="in"/>
+    <types:FeatureProxy xmi:id="3823" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="3826" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3836" sofa="1" begin="830" end="833" features="3841 3844 3847 3850 3853"/>
+    <types:FeatureProxy xmi:id="3841" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3844" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3847" key="lemma" value="the"/>
+    <types:FeatureProxy xmi:id="3850" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="3853" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3863" sofa="1" begin="834" end="843" features="3868 3871 3874 3877 3880"/>
+    <types:FeatureProxy xmi:id="3868" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3871" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3874" key="lemma" value="treatment"/>
+    <types:FeatureProxy xmi:id="3877" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="3880" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3890" sofa="1" begin="844" end="846" features="3895 3898 3901 3904 3907"/>
+    <types:FeatureProxy xmi:id="3895" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3898" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3901" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="3904" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="3907" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3917" sofa="1" begin="847" end="854" features="3922 3925 3928 3931 3934"/>
+    <types:FeatureProxy xmi:id="3922" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3925" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3928" key="lemma" value="various"/>
+    <types:FeatureProxy xmi:id="3931" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="3934" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3944" sofa="1" begin="855" end="865" features="3949 3952 3955 3958 3961"/>
+    <types:FeatureProxy xmi:id="3949" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="3952" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="3955" key="lemma" value="infection"/>
+    <types:FeatureProxy xmi:id="3958" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="3961" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="3971" sofa="1" begin="865" end="866" features="3976 3979 3982 3985 3988 3991"/>
+    <types:FeatureProxy xmi:id="3976" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="3979" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="3982" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="3985" key="lemma" value="."/>
+    <types:FeatureProxy xmi:id="3988" key="pos" value="SENT"/>
+    <types:FeatureProxy xmi:id="3991" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4002" sofa="1" begin="867" end="870" features="4007 4010 4013 4016 4019"/>
+    <types:FeatureProxy xmi:id="4007" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4010" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4013" key="lemma" value="Our"/>
+    <types:FeatureProxy xmi:id="4016" key="pos" value="PP$"/>
+    <types:FeatureProxy xmi:id="4019" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4029" sofa="1" begin="871" end="876" features="4034 4037 4040 4043 4046"/>
+    <types:FeatureProxy xmi:id="4034" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4037" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4040" key="lemma" value="study"/>
+    <types:FeatureProxy xmi:id="4043" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="4046" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4056" sofa="1" begin="877" end="879" features="4061 4064 4067 4070 4073"/>
+    <types:FeatureProxy xmi:id="4061" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4064" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4067" key="lemma" value="on"/>
+    <types:FeatureProxy xmi:id="4070" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="4073" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4083" sofa="1" begin="880" end="884" features="4088 4091 4094 4097 4100"/>
+    <types:FeatureProxy xmi:id="4088" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4091" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4094" key="lemma" value="drug"/>
+    <types:FeatureProxy xmi:id="4097" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="4100" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4110" sofa="1" begin="885" end="899" features="4115 4118 4121 4124 4127"/>
+    <types:FeatureProxy xmi:id="4115" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4118" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4121" key="lemma" value="concentration"/>
+    <types:FeatureProxy xmi:id="4124" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="4127" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4137" sofa="1" begin="900" end="902" features="4142 4145 4148 4151 4154"/>
+    <types:FeatureProxy xmi:id="4142" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4145" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4148" key="lemma" value="in"/>
+    <types:FeatureProxy xmi:id="4151" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="4154" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4164" sofa="1" begin="903" end="907" features="4169 4172 4175 4178 4181"/>
+    <types:FeatureProxy xmi:id="4169" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4172" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4175" key="lemma" value="body"/>
+    <types:FeatureProxy xmi:id="4178" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="4181" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4191" sofa="1" begin="908" end="914" features="4196 4199 4202 4205 4208"/>
+    <types:FeatureProxy xmi:id="4196" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4199" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4202" key="lemma" value="fluid"/>
+    <types:FeatureProxy xmi:id="4205" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="4208" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4218" sofa="1" begin="915" end="918" features="4223 4226 4229 4232 4235"/>
+    <types:FeatureProxy xmi:id="4223" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4226" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4229" key="lemma" value="and"/>
+    <types:FeatureProxy xmi:id="4232" key="pos" value="CC"/>
+    <types:FeatureProxy xmi:id="4235" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4245" sofa="1" begin="919" end="926" features="4250 4253 4256 4259 4262"/>
+    <types:FeatureProxy xmi:id="4250" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4253" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4256" key="lemma" value="genital"/>
+    <types:FeatureProxy xmi:id="4259" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="4262" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4272" sofa="1" begin="927" end="934" features="4277 4280 4283 4286 4289"/>
+    <types:FeatureProxy xmi:id="4277" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4280" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4283" key="lemma" value="tissue"/>
+    <types:FeatureProxy xmi:id="4286" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="4289" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4299" sofa="1" begin="935" end="947" features="4304 4307 4310 4313 4316"/>
+    <types:FeatureProxy xmi:id="4304" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4307" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4310" key="lemma" value="demonstrate"/>
+    <types:FeatureProxy xmi:id="4313" key="pos" value="VBD"/>
+    <types:FeatureProxy xmi:id="4316" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4326" sofa="1" begin="948" end="949" features="4331 4334 4337 4340 4343"/>
+    <types:FeatureProxy xmi:id="4331" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4334" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4337" key="lemma" value="a"/>
+    <types:FeatureProxy xmi:id="4340" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="4343" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4353" sofa="1" begin="950" end="954" features="4358 4361 4364 4367 4370"/>
+    <types:FeatureProxy xmi:id="4358" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4361" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4364" key="lemma" value="good"/>
+    <types:FeatureProxy xmi:id="4367" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="4370" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4380" sofa="1" begin="955" end="963" features="4385 4388 4391 4394 4397"/>
+    <types:FeatureProxy xmi:id="4385" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4388" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4391" key="lemma" value="transfer"/>
+    <types:FeatureProxy xmi:id="4394" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="4397" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4407" sofa="1" begin="964" end="966" features="4412 4415 4418 4421 4424"/>
+    <types:FeatureProxy xmi:id="4412" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4415" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4418" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="4421" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="4424" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4434" sofa="1" begin="967" end="971" features="4439 4442 4445 4448 4451"/>
+    <types:FeatureProxy xmi:id="4439" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4442" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4445" key="lemma" value="this"/>
+    <types:FeatureProxy xmi:id="4448" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="4451" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4461" sofa="1" begin="972" end="976" features="4466 4469 4472 4475 4478"/>
+    <types:FeatureProxy xmi:id="4466" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4469" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4472" key="lemma" value="drug"/>
+    <types:FeatureProxy xmi:id="4475" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="4478" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4488" sofa="1" begin="977" end="981" features="4493 4496 4499 4502 4505"/>
+    <types:FeatureProxy xmi:id="4493" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4496" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4499" key="lemma" value="into"/>
+    <types:FeatureProxy xmi:id="4502" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="4505" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4515" sofa="1" begin="982" end="989" features="4520 4523 4526 4529 4532"/>
+    <types:FeatureProxy xmi:id="4520" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4523" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4526" key="lemma" value="various"/>
+    <types:FeatureProxy xmi:id="4529" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="4532" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4542" sofa="1" begin="990" end="997" features="4547 4550 4553 4556 4559"/>
+    <types:FeatureProxy xmi:id="4547" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4550" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4553" key="lemma" value="tissue"/>
+    <types:FeatureProxy xmi:id="4556" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="4559" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4569" sofa="1" begin="997" end="998" features="4574 4577 4580 4583 4586"/>
+    <types:FeatureProxy xmi:id="4574" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="4577" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4580" key="lemma" value=";"/>
+    <types:FeatureProxy xmi:id="4583" key="pos" value=":"/>
+    <types:FeatureProxy xmi:id="4586" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4596" sofa="1" begin="999" end="1001" features="4601 4604 4607 4610 4613"/>
+    <types:FeatureProxy xmi:id="4601" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4604" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4607" key="lemma" value="in"/>
+    <types:FeatureProxy xmi:id="4610" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="4613" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4623" sofa="1" begin="1002" end="1007" features="4628 4631 4634 4637 4640"/>
+    <types:FeatureProxy xmi:id="4628" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4631" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4634" key="lemma" value="every"/>
+    <types:FeatureProxy xmi:id="4637" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="4640" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4650" sofa="1" begin="1008" end="1014" features="4655 4658 4661 4664 4667"/>
+    <types:FeatureProxy xmi:id="4655" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4658" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4661" key="lemma" value="tissue"/>
+    <types:FeatureProxy xmi:id="4664" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="4667" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4677" sofa="1" begin="1015" end="1023" features="4682 4685 4688 4691 4694"/>
+    <types:FeatureProxy xmi:id="4682" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4685" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4688" key="lemma" value="examine"/>
+    <types:FeatureProxy xmi:id="4691" key="pos" value="VBN"/>
+    <types:FeatureProxy xmi:id="4694" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4704" sofa="1" begin="1023" end="1024" features="4709 4712 4715 4718 4721"/>
+    <types:FeatureProxy xmi:id="4709" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="4712" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4715" key="lemma" value=","/>
+    <types:FeatureProxy xmi:id="4718" key="pos" value=","/>
+    <types:FeatureProxy xmi:id="4721" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4731" sofa="1" begin="1025" end="1028" features="4736 4739 4742 4745 4748"/>
+    <types:FeatureProxy xmi:id="4736" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4739" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4742" key="lemma" value="the"/>
+    <types:FeatureProxy xmi:id="4745" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="4748" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4758" sofa="1" begin="1029" end="1033" features="4763 4766 4769 4772 4775"/>
+    <types:FeatureProxy xmi:id="4763" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4766" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4769" key="lemma" value="drug"/>
+    <types:FeatureProxy xmi:id="4772" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="4775" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4785" sofa="1" begin="1034" end="1046" features="4790 4793 4796 4799 4802"/>
+    <types:FeatureProxy xmi:id="4790" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4793" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4796" key="lemma" value="administer"/>
+    <types:FeatureProxy xmi:id="4799" key="pos" value="VBN"/>
+    <types:FeatureProxy xmi:id="4802" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4812" sofa="1" begin="1047" end="1049" features="4817 4820 4823 4826 4829"/>
+    <types:FeatureProxy xmi:id="4817" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4820" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4823" key="lemma" value="by"/>
+    <types:FeatureProxy xmi:id="4826" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="4829" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4839" sofa="1" begin="1050" end="1053" features="4844 4847 4850 4853 4856"/>
+    <types:FeatureProxy xmi:id="4844" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4847" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4850" key="lemma" value="the"/>
+    <types:FeatureProxy xmi:id="4853" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="4856" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4866" sofa="1" begin="1054" end="1059" features="4871 4874 4877 4880 4883"/>
+    <types:FeatureProxy xmi:id="4871" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4874" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4877" key="lemma" value="usual"/>
+    <types:FeatureProxy xmi:id="4880" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="4883" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4893" sofa="1" begin="1060" end="1066" features="4898 4901 4904 4907 4910"/>
+    <types:FeatureProxy xmi:id="4898" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4901" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4904" key="lemma" value="method"/>
+    <types:FeatureProxy xmi:id="4907" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="4910" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4920" sofa="1" begin="1067" end="1069" features="4925 4928 4931 4934 4937"/>
+    <types:FeatureProxy xmi:id="4925" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4928" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4931" key="lemma" value="in"/>
+    <types:FeatureProxy xmi:id="4934" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="4937" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4947" sofa="1" begin="1070" end="1073" features="4952 4955 4958 4961 4964"/>
+    <types:FeatureProxy xmi:id="4952" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4955" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4958" key="lemma" value="the"/>
+    <types:FeatureProxy xmi:id="4961" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="4964" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="4974" sofa="1" begin="1074" end="1079" features="4979 4982 4985 4988 4991"/>
+    <types:FeatureProxy xmi:id="4979" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="4982" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="4985" key="lemma" value="usual"/>
+    <types:FeatureProxy xmi:id="4988" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="4991" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5001" sofa="1" begin="1080" end="1084" features="5006 5009 5012 5015 5018"/>
+    <types:FeatureProxy xmi:id="5006" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5009" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5012" key="lemma" value="dose"/>
+    <types:FeatureProxy xmi:id="5015" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="5018" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5028" sofa="1" begin="1085" end="1092" features="5033 5036 5039 5042 5045"/>
+    <types:FeatureProxy xmi:id="5033" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5036" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5039" key="lemma" value="yield"/>
+    <types:FeatureProxy xmi:id="5042" key="pos" value="VBD"/>
+    <types:FeatureProxy xmi:id="5045" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5055" sofa="1" begin="1093" end="1094" features="5060 5063 5066 5069 5072"/>
+    <types:FeatureProxy xmi:id="5060" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5063" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5066" key="lemma" value="a"/>
+    <types:FeatureProxy xmi:id="5069" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="5072" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5082" sofa="1" begin="1095" end="1108" features="5087 5090 5093 5096 5099"/>
+    <types:FeatureProxy xmi:id="5087" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5090" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5093" key="lemma" value="concentration"/>
+    <types:FeatureProxy xmi:id="5096" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="5099" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5109" sofa="1" begin="1109" end="1118" features="5114 5117 5120 5123 5126"/>
+    <types:FeatureProxy xmi:id="5114" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5117" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5120" key="lemma" value="exceed"/>
+    <types:FeatureProxy xmi:id="5123" key="pos" value="VBG"/>
+    <types:FeatureProxy xmi:id="5126" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5136" sofa="1" begin="1119" end="1122" features="5141 5144 5147 5150 5153"/>
+    <types:FeatureProxy xmi:id="5141" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5144" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5147" key="lemma" value="MIC"/>
+    <types:FeatureProxy xmi:id="5150" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="5153" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5163" sofa="1" begin="1123" end="1126" features="5168 5171 5174 5177 5180"/>
+    <types:FeatureProxy xmi:id="5168" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5171" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5174" key="lemma" value="for"/>
+    <types:FeatureProxy xmi:id="5177" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="5180" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5190" sofa="1" begin="1127" end="1136" features="5195 5198 5201 5204 5207"/>
+    <types:FeatureProxy xmi:id="5195" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5198" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5201" key="lemma" value="principal"/>
+    <types:FeatureProxy xmi:id="5204" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="5207" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5217" sofa="1" begin="1137" end="1146" features="5222 5225 5228 5231 5234"/>
+    <types:FeatureProxy xmi:id="5222" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5225" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5228" key="lemma" value="pathogen"/>
+    <types:FeatureProxy xmi:id="5231" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="5234" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5244" sofa="1" begin="1146" end="1147" features="5249 5252 5255 5258 5261"/>
+    <types:FeatureProxy xmi:id="5249" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="5252" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5255" key="lemma" value=","/>
+    <types:FeatureProxy xmi:id="5258" key="pos" value=","/>
+    <types:FeatureProxy xmi:id="5261" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5271" sofa="1" begin="1148" end="1152" features="5276 5279 5282 5285 5288"/>
+    <types:FeatureProxy xmi:id="5276" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5279" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5282" key="lemma" value="thus"/>
+    <types:FeatureProxy xmi:id="5285" key="pos" value="RB"/>
+    <types:FeatureProxy xmi:id="5288" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5298" sofa="1" begin="1153" end="1162" features="5303 5306 5309 5312 5315"/>
+    <types:FeatureProxy xmi:id="5303" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5306" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5309" key="lemma" value="promise"/>
+    <types:FeatureProxy xmi:id="5312" key="pos" value="VBG"/>
+    <types:FeatureProxy xmi:id="5315" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5325" sofa="1" begin="1163" end="1164" features="5330 5333 5336 5339 5342"/>
+    <types:FeatureProxy xmi:id="5330" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5333" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5336" key="lemma" value="a"/>
+    <types:FeatureProxy xmi:id="5339" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="5342" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5352" sofa="1" begin="1165" end="1169" features="5357 5360 5363 5366 5369"/>
+    <types:FeatureProxy xmi:id="5357" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5360" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5363" key="lemma" value="good"/>
+    <types:FeatureProxy xmi:id="5366" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="5369" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5379" sofa="1" begin="1170" end="1178" features="5384 5387 5390 5393 5396"/>
+    <types:FeatureProxy xmi:id="5384" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5387" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5390" key="lemma" value="clinical"/>
+    <types:FeatureProxy xmi:id="5393" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="5396" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5406" sofa="1" begin="1179" end="1187" features="5411 5414 5417 5420 5423"/>
+    <types:FeatureProxy xmi:id="5411" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5414" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5417" key="lemma" value="response"/>
+    <types:FeatureProxy xmi:id="5420" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="5423" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5433" sofa="1" begin="1187" end="1188" features="5438 5441 5444 5447 5450 5453"/>
+    <types:FeatureProxy xmi:id="5438" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="5441" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="5444" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="5447" key="lemma" value="."/>
+    <types:FeatureProxy xmi:id="5450" key="pos" value="SENT"/>
+    <types:FeatureProxy xmi:id="5453" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5464" sofa="1" begin="1189" end="1195" features="5469 5472 5475 5478 5481"/>
+    <types:FeatureProxy xmi:id="5469" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5472" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5475" key="lemma" value="Indeed"/>
+    <types:FeatureProxy xmi:id="5478" key="pos" value="RB"/>
+    <types:FeatureProxy xmi:id="5481" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5491" sofa="1" begin="1196" end="1197" features="5496 5499 5502 5505 5508"/>
+    <types:FeatureProxy xmi:id="5496" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5499" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5502" key="lemma" value="a"/>
+    <types:FeatureProxy xmi:id="5505" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="5508" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5518" sofa="1" begin="1198" end="1202" features="5523 5526 5529 5532 5535"/>
+    <types:FeatureProxy xmi:id="5523" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5526" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5529" key="lemma" value="high"/>
+    <types:FeatureProxy xmi:id="5532" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="5535" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5545" sofa="1" begin="1203" end="1211" features="5550 5553 5556 5559 5562"/>
+    <types:FeatureProxy xmi:id="5550" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5553" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5556" key="lemma" value="clinical"/>
+    <types:FeatureProxy xmi:id="5559" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="5562" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5572" sofa="1" begin="1212" end="1220" features="5577 5580 5583 5586 5589"/>
+    <types:FeatureProxy xmi:id="5577" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5580" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5583" key="lemma" value="efficacy"/>
+    <types:FeatureProxy xmi:id="5586" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="5589" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5599" sofa="1" begin="1221" end="1225" features="5604 5607 5610 5613 5616"/>
+    <types:FeatureProxy xmi:id="5604" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5607" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5610" key="lemma" value="rate"/>
+    <types:FeatureProxy xmi:id="5613" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="5616" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5626" sofa="1" begin="1226" end="1228" features="5631 5634 5637 5640 5643"/>
+    <types:FeatureProxy xmi:id="5631" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5634" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5637" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="5640" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="5643" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5653" sofa="1" begin="1229" end="1233" features="5658 5661 5664 5667 5670 5673 5676 5679 5682"/>
+    <types:FeatureProxy xmi:id="5658" key="type" value="num"/>
+    <types:FeatureProxy xmi:id="5661" key="value" value="fix"/>
+    <types:FeatureProxy xmi:id="5664" key="seg__fix" value="yes"/>
+    <types:FeatureProxy xmi:id="5667" key="wordType" value="fixed"/>
+    <types:FeatureProxy xmi:id="5670" key="wordType" value="fixed"/>
+    <types:FeatureProxy xmi:id="5673" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5676" key="lemma" value="90.1"/>
+    <types:FeatureProxy xmi:id="5679" key="pos" value="CD"/>
+    <types:FeatureProxy xmi:id="5682" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5696" sofa="1" begin="1233" end="1234" features="5701 5704 5707 5710 5713"/>
+    <types:FeatureProxy xmi:id="5701" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5704" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5707" key="lemma" value="%"/>
+    <types:FeatureProxy xmi:id="5710" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="5713" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5723" sofa="1" begin="1235" end="1236" features="5728 5731 5734 5737 5740"/>
+    <types:FeatureProxy xmi:id="5728" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="5731" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5734" key="lemma" value="("/>
+    <types:FeatureProxy xmi:id="5737" key="pos" value="("/>
+    <types:FeatureProxy xmi:id="5740" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5750" sofa="1" begin="1236" end="1240" features="5755 5758 5761 5764 5767"/>
+    <types:FeatureProxy xmi:id="5755" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5758" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5761" key="lemma" value="good"/>
+    <types:FeatureProxy xmi:id="5764" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="5767" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5777" sofa="1" begin="1241" end="1243" features="5782 5785 5788 5791 5794"/>
+    <types:FeatureProxy xmi:id="5782" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5785" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5788" key="lemma" value="to"/>
+    <types:FeatureProxy xmi:id="5791" key="pos" value="TO"/>
+    <types:FeatureProxy xmi:id="5794" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5804" sofa="1" begin="1244" end="1248" features="5809 5812 5815 5818 5821"/>
+    <types:FeatureProxy xmi:id="5809" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5812" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5815" key="lemma" value="very"/>
+    <types:FeatureProxy xmi:id="5818" key="pos" value="RB"/>
+    <types:FeatureProxy xmi:id="5821" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5831" sofa="1" begin="1249" end="1253" features="5836 5839 5842 5845 5848"/>
+    <types:FeatureProxy xmi:id="5836" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5839" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5842" key="lemma" value="good"/>
+    <types:FeatureProxy xmi:id="5845" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="5848" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5858" sofa="1" begin="1254" end="1263" features="5863 5866 5869 5872 5875"/>
+    <types:FeatureProxy xmi:id="5863" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5866" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5869" key="lemma" value="response"/>
+    <types:FeatureProxy xmi:id="5872" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="5875" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5885" sofa="1" begin="1263" end="1264" features="5890 5893 5896 5899 5902"/>
+    <types:FeatureProxy xmi:id="5890" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="5893" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5896" key="lemma" value=")"/>
+    <types:FeatureProxy xmi:id="5899" key="pos" value=")"/>
+    <types:FeatureProxy xmi:id="5902" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5912" sofa="1" begin="1265" end="1268" features="5917 5920 5923 5926 5929"/>
+    <types:FeatureProxy xmi:id="5917" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5920" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5923" key="lemma" value="be"/>
+    <types:FeatureProxy xmi:id="5926" key="pos" value="VVD"/>
+    <types:FeatureProxy xmi:id="5929" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5939" sofa="1" begin="1269" end="1277" features="5944 5947 5950 5953 5956"/>
+    <types:FeatureProxy xmi:id="5944" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5947" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5950" key="lemma" value="obtain"/>
+    <types:FeatureProxy xmi:id="5953" key="pos" value="VBN"/>
+    <types:FeatureProxy xmi:id="5956" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5966" sofa="1" begin="1278" end="1280" features="5971 5974 5977 5980 5983"/>
+    <types:FeatureProxy xmi:id="5971" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="5974" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="5977" key="lemma" value="in"/>
+    <types:FeatureProxy xmi:id="5980" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="5983" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="5993" sofa="1" begin="1281" end="1282" features="5998 6001 6004 6007 6010"/>
+    <types:FeatureProxy xmi:id="5998" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6001" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6004" key="lemma" value="a"/>
+    <types:FeatureProxy xmi:id="6007" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="6010" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6020" sofa="1" begin="1283" end="1291" features="6025 6028 6031 6034 6037"/>
+    <types:FeatureProxy xmi:id="6025" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6028" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6031" key="lemma" value="clinical"/>
+    <types:FeatureProxy xmi:id="6034" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="6037" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6047" sofa="1" begin="1292" end="1297" features="6052 6055 6058 6061 6064"/>
+    <types:FeatureProxy xmi:id="6052" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6055" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6058" key="lemma" value="trial"/>
+    <types:FeatureProxy xmi:id="6061" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="6064" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6074" sofa="1" begin="1298" end="1307" features="6079 6082 6085 6088 6091"/>
+    <types:FeatureProxy xmi:id="6079" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6082" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6085" key="lemma" value="involve"/>
+    <types:FeatureProxy xmi:id="6088" key="pos" value="VBG"/>
+    <types:FeatureProxy xmi:id="6091" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6101" sofa="1" begin="1308" end="1311" features="6106 6109 6112 6115 6118"/>
+    <types:FeatureProxy xmi:id="6106" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6109" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6112" key="lemma" value="222"/>
+    <types:FeatureProxy xmi:id="6115" key="pos" value="CD"/>
+    <types:FeatureProxy xmi:id="6118" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6128" sofa="1" begin="1312" end="1317" features="6133 6136 6139 6142 6145"/>
+    <types:FeatureProxy xmi:id="6133" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6136" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6139" key="lemma" value="case"/>
+    <types:FeatureProxy xmi:id="6142" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="6145" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6155" sofa="1" begin="1317" end="1318" features="6160 6163 6166 6169 6172 6175"/>
+    <types:FeatureProxy xmi:id="6160" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="6163" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="6166" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="6169" key="lemma" value="."/>
+    <types:FeatureProxy xmi:id="6172" key="pos" value="SENT"/>
+    <types:FeatureProxy xmi:id="6175" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6186" sofa="1" begin="1319" end="1333" features="6191 6194 6197 6200 6203"/>
+    <types:FeatureProxy xmi:id="6191" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6194" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6197" key="lemma" value="Administration"/>
+    <types:FeatureProxy xmi:id="6200" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="6203" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6213" sofa="1" begin="1334" end="1336" features="6218 6221 6224 6227 6230"/>
+    <types:FeatureProxy xmi:id="6218" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6221" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6224" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="6227" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="6230" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6240" sofa="1" begin="1337" end="1340" features="6245 6248 6251 6254 6257"/>
+    <types:FeatureProxy xmi:id="6245" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6248" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6251" key="lemma" value="the"/>
+    <types:FeatureProxy xmi:id="6254" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="6257" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6267" sofa="1" begin="1341" end="1345" features="6272 6275 6278 6281 6284"/>
+    <types:FeatureProxy xmi:id="6272" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6275" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6278" key="lemma" value="drug"/>
+    <types:FeatureProxy xmi:id="6281" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="6284" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6294" sofa="1" begin="1346" end="1348" features="6299 6302 6305 6308 6311"/>
+    <types:FeatureProxy xmi:id="6299" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6302" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6305" key="lemma" value="in"/>
+    <types:FeatureProxy xmi:id="6308" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="6311" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6321" sofa="1" begin="1349" end="1350" features="6326 6329 6332 6335 6338"/>
+    <types:FeatureProxy xmi:id="6326" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6329" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6332" key="lemma" value="2"/>
+    <types:FeatureProxy xmi:id="6335" key="pos" value="CD"/>
+    <types:FeatureProxy xmi:id="6338" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6348" sofa="1" begin="1351" end="1352" features="6353 6356 6359 6362 6365"/>
+    <types:FeatureProxy xmi:id="6353" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6356" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6359" key="lemma" value="g"/>
+    <types:FeatureProxy xmi:id="6362" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="6365" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6375" sofa="1" begin="1353" end="1361" features="6380 6383 6386 6389 6392"/>
+    <types:FeatureProxy xmi:id="6380" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6383" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6386" key="lemma" value="quantity"/>
+    <types:FeatureProxy xmi:id="6389" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="6392" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6402" sofa="1" begin="1362" end="1367" features="6407 6410 6413 6416 6419"/>
+    <types:FeatureProxy xmi:id="6407" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6410" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6413" key="lemma" value="daily"/>
+    <types:FeatureProxy xmi:id="6416" key="pos" value="RB"/>
+    <types:FeatureProxy xmi:id="6419" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6429" sofa="1" begin="1368" end="1376" features="6434 6437 6440 6443 6446"/>
+    <types:FeatureProxy xmi:id="6434" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6437" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6440" key="lemma" value="produce"/>
+    <types:FeatureProxy xmi:id="6443" key="pos" value="VBD"/>
+    <types:FeatureProxy xmi:id="6446" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6456" sofa="1" begin="1377" end="1378" features="6461 6464 6467 6470 6473"/>
+    <types:FeatureProxy xmi:id="6461" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6464" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6467" key="lemma" value="a"/>
+    <types:FeatureProxy xmi:id="6470" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="6473" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6483" sofa="1" begin="1379" end="1383" features="6488 6491 6494 6497 6500"/>
+    <types:FeatureProxy xmi:id="6488" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6491" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6494" key="lemma" value="high"/>
+    <types:FeatureProxy xmi:id="6497" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="6500" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6510" sofa="1" begin="1384" end="1392" features="6515 6518 6521 6524 6527"/>
+    <types:FeatureProxy xmi:id="6515" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6518" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6521" key="lemma" value="response"/>
+    <types:FeatureProxy xmi:id="6524" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="6527" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6537" sofa="1" begin="1393" end="1397" features="6542 6545 6548 6551 6554"/>
+    <types:FeatureProxy xmi:id="6542" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6545" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6548" key="lemma" value="rate"/>
+    <types:FeatureProxy xmi:id="6551" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="6554" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6564" sofa="1" begin="1398" end="1400" features="6569 6572 6575 6578 6581"/>
+    <types:FeatureProxy xmi:id="6569" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6572" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6575" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="6578" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="6581" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6591" sofa="1" begin="1401" end="1405" features="6596 6599 6602 6605 6608 6611 6614 6617 6620"/>
+    <types:FeatureProxy xmi:id="6596" key="type" value="num"/>
+    <types:FeatureProxy xmi:id="6599" key="value" value="fix"/>
+    <types:FeatureProxy xmi:id="6602" key="seg__fix" value="yes"/>
+    <types:FeatureProxy xmi:id="6605" key="wordType" value="fixed"/>
+    <types:FeatureProxy xmi:id="6608" key="wordType" value="fixed"/>
+    <types:FeatureProxy xmi:id="6611" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6614" key="lemma" value="92.8"/>
+    <types:FeatureProxy xmi:id="6617" key="pos" value="CD"/>
+    <types:FeatureProxy xmi:id="6620" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6634" sofa="1" begin="1405" end="1406" features="6639 6642 6645 6648 6651"/>
+    <types:FeatureProxy xmi:id="6639" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6642" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6645" key="lemma" value="%"/>
+    <types:FeatureProxy xmi:id="6648" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="6651" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6661" sofa="1" begin="1406" end="1407" features="6666 6669 6672 6675 6678 6681"/>
+    <types:FeatureProxy xmi:id="6666" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="6669" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="6672" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="6675" key="lemma" value="."/>
+    <types:FeatureProxy xmi:id="6678" key="pos" value="SENT"/>
+    <types:FeatureProxy xmi:id="6681" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6692" sofa="1" begin="1408" end="1410" features="6697 6700 6703 6706 6709"/>
+    <types:FeatureProxy xmi:id="6697" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6700" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6703" key="lemma" value="It"/>
+    <types:FeatureProxy xmi:id="6706" key="pos" value="PP"/>
+    <types:FeatureProxy xmi:id="6709" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6719" sofa="1" begin="1411" end="1414" features="6724 6727 6730 6733 6736"/>
+    <types:FeatureProxy xmi:id="6724" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6727" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6730" key="lemma" value="be"/>
+    <types:FeatureProxy xmi:id="6733" key="pos" value="VVD"/>
+    <types:FeatureProxy xmi:id="6736" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6746" sofa="1" begin="1415" end="1425" features="6751 6754 6757 6760 6763"/>
+    <types:FeatureProxy xmi:id="6751" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6754" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6757" key="lemma" value="especially"/>
+    <types:FeatureProxy xmi:id="6760" key="pos" value="RB"/>
+    <types:FeatureProxy xmi:id="6763" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6773" sofa="1" begin="1426" end="1436" features="6778 6781 6784 6787 6790"/>
+    <types:FeatureProxy xmi:id="6778" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6781" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6784" key="lemma" value="noteworthy"/>
+    <types:FeatureProxy xmi:id="6787" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="6790" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6800" sofa="1" begin="1437" end="1441" features="6805 6808 6811 6814 6817"/>
+    <types:FeatureProxy xmi:id="6805" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6808" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6811" key="lemma" value="that"/>
+    <types:FeatureProxy xmi:id="6814" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="6817" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6827" sofa="1" begin="1442" end="1443" features="6832 6835 6838 6841 6844"/>
+    <types:FeatureProxy xmi:id="6832" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6835" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6838" key="lemma" value="a"/>
+    <types:FeatureProxy xmi:id="6841" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="6844" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6854" sofa="1" begin="1444" end="1448" features="6859 6862 6865 6868 6871"/>
+    <types:FeatureProxy xmi:id="6859" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6862" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6865" key="lemma" value="good"/>
+    <types:FeatureProxy xmi:id="6868" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="6871" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6881" sofa="1" begin="1449" end="1457" features="6886 6889 6892 6895 6898"/>
+    <types:FeatureProxy xmi:id="6886" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6889" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6892" key="lemma" value="response"/>
+    <types:FeatureProxy xmi:id="6895" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="6898" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6908" sofa="1" begin="1458" end="1461" features="6913 6916 6919 6922 6925"/>
+    <types:FeatureProxy xmi:id="6913" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6916" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6919" key="lemma" value="be"/>
+    <types:FeatureProxy xmi:id="6922" key="pos" value="VVD"/>
+    <types:FeatureProxy xmi:id="6925" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6935" sofa="1" begin="1462" end="1470" features="6940 6943 6946 6949 6952"/>
+    <types:FeatureProxy xmi:id="6940" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6943" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6946" key="lemma" value="obtain"/>
+    <types:FeatureProxy xmi:id="6949" key="pos" value="VBN"/>
+    <types:FeatureProxy xmi:id="6952" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6962" sofa="1" begin="1471" end="1473" features="6967 6970 6973 6976 6979"/>
+    <types:FeatureProxy xmi:id="6967" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6970" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="6973" key="lemma" value="in"/>
+    <types:FeatureProxy xmi:id="6976" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="6979" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="6989" sofa="1" begin="1474" end="1476" features="6994 6997 7000 7003 7006"/>
+    <types:FeatureProxy xmi:id="6994" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="6997" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7000" key="lemma" value="30"/>
+    <types:FeatureProxy xmi:id="7003" key="pos" value="CD"/>
+    <types:FeatureProxy xmi:id="7006" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7016" sofa="1" begin="1477" end="1479" features="7021 7024 7027 7030 7033"/>
+    <types:FeatureProxy xmi:id="7021" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7024" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7027" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="7030" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="7033" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7043" sofa="1" begin="1480" end="1482" features="7048 7051 7054 7057 7060"/>
+    <types:FeatureProxy xmi:id="7048" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7051" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7054" key="lemma" value="32"/>
+    <types:FeatureProxy xmi:id="7057" key="pos" value="CD"/>
+    <types:FeatureProxy xmi:id="7060" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7070" sofa="1" begin="1483" end="1488" features="7075 7078 7081 7084 7087"/>
+    <types:FeatureProxy xmi:id="7075" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7078" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7081" key="lemma" value="case"/>
+    <types:FeatureProxy xmi:id="7084" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="7087" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7097" sofa="1" begin="1489" end="1490" features="7102 7105 7108 7111 7114"/>
+    <types:FeatureProxy xmi:id="7102" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="7105" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7108" key="lemma" value="("/>
+    <types:FeatureProxy xmi:id="7111" key="pos" value="("/>
+    <types:FeatureProxy xmi:id="7114" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7124" sofa="1" begin="1490" end="1494" features="7129 7132 7135 7138 7141 7144 7147 7150 7153"/>
+    <types:FeatureProxy xmi:id="7129" key="type" value="num"/>
+    <types:FeatureProxy xmi:id="7132" key="value" value="fix"/>
+    <types:FeatureProxy xmi:id="7135" key="seg__fix" value="yes"/>
+    <types:FeatureProxy xmi:id="7138" key="wordType" value="fixed"/>
+    <types:FeatureProxy xmi:id="7141" key="wordType" value="fixed"/>
+    <types:FeatureProxy xmi:id="7144" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7147" key="lemma" value="93.8"/>
+    <types:FeatureProxy xmi:id="7150" key="pos" value="CD"/>
+    <types:FeatureProxy xmi:id="7153" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7167" sofa="1" begin="1494" end="1495" features="7172 7175 7178 7181 7184"/>
+    <types:FeatureProxy xmi:id="7172" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7175" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7178" key="lemma" value="%"/>
+    <types:FeatureProxy xmi:id="7181" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="7184" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7194" sofa="1" begin="1495" end="1496" features="7199 7202 7205 7208 7211"/>
+    <types:FeatureProxy xmi:id="7199" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="7202" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7205" key="lemma" value=")"/>
+    <types:FeatureProxy xmi:id="7208" key="pos" value=")"/>
+    <types:FeatureProxy xmi:id="7211" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7221" sofa="1" begin="1497" end="1499" features="7226 7229 7232 7235 7238"/>
+    <types:FeatureProxy xmi:id="7226" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7229" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7232" key="lemma" value="in"/>
+    <types:FeatureProxy xmi:id="7235" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="7238" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7248" sofa="1" begin="1500" end="1505" features="7253 7256 7259 7262 7265"/>
+    <types:FeatureProxy xmi:id="7253" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7256" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7259" key="lemma" value="which"/>
+    <types:FeatureProxy xmi:id="7262" key="pos" value="WDT"/>
+    <types:FeatureProxy xmi:id="7265" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7275" sofa="1" begin="1506" end="1511" features="7280 7283 7286 7289 7292"/>
+    <types:FeatureProxy xmi:id="7280" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7283" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7286" key="lemma" value="other"/>
+    <types:FeatureProxy xmi:id="7289" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="7292" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7302" sofa="1" begin="1512" end="1518" features="7307 7310 7313 7316 7319"/>
+    <types:FeatureProxy xmi:id="7307" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7310" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7313" key="lemma" value="cephem"/>
+    <types:FeatureProxy xmi:id="7316" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="7319" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7329" sofa="1" begin="1519" end="1528" features="7334 7337 7340 7343 7346"/>
+    <types:FeatureProxy xmi:id="7334" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7337" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7340" key="lemma" value="compound"/>
+    <types:FeatureProxy xmi:id="7343" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="7346" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7356" sofa="1" begin="1529" end="1532" features="7361 7364 7367 7370 7373"/>
+    <types:FeatureProxy xmi:id="7361" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7364" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7367" key="lemma" value="have"/>
+    <types:FeatureProxy xmi:id="7370" key="pos" value="VHD"/>
+    <types:FeatureProxy xmi:id="7373" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7383" sofa="1" begin="1533" end="1539" features="7388 7391 7394 7397 7400"/>
+    <types:FeatureProxy xmi:id="7388" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7391" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7394" key="lemma" value="fail"/>
+    <types:FeatureProxy xmi:id="7397" key="pos" value="VBN"/>
+    <types:FeatureProxy xmi:id="7400" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7410" sofa="1" begin="1539" end="1540" features="7415 7418 7421 7424 7427 7430"/>
+    <types:FeatureProxy xmi:id="7415" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="7418" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="7421" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="7424" key="lemma" value="."/>
+    <types:FeatureProxy xmi:id="7427" key="pos" value="SENT"/>
+    <types:FeatureProxy xmi:id="7430" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7441" sofa="1" begin="1541" end="1543" features="7446 7449 7452 7455 7458"/>
+    <types:FeatureProxy xmi:id="7446" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7449" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7452" key="lemma" value="In"/>
+    <types:FeatureProxy xmi:id="7455" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="7458" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7468" sofa="1" begin="1544" end="1554" features="7473 7476 7479 7482 7485"/>
+    <types:FeatureProxy xmi:id="7473" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7476" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7479" key="lemma" value="evaluation"/>
+    <types:FeatureProxy xmi:id="7482" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="7485" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7495" sofa="1" begin="1555" end="1557" features="7500 7503 7506 7509 7512"/>
+    <types:FeatureProxy xmi:id="7500" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7503" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7506" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="7509" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="7512" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7522" sofa="1" begin="1558" end="1561" features="7527 7530 7533 7536 7539"/>
+    <types:FeatureProxy xmi:id="7527" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7530" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7533" key="lemma" value="the"/>
+    <types:FeatureProxy xmi:id="7536" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="7539" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7549" sofa="1" begin="1562" end="1577" features="7554 7557 7560 7563 7566"/>
+    <types:FeatureProxy xmi:id="7554" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7557" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7560" key="lemma" value="bacteriological"/>
+    <types:FeatureProxy xmi:id="7563" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="7566" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7576" sofa="1" begin="1578" end="1584" features="7581 7584 7587 7590 7593"/>
+    <types:FeatureProxy xmi:id="7581" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7584" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7587" key="lemma" value="effect"/>
+    <types:FeatureProxy xmi:id="7590" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="7593" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7603" sofa="1" begin="1584" end="1585" features="7608 7611 7614 7617 7620"/>
+    <types:FeatureProxy xmi:id="7608" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="7611" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7614" key="lemma" value=","/>
+    <types:FeatureProxy xmi:id="7617" key="pos" value=","/>
+    <types:FeatureProxy xmi:id="7620" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7630" sofa="1" begin="1586" end="1597" features="7635 7638 7641 7644 7647"/>
+    <types:FeatureProxy xmi:id="7635" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7638" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7641" key="lemma" value="furthermore"/>
+    <types:FeatureProxy xmi:id="7644" key="pos" value="RB"/>
+    <types:FeatureProxy xmi:id="7647" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7657" sofa="1" begin="1597" end="1598" features="7662 7665 7668 7671 7674"/>
+    <types:FeatureProxy xmi:id="7662" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="7665" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7668" key="lemma" value=","/>
+    <types:FeatureProxy xmi:id="7671" key="pos" value=","/>
+    <types:FeatureProxy xmi:id="7674" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7684" sofa="1" begin="1599" end="1602" features="7689 7692 7695 7698 7701"/>
+    <types:FeatureProxy xmi:id="7689" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7692" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7695" key="lemma" value="the"/>
+    <types:FeatureProxy xmi:id="7698" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="7701" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7711" sofa="1" begin="1603" end="1607" features="7716 7719 7722 7725 7728"/>
+    <types:FeatureProxy xmi:id="7716" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7719" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7722" key="lemma" value="drug"/>
+    <types:FeatureProxy xmi:id="7725" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="7728" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7738" sofa="1" begin="1608" end="1614" features="7743 7746 7749 7752 7755"/>
+    <types:FeatureProxy xmi:id="7743" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7746" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7749" key="lemma" value="show"/>
+    <types:FeatureProxy xmi:id="7752" key="pos" value="VBD"/>
+    <types:FeatureProxy xmi:id="7755" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7765" sofa="1" begin="1615" end="1617" features="7770 7773 7776 7779 7782"/>
+    <types:FeatureProxy xmi:id="7770" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7773" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7776" key="lemma" value="an"/>
+    <types:FeatureProxy xmi:id="7779" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="7782" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7792" sofa="1" begin="1618" end="1627" features="7797 7800 7803 7806 7809"/>
+    <types:FeatureProxy xmi:id="7797" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7800" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7803" key="lemma" value="excellent"/>
+    <types:FeatureProxy xmi:id="7806" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="7809" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7819" sofa="1" begin="1628" end="1632" features="7824 7827 7830 7833 7836"/>
+    <types:FeatureProxy xmi:id="7824" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7827" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7830" key="lemma" value="rate"/>
+    <types:FeatureProxy xmi:id="7833" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="7836" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7846" sofa="1" begin="1633" end="1635" features="7851 7854 7857 7860 7863"/>
+    <types:FeatureProxy xmi:id="7851" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7854" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7857" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="7860" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="7863" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7873" sofa="1" begin="1636" end="1645" features="7878 7881 7884 7887 7890"/>
+    <types:FeatureProxy xmi:id="7878" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7881" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7884" key="lemma" value="bacterial"/>
+    <types:FeatureProxy xmi:id="7887" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="7890" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7900" sofa="1" begin="1646" end="1657" features="7905 7908 7911 7914 7917"/>
+    <types:FeatureProxy xmi:id="7905" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7908" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7911" key="lemma" value="elimination"/>
+    <types:FeatureProxy xmi:id="7914" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="7917" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7927" sofa="1" begin="1657" end="1658" features="7932 7935 7938 7941 7944 7947"/>
+    <types:FeatureProxy xmi:id="7932" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="7935" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="7938" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="7941" key="lemma" value="."/>
+    <types:FeatureProxy xmi:id="7944" key="pos" value="SENT"/>
+    <types:FeatureProxy xmi:id="7947" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7958" sofa="1" begin="1659" end="1661" features="7963 7966 7969 7972 7975"/>
+    <types:FeatureProxy xmi:id="7963" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7966" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7969" key="lemma" value="In"/>
+    <types:FeatureProxy xmi:id="7972" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="7975" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="7985" sofa="1" begin="1662" end="1672" features="7990 7993 7996 7999 8002"/>
+    <types:FeatureProxy xmi:id="7990" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="7993" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="7996" key="lemma" value="conclusion"/>
+    <types:FeatureProxy xmi:id="7999" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="8002" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8012" sofa="1" begin="1672" end="1673" features="8017 8020 8023 8026 8029"/>
+    <types:FeatureProxy xmi:id="8017" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="8020" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8023" key="lemma" value=","/>
+    <types:FeatureProxy xmi:id="8026" key="pos" value=","/>
+    <types:FeatureProxy xmi:id="8029" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8039" sofa="1" begin="1674" end="1678" features="8044 8047 8050 8053 8056"/>
+    <types:FeatureProxy xmi:id="8044" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8047" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8050" key="lemma" value="this"/>
+    <types:FeatureProxy xmi:id="8053" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="8056" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8066" sofa="1" begin="1679" end="1683" features="8071 8074 8077 8080 8083"/>
+    <types:FeatureProxy xmi:id="8071" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8074" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8077" key="lemma" value="drug"/>
+    <types:FeatureProxy xmi:id="8080" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="8083" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8093" sofa="1" begin="1684" end="1686" features="8098 8101 8104 8107 8110"/>
+    <types:FeatureProxy xmi:id="8098" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8101" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8104" key="lemma" value="be"/>
+    <types:FeatureProxy xmi:id="8107" key="pos" value="VVZ"/>
+    <types:FeatureProxy xmi:id="8110" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8120" sofa="1" begin="1687" end="1695" features="8125 8128 8131 8134 8137"/>
+    <types:FeatureProxy xmi:id="8125" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8128" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8131" key="lemma" value="expect"/>
+    <types:FeatureProxy xmi:id="8134" key="pos" value="VBN"/>
+    <types:FeatureProxy xmi:id="8137" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8147" sofa="1" begin="1696" end="1698" features="8152 8155 8158 8161 8164"/>
+    <types:FeatureProxy xmi:id="8152" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8155" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8158" key="lemma" value="to"/>
+    <types:FeatureProxy xmi:id="8161" key="pos" value="TO"/>
+    <types:FeatureProxy xmi:id="8164" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8174" sofa="1" begin="1699" end="1701" features="8179 8182 8185 8188 8191"/>
+    <types:FeatureProxy xmi:id="8179" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8182" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8185" key="lemma" value="be"/>
+    <types:FeatureProxy xmi:id="8188" key="pos" value="VV"/>
+    <types:FeatureProxy xmi:id="8191" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8201" sofa="1" begin="1702" end="1709" features="8206 8209 8212 8215 8218"/>
+    <types:FeatureProxy xmi:id="8206" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8209" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8212" key="lemma" value="greatly"/>
+    <types:FeatureProxy xmi:id="8215" key="pos" value="RB"/>
+    <types:FeatureProxy xmi:id="8218" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8228" sofa="1" begin="1710" end="1716" features="8233 8236 8239 8242 8245"/>
+    <types:FeatureProxy xmi:id="8233" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8236" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8239" key="lemma" value="useful"/>
+    <types:FeatureProxy xmi:id="8242" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="8245" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8255" sofa="1" begin="1717" end="1719" features="8260 8263 8266 8269 8272"/>
+    <types:FeatureProxy xmi:id="8260" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8263" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8266" key="lemma" value="in"/>
+    <types:FeatureProxy xmi:id="8269" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="8272" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8282" sofa="1" begin="1720" end="1723" features="8287 8290 8293 8296 8299"/>
+    <types:FeatureProxy xmi:id="8287" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8290" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8293" key="lemma" value="the"/>
+    <types:FeatureProxy xmi:id="8296" key="pos" value="DT"/>
+    <types:FeatureProxy xmi:id="8299" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8309" sofa="1" begin="1724" end="1729" features="8314 8317 8320 8323 8326"/>
+    <types:FeatureProxy xmi:id="8314" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8317" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8320" key="lemma" value="light"/>
+    <types:FeatureProxy xmi:id="8323" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="8326" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8336" sofa="1" begin="1730" end="1732" features="8341 8344 8347 8350 8353"/>
+    <types:FeatureProxy xmi:id="8341" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8344" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8347" key="lemma" value="of"/>
+    <types:FeatureProxy xmi:id="8350" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="8353" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8363" sofa="1" begin="1733" end="1736" features="8368 8371 8374 8377 8380"/>
+    <types:FeatureProxy xmi:id="8368" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8371" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8374" key="lemma" value="its"/>
+    <types:FeatureProxy xmi:id="8377" key="pos" value="PP$"/>
+    <types:FeatureProxy xmi:id="8380" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8390" sofa="1" begin="1737" end="1741" features="8395 8398 8401 8404 8407"/>
+    <types:FeatureProxy xmi:id="8395" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8398" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8401" key="lemma" value="good"/>
+    <types:FeatureProxy xmi:id="8404" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="8407" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8417" sofa="1" begin="1742" end="1750" features="8422 8425 8428 8431 8434"/>
+    <types:FeatureProxy xmi:id="8422" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8425" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8428" key="lemma" value="transfer"/>
+    <types:FeatureProxy xmi:id="8431" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="8434" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8444" sofa="1" begin="1751" end="1755" features="8449 8452 8455 8458 8461"/>
+    <types:FeatureProxy xmi:id="8449" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8452" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8455" key="lemma" value="into"/>
+    <types:FeatureProxy xmi:id="8458" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="8461" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8471" sofa="1" begin="1756" end="1763" features="8476 8479 8482 8485 8488"/>
+    <types:FeatureProxy xmi:id="8476" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8479" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8482" key="lemma" value="genital"/>
+    <types:FeatureProxy xmi:id="8485" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="8488" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8498" sofa="1" begin="1764" end="1771" features="8503 8506 8509 8512 8515"/>
+    <types:FeatureProxy xmi:id="8503" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8506" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8509" key="lemma" value="tissue"/>
+    <types:FeatureProxy xmi:id="8512" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="8515" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8525" sofa="1" begin="1772" end="1775" features="8530 8533 8536 8539 8542"/>
+    <types:FeatureProxy xmi:id="8530" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8533" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8536" key="lemma" value="and"/>
+    <types:FeatureProxy xmi:id="8539" key="pos" value="CC"/>
+    <types:FeatureProxy xmi:id="8542" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8552" sofa="1" begin="1776" end="1779" features="8557 8560 8563 8566 8569"/>
+    <types:FeatureProxy xmi:id="8557" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8560" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8563" key="lemma" value="its"/>
+    <types:FeatureProxy xmi:id="8566" key="pos" value="PP$"/>
+    <types:FeatureProxy xmi:id="8569" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8579" sofa="1" begin="1780" end="1786" features="8584 8587 8590 8593 8596"/>
+    <types:FeatureProxy xmi:id="8584" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8587" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8590" key="lemma" value="strong"/>
+    <types:FeatureProxy xmi:id="8593" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="8596" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8606" sofa="1" begin="1787" end="1800" features="8611 8614 8617 8620 8623"/>
+    <types:FeatureProxy xmi:id="8611" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8614" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8617" key="lemma" value="antibacterial"/>
+    <types:FeatureProxy xmi:id="8620" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="8623" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8633" sofa="1" begin="1801" end="1811" features="8638 8641 8644 8647 8650"/>
+    <types:FeatureProxy xmi:id="8638" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8641" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8644" key="lemma" value="activity"/>
+    <types:FeatureProxy xmi:id="8647" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="8650" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8660" sofa="1" begin="1812" end="1819" features="8665 8668 8671 8674 8677"/>
+    <types:FeatureProxy xmi:id="8665" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8668" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8671" key="lemma" value="against"/>
+    <types:FeatureProxy xmi:id="8674" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="8677" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8687" sofa="1" begin="1820" end="1824" features="8692 8695 8698 8701 8704"/>
+    <types:FeatureProxy xmi:id="8692" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8695" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8698" key="lemma" value="Gram"/>
+    <types:FeatureProxy xmi:id="8701" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="8704" key="genia-entity" value="B-protein"/>
+    <types:AnnotationProxy xmi:id="8714" sofa="1" begin="1824" end="1825" features="8719 8722 8725 8728 8731"/>
+    <types:FeatureProxy xmi:id="8719" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="8722" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8725" key="lemma" value="-"/>
+    <types:FeatureProxy xmi:id="8728" key="pos" value="HYPH"/>
+    <types:FeatureProxy xmi:id="8731" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8741" sofa="1" begin="1825" end="1833" features="8746 8749 8752 8755 8758"/>
+    <types:FeatureProxy xmi:id="8746" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8749" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8752" key="lemma" value="positive"/>
+    <types:FeatureProxy xmi:id="8755" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="8758" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8768" sofa="1" begin="1834" end="1839" features="8773 8776 8779 8782 8785"/>
+    <types:FeatureProxy xmi:id="8773" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8776" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8779" key="lemma" value="coccus"/>
+    <types:FeatureProxy xmi:id="8782" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="8785" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8795" sofa="1" begin="1839" end="1840" features="8800 8803 8806 8809 8812"/>
+    <types:FeatureProxy xmi:id="8800" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="8803" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8806" key="lemma" value=","/>
+    <types:FeatureProxy xmi:id="8809" key="pos" value=","/>
+    <types:FeatureProxy xmi:id="8812" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8822" sofa="1" begin="1841" end="1845" features="8827 8830 8833 8836 8839"/>
+    <types:FeatureProxy xmi:id="8827" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8830" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8833" key="lemma" value="Gram"/>
+    <types:FeatureProxy xmi:id="8836" key="pos" value="NN"/>
+    <types:FeatureProxy xmi:id="8839" key="genia-entity" value="B-protein"/>
+    <types:AnnotationProxy xmi:id="8849" sofa="1" begin="1845" end="1846" features="8854 8857 8860 8863 8866"/>
+    <types:FeatureProxy xmi:id="8854" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="8857" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8860" key="lemma" value="-"/>
+    <types:FeatureProxy xmi:id="8863" key="pos" value="HYPH"/>
+    <types:FeatureProxy xmi:id="8866" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8876" sofa="1" begin="1846" end="1854" features="8881 8884 8887 8890 8893"/>
+    <types:FeatureProxy xmi:id="8881" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8884" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8887" key="lemma" value="negative"/>
+    <types:FeatureProxy xmi:id="8890" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="8893" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8903" sofa="1" begin="1855" end="1863" features="8908 8911 8914 8917 8920"/>
+    <types:FeatureProxy xmi:id="8908" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8911" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8914" key="lemma" value="bacteria"/>
+    <types:FeatureProxy xmi:id="8917" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="8920" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8930" sofa="1" begin="1864" end="1867" features="8935 8938 8941 8944 8947"/>
+    <types:FeatureProxy xmi:id="8935" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8938" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8941" key="lemma" value="and"/>
+    <types:FeatureProxy xmi:id="8944" key="pos" value="CC"/>
+    <types:FeatureProxy xmi:id="8947" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8957" sofa="1" begin="1868" end="1877" features="8962 8965 8968 8971 8974"/>
+    <types:FeatureProxy xmi:id="8962" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8965" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8968" key="lemma" value="anaerobe"/>
+    <types:FeatureProxy xmi:id="8971" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="8974" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="8984" sofa="1" begin="1878" end="1880" features="8989 8992 8995 8998 9001"/>
+    <types:FeatureProxy xmi:id="8989" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="8992" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="8995" key="lemma" value="as"/>
+    <types:FeatureProxy xmi:id="8998" key="pos" value="RB"/>
+    <types:FeatureProxy xmi:id="9001" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="9011" sofa="1" begin="1881" end="1885" features="9016 9019 9022 9025 9028"/>
+    <types:FeatureProxy xmi:id="9016" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="9019" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="9022" key="lemma" value="well"/>
+    <types:FeatureProxy xmi:id="9025" key="pos" value="RB"/>
+    <types:FeatureProxy xmi:id="9028" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="9038" sofa="1" begin="1886" end="1888" features="9043 9046 9049 9052 9055"/>
+    <types:FeatureProxy xmi:id="9043" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="9046" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="9049" key="lemma" value="as"/>
+    <types:FeatureProxy xmi:id="9052" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="9055" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="9065" sofa="1" begin="1889" end="1896" features="9070 9073 9076 9079 9082"/>
+    <types:FeatureProxy xmi:id="9070" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="9073" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="9076" key="lemma" value="against"/>
+    <types:FeatureProxy xmi:id="9079" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="9082" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="9092" sofa="1" begin="1897" end="1905" features="9097 9100 9103 9106 9109"/>
+    <types:FeatureProxy xmi:id="9097" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="9100" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="9103" key="lemma" value="multiple"/>
+    <types:FeatureProxy xmi:id="9106" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="9109" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="9119" sofa="1" begin="1906" end="1915" features="9124 9127 9130 9133 9136"/>
+    <types:FeatureProxy xmi:id="9124" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="9127" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="9130" key="lemma" value="bacterial"/>
+    <types:FeatureProxy xmi:id="9133" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="9136" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="9146" sofa="1" begin="1916" end="1926" features="9151 9154 9157 9160 9163"/>
+    <types:FeatureProxy xmi:id="9151" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="9154" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="9157" key="lemma" value="infection"/>
+    <types:FeatureProxy xmi:id="9160" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="9163" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="9173" sofa="1" begin="1927" end="1940" features="9178 9181 9184 9187 9190"/>
+    <types:FeatureProxy xmi:id="9178" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="9181" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="9184" key="lemma" value="predominate"/>
+    <types:FeatureProxy xmi:id="9187" key="pos" value="VBG"/>
+    <types:FeatureProxy xmi:id="9190" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="9200" sofa="1" begin="1941" end="1946" features="9205 9208 9211 9214 9217"/>
+    <types:FeatureProxy xmi:id="9205" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="9208" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="9211" key="lemma" value="among"/>
+    <types:FeatureProxy xmi:id="9214" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="9217" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="9227" sofa="1" begin="1947" end="1952" features="9232 9235 9238 9241 9244"/>
+    <types:FeatureProxy xmi:id="9232" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="9235" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="9238" key="lemma" value="woman"/>
+    <types:FeatureProxy xmi:id="9241" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="9244" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="9254" sofa="1" begin="1953" end="1957" features="9259 9262 9265 9268 9271"/>
+    <types:FeatureProxy xmi:id="9259" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="9262" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="9265" key="lemma" value="with"/>
+    <types:FeatureProxy xmi:id="9268" key="pos" value="IN"/>
+    <types:FeatureProxy xmi:id="9271" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="9281" sofa="1" begin="1958" end="1965" features="9286 9289 9292 9295 9298"/>
+    <types:FeatureProxy xmi:id="9286" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="9289" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="9292" key="lemma" value="genital"/>
+    <types:FeatureProxy xmi:id="9295" key="pos" value="JJ"/>
+    <types:FeatureProxy xmi:id="9298" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="9308" sofa="1" begin="1966" end="1976" features="9313 9316 9319 9322 9325"/>
+    <types:FeatureProxy xmi:id="9313" key="wordType" value="word"/>
+    <types:FeatureProxy xmi:id="9316" key="eos" value="not-eos"/>
+    <types:FeatureProxy xmi:id="9319" key="lemma" value="infection"/>
+    <types:FeatureProxy xmi:id="9322" key="pos" value="NNS"/>
+    <types:FeatureProxy xmi:id="9325" key="genia-entity" value="O"/>
+    <types:AnnotationProxy xmi:id="9335" sofa="1" begin="1976" end="1977" features="9340 9343 9346 9349 9352 9355"/>
+    <types:FeatureProxy xmi:id="9340" key="wordType" value="punctuation"/>
+    <types:FeatureProxy xmi:id="9343" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="9346" key="eos" value="eos"/>
+    <types:FeatureProxy xmi:id="9349" key="lemma" value="."/>
+    <types:FeatureProxy xmi:id="9352" key="pos" value="SENT"/>
+    <types:FeatureProxy xmi:id="9355" key="genia-entity" value="O"/>
+    <types:LayerProxy xmi:id="9785" sofa="1" name="sentences" annotations="9789"/>
+    <cas:FSArray xmi:id="9789" elements="9708 9715 9722 9729 9736 9743 9750 9757 9764 9771 9778"/>
+    <types:AnnotationProxy xmi:id="9708" sofa="1" begin="0" end="89" features=""/>
+    <types:AnnotationProxy xmi:id="9715" sofa="1" begin="90" end="202" features=""/>
+    <types:AnnotationProxy xmi:id="9722" sofa="1" begin="203" end="456" features=""/>
+    <types:AnnotationProxy xmi:id="9729" sofa="1" begin="457" end="752" features=""/>
+    <types:AnnotationProxy xmi:id="9736" sofa="1" begin="753" end="866" features=""/>
+    <types:AnnotationProxy xmi:id="9743" sofa="1" begin="867" end="1188" features=""/>
+    <types:AnnotationProxy xmi:id="9750" sofa="1" begin="1189" end="1318" features=""/>
+    <types:AnnotationProxy xmi:id="9757" sofa="1" begin="1319" end="1407" features=""/>
+    <types:AnnotationProxy xmi:id="9764" sofa="1" begin="1408" end="1540" features=""/>
+    <types:AnnotationProxy xmi:id="9771" sofa="1" begin="1541" end="1658" features=""/>
+    <types:AnnotationProxy xmi:id="9778" sofa="1" begin="1659" end="1977" features=""/>
+    <types:RelationProxy xmi:id="9810" sofa="1" features="9815" tuples="9821" name="Title"/>
+    <types:FeatureProxy xmi:id="9815" key="kind" value="text"/>
+    <types:TupleProxy xmi:id="9821" sofa="1" features="9825 9828" arguments="10216"/>
+    <types:FeatureProxy xmi:id="9825" key="id" value="T1"/>
+    <types:FeatureProxy xmi:id="9828" key="type" value="Title"/>
+    <cas:FSArray xmi:id="10216" elements="10213"/>
+    <types:ArgumentProxy xmi:id="10213" role="frag0" argument="34"/>
+    <types:RelationProxy xmi:id="9838" sofa="1" features="9843" tuples="9849" name="Paragraph"/>
+    <types:FeatureProxy xmi:id="9843" key="kind" value="text"/>
+    <types:TupleProxy xmi:id="9849" sofa="1" features="9853 9856" arguments="10222"/>
+    <types:FeatureProxy xmi:id="9853" key="id" value="T2"/>
+    <types:FeatureProxy xmi:id="9856" key="type" value="Paragraph"/>
+    <cas:FSArray xmi:id="10222" elements="10219"/>
+    <types:ArgumentProxy xmi:id="10219" role="frag0" argument="48"/>
+    <types:RelationProxy xmi:id="9866" sofa="1" features="9871" tuples="9877" name="Bacteria"/>
+    <types:FeatureProxy xmi:id="9871" key="kind" value="text"/>
+    <types:TupleProxy xmi:id="9877" sofa="1" features="9881 9884 9887" arguments="10228"/>
+    <types:FeatureProxy xmi:id="9881" key="id" value="T3"/>
+    <types:FeatureProxy xmi:id="9884" key="type" value="Bacteria"/>
+    <types:FeatureProxy xmi:id="9887" key="NCBI_Taxonomy" value="1280"/>
+    <cas:FSArray xmi:id="10228" elements="10225"/>
+    <types:ArgumentProxy xmi:id="10225" role="frag0" argument="62"/>
+    <types:RelationProxy xmi:id="9898" sofa="1" features="9903" tuples="9909 9927 9949 9967 9985 10003 10021 10039 10057 10075 10093 10111 10129 10147 10165" name="Habitat"/>
+    <types:FeatureProxy xmi:id="9903" key="kind" value="text"/>
+    <types:TupleProxy xmi:id="9909" sofa="1" features="9913 9916 9919" arguments="10234"/>
+    <types:FeatureProxy xmi:id="9913" key="id" value="T4"/>
+    <types:FeatureProxy xmi:id="9916" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="9919" key="OntoBiotope" value="OBT:002133"/>
+    <cas:FSArray xmi:id="10234" elements="10231"/>
+    <types:ArgumentProxy xmi:id="10231" role="frag0" argument="76"/>
+    <types:TupleProxy xmi:id="9927" sofa="1" features="9931 9934 9937 9940" arguments="10240"/>
+    <types:FeatureProxy xmi:id="9931" key="id" value="T5"/>
+    <types:FeatureProxy xmi:id="9934" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="9937" key="OntoBiotope" value="OBT:000065"/>
+    <types:FeatureProxy xmi:id="9940" key="OntoBiotope" value="OBT:002133"/>
+    <cas:FSArray xmi:id="10240" elements="10237"/>
+    <types:ArgumentProxy xmi:id="10237" role="frag0" argument="83"/>
+    <types:TupleProxy xmi:id="9949" sofa="1" features="9953 9956 9959" arguments="10246"/>
+    <types:FeatureProxy xmi:id="9953" key="id" value="T6"/>
+    <types:FeatureProxy xmi:id="9956" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="9959" key="OntoBiotope" value="OBT:000315"/>
+    <cas:FSArray xmi:id="10246" elements="10243"/>
+    <types:ArgumentProxy xmi:id="10243" role="frag0" argument="90"/>
+    <types:TupleProxy xmi:id="9967" sofa="1" features="9971 9974 9977" arguments="10252"/>
+    <types:FeatureProxy xmi:id="9971" key="id" value="T7"/>
+    <types:FeatureProxy xmi:id="9974" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="9977" key="OntoBiotope" value="OBT:000520"/>
+    <cas:FSArray xmi:id="10252" elements="10249"/>
+    <types:ArgumentProxy xmi:id="10249" role="frag0" argument="104"/>
+    <types:TupleProxy xmi:id="9985" sofa="1" features="9989 9992 9995" arguments="10258"/>
+    <types:FeatureProxy xmi:id="9989" key="id" value="T8"/>
+    <types:FeatureProxy xmi:id="9992" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="9995" key="OntoBiotope" value="OBT:000492"/>
+    <cas:FSArray xmi:id="10258" elements="10255"/>
+    <types:ArgumentProxy xmi:id="10255" role="frag0" argument="97"/>
+    <types:TupleProxy xmi:id="10003" sofa="1" features="10007 10010 10013" arguments="10264"/>
+    <types:FeatureProxy xmi:id="10007" key="id" value="T9"/>
+    <types:FeatureProxy xmi:id="10010" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="10013" key="OntoBiotope" value="OBT:000103"/>
+    <cas:FSArray xmi:id="10264" elements="10261"/>
+    <types:ArgumentProxy xmi:id="10261" role="frag0" argument="111"/>
+    <types:TupleProxy xmi:id="10021" sofa="1" features="10025 10028 10031" arguments="10270"/>
+    <types:FeatureProxy xmi:id="10025" key="id" value="T10"/>
+    <types:FeatureProxy xmi:id="10028" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="10031" key="OntoBiotope" value="OBT:000126"/>
+    <cas:FSArray xmi:id="10270" elements="10267"/>
+    <types:ArgumentProxy xmi:id="10267" role="frag0" argument="118"/>
+    <types:TupleProxy xmi:id="10039" sofa="1" features="10043 10046 10049" arguments="10276"/>
+    <types:FeatureProxy xmi:id="10043" key="id" value="T12"/>
+    <types:FeatureProxy xmi:id="10046" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="10049" key="OntoBiotope" value="OBT:000103"/>
+    <cas:FSArray xmi:id="10276" elements="10273"/>
+    <types:ArgumentProxy xmi:id="10273" role="frag0" argument="132"/>
+    <types:TupleProxy xmi:id="10057" sofa="1" features="10061 10064 10067" arguments="10282"/>
+    <types:FeatureProxy xmi:id="10061" key="id" value="T11"/>
+    <types:FeatureProxy xmi:id="10064" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="10067" key="OntoBiotope" value="OBT:002216"/>
+    <cas:FSArray xmi:id="10282" elements="10279"/>
+    <types:ArgumentProxy xmi:id="10279" role="frag0" argument="125"/>
+    <types:TupleProxy xmi:id="10075" sofa="1" features="10079 10082 10085" arguments="10288"/>
+    <types:FeatureProxy xmi:id="10079" key="id" value="T14"/>
+    <types:FeatureProxy xmi:id="10082" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="10085" key="OntoBiotope" value="OBT:000381"/>
+    <cas:FSArray xmi:id="10288" elements="10285"/>
+    <types:ArgumentProxy xmi:id="10285" role="frag0" argument="153"/>
+    <types:TupleProxy xmi:id="10093" sofa="1" features="10097 10100 10103" arguments="10294"/>
+    <types:FeatureProxy xmi:id="10097" key="id" value="T13"/>
+    <types:FeatureProxy xmi:id="10100" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="10103" key="OntoBiotope" value="OBT:000212"/>
+    <cas:FSArray xmi:id="10294" elements="10291"/>
+    <types:ArgumentProxy xmi:id="10291" role="frag0" argument="139"/>
+    <types:TupleProxy xmi:id="10111" sofa="1" features="10115 10118 10121" arguments="10300"/>
+    <types:FeatureProxy xmi:id="10115" key="id" value="T16"/>
+    <types:FeatureProxy xmi:id="10118" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="10121" key="OntoBiotope" value="OBT:000381"/>
+    <cas:FSArray xmi:id="10300" elements="10297"/>
+    <types:ArgumentProxy xmi:id="10297" role="frag0" argument="160"/>
+    <types:TupleProxy xmi:id="10129" sofa="1" features="10133 10136 10139" arguments="10306"/>
+    <types:FeatureProxy xmi:id="10133" key="id" value="T15"/>
+    <types:FeatureProxy xmi:id="10136" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="10139" key="OntoBiotope" value="OBT:000198"/>
+    <cas:FSArray xmi:id="10306" elements="10303"/>
+    <types:ArgumentProxy xmi:id="10303" role="frag0" argument="146"/>
+    <types:TupleProxy xmi:id="10147" sofa="1" features="10151 10154 10157" arguments="10312"/>
+    <types:FeatureProxy xmi:id="10151" key="id" value="T18"/>
+    <types:FeatureProxy xmi:id="10154" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="10157" key="OntoBiotope" value="OBT:000381"/>
+    <cas:FSArray xmi:id="10312" elements="10309"/>
+    <types:ArgumentProxy xmi:id="10309" role="frag0" argument="174"/>
+    <types:TupleProxy xmi:id="10165" sofa="1" features="10169 10172 10175 10178" arguments="10318"/>
+    <types:FeatureProxy xmi:id="10169" key="id" value="T17"/>
+    <types:FeatureProxy xmi:id="10172" key="type" value="Habitat"/>
+    <types:FeatureProxy xmi:id="10175" key="OntoBiotope" value="OBT:002296"/>
+    <types:FeatureProxy xmi:id="10178" key="OntoBiotope" value="OBT:002216"/>
+    <cas:FSArray xmi:id="10318" elements="10315"/>
+    <types:ArgumentProxy xmi:id="10315" role="frag0" argument="167"/>
+    <types:RelationProxy xmi:id="10204" sofa="1" features="" tuples="" name="equiv"/>
+    <cas:View sofa="1" members="8 13"/>
+</xmi:XMI>
