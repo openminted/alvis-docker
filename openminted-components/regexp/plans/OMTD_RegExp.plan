@@ -1,0 +1,19 @@
+<alvisnlp-plan id="OMTD_RegExp">
+  <param name="input">
+    <alias module="read" param="source"/>
+  </param>
+
+  <param name="pattern">
+    <alias module="regexp" param="pattern"/>
+  </param>
+
+  <read class="XMIImport"/>
+
+  <regexp class="RegExp">
+    <targetLayerName>regexp</targetLayerName>
+  </regexp>
+  
+  <write class="XMIExport">
+    <outDir>.</outDir>
+  </write>
+</alvisnlp-plan>
