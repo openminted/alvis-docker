@@ -1,0 +1,73 @@
+<alvisnlp-plan id="OMTD_GeniaTagger">
+  <param name="input">
+    <alias module="read" param="source"/>
+  </param>
+
+  <read class="XMIImport"/>
+
+  <import>res://segmentation.plan</import>
+
+  <genia-tagger class="GeniaTagger">
+    <treeTaggerTagset/>
+    <entityFeature>genia-entity</entityFeature>
+  </genia-tagger>
+
+  <DNA class="PatternMatcher">
+    <pattern>
+      [@genia-entity == "B-DNA"]
+      [@genia-entity == "I-DNA"]*
+    </pattern>
+    <actions>
+      <createAnnotation layer="named-entities"/>
+    </actions>
+    <constantAnnotationFeatures>ne-type=DNA</constantAnnotationFeatures>
+  </DNA>
+
+  <RNA class="PatternMatcher">
+    <pattern>
+      [@genia-entity == "B-RNA"]
+      [@genia-entity == "I-RNA"]*
+    </pattern>
+    <actions>
+      <createAnnotation layer="named-entities"/>
+    </actions>
+    <constantAnnotationFeatures>ne-type=RNA</constantAnnotationFeatures>
+  </RNA>
+
+  <cell_line class="PatternMatcher">
+    <pattern>
+      [@genia-entity == "B-cell_line"]
+      [@genia-entity == "I-cell_line"]*
+    </pattern>
+    <actions>
+      <createAnnotation layer="named-entities"/>
+    </actions>
+    <constantAnnotationFeatures>ne-type=cell_line</constantAnnotationFeatures>
+  </cell_line>
+
+  <cell_type class="PatternMatcher">
+    <pattern>
+      [@genia-entity == "B-cell_type"]
+      [@genia-entity == "I-cell_type"]*
+    </pattern>
+    <actions>
+      <createAnnotation layer="named-entities"/>
+    </actions>
+    <constantAnnotationFeatures>ne-type=cell_type</constantAnnotationFeatures>
+  </cell_type>
+
+  <PROTEIN class="PatternMatcher">
+    <pattern>
+      [@genia-entity == "B-PROTEIN"]
+      [@genia-entity == "I-PROTEIN"]*
+    </pattern>
+    <actions>
+      <createAnnotation layer="named-entities"/>
+    </actions>
+    <constantAnnotationFeatures>ne-type=PROTEIN</constantAnnotationFeatures>
+  </PROTEIN>
+
+  <write class="XMIExport">
+    <outDir>.</outDir>
+  </write>
+</alvisnlp-plan>

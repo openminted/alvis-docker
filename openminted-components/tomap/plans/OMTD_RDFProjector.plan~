@@ -7,12 +7,12 @@
 
   <import>res://segmentation.plan</import>
 
-  <tt class="TreeTagger">
-    <noUnknownLemma/>
-  </tt>
+  <genia-tagger class="GeniaTagger">
+    <treeTaggerTagset/>
+  </genia-tagger>
 
   <rdf class="RDFProjector">
-    <source>Wheat-Trait-Ontology-1.2.xrdf</source>
+    <source>/alvisnlp/Wheat-Trait-Ontology-1.2.xrdf</source>
     <constantAnnotationFeatures>ne-type=phenotype</constantAnnotationFeatures>
     <skipConsecutiveWhitespaces/>
     <wordStartCaseInsensitive/>
