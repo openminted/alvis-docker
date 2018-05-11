@@ -1,0 +1,19 @@
+<alvisnlp-plan id="OMTD_Segmentation">
+  <param name="input">
+    <alias module="read" param="source"/>
+  </param>
+
+  <param name="outDir">
+    <alias module="write" param="outDir"/>
+  </param>
+
+  <read class="XMIImport">
+    <source>.</source>
+    <ignoreMalformedXMI/>
+    <baseNameId/>
+  </read>
+
+  <import>res://segmentation.plan</import>
+
+  <write class="XMIExport" />
+</alvisnlp-plan>

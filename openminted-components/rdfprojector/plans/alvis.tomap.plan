@@ -1,0 +1,22 @@
+<alvisnlp-plan id="OMTD_ToMap">
+  <param name="input">
+    <alias module="read" param="source"/>
+  </param>
+
+  <read class="XMIImport"/>
+
+  <yatea class="YateaExtractor">
+    <workingDir>yatea</workingDir>
+  </yatea>
+  
+  <tomap class="TomapProjector">
+    <tomapClassifier></tomapClassifier><!--XXX-->
+    <yateaFile inhibitCheck="true">yatea/corpus/default/xml/candidates.xml</yateaFile>
+    <targetLayerName>tomap</targetLayerName>
+    <conceptFeature>tomap</conceptFeature>
+  </tomap>
+  
+  <write class="XMIExport">
+    <outDir>.</outDir>
+  </write>
+</alvisnlp-plan>
