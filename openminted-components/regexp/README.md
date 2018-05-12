@@ -19,7 +19,7 @@ bibliome/regexp \
 alvisnlp /alvisnlp/OMTD_RegExp.plan \
 --input /alvisnlp/data/corpus \
 --output /alvisnlp/data/output \
---param:pattern=(\b(?:(B|D|m|R|V|W|H|Aadh)-?([A-Z][a-z]*)?[0-9]{1,5}\b)
+--param:pattern=bact*
 ```
 
 # OpenMinTeD metadata
