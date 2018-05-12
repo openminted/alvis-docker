@@ -24,7 +24,7 @@ alvisnlp /alvisnlp/OMTD_rdfprojector.plan \
 # OpenMinTeD metadata
 
 The Openminted metadata records are described in the following XML files based on [OMTD-SHARE](https://openminted.github.io/releases/omtd-share/)
-* [OMTD-SHARE records V3.0.0](segmenter.metadata.omtd.v3.0.2.xml)
+* [OMTD-SHARE records](rdfprojector.xml)
 
 # re-build the docker image
 You can re-build the docker image from the dockerfile by running the following command from the folder contained the README
