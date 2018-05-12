@@ -3,7 +3,7 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ms="http://www.meta-share.org/OMTD-SHARE_XMLSchema">
     <ms:metadataHeaderInfo>
-      <ms:metadataCreationDate>2018-05-04Z</ms:metadataCreationDate>
+        <ms:metadataCreationDate>2018-05-12Z</ms:metadataCreationDate>
         <ms:metadataCreators>
             <ms:metadataCreator>
                 <ms:surname>Ba</ms:surname>
@@ -26,13 +26,13 @@
                 </ms:affiliation>
             </ms:metadataCreator>
         </ms:metadataCreators>
-        <ms:metadataLastDateUpdated>2018-05-04Z</ms:metadataLastDateUpdated>
+        <ms:metadataLastDateUpdated>2018-05-12Z</ms:metadataLastDateUpdated>
     </ms:metadataHeaderInfo>
     <ms:componentInfo>
         <ms:resourceType>component</ms:resourceType>
         <ms:identificationInfo>
             <ms:resourceNames>
-                <ms:resourceName lang="en">ToMap</ms:resourceName>
+                <ms:resourceName lang="en">Alvis RDFProjector</ms:resourceName>
             </ms:resourceNames>
             <ms:descriptions>
                 <ms:description lang="en">Performs segmentation, POS-tagging, lemmatization, NER (phenotype).</ms:description>
@@ -79,7 +79,7 @@
         </ms:resourceDocumentations>
         <ms:application>false</ms:application>
         <ms:functionInfo>
-            <ms:function>http://w3id.org/meta-share/omtd-share/Segmenter</ms:function>
+            <ms:function>http://w3id.org/meta-share/omtd-share/NamedEntitityRecognizer</ms:function>
         </ms:functionInfo>
         <ms:distributionInfos>
             <ms:componentDistributionInfo>
@@ -96,7 +96,6 @@
             </ms:licenceInfos>
             <ms:rightsStatement>openAccess</ms:rightsStatement>
         </ms:rightsInfo>
-        <ms:parameterInfos/>
         <ms:inputContentResourceInfo>
             <ms:processingResourceType>corpus</ms:processingResourceType>
             <ms:dataFormats>
@@ -120,7 +119,7 @@
             </ms:languages>
             <ms:annotationTypes>
                 <ms:annotationTypeInfo>
-                    <ms:annotationType>http://w3id.org/meta-share/omtd-share/StructuralAnnotationType</ms:annotationType>
+                    <ms:annotationType>http://w3id.org/meta-share/omtd-share/NamedEntity</ms:annotationType>
                 </ms:annotationTypeInfo>
             </ms:annotationTypes>
         </ms:outputResourceInfo>
@@ -137,7 +136,7 @@
         </ms:componentDependencies>
         <ms:componentCreationInfo>
             <ms:framework>AlvisNLP</ms:framework>
-            <ms:TDMMethod>http://w3id.org/meta-share/omtd-share/RuleBasedMethod</ms:TDMMethod>
+            <ms:TDMMethod>http://w3id.org/meta-share/omtd-share/TdmMethod</ms:TDMMethod>
             <ms:implementationLanguage>Java</ms:implementationLanguage>
         </ms:componentCreationInfo>
     </ms:componentInfo>
