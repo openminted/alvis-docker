@@ -35,10 +35,10 @@
                 <ms:resourceName lang="en">ToMap</ms:resourceName>
             </ms:resourceNames>
             <ms:descriptions>
-                <ms:description lang="en">performs segmentation, POS-tagging, lemmatization, NER (habitat).</ms:description>
+                <ms:description lang="en">Performs segmentation, POS-tagging, lemmatization, NER (DNA, cell_line, cell_type, PROTEIN).</ms:description>
             </ms:descriptions>
             <ms:resourceIdentifiers>
-                <ms:resourceIdentifier resourceIdentifierSchemeName="OMTD-docker">org.bibliome.alvisnlp.modules.tomap</ms:resourceIdentifier>
+                <ms:resourceIdentifier resourceIdentifierSchemeName="OMTD-docker">org.bibliome.alvisnlp.modules.geniatagger</ms:resourceIdentifier>
             </ms:resourceIdentifiers>
             <ms:public>true</ms:public>
         </ms:identificationInfo>
@@ -73,7 +73,7 @@
         </ms:contactInfo>
         <ms:resourceDocumentations>
             <ms:resourceDocumentationInfo>
-                <ms:documentationDescription>https://github.com/openminted/alvis-docker/tree/master/openminted-components/tomap</ms:documentationDescription>
+                <ms:documentationDescription>https://github.com/openminted/alvis-docker/tree/master/openminted-components/geniatagger</ms:documentationDescription>
                 <ms:documentationType>onLineHelpURL</ms:documentationType>
             </ms:resourceDocumentationInfo>
         </ms:resourceDocumentations>
@@ -84,8 +84,8 @@
         <ms:distributionInfos>
             <ms:componentDistributionInfo>
                 <ms:componentDistributionForm>dockerImage</ms:componentDistributionForm>
-                <ms:distributionLocation>bibliome/tomap</ms:distributionLocation>
-                <ms:command>alvisnlp  -verbose  /alvisnlp/OMTD_ToMap.plan</ms:command>
+                <ms:distributionLocation>bibliome/geniatagger</ms:distributionLocation>
+                <ms:command>alvisnlp  -verbose  /alvisnlp/OMTD_GeniaTagger.plan</ms:command>
             </ms:componentDistributionInfo>
         </ms:distributionInfos>
         <ms:rightsInfo>
