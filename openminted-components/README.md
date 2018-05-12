@@ -12,7 +12,7 @@
     * private link 
 * [Alvis Segmenter](segmenter/)
     * deployment and test ok
-    * public link
+    * public link: https://test.openminted.eu/landingPage/application/6299b41c-1b02-465d-8f2c-7acf284c243c
 * [GeniaTagger](geniatagger/) 
     * deployment in progress
 * [RDFProjector](rdfprojector/) 
