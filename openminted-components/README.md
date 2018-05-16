@@ -4,7 +4,7 @@
 
 
 
-| Component capsule on github | Local validation | public link on OMTD Registry | Tests on OMTD Registry | Remarks |
+| Component capsule on github | Local validation | Public link on OMTD Registry | Tests on OMTD Registry | comments |
 | ------------- | ------------- | --------------------- |-------------|----------------|
 | [Alvis Segmenter](segmenter/) | success  | [Alvis Segmenter 2](https://test.openminted.eu/landingPage/component/62bd4ee3-5476-4343-b27b-ac65d8dba385) | [successed one time but was not possible to remake it](https://github.com/openminted/alvis-docker/issues/10#issuecomment-386676078) |  |
 | [ToMap](tomap/) | success | [Alvis ToMap](https://test.openminted.eu/landingPage/application/6fb92855-4afe-4846-85a4-8d391e2999af) | [worked but display failed](https://github.com/openminted/alvis-docker/issues/10#issuecomment-388838168) | |
