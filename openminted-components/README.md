@@ -1,6 +1,8 @@
 # Recap of the deployment of the Alvis components 
 
-> [issue opened to track the tests](https://github.com/openminted/alvis-docker/issues/10)
+> [this issue is opened to track the tests](https://github.com/openminted/alvis-docker/issues/10)   /!\
+
+
 
 | Component capsule on github | Local validation | public link on OMTD Registry | Tests on OMTD Registry | Remarks |
 | ------------- | ------------- | --------------------- |-------------|----------------|
