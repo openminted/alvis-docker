@@ -7,7 +7,7 @@
 | Component capsule on github | Local validation | Public link on OMTD Registry | Tests on OMTD Registry | comments |
 | ------------- | ------------- | --------------------- |-------------|----------------|
 | [Alvis Segmenter](segmenter/) | success  | [Alvis Segmenter 2](https://test.openminted.eu/landingPage/component/62bd4ee3-5476-4343-b27b-ac65d8dba385) | [successed one time but was not possible to remake it](https://github.com/openminted/alvis-docker/issues/10#issuecomment-386676078) |  |
-| [ToMap](tomap/) | success | [Alvis ToMap](https://test.openminted.eu/landingPage/application/6fb92855-4afe-4846-85a4-8d391e2999af) | [worked but does not display the results](https://github.com/openminted/alvis-docker/issues/10#issuecomment-388838168) | seems to be a problem of AAI communication  |
+| [ToMap](tomap/) | success | [Alvis ToMap](https://test.openminted.eu/landingPage/component/f145b471-c3e7-48b1-992d-c19bd79d156e) | [worked but does not display the results](https://github.com/openminted/alvis-docker/issues/10#issuecomment-388838168) | seems to be a problem of AAI communication  |
 | [GeniaTagger](geniatagger/)  | success | [Alvis GeniaTagger](https://test.openminted.eu/landingPage/component/2cb79581-8629-412e-ba7c-51a4b6c5bb19) | failed | similar to ToMap |
 | [RDFProjector](rdfprojector/) | success | [Alvis RDFProjector](https://test.openminted.eu/landingPage/component/1e382d21-8669-45ef-8415-3f9e1ecff3bf) | failed | similar to ToMap |
 | [RegExp](regexp/)  | success | [Alvis RegExp](https://test.openminted.eu/landingPage/component/ed724697-a907-4140-ac83-9aa485375ce4) | failed | similar to ToMap |
