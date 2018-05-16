@@ -1,7 +1,7 @@
 # List of the alvis components to be deployed on the OMTD platform
 
 | Component | Local vaaidation Tests | public link on OMTD Registry | Tests on OMTD Registry |
-| ------------- | ------------- | --------------------- |
+| ------------- | ------------- | --------------------- |-------------|
 | [Alvis Segmenter](segmenter/) | success  | [Alvis Segmenter 2](https://test.openminted.eu/landingPage/component/62bd4ee3-5476-4343-b27b-ac65d8dba385) | successed one time but was not possible to remake it |
 | [GeniaTagger](geniatagger/)  | success | [Alvis GeniaTagger](https://test.openminted.eu/landingPage/component/2cb79581-8629-412e-ba7c-51a4b6c5bb19) | failed, there was a problem of AAI communication  |
 | [RDFProjector](rdfprojector/) | success | [Alvis RDFProjector](https://test.openminted.eu/landingPage/component/1e382d21-8669-45ef-8415-3f9e1ecff3bf) | failed |
