@@ -1,5 +1,9 @@
 # List of the alvis components to be deployed on the OMTD platform
 
+| Component | Local test status | Test on OMTD Registry |
+| ------------- | ------------- | --------------------- |
+| [Wheat Phenotypic Information Extractor](uc-tdm-as-d/) | worked fine | failed | 
+
 
 * [Wheat Phenotypic Information Extractor](uc-tdm-as-d/) 
     * was added to test.openminted.eu in private, test in progress but problem of memory
