@@ -19,6 +19,7 @@ bibliome/regexp \
 alvisnlp /alvisnlp/OMTD_RegExp.plan \
 --input /alvisnlp/data/corpus \
 --output /alvisnlp/data/output \
+--param:pattern=bact*
 ```
 
 # OpenMinTeD metadata
