@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:tcas="http:///uima/tcas.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:cas="http:///uima/cas.ecore" xmlns:types="http:///fr/inra/maiage/bibliome/alvisnlp/bibliomefactory/modules/uima/types.ecore" xmi:version="2.0">
+    <cas:NULL xmi:id="0"/>
+    <tcas:DocumentAnnotation xmi:id="8" sofa="1" begin="0" end="58416" language="x-unspecified"/>
+    <types:DocumentProxy xmi:id="13" sofa="1" id="12578989" features="18 21 24 27 30" sections="40 58 76"/>
+    <cas:Sofa xmi:id="1" sofaNum="1" sofaID="_InitialView" mimeType="text" sofaString="Arabidopsis LEAFY COTYLEDON1 represents a functionally specialized subunit of the CCAAT binding transcription factor&#10;               &#10;                  &#10;                      Next Section&#10;                  Abstract&#10;                  &#10;                  LEAFY COTYLEDON1 (LEC1) is a central regulator that is required for many aspects of Arabidopsis embryogenesis and sufficient to induce embryo development in vegetative cells when expressed ectopically. We previously showed&#10;                     that LEC1 encodes an HAP3 subunit of the CCAAT binding factor and that the 10 Arabidopsis HAP3 (AHAP3) subunits can be divided into two classes, the LEC1-type and the non-LEC1-type, based on sequence similarity&#10;                     within their B domains. By analyzing the ability of chimeric HAP3 subunits containing different combinations of domains from&#10;                     LEC1 and a non-LEC1-type AHAP3 subunit to suppress genetically the lec1 mutation, we show that the B domain of LEC1 is necessary and sufficient within the context of the protein for its activity&#10;                     in embryogenesis. Moreover, we identify one amino acid residue, Asp-55, specific to the LEC1-type B domain that is required&#10;                     for LEC1 activity in embryogenesis and sufficient to confer partial LEC1 activity to a non-LEC1-type B domain. Based on structural&#10;                     similarities between the HAP3 B domain and histone fold motif, we discuss how the Asp-55 residue may functionally differentiate&#10;                     LEC1 from the non-LEC1-type AHAP3 subunits.&#10;                  &#10;                  &#10;               &#10;  &#10;    Arabidopsis LEAFY COTYLEDON1 represents a functionally specialized subunit of the CCAAT binding transcription factor&#10;               &#10;               &#10;                  Hyeseung Lee*, &#10;                     &#10;                     Robert L. Fischer†, &#10;                     &#10;                     Robert B. Goldberg‡, and &#10;                     &#10;                     John J. Harada*§&#10;                  *Section of Plant Biology, Division of Biological Sciences, University of California, One Shields Avenue, Davis, CA 95616;&#10;                           †Department of Plant and Microbial Biology, University of California, Berkeley, CA 94720; and ‡Department of Molecular, Cell and Developmental Biology, University of California, Los Angeles, CA 90024-1606&#10;                        &#10;                     &#10;                  &#10;                        &#10;                        Contributed by Robert B. Goldberg&#10;                        &#10;                     &#10;                  &#10;               &#10;                  &#10;                      Next Section&#10;                  Abstract&#10;                  &#10;                  LEAFY COTYLEDON1 (LEC1) is a central regulator that is required for many aspects of Arabidopsis embryogenesis and sufficient to induce embryo development in vegetative cells when expressed ectopically. We previously showed&#10;                     that LEC1 encodes an HAP3 subunit of the CCAAT binding factor and that the 10 Arabidopsis HAP3 (AHAP3) subunits can be divided into two classes, the LEC1-type and the non-LEC1-type, based on sequence similarity&#10;                     within their B domains. By analyzing the ability of chimeric HAP3 subunits containing different combinations of domains from&#10;                     LEC1 and a non-LEC1-type AHAP3 subunit to suppress genetically the lec1 mutation, we show that the B domain of LEC1 is necessary and sufficient within the context of the protein for its activity&#10;                     in embryogenesis. Moreover, we identify one amino acid residue, Asp-55, specific to the LEC1-type B domain that is required&#10;                     for LEC1 activity in embryogenesis and sufficient to confer partial LEC1 activity to a non-LEC1-type B domain. Based on structural&#10;                     similarities between the HAP3 B domain and histone fold motif, we discuss how the Asp-55 residue may functionally differentiate&#10;                     LEC1 from the non-LEC1-type AHAP3 subunits.&#10;                  &#10;                  &#10;               &#10;               Embryogenesis is a critical period of the flowering plant life cycle during which the single-celled zygote proliferates and&#10;                  undergoes a series of differentiation events, resulting in the formation of a mature embryo. During the early phase of embryogenesis,&#10;                  the polarity of the plant is expressed as the shoot-root axis and the embryonic tissue and organ systems are formed (1–4). Late in embryogenesis, the embryo acquires the ability to withstand desiccation, the seed accumulates storage reserves&#10;                  that serve as food sources after germination, and the embryo becomes quiescent metabolically as a result of seed desiccation&#10;                  (5, 6). Embryo development has been analyzed extensively, and many genes involved in events that characterize embryogenesis have&#10;                  been identified (7). However, little is known at a mechanistic level about the processes that control and coordinate these developmental events.&#10;               &#10;               LEAFY COTYLEDON1 (LEC1) is a central regulator of Arabidopsis embryogenesis that controls many different aspects of embryo development (reviewed in 8). Early in embryogenesis, LEC1 is&#10;                  required to maintain the fate of embryonic cells that constitute the suspensor and to specify the identity of cotyledons,&#10;                  the embryonic leaves (9–11). During late embryogenesis, LEC1 is needed for many events involved in seed maturation, including the acquisition of desiccation&#10;                  tolerance and the accumulation of storage reserves (11–14). LEC1 also plays an essential role by preventing immature seeds from germinating prematurely. Significant insight into the&#10;                  role of LEC1 in embryo development came with the finding that ectopic LEC1 expression was sufficient to confer embryonic characteristics&#10;                  to seedlings and to induce somatic embryo development from vegetative cells (10). Thus, LEC1 plays multiple essential roles both early and late in embryo development and establishes a cellular environment&#10;                  that promotes embryo development.&#10;               &#10;               LEC1 shares significant sequence identity with the HAP3 subunit of the CCAAT binding factor (CBF, also known as NF-Y) (10). CBFs are evolutionary conserved oligomeric transcription factors that contain three nonidentical subunits called HAP2 (CBF-B,&#10;                  NF-YA), HAP3 (CBF-A, NF-YB), and HAP5 (CBF-C, NF-YC) that interact to form a complex that binds the CCAAT DNA motif (reviewed&#10;                  in refs. 15 and 16). Yeast possess a fourth subunit, HAP4, that provides a transcriptional activation domain to the complex (17) whereas in mammals, this domain has been incorporated in the CBF-B and CBF-C subunits (18). Although a functional, plant CBF complex has not yet been isolated, several lines of evidence suggest its existence. First,&#10;                  activities that bind CAAT and CCAAT DNA sequences have been identified in plant nuclear extracts (19, 20). Second, genes encoding proteins with significant sequence identity to the functional domains of HAP2, HAP3, and HAP5 subunits&#10;                  have been identified in plants, though no HAP4 subunit has been identified (19–23, 34). Third, an Arabidopsis HAP2 (AHAP2) subunit suppresses a hap2 mutation of yeast, suggesting that the plant protein interacts functionally in the CBF complex (23). Thus, LEC1 is likely to regulate embryogenesis through its role as a subunit of a transcription factor that modulates the&#10;                  activity of genes required for embryo development.&#10;               &#10;               HAP3 subunits, including LEC1, consist of three regions, the A, B, and C domains, with the central B domain being conserved&#10;                  throughout eukaryotic evolution. The B domain possesses amino acid residues required for interaction of HAP3 with other CBF&#10;                  subunits and for DNA-binding activity of the CBF complex (24–26). Unlike yeast and mammals, plants possess families of genes that encode each CBF subunit (20, 22, 23). We showed previously that the 10 AHAP3 subunits could be divided into two classes on the basis of sequence similarity in&#10;                  the B domain: the LEC1-type, consisting of LEC1 and LEC1-LIKE (L1L), and the non-LEC1-type comprising the remaining subunits&#10;                  (22). Specifically, LEC1-type B domains possess 16 shared residues that differ from conserved residues found at equivalent positions&#10;                  in non-LEC1 type AHAP3 B domains, as shown in Fig. 1. We also showed that L1L, but not genes encoding non-LEC1-type AHAP3 subunits, could suppress the lec1 mutation when expressed ectopically, suggesting that the two LEC1-type proteins are functionally equivalent. Thus, LEC1-type&#10;                  AHAP3 subunits appear to function differently than their non-LEC1-type counterparts.  &#10;               &#10;               &#10;                  View larger version:In this window&#10;                           In a new window&#10;                        Download as PowerPoint Slide&#10;                        &#10;                  &#10;                  Figure 1 &#10;                     &#10;                     Amino acid sequence alignment of the B domains of HAP3 subunits from Arabidopsis, yeast, and rat. Identical residues are shaded in yellow boxes. Residues specific to LEC1 and L1L are highlighted in red.&#10;                        The positions of α-helices and loops in the histone fold motif are indicated as continuous and dashed blue lines, respectively.&#10;                        Numbers indicate amino acid position within LEC1.&#10;                     &#10;                     &#10;                     &#10;                  &#10;               &#10;               To begin to understand how LEC1 differs from non-LEC1-type AHAP3 subunits at a mechanistic level, we identified amino acid&#10;                  residues required for LEC1's specific function in embryogenesis. We show that the B domain of LEC1 is required for its function&#10;                  in embryo development and identify a specific B domain residue critical for its activity. Implications of these studies for&#10;                  the mechanism by which the CBF containing LEC1 regulates genes required for embryogenesis are discussed.&#10;               &#10;               &#10;                  Previous SectionNext Section&#10;                  &#10;                  Materials and Methods&#10;                  &#10;                  &#10;                     &#10;                     &#10;                        Plant Material.&#10;                        Wild-type and lec1-1 mutant plants of Arabidopsis thaliana (L.) Heynh ecotype Wassilewskija lines were grown as described (11).&#10;                        &#10;                     &#10;                     &#10;                     &#10;                  &#10;                  &#10;                  &#10;                     &#10;                     &#10;                        Constructs Encoding Chimeric Proteins.&#10;                        PCR methods were used to make the domain-swap constructs. For example, the LA-LB-NCconstruct was prepared by amplifying separately regions encoding the A and B domains of LEC1 and the C domain of At4g14540&#10;                           by using primer combinations LEC1A-F (5′-CCCGGGGAGATCTATGACCAGCTCAGTCATAGTAGC-3′)/LEC1B-R (5′-TTGTCTCCCTGCCGTAGTAGTACGATCGGTCTCTATCTCACG-3′)&#10;                           and At4gC-F (5′-CGTGAGATAGAGACCGATCGTACTACTACGGCAGGGAGACAA-3′)/At4gC-R (5′-CCCGGCCTAGGTTAAGAAAAATGATGGGAAAATTGATGTCC-3′),&#10;                           respectively. Primers LEC1B-R and At4gC–F contain complementary regions that facilitated the joining of the fragments by combining,&#10;                           annealing, and extending the two PCR products. The ORF containing the entire LA-LB-NCcDNA was then amplified by using the end primers, LEC1A-F and At4gC-R, that each contain restriction enzyme sites for cloning.&#10;                           After nucleotide sequencing to confirm the correct ORF, constructs were inserted into the LEC1 expression cassette (22). Specific details for preparation of other constructs are available on request.&#10;                        &#10;                     &#10;                     &#10;                     &#10;                  &#10;                  &#10;                  &#10;                     &#10;                     &#10;                        Site-Directed Mutagenesis.&#10;                        Amino acid substitution mutants of LEC1 were created by using a modification of the method described above. For example, to&#10;                           replace Met 34 of LEC1 with Leu, LEC1 cDNA was amplified with the primer pairs LEC1 A-F (5′-CCCGGGGAGATCTATGACCAGCTCAGTCATAGTAGC-3′)/LEC1M34L-R (5′-CGTTTGCGATTGGAAGGTATTGGTCTTGC-3′) and LEC1 M34L-F (5′-AGCAAGACCAATACCTTCCAATCGCAAACG-3′)/LEC1 C-R (5′-GGGCCCCTAGGTCTTCACTTATACTGACCATAATGG-3′), where the positions of the substitution is underlined.&#10;                           The two PCR products were annealed and amplified by using LEC1 A-F and LEC1 C-R, and inserted into the LEC1 expression cassette&#10;                           after the nucleotide sequence was confirmed. Additional details are available on request.&#10;                        &#10;                     &#10;                     &#10;                     &#10;                  &#10;                  &#10;                  &#10;                     &#10;                     &#10;                        Genetic Suppression Assay.&#10;                        Constructs were transferred into homozygous lec1-1 mutants by using Agrobacterium tumefaciens strain GV3101 and in planta transformation procedures (27). T1 seeds from T0 plants were dried for 2 weeks at 28°C and plated on selection media containing 20 μg/ml hygromycin or 60 μg/ml glufosinate&#10;                           ammonium (Finale, AgrEvo Environmental Health, Montvale, NJ). The number of viable seedlings was counted, and their genotypes&#10;                           were verified in PCR amplification experiments.&#10;                        &#10;                     &#10;                     &#10;                     &#10;                  &#10;                  &#10;               &#10;               &#10;                  Previous SectionNext Section&#10;                  &#10;                  Results&#10;                  &#10;                  &#10;                     &#10;                     Domain-Swap Experiments Reveal that the LEC1 B Domain Is Critical for Its Function.&#10;                     Given that LEC1 and non-LEC1-type AHAP3 subunits serve different roles during plant growth and development (22), we sought initially to identify the regions that distinguish the two proteins functionally. All HAP3 proteins, including&#10;                        LEC1, consist of three domains, an N-terminal A domain, a central B domain, and a C-terminal C domain, with the B domain being&#10;                        required for DNA binding and interaction with other CCAAT binding factor subunits (25, 26). LEC1 does not share significant sequence identity with any other AHAP3 subunit in the A or C domains (22).&#10;                     &#10;                     &#10;                     &#10;                     To identify the domain that underlies LEC1 activity in embryogenesis, we took advantage of the modular structure of AHAP3&#10;                        subunits and constructed six fusion proteins that possessed all possible combinations of A, B, and C domains from LEC1 and&#10;                        the non-LEC1-type AHAP3 subunit encoded by At4g14540. This non-LEC1-type AHAP3 subunit was chosen because previous studies showed that it is distantly related to LEC1 and it&#10;                        cannot substitute for LEC1 when expressed ectopically (22). Constructs encoding these chimeric proteins were inserted into a LEC1 expression cassette that contains 1,997 bp of 5′ and 774 bp of 3′ untranslated and flanking regions of the LEC1 gene (22). To determine which of the chimeric proteins possessed LEC1 activity, the constructs were tested for their ability to suppress&#10;                        the lec1 mutation in planta by transferring the constructs into lec1-1 null mutant plants in which the LEC1 gene has been deleted (10). Homozygous lec1-1 mutant seeds do not germinate because their embryos are intolerant of desiccation and die on drying, though immature seeds&#10;                        can be rescued before silique drying and germinated to produce vegetatively growing plants (9, 11). Thus, genetic suppression is indicated by the ability of transgenic lec1 mutant seeds to germinate after desiccation and give rise to viable seedlings.&#10;                     &#10;                     &#10;                     Control experiments showed that lec1 mutant plants transformed with the LEC1 gene by using the infiltration method produced an average of 0.6% viable seeds (Fig. 2, construct 1). This value reflects both the transformation efficiency of the infiltration method (27) and the ability of the LEC1 transgene to suppress the lec1 mutation efficiently. By contrast, plants transformed with At4g14540 in the LEC1 expression cassette did not give rise to viable seeds (Fig. 2, construct 2), confirming that this non-LEC1-type AHAP3 subunit cannot suppress the lec1 mutation and that the suppression strategy is valid (22).  &#10;                     &#10;                     &#10;                        View larger version:In this window&#10;                                 In a new window&#10;                              Download as PowerPoint Slide&#10;                              &#10;                        &#10;                        Figure 2 &#10;                           &#10;                           LEC1 B domain is necessary and sufficient for its activity in embryogenesis. The diagrammatic representation shows LEC1 (construct&#10;                              1), the non-LEC1-type AHAP3 subunit, At4g14540 (construct 2), and chimeric proteins containing A, B, and C domains from LEC1&#10;                              (L) or At4g14540 (N). Constructs encoding these chimeric proteins were transformed into lec1-1 null mutants and, after drying of the T1 seeds, the number of viable seedlings generated from seeds tested (shown in parentheses) was determined. Transformation experiments&#10;                              were repeated multiple times with similar results, and the total values for all experiments are reported.&#10;                           &#10;                           &#10;                           &#10;                        &#10;                     &#10;                     &#10;                     The most striking results were obtained with chimeric proteins that had their B domains exchanged. The construct encoding&#10;                        the chimeric protein consisting of Non-LEC1-type A and C domains and the LEC1 B domain, designated NA-LB-NC (Fig. 2, construct 3), suppressed the lec1 mutation and produced viable seedlings with an efficiency (0.4%) close to that of the LEC1 control (0.6%). T1 plants segregated T2 embryos resembling either wild-type or lec1 mutants at ratios suggesting the presence of one or two transgenes (data not shown). These results suggest that the NA-LB-NC construct behaved like the wild-type LEC1 gene. By contrast, the frequency of suppression by the construct encoding its counterpart, LA-NB-LC, was significantly lower (0.03%, Student's t test, P &lt; 0.005) (Fig. 2, construct 4). Control experiments showed that all domain-swap constructs were competent to transform wild-type plants at&#10;                        a frequency similar to a vector-only control and that wild-type plants containing these constructs germinated with near 100%&#10;                        efficiency. These results indicate that the constructs were transformation competent and that the chimeric proteins did not&#10;                        have a negative effect on embryo or seedling growth (data not shown). Although a small number of lec1 mutant embryos containing the LA-NB-LC construct survived desiccation, these plants segregated progeny that resembled wild-type and lec1 mutant embryos and those with morphological phenotypes intermediate between the two, as shown in Fig. 3. Thus, LA-NB-LC was only minimally effective in rescuing morphological defects and desiccation intolerance caused by the lec1 mutation, suggesting that the chimeric protein exhibits attenuated LEC1 function. Together, these results suggest that the&#10;                        B domain of LEC1 within the context of the A and C domains is both necessary and sufficient for LEC1 activity.  &#10;                     &#10;                     &#10;                        View larger version:In this window&#10;                                 In a new window&#10;                              Download as PowerPoint Slide&#10;                              &#10;                        &#10;                        Figure 3 &#10;                           &#10;                           Partial rescue of morphological defects caused by the lec1 mutation. Representative T2 embryos of lec1-1 mutants transformed with the LA-NB-LC construct that display a range of morphological phenotypes intermediate between those of lec1 mutants and wild type. All embryos were dissected from siliques containing wild-type embryos at the mature green stage. (Bar&#10;                              = 300 μm.)&#10;                           &#10;                           &#10;                           &#10;                        &#10;                     &#10;                     &#10;                     Suppression assays were also done to address the roles of the LEC1 A and C domains. The LA-LB-NC construct suppressed the lec1 mutation (Fig. 2, construct 5), but the NA-NB-LC construct did not (Fig. 2, construct 6), indicating that the LEC1 C domain is dispensable for its function. Neither the NA-LB-LC nor the LA-NB-NC constructs suppressed the lec1 mutation (Fig. 2, constructs 7 and 8). Unlike the B and C domain-swap experiments described above, no positive result showing sufficiency&#10;                        was obtained with this pair of constructs to corroborate the loss-of-function result showing necessity, making interpretation&#10;                        of these results difficult. For example, it is not clear whether the A domain influences LEC1 activity or whether the chimeric&#10;                        proteins do not fold or accumulate properly. The finding that the LEC1 A and C domains are not sufficient within an AHAP3&#10;                        subunit to confer LEC1 activity is consistent with the conclusion that the LEC1 B domain primarily underlies its activity&#10;                        in embryogenesis.&#10;                     &#10;                     &#10;                  &#10;                  &#10;                  &#10;                     &#10;                     Identification of B Domain Residues Required for LEC1 Function.&#10;                     LEC1 and non-LEC1-type AHAP3 subunits can be distinguished on the basis of specific amino residues within the B domain that&#10;                        are highlighted in red in Fig. 1 (22). To determine which of these residues are important for LEC1 function, we substituted residues specific for LEC1 with those&#10;                        conserved at corresponding positions in non-LEC1-type AHAP3 subunits. For example, the Met at position 34 of LEC1 was replaced&#10;                        with the Leu present at the corresponding position in all non-LEC1-type B domains to create LEC1 (M34L). We focused on those&#10;                        residues that significantly changed the chemical properties of the LEC1-specific amino acid residues. cDNA clones encoding&#10;                        mutant forms of LEC1 with amino acid substitutions were inserted into the LEC1 expression cassette and transferred into lec1-1 null mutants to assess their ability to suppress the lec1 mutation.&#10;                     &#10;                     &#10;                     &#10;                     As summarized in Table 1, constructs encoding mutagenized LEC1 proteins with single amino acid substitutions of Met at position 34 for Leu (M34L),&#10;                        Arg for Lys (R44K), His for Asn (H50N), Asn for Ser (N77S), or Gln for Lys (Q84K) suppressed the lec1 mutation, resulting in the production of between 0.4% and 0.8% viable seedlings. Replacement of the Thr (T)–Ala (A)–Glu (E)&#10;                        residues at positions 89–91 with Asn (N)–Gly (G)–Asp (D) resulted in the production of 0.4% of viable seedlings. These results&#10;                        suggested that the amino acid residues at these positions are not absolutely required for LEC1 function.  &#10;                     &#10;                     &#10;                        &#10;                           View this table:In this window&#10;                                 In a new window&#10;                              &#10;                        &#10;                        Table 1 &#10;                           &#10;                           Identification of a LEC1 B domain residue required for LEC1 activity&#10;                           &#10;                           &#10;                        &#10;                     &#10;                     &#10;                     By contrast, substitution of Asp at position 55 with lysine (D55K) severely compromised the ability of the LEC1 construct to suppress the lec1 mutation, resulting in a 40-fold decrease in the recovery of viable seedlings (0.01%; Table 1). Experiments showed that this construct transformed wild-type plants at a frequency similar to that of a control plasmid,&#10;                        indicating that it was not defective. This result suggests that the Asp-55 residue is critically required for LEC1 function.&#10;                     &#10;                     &#10;                  &#10;                  &#10;                  &#10;                     &#10;                     Single Amino Acid Change Within Non-LEC1-Type B Domain Confers LEC1 Activity.&#10;                     To confirm the importance of this Asp-55 residue, we determined whether the complementary change would confer LEC1 activity&#10;                        to a non-LEC1-type B domain. Specifically, we mutagenized the construct encoding LA-NB-LC (see Fig. 2) such that the Lys at position 55 was replaced with the Asp characteristic of the LEC1 B domain (K55D). Table 2 shows that unlike the LA-NB-LC domain-swap construct that suppressed the lec1 mutation only at a low frequency (0.03%), LA-NB-LC (K55D) resulted in an 8-fold increase in the number of viable seedlings (0.23%). Thus, this single amino acid substitution permitted&#10;                        a non-LEC1-type B domain to rescue the desiccation-intolerance defect caused by the lec1 mutation.  &#10;                     &#10;                     &#10;                     &#10;                        &#10;                           View this table:In this window&#10;                                 In a new window&#10;                              &#10;                        &#10;                        Table 2 &#10;                           &#10;                           A single amino acid substitution confers LEC1 activity to a non-LEC1-type B domain&#10;                           &#10;                           &#10;                        &#10;                     &#10;                     &#10;                     Analysis of progeny provided additional information about the effectiveness of LA-NB-LC (K55D) to substitute for LEC1. Progeny from these transgenic plants segregated embryos with wild-type, lec1 mutant, and intermediate morphological phenotypes similar to those observed with LA-NB-LC plants (see Fig. 3). Because LA-NB-LC (K55D) significantly enhanced the ability of the chimeric protein to confer desiccation tolerance to lec1-1 mutant embryos but did not completely rescue morphological defects, we conclude that this single amino acid substitution&#10;                        only partially restores LEC1 activity. These results suggest that the Asp residue at position 55 plays an important role in&#10;                        LEC1 function.&#10;                     &#10;                     &#10;                  &#10;                  &#10;               &#10;               &#10;                  Previous SectionNext Section&#10;                  &#10;                  Discussion&#10;                  &#10;                  &#10;                     &#10;                     LEC1 Defines a Specialized Class of HAP3 Subunit.&#10;                     Our previous studies showed that AHAP3 subunits can be divided into at least two classes, LEC1-type and non-LEC1-type, based&#10;                        primarily on sequence differences in their B domains (22). Here we provide two lines of evidence that strongly support the hypothesis that the B domain is primarily responsible for&#10;                        differentiating LEC1 functionally from non-LEC1-type AHAP3 subunits. First, the ability of NA-LB-NC to rescue desiccation intolerance and morphological defects of lec1 mutant embryos strongly suggests that the LEC1 B domain is sufficient for LEC1 activity within the context of the A and C&#10;                        domain (Fig. 2). Consistent with this conclusion, all constructs without the LEC1 B domain did not rescue lec1 mutant defects efficiently, suggesting that the LEC1 B domain is necessary for its function.&#10;                     &#10;                     &#10;                     &#10;                     L1L, the only other AHAP3 subunit with a LEC1-type B domain, but not two non-LEC1-type AHAP3 subunits suppresses the lec1 mutation when expressed from the LEC1 expression cassette and confers embryonic characteristics to seedlings when driven by the cauliflower mosaic virus 35S promoter (22). Because LEC1 and L1L do not exhibit sequence identity in their A and C domains, this finding provides additional evidence&#10;                        that the B domain differentiates LEC1 and non-LEC1-type AHAP3 subunits functionally.&#10;                     &#10;                     &#10;                     We note that neither the LA-NB-NC nor the NA-LB-LC chimeric proteins rescued lec1 mutant embryos, making interpretation of this set of results difficult. Because the A domains of LEC1 and At4g14540 differ&#10;                        substantially (46 residues vs. 14 residues, respectively) (22), it is formally possible that the length of the A domain may be important for LEC1 function. However, because the NA-LB-NC and LA-LB-NC constructs suppressed the lec1 mutation, a more likely explanation is that the NA-LB-LC chimeric protein adopted an abnormal confirmation, thereby negating its activity and/or accumulation.&#10;                     &#10;                     &#10;                     Second, our results show that a single amino acid specific to the LEC1 B domain, Asp-55, is required to confer desiccation&#10;                        tolerance to lec1 mutant embryos and that substitution of the non-LEC1-type B domain residue, Lys-55, with Asp to create LA-NB-LC (K55D) confers partial LEC1 activity to the non-LEC1-type B domain (Tables 1 and 2). These results strongly support the importance of Asp-55 in conferring LEC1 function and suggest that the inability of LA-NB-LC and LEC1 (D55K) to suppress the lec1 mutation efficiently does not result from instability of the mutagenized proteins. Because LA-NB-LC (K55D) does not completely suppress the lec1 mutation, it is likely that other LEC1-specific B domain residues also play important roles in conferring LEC1 activity.&#10;                     &#10;                     &#10;                     Thus, the B domain differentiates LEC1 functionally from non-LEC1-type AHAP3 subunits. Because yeast and mammalian B domains&#10;                        are more closely related to non-LEC1-type than LEC1-type B domains (22), these results suggest that LEC1 represents a previously undescribed class of HAP3 subunit.&#10;                     &#10;                     &#10;                  &#10;                  &#10;                  &#10;                     &#10;                     Role of Asp-55 in Determining LEC1 Activity.&#10;                     Results of the domain-swap and site-directed mutagenesis studies show that the B domain differentiates LEC1 functionally from&#10;                        non-LEC1-type AHAP3 subunits. The B domain is required for the interaction of yeast and mammalian HAP3 subunits with the other&#10;                        CBF subunits, HAP2 and HAP5, and for the DNA binding activity of the CBF complex (24–26). Several alternatives could explain how the LEC1 B domain confers unique activity to the CBF (22). First, the LEC1 B domain may affect the DNA binding specificity or binding affinity of the CBF complex. Second, because&#10;                        Arabidopsis possesses 10 and 9 genes encoding AHAP2 and AHAP5 subunits, respectively, the LEC1 B domain may bind with a specific combination&#10;                        of these other two subunits to form a CBF that activates genes required for embryogenesis. Third, the LEC1 B domain may recruit&#10;                        another transcription factor to confer a unique activity to the CBF complex. AHAP2, -3, and -5 subunits do not possess obvious&#10;                        transcriptional activation domains, as do the mammalian HAP2 and HAP5 subunits (18). A different subunit may be necessary to provide a transcriptional activation function to the CBF complex or to alter its&#10;                        binding specificity.&#10;                     &#10;                     &#10;                     &#10;                     Our finding that Asp-55 of LEC1 is critical for its function provides insight into how the LEC1 B domain may confer unique&#10;                        activity to the CBF complex. The B domain of HAP3 subunits shares sequence identity with the histone fold motif of histone&#10;                        H2B, a structurally conserved region consisting of three α helices (α1, α2, and α3) connected by two short loops (L1 and L2,&#10;                        see Fig. 1) (26, 28). The histone fold motif mediates protein–protein and DNA binding interactions (29–32). For example, the HAP3 histone fold motif mediates heterodimerization with the histone H2A-like histone fold motif of HAP5&#10;                        as the first step in CBF assembly (33). Although LEC1 possesses amino acid residues that differentiates it from other AHAP3 subunits, it retains residues characteristic&#10;                        of the histone fold motif.&#10;                     &#10;                     &#10;                     Sequence alignment of the B domain and histone H2B positions Asp-55 of LEC1 at the junction between L1 and α2-helix of the&#10;                        histone fold motif (Fig. 1). Based on the three-dimensional structure of the nucleosome core particle, the amino acid residue at this position is located&#10;                        on the surface of the histone octamer complex in a region that contacts DNA (29, 31). Assuming that Asp-55 is located similarly in the CBF containing LEC1, this result supports the hypothesis that Asp-55 of&#10;                        the LEC1 B domain may affect the DNA binding specificity or affinity relative to that of non-LEC1-type AHAP3 subunits. In&#10;                        support of this hypothesis, it has been shown that the histone fold motif of the HAP3 subunit contributes to the CCAAT specificity&#10;                        to the complex, though the α1 helix has been implicated to play a primary role (32). Moreover, substitution of the Lys residue at the corresponding position of the rat HAP3 subunit with Ala did not affect&#10;                        its ability to interact with HAP2 and HAP5 subunits but, rather, altered the DNA binding activity of the CBF complex (26). Together, these findings open the possibility that the CBF containing LEC1 may regulate genes required for embryo development&#10;                        by binding a different DNA consensus sequence than a CBF containing a non-LEC1-type AHAP3 subunit. Because Asp-55 is predicted&#10;                        to be on the surface of LEC1, we cannot formally exclude the possibility that Asp-55 acts in the LEC1 B domain to mediate&#10;                        specific interactions with other CBF subunits or with other transcription factors (26). Additional studies about the components of LEC1-CBF and identification of the complex's target sequence are necessary to&#10;                        define precisely how Asp-55 contributes to the unique function of the CBF containing LEC1 during embryogenesis.&#10;                     &#10;                     &#10;                  &#10;                  &#10;               &#10;               &#10;                  Previous SectionNext Section&#10;                  Acknowledgments&#10;                  &#10;                  We thank Abeba Kiros and Julie Pelletier for technical assistance, Hongyu Zhang and Nickolai Alexandrov for help in analyzing&#10;                     protein structure, and Raymond Kwong, Katie Dehesh, and Jack Okamuro for helpful discussions. This work was supported by grants&#10;                     from the Department of Energy (to J.J.H.) and Ceres, Inc.&#10;                  &#10;                  &#10;               &#10;               &#10;                  Previous SectionNext Section&#10;                  &#10;                  Note Added in Proof.&#10;                  &#10;                  A recent publication (35) confirms that the HAP3 (NF-YB) and HAP5 (NF-YC) subunits from humans interact through their histone fold motifs and that&#10;                     the residue corresponding to Asp-55 of LEC1 is located at the junction between L1 and α2.&#10;                  &#10;                  &#10;               &#10;               &#10;                  Previous SectionNext Section&#10;                  Footnotes&#10;                  &#10;                        &#10;                        &#10;                        ↵§ To whom correspondence should be addressed. E-mail: jjharada{at}ucdavis.edu.&#10;                        &#10;                        &#10;                     &#10;                  &#10;               &#10;                  &#10;                  Abbreviations&#10;                  &#10;                  AHAP,&#10;                     Arabidopsis heme-activated protein;&#10;                     CBF,&#10;                     CCAAT binding factor;&#10;                     LEC1,&#10;                     LEAFY COTYLEDON1;&#10;                     L1L,&#10;                     LEC1-LIKE&#10;                  &#10;               Accepted December 24, 2002.&#10;                  &#10;               Copyright © 2003, The National Academy of Sciences&#10;               &#10;                  Previous Section &#10;                  &#10;                  References&#10;                  ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Laux  T, &#10;                                 &#10;                                 Jurgens  G&#10;                              (1997) Plant Cell 9:989–1000, pmid:12237371.&#10;                           FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     &#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Goldberg  R B, &#10;                                 &#10;                                 de Paiva  G, &#10;                                 &#10;                                 Yadegari  R&#10;                              (1994) Science 266:605–614.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     &#10;                        &#10;                        &#10;                        &#10;                           &#10;                              West  M A L, &#10;                                 &#10;                                 Harada  J J&#10;                              (1993) Plant Cell 5:1361–1369, pmid:12271035.&#10;                           FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Jurgens  G&#10;                              (2001) EMBO J 20:3609–3616, pmid:11447101.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Larkins  B A, &#10;                                 &#10;                                 Vasil  I K&#10;                              Harada  J J&#10;                              (1997) in Cellular and Molecular Biology of Seed Development, Advances in Cellular and Molecular Biology of Plants, eds Larkins  B A, Vasil  I K(Kluwer Academic, Dordrecht, The Netherlands), 4, pp 545–592.&#10;                           &#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Bewley  J D&#10;                              (1997) Plant Cell 9:1055–1066, pmid:12237375.&#10;                           FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Somerville  C R, &#10;                                 &#10;                                 Meyerowitz  E M&#10;                              Berleth  T, &#10;                                 &#10;                                 Chatfield  S&#10;                              (2002) in The Arabidopsis Book, eds Somerville  C R, Meyerowitz  E M(Am. Soc. Plant Biol. Rockville, MD) , doi/10.1199/tab.0009.&#10;                           &#10;                        &#10;                        &#10;                     &#10;                     &#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Harada  J J&#10;                              (2001) J Plant Physiol 158:405–409.&#10;                           CrossRefWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Meinke  D W&#10;                              (1992) Science 258:1647–1650.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Lotan  T, &#10;                                 &#10;                                 Ohto  M, &#10;                                 &#10;                                 Matsudaira Yee  K, &#10;                                 &#10;                                 West  M A L, &#10;                                 &#10;                                 Lo  R, &#10;                                 &#10;                                 Kwong  R W, &#10;                                 &#10;                                 Yamagishi  K, &#10;                                 &#10;                                 Fischer  R L, &#10;                                 &#10;                                 Goldberg  R B, &#10;                                 &#10;                                 Harada  J J&#10;                              (1998) Cell 93:1195–1205, pmid:9657152.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              West  M A L, &#10;                                 &#10;                                 Matsudaira Yee  K L, &#10;                                 &#10;                                 Danao  J, &#10;                                 &#10;                                 Zimmerman  J L, &#10;                                 &#10;                                 Fischer  R L, &#10;                                 &#10;                                 Goldberg  R B, &#10;                                 &#10;                                 Harada  J J&#10;                              (1994) Plant Cell 6:1731–1745, pmid:12244233.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     &#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Meinke  D W, &#10;                                 &#10;                                 Franzmann  L H, &#10;                                 &#10;                                 Nickle  T C, &#10;                                 &#10;                                 Yeung  E C&#10;                              (1994) Plant Cell 6:1049–1064, pmid:12244265.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     &#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Parcy  F, &#10;                                 &#10;                                 Valon  C, &#10;                                 &#10;                                 Kohara  A, &#10;                                 &#10;                                 Misera  S, &#10;                                 &#10;                                 Giraudat  J&#10;                              (1997) Plant Cell 9:1265–1277, pmid:9286105.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Vicient  C M, &#10;                                 &#10;                                 Bies-Etheve  N, &#10;                                 &#10;                                 Delseny  M&#10;                              (2000) J Exp Bot 51:995–1003, pmid:10948227.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Maity  S N, &#10;                                 &#10;                                 de Crombrugghe  B&#10;                              (1998) Trends Biochem Sci 23:174–178, pmid:9612081.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Mantovani  R&#10;                              (1999) Gene 239:15–27, pmid:10571030.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Forsburg  S L, &#10;                                 &#10;                                 Guarente  L&#10;                              (1989) Genes Dev 3:1166–1178, pmid:2676721.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Coustry  F, &#10;                                 &#10;                                 Maity  S N, &#10;                                 &#10;                                 Sinha  S, &#10;                                 &#10;                                 de Crombrugghe  B&#10;                              (1996) J Biol Chem 272:14485–14491.&#10;                           &#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Kusnetsov  V, &#10;                                 &#10;                                 Landsberger  M, &#10;                                 &#10;                                 Meurer  J, &#10;                                 &#10;                                 Oelmuller  R&#10;                              (1999) J Biol Chem 274:36009–36014, pmid:10585491.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Gusmaroli  G, &#10;                                 &#10;                                 Tonelli  C, &#10;                                 &#10;                                 Mantovani  R&#10;                              (2001) Gene 264:173–185, pmid:11250072.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     &#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Albani  D, &#10;                                 &#10;                                 Robert  L S&#10;                              (1995) Gene 167:209–213, pmid:8566779.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Kwong  R W, &#10;                                 &#10;                                 Bui  A Q, &#10;                                 &#10;                                 Lee  H, &#10;                                 &#10;                                 Kwong  L W, &#10;                                 &#10;                                 Fischer  R L, &#10;                                 &#10;                                 Goldberg  R B, &#10;                                 &#10;                                 Harada  J J&#10;                              (2003) Plant Cell 15:5–18, pmid:12509518.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Edwards  D, &#10;                                 &#10;                                 Murray  J A H, &#10;                                 &#10;                                 Smith  A G&#10;                              (1998) Plant Physiol 117:1015–1022, pmid:9662544.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Li  X-Y, &#10;                                 &#10;                                 Mantovani  R, &#10;                                 &#10;                                 Hooft Van Huijsduijnen  R, &#10;                                 &#10;                                 Andre  I, &#10;                                 &#10;                                 Benoist  C, &#10;                                 &#10;                                 Mathis  D&#10;                              (1992) Nucleic Acids Res 20:1087–1091, pmid:1549471.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Xing  Y, &#10;                                 &#10;                                 Fikes  J D, &#10;                                 &#10;                                 Guarente  L&#10;                              (1993) EMBO J 12:4647–4655, pmid:8223474.&#10;                           MedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Sinha  S, &#10;                                 &#10;                                 Kim  I S, &#10;                                 &#10;                                 Sohn  K-Y, &#10;                                 &#10;                                 de Crombrugghe  B, &#10;                                 &#10;                                 Maity  S N&#10;                              (1996) Mol Cell Biol 16:328–337, pmid:8524312.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Bechtold  N, &#10;                                 &#10;                                 Ellis  J, &#10;                                 &#10;                                 Pelletier  G&#10;                              (1993) C R Acad Sci Paris 316:1194–1199.&#10;                           &#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Bolognese  F, &#10;                                 &#10;                                 Imbriano  C, &#10;                                 &#10;                                 Caretti  G, &#10;                                 &#10;                                 Mantovani  R&#10;                              (2000) Nucleic Acids Res 28:3830–3838, pmid:11000277.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Arents  G, &#10;                                 &#10;                                 Moudrianakis  E N&#10;                              (1995) Proc Natl Acad Sci USA 92:11170–11174, pmid:7479959.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     &#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Baxevanis  A D, &#10;                                 &#10;                                 Arents  G, &#10;                                 &#10;                                 Mourdianakis  E N, &#10;                                 &#10;                                 Landsman  D&#10;                              (1995) Nucleic Acids Res 23:2685–2691, pmid:7651829.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Luger  K, &#10;                                 &#10;                                 Mader  A W, &#10;                                 &#10;                                 Richmond  R K, &#10;                                 &#10;                                 Sargent  D F, &#10;                                 &#10;                                 Richmond  T J&#10;                              (1997) Nature 389:251–260, pmid:9305837.&#10;                           CrossRefMedline&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Zemzoumi  K, &#10;                                 &#10;                                 Frontini  M, &#10;                                 &#10;                                 Bellorini  M, &#10;                                 &#10;                                 Mantovani  R&#10;                              (1999) J Mol Biol 286:327–337, pmid:9973554.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Sinha  S, &#10;                                 &#10;                                 Maity  S N, &#10;                                 &#10;                                 Lu  J, &#10;                                 &#10;                                 de Crombrugghe  B&#10;                              (1995) Proc Natl Acad Sci USA 92:1624–1628, pmid:7878029.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Gusmaroli  G, &#10;                                 &#10;                                 Tonelli  C, &#10;                                 &#10;                                 Mantovani  R&#10;                              (2002) Gene 283:41–48, pmid:11867211.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                        &#10;                           &#10;                              Romier  C, &#10;                                 &#10;                                 Cocchiarella  F, &#10;                                 &#10;                                 Mantovani  R, &#10;                                 &#10;                                 Moras  D&#10;                              (2003) J Biol Chem 278:1336–1345, pmid:12401788.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                  &#10;  &#10;"/>
+    <types:FeatureProxy xmi:id="18" key="source" value="html"/>
+    <types:FeatureProxy xmi:id="21" key="url" value="https://www.ncbi.nlm.nih.gov/pubmed/"/>
+    <types:FeatureProxy xmi:id="24" key="url" value="https://www.ncbi.nlm.nih.gov/pubmed/12578989"/>
+    <types:FeatureProxy xmi:id="27" key="title" value="Arabidopsis LEAFY COTYLEDON1 represents a functionally specialized subunit of the CCAAT binding transcription factor&#10;               "/>
+    <types:FeatureProxy xmi:id="30" key="ID" value="12578989"/>
+    <types:SectionProxy xmi:id="40" sofa="1" begin="0" end="132" name="title" features="48" layers="" relations=""/>
+    <types:FeatureProxy xmi:id="48" key="sectionname" value="title"/>
+    <types:SectionProxy xmi:id="58" sofa="1" begin="132" end="1632" name="abstract" features="66" layers="" relations=""/>
+    <types:FeatureProxy xmi:id="66" key="sectionname" value="abstract"/>
+    <types:SectionProxy xmi:id="76" sofa="1" begin="1632" end="58416" name="alltext" features="84" layers="4188" relations=""/>
+    <types:FeatureProxy xmi:id="84" key="sectionname" value="alltext"/>
+    <types:LayerProxy xmi:id="4188" sofa="1" name="html" annotations="4192"/>
+    <cas:FSArray xmi:id="4192" elements="90 109 120 139 170 201 232 251 266 281 296 315 326 337 348 359 370 381 392 403 414 429 440 451 466 481 492 503 514 525 536 547 558 569 580 591 602 613 624 635 646 657 668 679 690 701 712 723 734 745 756 767 778 789 800 811 822 833 844 855 866 877 888 903 914 925 940 955 966 977 988 999 1010 1021 1032 1043 1054 1065 1076 1087 1098 1113 1124 1135 1150 1165 1176 1187 1198 1209 1220 1231 1242 1253 1264 1275 1286 1297 1308 1319 1330 1341 1352 1367 1378 1389 1400 1411 1422 1433 1444 1455 1466 1481 1492 1503 1514 1525 1536 1547 1558 1569 1580 1591 1602 1613 1624 1635 1646 1657 1668 1679 1690 1701 1712 1723 1734 1745 1756 1775 1790 1801 1812 1827 1846 1861 1880 1891 1906 1917 1932 1943 1954 1965 1980 1991 2002 2013 2024 2039 2050 2061 2072 2087 2098 2109 2124 2135 2146 2161 2172 2183 2198 2209 2220 2235 2246 2257 2272 2283 2294 2305 2320 2331 2342 2357 2368 2379 2394 2405 2416 2427 2438 2449 2460 2471 2482 2493 2504 2515 2530 2541 2552 2563 2574 2585 2596 2607 2618 2633 2644 2655 2666 2677 2688 2703 2714 2725 2736 2747 2758 2769 2784 2795 2806 2817 2828 2843 2854 2865 2876 2891 2902 2913 2928 2939 2950 2961 2976 2987 2998 3009 3020 3031 3046 3057 3068 3079 3090 3101 3116 3127 3138 3149 3160 3175 3186 3197 3208 3223 3234 3245 3256 3267 3278 3289 3300 3311 3326 3337 3348 3359 3370 3385 3396 3407 3418 3429 3440 3451 3462 3477 3488 3499 3510 3521 3536 3547 3558 3569 3580 3591 3602 3617 3628 3639 3650 3661 3676 3687 3698 3709 3720 3731 3746 3757 3768 3779 3794 3805 3816 3827 3838 3849 3864 3875 3886 3897 3908 3919 3930 3945 3956 3967 3978 3989 4000 4015 4026 4037 4048 4059 4070 4085 4096 4107 4118 4129 4144 4155 4166 4177"/>
+    <types:AnnotationProxy xmi:id="90" sofa="1" begin="1640" end="1772" features="95 98 101"/>
+    <types:FeatureProxy xmi:id="95" key="tag" value="h1"/>
+    <types:FeatureProxy xmi:id="98" key="id" value="article-title-1"/>
+    <types:FeatureProxy xmi:id="101" key="itemprop" value="headline"/>
+    <types:AnnotationProxy xmi:id="109" sofa="1" begin="1640" end="1651" features="114"/>
+    <types:FeatureProxy xmi:id="114" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="120" sofa="1" begin="1807" end="2034" features="125 128 131"/>
+    <types:FeatureProxy xmi:id="125" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="128" key="class" value="contributor-list"/>
+    <types:FeatureProxy xmi:id="131" key="id" value="contrib-group-1"/>
+    <types:AnnotationProxy xmi:id="139" sofa="1" begin="1807" end="1844" features="144 147 150 153 156 159"/>
+    <types:FeatureProxy xmi:id="144" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="147" key="class" value="contributor"/>
+    <types:FeatureProxy xmi:id="150" key="id" value="contrib-1"/>
+    <types:FeatureProxy xmi:id="153" key="itemprop" value="author"/>
+    <types:FeatureProxy xmi:id="156" key="itemscope" value="itemscope"/>
+    <types:FeatureProxy xmi:id="159" key="itemtype" value="http://schema.org/Person"/>
+    <types:AnnotationProxy xmi:id="170" sofa="1" begin="1866" end="1908" features="175 178 181 184 187 190"/>
+    <types:FeatureProxy xmi:id="175" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="178" key="class" value="contributor"/>
+    <types:FeatureProxy xmi:id="181" key="id" value="contrib-2"/>
+    <types:FeatureProxy xmi:id="184" key="itemprop" value="author"/>
+    <types:FeatureProxy xmi:id="187" key="itemscope" value="itemscope"/>
+    <types:FeatureProxy xmi:id="190" key="itemtype" value="http://schema.org/Person"/>
+    <types:AnnotationProxy xmi:id="201" sofa="1" begin="1930" end="1977" features="206 209 212 215 218 221"/>
+    <types:FeatureProxy xmi:id="206" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="209" key="class" value="contributor"/>
+    <types:FeatureProxy xmi:id="212" key="id" value="contrib-3"/>
+    <types:FeatureProxy xmi:id="215" key="itemprop" value="author"/>
+    <types:FeatureProxy xmi:id="218" key="itemscope" value="itemscope"/>
+    <types:FeatureProxy xmi:id="221" key="itemtype" value="http://schema.org/Person"/>
+    <types:AnnotationProxy xmi:id="232" sofa="1" begin="1999" end="2015" features="237 240 243"/>
+    <types:FeatureProxy xmi:id="237" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="240" key="class" value="last"/>
+    <types:FeatureProxy xmi:id="243" key="id" value="contrib-4"/>
+    <types:AnnotationProxy xmi:id="251" sofa="1" begin="2034" end="2454" features="256 259"/>
+    <types:FeatureProxy xmi:id="256" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="259" key="class" value="affiliation-list"/>
+    <types:AnnotationProxy xmi:id="266" sofa="1" begin="2034" end="2435" features="271 274"/>
+    <types:FeatureProxy xmi:id="271" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="274" key="class" value="aff"/>
+    <types:AnnotationProxy xmi:id="281" sofa="1" begin="2454" end="2603" features="286 289"/>
+    <types:FeatureProxy xmi:id="286" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="289" key="class" value="fn-track"/>
+    <types:AnnotationProxy xmi:id="296" sofa="1" begin="2454" end="2584" features="301 304 307"/>
+    <types:FeatureProxy xmi:id="301" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="304" key="class" value="fn-con"/>
+    <types:FeatureProxy xmi:id="307" key="id" value="fn-2"/>
+    <types:AnnotationProxy xmi:id="315" sofa="1" begin="2692" end="2700" features="320"/>
+    <types:FeatureProxy xmi:id="320" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="326" sofa="1" begin="2822" end="2833" features="331"/>
+    <types:FeatureProxy xmi:id="331" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="337" sofa="1" begin="3060" end="3071" features="342"/>
+    <types:FeatureProxy xmi:id="342" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="348" sofa="1" begin="3427" end="3431" features="353"/>
+    <types:FeatureProxy xmi:id="353" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="359" sofa="1" begin="5205" end="5216" features="364"/>
+    <types:FeatureProxy xmi:id="364" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="370" sofa="1" begin="7439" end="7450" features="375"/>
+    <types:FeatureProxy xmi:id="375" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="381" sofa="1" begin="7485" end="7489" features="386"/>
+    <types:FeatureProxy xmi:id="386" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="392" sofa="1" begin="8772" end="8775" features="397"/>
+    <types:FeatureProxy xmi:id="397" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="403" sofa="1" begin="8849" end="8853" features="408"/>
+    <types:FeatureProxy xmi:id="408" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="414" sofa="1" begin="9154" end="9236" features="419 422"/>
+    <types:FeatureProxy xmi:id="419" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="422" key="class" value="callout-links"/>
+    <types:AnnotationProxy xmi:id="429" sofa="1" begin="9154" end="9168" features="434"/>
+    <types:FeatureProxy xmi:id="434" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="440" sofa="1" begin="9196" end="9211" features="445"/>
+    <types:FeatureProxy xmi:id="445" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="451" sofa="1" begin="9236" end="9289" features="456 459"/>
+    <types:FeatureProxy xmi:id="456" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="459" key="class" value="fig-services"/>
+    <types:AnnotationProxy xmi:id="466" sofa="1" begin="9236" end="9264" features="471 474"/>
+    <types:FeatureProxy xmi:id="471" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="474" key="class" value="ppt-link"/>
+    <types:AnnotationProxy xmi:id="481" sofa="1" begin="9449" end="9460" features="486"/>
+    <types:FeatureProxy xmi:id="486" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="492" sofa="1" begin="10575" end="10596" features="497"/>
+    <types:FeatureProxy xmi:id="497" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="503" sofa="1" begin="10703" end="10718" features="508"/>
+    <types:FeatureProxy xmi:id="508" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="514" sofa="1" begin="10757" end="10761" features="519"/>
+    <types:FeatureProxy xmi:id="519" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="525" sofa="1" begin="10762" end="10763" features="530"/>
+    <types:FeatureProxy xmi:id="530" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="536" sofa="1" begin="10781" end="10801" features="541"/>
+    <types:FeatureProxy xmi:id="541" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="547" sofa="1" begin="11087" end="11125" features="552"/>
+    <types:FeatureProxy xmi:id="552" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="558" sofa="1" begin="11225" end="11233" features="563"/>
+    <types:FeatureProxy xmi:id="563" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="569" sofa="1" begin="11936" end="11944" features="574"/>
+    <types:FeatureProxy xmi:id="574" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="580" sofa="1" begin="12514" end="12540" features="585"/>
+    <types:FeatureProxy xmi:id="585" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="591" sofa="1" begin="12734" end="12738" features="596"/>
+    <types:FeatureProxy xmi:id="596" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="602" sofa="1" begin="12749" end="12753" features="607"/>
+    <types:FeatureProxy xmi:id="607" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="613" sofa="1" begin="13551" end="13577" features="618"/>
+    <types:FeatureProxy xmi:id="618" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="624" sofa="1" begin="13646" end="13650" features="629"/>
+    <types:FeatureProxy xmi:id="629" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="635" sofa="1" begin="13651" end="13652" features="640"/>
+    <types:FeatureProxy xmi:id="640" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="646" sofa="1" begin="13670" end="13695" features="651"/>
+    <types:FeatureProxy xmi:id="651" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="657" sofa="1" begin="13714" end="13723" features="662"/>
+    <types:FeatureProxy xmi:id="662" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="668" sofa="1" begin="14369" end="14376" features="673"/>
+    <types:FeatureProxy xmi:id="673" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="679" sofa="1" begin="14458" end="14541" features="684"/>
+    <types:FeatureProxy xmi:id="684" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="690" sofa="1" begin="15594" end="15603" features="695"/>
+    <types:FeatureProxy xmi:id="695" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="701" sofa="1" begin="15874" end="15878" features="706"/>
+    <types:FeatureProxy xmi:id="706" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="712" sofa="1" begin="15986" end="15990" features="717"/>
+    <types:FeatureProxy xmi:id="717" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="723" sofa="1" begin="16156" end="16160" features="728"/>
+    <types:FeatureProxy xmi:id="728" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="734" sofa="1" begin="16170" end="16179" features="739"/>
+    <types:FeatureProxy xmi:id="739" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="745" sofa="1" begin="16216" end="16220" features="750"/>
+    <types:FeatureProxy xmi:id="750" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="756" sofa="1" begin="16221" end="16222" features="761"/>
+    <types:FeatureProxy xmi:id="761" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="767" sofa="1" begin="16255" end="16259" features="772"/>
+    <types:FeatureProxy xmi:id="772" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="778" sofa="1" begin="16299" end="16303" features="783"/>
+    <types:FeatureProxy xmi:id="783" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="789" sofa="1" begin="16304" end="16305" features="794"/>
+    <types:FeatureProxy xmi:id="794" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="800" sofa="1" begin="16621" end="16625" features="805"/>
+    <types:FeatureProxy xmi:id="805" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="811" sofa="1" begin="16802" end="16806" features="816"/>
+    <types:FeatureProxy xmi:id="816" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="822" sofa="1" begin="16842" end="16846" features="827"/>
+    <types:FeatureProxy xmi:id="827" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="833" sofa="1" begin="17059" end="17063" features="838"/>
+    <types:FeatureProxy xmi:id="838" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="844" sofa="1" begin="17090" end="17094" features="849"/>
+    <types:FeatureProxy xmi:id="849" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="855" sofa="1" begin="17154" end="17163" features="860"/>
+    <types:FeatureProxy xmi:id="860" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="866" sofa="1" begin="17171" end="17175" features="871"/>
+    <types:FeatureProxy xmi:id="871" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="877" sofa="1" begin="17322" end="17326" features="882"/>
+    <types:FeatureProxy xmi:id="882" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="888" sofa="1" begin="17475" end="17569" features="893 896"/>
+    <types:FeatureProxy xmi:id="893" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="896" key="class" value="callout-links"/>
+    <types:AnnotationProxy xmi:id="903" sofa="1" begin="17475" end="17489" features="908"/>
+    <types:FeatureProxy xmi:id="908" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="914" sofa="1" begin="17523" end="17538" features="919"/>
+    <types:FeatureProxy xmi:id="919" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="925" sofa="1" begin="17569" end="17628" features="930 933"/>
+    <types:FeatureProxy xmi:id="930" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="933" key="class" value="fig-services"/>
+    <types:AnnotationProxy xmi:id="940" sofa="1" begin="17569" end="17597" features="945 948"/>
+    <types:FeatureProxy xmi:id="945" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="948" key="class" value="ppt-link"/>
+    <types:AnnotationProxy xmi:id="955" sofa="1" begin="18147" end="18151" features="960"/>
+    <types:FeatureProxy xmi:id="960" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="966" sofa="1" begin="18152" end="18153" features="971"/>
+    <types:FeatureProxy xmi:id="971" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="977" sofa="1" begin="18929" end="18933" features="982"/>
+    <types:FeatureProxy xmi:id="982" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="988" sofa="1" begin="19104" end="19108" features="993"/>
+    <types:FeatureProxy xmi:id="993" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="999" sofa="1" begin="19225" end="19233" features="1004"/>
+    <types:FeatureProxy xmi:id="1004" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1010" sofa="1" begin="19271" end="19275" features="1015"/>
+    <types:FeatureProxy xmi:id="1015" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1021" sofa="1" begin="19367" end="19375" features="1026"/>
+    <types:FeatureProxy xmi:id="1026" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1032" sofa="1" begin="19419" end="19420" features="1037"/>
+    <types:FeatureProxy xmi:id="1037" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1043" sofa="1" begin="19427" end="19428" features="1048"/>
+    <types:FeatureProxy xmi:id="1048" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1054" sofa="1" begin="19986" end="19990" features="1059"/>
+    <types:FeatureProxy xmi:id="1059" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1065" sofa="1" begin="20021" end="20029" features="1070"/>
+    <types:FeatureProxy xmi:id="1070" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1076" sofa="1" begin="20123" end="20127" features="1081"/>
+    <types:FeatureProxy xmi:id="1081" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1087" sofa="1" begin="20353" end="20357" features="1092"/>
+    <types:FeatureProxy xmi:id="1092" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1098" sofa="1" begin="20706" end="20800" features="1103 1106"/>
+    <types:FeatureProxy xmi:id="1103" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="1106" key="class" value="callout-links"/>
+    <types:AnnotationProxy xmi:id="1113" sofa="1" begin="20706" end="20720" features="1118"/>
+    <types:FeatureProxy xmi:id="1118" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1124" sofa="1" begin="20754" end="20769" features="1129"/>
+    <types:FeatureProxy xmi:id="1129" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1135" sofa="1" begin="20800" end="20859" features="1140 1143"/>
+    <types:FeatureProxy xmi:id="1140" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="1143" key="class" value="fig-services"/>
+    <types:AnnotationProxy xmi:id="1150" sofa="1" begin="20800" end="20828" features="1155 1158"/>
+    <types:FeatureProxy xmi:id="1155" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="1158" key="class" value="ppt-link"/>
+    <types:AnnotationProxy xmi:id="1165" sofa="1" begin="21028" end="21032" features="1170"/>
+    <types:FeatureProxy xmi:id="1170" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1176" sofa="1" begin="21072" end="21076" features="1181"/>
+    <types:FeatureProxy xmi:id="1181" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1187" sofa="1" begin="21077" end="21078" features="1192"/>
+    <types:FeatureProxy xmi:id="1192" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1198" sofa="1" begin="21108" end="21110" features="1203"/>
+    <types:FeatureProxy xmi:id="1203" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1209" sofa="1" begin="21206" end="21210" features="1214"/>
+    <types:FeatureProxy xmi:id="1214" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1220" sofa="1" begin="21639" end="21647" features="1225"/>
+    <types:FeatureProxy xmi:id="1225" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1231" sofa="1" begin="21673" end="21677" features="1236"/>
+    <types:FeatureProxy xmi:id="1236" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1242" sofa="1" begin="21718" end="21726" features="1247"/>
+    <types:FeatureProxy xmi:id="1247" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1253" sofa="1" begin="21847" end="21855" features="1258"/>
+    <types:FeatureProxy xmi:id="1258" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1264" sofa="1" begin="21864" end="21872" features="1269"/>
+    <types:FeatureProxy xmi:id="1269" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1275" sofa="1" begin="21899" end="21903" features="1280"/>
+    <types:FeatureProxy xmi:id="1280" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1286" sofa="1" begin="22821" end="22884" features="1291"/>
+    <types:FeatureProxy xmi:id="1291" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="1297" sofa="1" begin="23761" end="23765" features="1302"/>
+    <types:FeatureProxy xmi:id="1302" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1308" sofa="1" begin="23807" end="23811" features="1313"/>
+    <types:FeatureProxy xmi:id="1313" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1319" sofa="1" begin="23812" end="23813" features="1324"/>
+    <types:FeatureProxy xmi:id="1324" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1330" sofa="1" begin="23867" end="23871" features="1335"/>
+    <types:FeatureProxy xmi:id="1335" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1341" sofa="1" begin="24237" end="24241" features="1346"/>
+    <types:FeatureProxy xmi:id="1346" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1352" sofa="1" begin="24760" end="24854" features="1357 1360"/>
+    <types:FeatureProxy xmi:id="1357" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="1360" key="class" value="callout-links"/>
+    <types:AnnotationProxy xmi:id="1367" sofa="1" begin="24760" end="24774" features="1372"/>
+    <types:FeatureProxy xmi:id="1372" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1378" sofa="1" begin="24808" end="24823" features="1383"/>
+    <types:FeatureProxy xmi:id="1383" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1389" sofa="1" begin="25290" end="25294" features="1394"/>
+    <types:FeatureProxy xmi:id="1394" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1400" sofa="1" begin="25321" end="25325" features="1405"/>
+    <types:FeatureProxy xmi:id="1405" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1411" sofa="1" begin="25836" end="25913" features="1416"/>
+    <types:FeatureProxy xmi:id="1416" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="1422" sofa="1" begin="26319" end="26327" features="1427"/>
+    <types:FeatureProxy xmi:id="1427" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1433" sofa="1" begin="26370" end="26374" features="1438"/>
+    <types:FeatureProxy xmi:id="1438" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1444" sofa="1" begin="26417" end="26433" features="1449"/>
+    <types:FeatureProxy xmi:id="1449" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1455" sofa="1" begin="26667" end="26671" features="1460"/>
+    <types:FeatureProxy xmi:id="1460" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1466" sofa="1" begin="26818" end="26912" features="1471 1474"/>
+    <types:FeatureProxy xmi:id="1471" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="1474" key="class" value="callout-links"/>
+    <types:AnnotationProxy xmi:id="1481" sofa="1" begin="26818" end="26832" features="1486"/>
+    <types:FeatureProxy xmi:id="1486" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1492" sofa="1" begin="26866" end="26881" features="1497"/>
+    <types:FeatureProxy xmi:id="1497" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1503" sofa="1" begin="27446" end="27450" features="1508"/>
+    <types:FeatureProxy xmi:id="1508" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1514" sofa="1" begin="27680" end="27684" features="1519"/>
+    <types:FeatureProxy xmi:id="1519" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1525" sofa="1" begin="27685" end="27686" features="1530"/>
+    <types:FeatureProxy xmi:id="1530" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1536" sofa="1" begin="28193" end="28203" features="1541"/>
+    <types:FeatureProxy xmi:id="1541" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="1547" sofa="1" begin="28285" end="28334" features="1552"/>
+    <types:FeatureProxy xmi:id="1552" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="1558" sofa="1" begin="28873" end="28877" features="1563"/>
+    <types:FeatureProxy xmi:id="1563" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1569" sofa="1" begin="29130" end="29134" features="1574"/>
+    <types:FeatureProxy xmi:id="1574" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1580" sofa="1" begin="29432" end="29436" features="1585"/>
+    <types:FeatureProxy xmi:id="1585" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1591" sofa="1" begin="29470" end="29474" features="1596"/>
+    <types:FeatureProxy xmi:id="1596" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1602" sofa="1" begin="29590" end="29593" features="1607"/>
+    <types:FeatureProxy xmi:id="1607" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1613" sofa="1" begin="29982" end="29986" features="1618"/>
+    <types:FeatureProxy xmi:id="1618" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1624" sofa="1" begin="30311" end="30319" features="1629"/>
+    <types:FeatureProxy xmi:id="1629" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1635" sofa="1" begin="30324" end="30332" features="1640"/>
+    <types:FeatureProxy xmi:id="1640" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1646" sofa="1" begin="30359" end="30363" features="1651"/>
+    <types:FeatureProxy xmi:id="1651" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1657" sofa="1" begin="30748" end="30752" features="1662"/>
+    <types:FeatureProxy xmi:id="1662" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1668" sofa="1" begin="31109" end="31113" features="1673"/>
+    <types:FeatureProxy xmi:id="1673" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1679" sofa="1" begin="31254" end="31258" features="1684"/>
+    <types:FeatureProxy xmi:id="1684" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1690" sofa="1" begin="31902" end="31946" features="1695"/>
+    <types:FeatureProxy xmi:id="1695" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="1701" sofa="1" begin="32601" end="32612" features="1706"/>
+    <types:FeatureProxy xmi:id="1706" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1712" sofa="1" begin="36569" end="36584" features="1717"/>
+    <types:FeatureProxy xmi:id="1717" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="1723" sofa="1" begin="37130" end="37150" features="1728"/>
+    <types:FeatureProxy xmi:id="1728" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="1734" sofa="1" begin="37581" end="37590" features="1739"/>
+    <types:FeatureProxy xmi:id="1739" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="1745" sofa="1" begin="37609" end="37854" features="1750"/>
+    <types:FeatureProxy xmi:id="1750" key="tag" value="ul"/>
+    <types:AnnotationProxy xmi:id="1756" sofa="1" begin="37609" end="37835" features="1761 1764 1767"/>
+    <types:FeatureProxy xmi:id="1761" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="1764" key="class" value="fn"/>
+    <types:FeatureProxy xmi:id="1767" key="id" value="fn-1"/>
+    <types:AnnotationProxy xmi:id="1775" sofa="1" begin="37609" end="37609" features="1780 1783"/>
+    <types:FeatureProxy xmi:id="1780" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="1783" key="class" value="pnas-footnotes"/>
+    <types:AnnotationProxy xmi:id="1790" sofa="1" begin="37908" end="37921" features="1795"/>
+    <types:FeatureProxy xmi:id="1795" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="1801" sofa="1" begin="37986" end="37997" features="1806"/>
+    <types:FeatureProxy xmi:id="1806" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1812" sofa="1" begin="38248" end="38310" features="1817 1820"/>
+    <types:FeatureProxy xmi:id="1817" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="1820" key="class" value="history-list"/>
+    <types:AnnotationProxy xmi:id="1827" sofa="1" begin="38248" end="38294" features="1832 1835 1838"/>
+    <types:FeatureProxy xmi:id="1832" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="1835" key="class" value="accepted"/>
+    <types:FeatureProxy xmi:id="1838" key="hwp:start" value="2002-12-24"/>
+    <types:AnnotationProxy xmi:id="1846" sofa="1" begin="38310" end="38376" features="1851 1854"/>
+    <types:FeatureProxy xmi:id="1851" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="1854" key="class" value="copyright-statement"/>
+    <types:AnnotationProxy xmi:id="1861" sofa="1" begin="38310" end="38360" features="1866 1869 1872"/>
+    <types:FeatureProxy xmi:id="1866" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="1869" key="class" value="fn"/>
+    <types:FeatureProxy xmi:id="1872" key="id" value="copyright-statement-1"/>
+    <types:AnnotationProxy xmi:id="1880" sofa="1" begin="38450" end="38460" features="1885"/>
+    <types:FeatureProxy xmi:id="1885" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="1891" sofa="1" begin="38479" end="58412" features="1896 1899"/>
+    <types:FeatureProxy xmi:id="1896" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="1899" key="class" value="cit-list"/>
+    <types:AnnotationProxy xmi:id="1906" sofa="1" begin="38479" end="38890" features="1911"/>
+    <types:FeatureProxy xmi:id="1911" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1917" sofa="1" begin="38614" end="38732" features="1922 1925"/>
+    <types:FeatureProxy xmi:id="1922" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="1925" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="1932" sofa="1" begin="38614" end="38657" features="1937"/>
+    <types:FeatureProxy xmi:id="1937" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1943" sofa="1" begin="38691" end="38701" features="1948"/>
+    <types:FeatureProxy xmi:id="1948" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1954" sofa="1" begin="38912" end="39402" features="1959"/>
+    <types:FeatureProxy xmi:id="1959" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1965" sofa="1" begin="39046" end="39252" features="1970 1973"/>
+    <types:FeatureProxy xmi:id="1970" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="1973" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="1980" sofa="1" begin="39046" end="39095" features="1985"/>
+    <types:FeatureProxy xmi:id="1985" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1991" sofa="1" begin="39129" end="39176" features="1996"/>
+    <types:FeatureProxy xmi:id="1996" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2002" sofa="1" begin="39210" end="39221" features="2007"/>
+    <types:FeatureProxy xmi:id="2007" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2013" sofa="1" begin="39424" end="39840" features="2018"/>
+    <types:FeatureProxy xmi:id="2018" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2024" sofa="1" begin="39558" end="39681" features="2029 2032"/>
+    <types:FeatureProxy xmi:id="2029" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2032" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2039" sofa="1" begin="39558" end="39605" features="2044"/>
+    <types:FeatureProxy xmi:id="2044" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2050" sofa="1" begin="39639" end="39650" features="2055"/>
+    <types:FeatureProxy xmi:id="2055" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2061" sofa="1" begin="39862" end="40209" features="2066"/>
+    <types:FeatureProxy xmi:id="2066" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2072" sofa="1" begin="39997" end="40038" features="2077 2080"/>
+    <types:FeatureProxy xmi:id="2077" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2080" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2087" sofa="1" begin="39997" end="40007" features="2092"/>
+    <types:FeatureProxy xmi:id="2092" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2098" sofa="1" begin="40231" end="40836" features="2103"/>
+    <types:FeatureProxy xmi:id="2103" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2109" sofa="1" begin="40366" end="40489" features="2114 2117"/>
+    <types:FeatureProxy xmi:id="2114" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2117" key="class" value="cit-ed-list duplicate"/>
+    <types:AnnotationProxy xmi:id="2124" sofa="1" begin="40366" end="40414" features="2129"/>
+    <types:FeatureProxy xmi:id="2129" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2135" sofa="1" begin="40448" end="40458" features="2140"/>
+    <types:FeatureProxy xmi:id="2140" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2146" sofa="1" begin="40489" end="40531" features="2151 2154"/>
+    <types:FeatureProxy xmi:id="2151" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2154" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2161" sofa="1" begin="40489" end="40500" features="2166"/>
+    <types:FeatureProxy xmi:id="2166" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2172" sofa="1" begin="40858" end="41194" features="2177"/>
+    <types:FeatureProxy xmi:id="2177" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2183" sofa="1" begin="40993" end="41035" features="2188 2191"/>
+    <types:FeatureProxy xmi:id="2188" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2191" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2198" sofa="1" begin="40993" end="41004" features="2203"/>
+    <types:FeatureProxy xmi:id="2203" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2209" sofa="1" begin="41216" end="41833" features="2214"/>
+    <types:FeatureProxy xmi:id="2214" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2220" sofa="1" begin="41351" end="41482" features="2225 2228"/>
+    <types:FeatureProxy xmi:id="2225" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2228" key="class" value="cit-ed-list duplicate"/>
+    <types:AnnotationProxy xmi:id="2235" sofa="1" begin="41351" end="41402" features="2240"/>
+    <types:FeatureProxy xmi:id="2240" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2246" sofa="1" begin="41436" end="41451" features="2251"/>
+    <types:FeatureProxy xmi:id="2251" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2257" sofa="1" begin="41482" end="41605" features="2262 2265"/>
+    <types:FeatureProxy xmi:id="2262" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2265" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2272" sofa="1" begin="41482" end="41528" features="2277"/>
+    <types:FeatureProxy xmi:id="2277" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2283" sofa="1" begin="41562" end="41574" features="2288"/>
+    <types:FeatureProxy xmi:id="2288" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2294" sofa="1" begin="41855" end="42188" features="2299"/>
+    <types:FeatureProxy xmi:id="2299" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2305" sofa="1" begin="41989" end="42031" features="2310 2313"/>
+    <types:FeatureProxy xmi:id="2310" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2313" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2320" sofa="1" begin="41989" end="42000" features="2325"/>
+    <types:FeatureProxy xmi:id="2325" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2331" sofa="1" begin="42210" end="42539" features="2336"/>
+    <types:FeatureProxy xmi:id="2336" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2342" sofa="1" begin="42345" end="42387" features="2347 2350"/>
+    <types:FeatureProxy xmi:id="2347" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2350" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2357" sofa="1" begin="42345" end="42356" features="2362"/>
+    <types:FeatureProxy xmi:id="2362" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2368" sofa="1" begin="42561" end="43631" features="2373"/>
+    <types:FeatureProxy xmi:id="2373" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2379" sofa="1" begin="42696" end="43463" features="2384 2387"/>
+    <types:FeatureProxy xmi:id="2384" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2387" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2394" sofa="1" begin="42696" end="42740" features="2399"/>
+    <types:FeatureProxy xmi:id="2399" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2405" sofa="1" begin="42774" end="42817" features="2410"/>
+    <types:FeatureProxy xmi:id="2410" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2416" sofa="1" begin="42851" end="42904" features="2421"/>
+    <types:FeatureProxy xmi:id="2421" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2427" sofa="1" begin="42938" end="42985" features="2432"/>
+    <types:FeatureProxy xmi:id="2432" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2438" sofa="1" begin="43019" end="43060" features="2443"/>
+    <types:FeatureProxy xmi:id="2443" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2449" sofa="1" begin="43094" end="43140" features="2454"/>
+    <types:FeatureProxy xmi:id="2454" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2460" sofa="1" begin="43174" end="43222" features="2465"/>
+    <types:FeatureProxy xmi:id="2465" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2471" sofa="1" begin="43256" end="43304" features="2476"/>
+    <types:FeatureProxy xmi:id="2476" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2482" sofa="1" begin="43338" end="43387" features="2487"/>
+    <types:FeatureProxy xmi:id="2487" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2493" sofa="1" begin="43421" end="43432" features="2498"/>
+    <types:FeatureProxy xmi:id="2498" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2504" sofa="1" begin="43653" end="44495" features="2509"/>
+    <types:FeatureProxy xmi:id="2509" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2515" sofa="1" begin="43788" end="44327" features="2520 2523"/>
+    <types:FeatureProxy xmi:id="2520" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2523" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2530" sofa="1" begin="43788" end="43835" features="2535"/>
+    <types:FeatureProxy xmi:id="2535" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2541" sofa="1" begin="43869" end="43924" features="2546"/>
+    <types:FeatureProxy xmi:id="2546" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2552" sofa="1" begin="43958" end="44002" features="2557"/>
+    <types:FeatureProxy xmi:id="2557" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2563" sofa="1" begin="44036" end="44086" features="2568"/>
+    <types:FeatureProxy xmi:id="2568" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2574" sofa="1" begin="44120" end="44168" features="2579"/>
+    <types:FeatureProxy xmi:id="2579" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2585" sofa="1" begin="44202" end="44251" features="2590"/>
+    <types:FeatureProxy xmi:id="2590" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2596" sofa="1" begin="44285" end="44296" features="2601"/>
+    <types:FeatureProxy xmi:id="2601" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2607" sofa="1" begin="44517" end="45106" features="2612"/>
+    <types:FeatureProxy xmi:id="2612" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2618" sofa="1" begin="44651" end="44938" features="2623 2626"/>
+    <types:FeatureProxy xmi:id="2623" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2626" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2633" sofa="1" begin="44651" end="44698" features="2638"/>
+    <types:FeatureProxy xmi:id="2638" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2644" sofa="1" begin="44732" end="44782" features="2649"/>
+    <types:FeatureProxy xmi:id="2649" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2655" sofa="1" begin="44816" end="44863" features="2660"/>
+    <types:FeatureProxy xmi:id="2660" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2666" sofa="1" begin="44897" end="44907" features="2671"/>
+    <types:FeatureProxy xmi:id="2671" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2677" sofa="1" begin="45128" end="45785" features="2682"/>
+    <types:FeatureProxy xmi:id="2682" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2688" sofa="1" begin="45262" end="45618" features="2693 2696"/>
+    <types:FeatureProxy xmi:id="2693" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2696" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2703" sofa="1" begin="45262" end="45306" features="2708"/>
+    <types:FeatureProxy xmi:id="2708" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2714" sofa="1" begin="45340" end="45384" features="2719"/>
+    <types:FeatureProxy xmi:id="2719" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2725" sofa="1" begin="45418" end="45463" features="2730"/>
+    <types:FeatureProxy xmi:id="2730" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2736" sofa="1" begin="45497" end="45542" features="2741"/>
+    <types:FeatureProxy xmi:id="2741" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2747" sofa="1" begin="45576" end="45587" features="2752"/>
+    <types:FeatureProxy xmi:id="2752" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2758" sofa="1" begin="45807" end="46316" features="2763"/>
+    <types:FeatureProxy xmi:id="2763" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2769" sofa="1" begin="45942" end="46149" features="2774 2777"/>
+    <types:FeatureProxy xmi:id="2774" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2777" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2784" sofa="1" begin="45942" end="45990" features="2789"/>
+    <types:FeatureProxy xmi:id="2789" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2795" sofa="1" begin="46024" end="46074" features="2800"/>
+    <types:FeatureProxy xmi:id="2800" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2806" sofa="1" begin="46108" end="46118" features="2811"/>
+    <types:FeatureProxy xmi:id="2811" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2817" sofa="1" begin="46338" end="46781" features="2822"/>
+    <types:FeatureProxy xmi:id="2822" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2828" sofa="1" begin="46473" end="46601" features="2833 2836"/>
+    <types:FeatureProxy xmi:id="2833" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2836" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2843" sofa="1" begin="46473" end="46519" features="2848"/>
+    <types:FeatureProxy xmi:id="2848" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2854" sofa="1" begin="46553" end="46570" features="2859"/>
+    <types:FeatureProxy xmi:id="2859" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2865" sofa="1" begin="46803" end="47147" features="2870"/>
+    <types:FeatureProxy xmi:id="2870" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2876" sofa="1" begin="46938" end="46981" features="2881 2884"/>
+    <types:FeatureProxy xmi:id="2881" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2884" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2891" sofa="1" begin="46938" end="46950" features="2896"/>
+    <types:FeatureProxy xmi:id="2896" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2902" sofa="1" begin="47169" end="47595" features="2907"/>
+    <types:FeatureProxy xmi:id="2907" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2913" sofa="1" begin="47304" end="47429" features="2918 2921"/>
+    <types:FeatureProxy xmi:id="2918" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2921" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2928" sofa="1" begin="47304" end="47353" features="2933"/>
+    <types:FeatureProxy xmi:id="2933" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2939" sofa="1" begin="47387" end="47398" features="2944"/>
+    <types:FeatureProxy xmi:id="2944" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2950" sofa="1" begin="47617" end="48173" features="2955"/>
+    <types:FeatureProxy xmi:id="2955" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2961" sofa="1" begin="47752" end="48038" features="2966 2969"/>
+    <types:FeatureProxy xmi:id="2966" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="2969" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="2976" sofa="1" begin="47752" end="47798" features="2981"/>
+    <types:FeatureProxy xmi:id="2981" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2987" sofa="1" begin="47832" end="47878" features="2992"/>
+    <types:FeatureProxy xmi:id="2992" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2998" sofa="1" begin="47912" end="47956" features="3003"/>
+    <types:FeatureProxy xmi:id="3003" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3009" sofa="1" begin="47990" end="48007" features="3014"/>
+    <types:FeatureProxy xmi:id="3014" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3020" sofa="1" begin="48195" end="48791" features="3025"/>
+    <types:FeatureProxy xmi:id="3025" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3031" sofa="1" begin="48330" end="48618" features="3036 3039"/>
+    <types:FeatureProxy xmi:id="3036" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="3039" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="3046" sofa="1" begin="48330" end="48378" features="3051"/>
+    <types:FeatureProxy xmi:id="3051" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3057" sofa="1" begin="48412" end="48462" features="3062"/>
+    <types:FeatureProxy xmi:id="3062" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3068" sofa="1" begin="48496" end="48541" features="3073"/>
+    <types:FeatureProxy xmi:id="3073" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3079" sofa="1" begin="48575" end="48587" features="3084"/>
+    <types:FeatureProxy xmi:id="3084" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3090" sofa="1" begin="48813" end="49321" features="3095"/>
+    <types:FeatureProxy xmi:id="3095" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3101" sofa="1" begin="48948" end="49153" features="3106 3109"/>
+    <types:FeatureProxy xmi:id="3106" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="3109" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="3116" sofa="1" begin="48948" end="48996" features="3121"/>
+    <types:FeatureProxy xmi:id="3121" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3127" sofa="1" begin="49030" end="49076" features="3132"/>
+    <types:FeatureProxy xmi:id="3132" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3138" sofa="1" begin="49110" end="49122" features="3143"/>
+    <types:FeatureProxy xmi:id="3143" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3149" sofa="1" begin="49343" end="49765" features="3154"/>
+    <types:FeatureProxy xmi:id="3154" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3160" sofa="1" begin="49477" end="49598" features="3165 3168"/>
+    <types:FeatureProxy xmi:id="3165" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="3168" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="3175" sofa="1" begin="49477" end="49522" features="3180"/>
+    <types:FeatureProxy xmi:id="3180" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3186" sofa="1" begin="49556" end="49567" features="3191"/>
+    <types:FeatureProxy xmi:id="3191" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3197" sofa="1" begin="49787" end="50607" features="3202"/>
+    <types:FeatureProxy xmi:id="3202" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3208" sofa="1" begin="49922" end="50443" features="3213 3216"/>
+    <types:FeatureProxy xmi:id="3213" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="3216" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="3223" sofa="1" begin="49922" end="49968" features="3228"/>
+    <types:FeatureProxy xmi:id="3228" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3234" sofa="1" begin="50002" end="50046" features="3239"/>
+    <types:FeatureProxy xmi:id="3239" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3245" sofa="1" begin="50080" end="50122" features="3250"/>
+    <types:FeatureProxy xmi:id="3250" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3256" sofa="1" begin="50156" end="50202" features="3261"/>
+    <types:FeatureProxy xmi:id="3261" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3267" sofa="1" begin="50236" end="50284" features="3272"/>
+    <types:FeatureProxy xmi:id="3272" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3278" sofa="1" begin="50318" end="50367" features="3283"/>
+    <types:FeatureProxy xmi:id="3283" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3289" sofa="1" begin="50401" end="50412" features="3294"/>
+    <types:FeatureProxy xmi:id="3294" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3300" sofa="1" begin="50629" end="51140" features="3305"/>
+    <types:FeatureProxy xmi:id="3305" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3311" sofa="1" begin="50764" end="50968" features="3316 3319"/>
+    <types:FeatureProxy xmi:id="3316" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="3319" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="3326" sofa="1" begin="50764" end="50810" features="3331"/>
+    <types:FeatureProxy xmi:id="3331" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3337" sofa="1" begin="50844" end="50893" features="3342"/>
+    <types:FeatureProxy xmi:id="3342" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3348" sofa="1" begin="50927" end="50937" features="3353"/>
+    <types:FeatureProxy xmi:id="3353" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3359" sofa="1" begin="51162" end="51924" features="3364"/>
+    <types:FeatureProxy xmi:id="3364" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3370" sofa="1" begin="51297" end="51749" features="3375 3378"/>
+    <types:FeatureProxy xmi:id="3375" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="3378" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="3385" sofa="1" begin="51297" end="51340" features="3390"/>
+    <types:FeatureProxy xmi:id="3390" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3396" sofa="1" begin="51374" end="51422" features="3401"/>
+    <types:FeatureProxy xmi:id="3401" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3407" sofa="1" begin="51456" end="51517" features="3412"/>
+    <types:FeatureProxy xmi:id="3412" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3418" sofa="1" begin="51551" end="51595" features="3423"/>
+    <types:FeatureProxy xmi:id="3423" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3429" sofa="1" begin="51629" end="51675" features="3434"/>
+    <types:FeatureProxy xmi:id="3434" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3440" sofa="1" begin="51709" end="51718" features="3445"/>
+    <types:FeatureProxy xmi:id="3445" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3451" sofa="1" begin="51946" end="52442" features="3456"/>
+    <types:FeatureProxy xmi:id="3456" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3462" sofa="1" begin="52081" end="52280" features="3467 3470"/>
+    <types:FeatureProxy xmi:id="3467" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="3470" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="3477" sofa="1" begin="52081" end="52124" features="3482"/>
+    <types:FeatureProxy xmi:id="3482" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3488" sofa="1" begin="52158" end="52204" features="3493"/>
+    <types:FeatureProxy xmi:id="3493" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3499" sofa="1" begin="52238" end="52249" features="3504"/>
+    <types:FeatureProxy xmi:id="3504" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3510" sofa="1" begin="52464" end="53131" features="3515"/>
+    <types:FeatureProxy xmi:id="3515" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3521" sofa="1" begin="52599" end="52962" features="3526 3529"/>
+    <types:FeatureProxy xmi:id="3526" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="3529" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="3536" sofa="1" begin="52599" end="52643" features="3541"/>
+    <types:FeatureProxy xmi:id="3541" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3547" sofa="1" begin="52677" end="52721" features="3552"/>
+    <types:FeatureProxy xmi:id="3552" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3558" sofa="1" begin="52755" end="52800" features="3563"/>
+    <types:FeatureProxy xmi:id="3563" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3569" sofa="1" begin="52834" end="52887" features="3574"/>
+    <types:FeatureProxy xmi:id="3574" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3580" sofa="1" begin="52921" end="52931" features="3585"/>
+    <types:FeatureProxy xmi:id="3585" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3591" sofa="1" begin="53153" end="53630" features="3596"/>
+    <types:FeatureProxy xmi:id="3596" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3602" sofa="1" begin="53288" end="53490" features="3607 3610"/>
+    <types:FeatureProxy xmi:id="3607" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="3610" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="3617" sofa="1" begin="53288" end="53335" features="3622"/>
+    <types:FeatureProxy xmi:id="3622" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3628" sofa="1" begin="53369" end="53413" features="3633"/>
+    <types:FeatureProxy xmi:id="3633" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3639" sofa="1" begin="53447" end="53459" features="3644"/>
+    <types:FeatureProxy xmi:id="3644" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3650" sofa="1" begin="53652" end="54249" features="3655"/>
+    <types:FeatureProxy xmi:id="3655" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3661" sofa="1" begin="53787" end="54073" features="3666 3669"/>
+    <types:FeatureProxy xmi:id="3666" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="3669" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="3676" sofa="1" begin="53787" end="53835" features="3681"/>
+    <types:FeatureProxy xmi:id="3681" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3687" sofa="1" begin="53869" end="53916" features="3692"/>
+    <types:FeatureProxy xmi:id="3692" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3698" sofa="1" begin="53950" end="53996" features="3703"/>
+    <types:FeatureProxy xmi:id="3703" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3709" sofa="1" begin="54030" end="54042" features="3714"/>
+    <types:FeatureProxy xmi:id="3714" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3720" sofa="1" begin="54271" end="54715" features="3725"/>
+    <types:FeatureProxy xmi:id="3725" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3731" sofa="1" begin="54406" end="54533" features="3736 3739"/>
+    <types:FeatureProxy xmi:id="3736" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="3739" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="3746" sofa="1" begin="54406" end="54451" features="3751"/>
+    <types:FeatureProxy xmi:id="3751" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3757" sofa="1" begin="54485" end="54502" features="3762"/>
+    <types:FeatureProxy xmi:id="3762" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3768" sofa="1" begin="54737" end="55338" features="3773"/>
+    <types:FeatureProxy xmi:id="3773" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3779" sofa="1" begin="54871" end="55163" features="3784 3787"/>
+    <types:FeatureProxy xmi:id="3784" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="3787" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="3794" sofa="1" begin="54871" end="54921" features="3799"/>
+    <types:FeatureProxy xmi:id="3799" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3805" sofa="1" begin="54955" end="55000" features="3810"/>
+    <types:FeatureProxy xmi:id="3810" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3816" sofa="1" begin="55034" end="55087" features="3821"/>
+    <types:FeatureProxy xmi:id="3821" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3827" sofa="1" begin="55121" end="55132" features="3832"/>
+    <types:FeatureProxy xmi:id="3832" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3838" sofa="1" begin="55360" end="56017" features="3843"/>
+    <types:FeatureProxy xmi:id="3843" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3849" sofa="1" begin="55495" end="55862" features="3854 3857"/>
+    <types:FeatureProxy xmi:id="3854" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="3857" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="3864" sofa="1" begin="55495" end="55539" features="3869"/>
+    <types:FeatureProxy xmi:id="3869" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3875" sofa="1" begin="55573" end="55619" features="3880"/>
+    <types:FeatureProxy xmi:id="3880" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3886" sofa="1" begin="55653" end="55702" features="3891"/>
+    <types:FeatureProxy xmi:id="3891" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3897" sofa="1" begin="55736" end="55784" features="3902"/>
+    <types:FeatureProxy xmi:id="3902" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3908" sofa="1" begin="55818" end="55831" features="3913"/>
+    <types:FeatureProxy xmi:id="3913" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3919" sofa="1" begin="56039" end="56634" features="3924"/>
+    <types:FeatureProxy xmi:id="3924" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3930" sofa="1" begin="56174" end="56461" features="3935 3938"/>
+    <types:FeatureProxy xmi:id="3935" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="3938" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="3945" sofa="1" begin="56174" end="56221" features="3950"/>
+    <types:FeatureProxy xmi:id="3950" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3956" sofa="1" begin="56255" end="56302" features="3961"/>
+    <types:FeatureProxy xmi:id="3961" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3967" sofa="1" begin="56336" end="56384" features="3972"/>
+    <types:FeatureProxy xmi:id="3972" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3978" sofa="1" begin="56418" end="56430" features="3983"/>
+    <types:FeatureProxy xmi:id="3983" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="3989" sofa="1" begin="56656" end="57252" features="3994"/>
+    <types:FeatureProxy xmi:id="3994" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4000" sofa="1" begin="56791" end="57072" features="4005 4008"/>
+    <types:FeatureProxy xmi:id="4005" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="4008" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="4015" sofa="1" begin="56791" end="56835" features="4020"/>
+    <types:FeatureProxy xmi:id="4020" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4026" sofa="1" begin="56869" end="56915" features="4031"/>
+    <types:FeatureProxy xmi:id="4031" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4037" sofa="1" begin="56949" end="56990" features="4042"/>
+    <types:FeatureProxy xmi:id="4042" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4048" sofa="1" begin="57024" end="57041" features="4053"/>
+    <types:FeatureProxy xmi:id="4053" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4059" sofa="1" begin="57274" end="57780" features="4064"/>
+    <types:FeatureProxy xmi:id="4064" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4070" sofa="1" begin="57409" end="57614" features="4075 4078"/>
+    <types:FeatureProxy xmi:id="4075" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="4078" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="4085" sofa="1" begin="57409" end="57457" features="4090"/>
+    <types:FeatureProxy xmi:id="4090" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4096" sofa="1" begin="57491" end="57537" features="4101"/>
+    <types:FeatureProxy xmi:id="4101" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4107" sofa="1" begin="57571" end="57583" features="4112"/>
+    <types:FeatureProxy xmi:id="4112" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4118" sofa="1" begin="57802" end="58393" features="4123"/>
+    <types:FeatureProxy xmi:id="4123" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4129" sofa="1" begin="57937" end="58222" features="4134 4137"/>
+    <types:FeatureProxy xmi:id="4134" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="4137" key="class" value="cit-auth-list"/>
+    <types:AnnotationProxy xmi:id="4144" sofa="1" begin="57937" end="57982" features="4149"/>
+    <types:FeatureProxy xmi:id="4149" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4155" sofa="1" begin="58016" end="58067" features="4160"/>
+    <types:FeatureProxy xmi:id="4160" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4166" sofa="1" begin="58101" end="58149" features="4171"/>
+    <types:FeatureProxy xmi:id="4171" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4177" sofa="1" begin="58183" end="58191" features="4182"/>
+    <types:FeatureProxy xmi:id="4182" key="tag" value="li"/>
+    <cas:View sofa="1" members="8 13"/>
+</xmi:XMI>

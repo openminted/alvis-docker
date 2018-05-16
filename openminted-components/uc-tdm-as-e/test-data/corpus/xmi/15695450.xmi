@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:tcas="http:///uima/tcas.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:cas="http:///uima/cas.ecore" xmlns:types="http:///fr/inra/maiage/bibliome/alvisnlp/bibliomefactory/modules/uima/types.ecore" xmi:version="2.0">
+    <cas:NULL xmi:id="0"/>
+    <tcas:DocumentAnnotation xmi:id="8" sofa="1" begin="0" end="53345" language="x-unspecified"/>
+    <types:DocumentProxy xmi:id="13" sofa="1" id="15695450" features="18 21 24 27 30" sections="40 58 76"/>
+    <cas:Sofa xmi:id="1" sofaNum="1" sofaID="_InitialView" mimeType="text" sofaString="LEAFY COTYLEDON1 Controls Seed Storage Protein Genes through Its Regulation of FUSCA3 and ABSCISIC ACID INSENSITIVE3&#10;                  &#10;                      Next Section&#10;                  Abstract&#10;                  &#10;                  Arabidopsis ABSCISIC ACID INSENSEITIVE3 (ABI3), FUSCA3 (FUS3) and LEAFY COTYLEDON1 (LEC1) encode key transcription factors that control seed maturation events, including seed storage protein (SSP) accumulation.&#10;                     Although lec1 mutations are known to down-regulate SSP gene expression as the fus3 or abi3 mutation does, the mechanisms by which LEC1 regulates SSP gene expression are largely unknown compared with the mechanisms utilized by FUS3 or ABI3. We expressed LEC1 ectopically&#10;                     in transgenic plants using an artificial dexamethasone (Dex) induction system. The ectopic expression of LEC1 also resulted&#10;                     in the induction of FUS3 and ABI3 expression, which preceded the induction of SSP expression. The expression of FUS3 and ABI3 was found to be down-regulated in developing siliques of the lec1 mutant. Furthermore, the levels of ectopic SSP induction by LEC1 were greatly or moderately reduced in transgenic plants with an abi3 or fus3 mutant background, respectively. LEC1-induced ectopic expression of the At1g62290 aspartic protease gene, which was identified to be regulated preferentially by FUS3, was more severely affected in the fus3 mutant than in the abi3 mutant. From these data, we suggest that LEC1 controls the expression of the SSP genes in a hierarchical manner, which involves ABI3 and FUS3.&#10;                  &#10;                  &#10;               &#10;  &#10;    LEAFY COTYLEDON1 Controls Seed Storage Protein Genes through Its Regulation of FUSCA3 and ABSCISIC ACID INSENSITIVE3&#10;               &#10;                  Yasuaki Kagaya1, &#10;                     &#10;                     Ryoko Toyoshima1, &#10;                     &#10;                     Rie Okuda1, &#10;                     &#10;                     Haruko Usui2, &#10;                     &#10;                     Akiko Yamamoto2 and &#10;                     &#10;                     Tsukaho Hattori2,3&#10;                  1 Life Science Research Center, Mie University, Tsu, 514-8507 Japan &#10;                        &#10;                     &#10;                     2 Bioscience and Biotechnology Center, Nagoya University, Chikusa, Nagoya, 464-8601 Japan&#10;                        &#10;                     &#10;                  3Corresponding author: E-mail, hattori{at}agr.nagoya-u.ac.jp; Fax, +81-52-789-5214.&#10;                     &#10;                  Received November 26, 2004.&#10;                     &#10;                     Accepted December 28, 2004.&#10;                     &#10;                  &#10;               &#10;                  &#10;                      Next Section&#10;                  Abstract&#10;                  &#10;                  Arabidopsis ABSCISIC ACID INSENSEITIVE3 (ABI3), FUSCA3 (FUS3) and LEAFY COTYLEDON1 (LEC1) encode key transcription factors that control seed maturation events, including seed storage protein (SSP) accumulation.&#10;                     Although lec1 mutations are known to down-regulate SSP gene expression as the fus3 or abi3 mutation does, the mechanisms by which LEC1 regulates SSP gene expression are largely unknown compared with the mechanisms utilized by FUS3 or ABI3. We expressed LEC1 ectopically&#10;                     in transgenic plants using an artificial dexamethasone (Dex) induction system. The ectopic expression of LEC1 also resulted&#10;                     in the induction of FUS3 and ABI3 expression, which preceded the induction of SSP expression. The expression of FUS3 and ABI3 was found to be down-regulated in developing siliques of the lec1 mutant. Furthermore, the levels of ectopic SSP induction by LEC1 were greatly or moderately reduced in transgenic plants with an abi3 or fus3 mutant background, respectively. LEC1-induced ectopic expression of the At1g62290 aspartic protease gene, which was identified to be regulated preferentially by FUS3, was more severely affected in the fus3 mutant than in the abi3 mutant. From these data, we suggest that LEC1 controls the expression of the SSP genes in a hierarchical manner, which involves ABI3 and FUS3.&#10;                  &#10;                  &#10;               &#10;               Key words&#10;               ABI3&#10;                  &#10;                           Arabidopsis thaliana&#10;                           &#10;                  FUS3&#10;                  LEC1&#10;                  Seed development&#10;                  Seed storage protein&#10;               Key words&#10;               CaMV, cauliflower mosaic virus&#10;                  Dex, dexamethasone&#10;                  SSP, seed storage protein&#10;               &#10;                  Previous SectionNext Section&#10;                  &#10;                  Introduction&#10;                  &#10;                  Accumulation of specific proteins and other compounds for nutrient storage to high levels is one of the characteristic events&#10;                     during seed development. Seed storage material accumulation occurs during the latter half of embryogenesis or the maturation&#10;                     phase where morphogenesis has already been accomplished (Harada 1997). The embryo also acquires desiccation tolerance and dormancy during the maturation phase (Harada 1997). These events, including seed storage protein (SSP) accumulation, are considered to be regulated by a common, at least in&#10;                     part, genetic program because mutations are known which affect a wide range of events that occur during the maturation phase&#10;                     (Koornneef et al. 1984, Finkelstein and Somerville 1990, Meinke 1992, Nambara et al. 1992, Bäumlein et al. 1994, Keith et al. 1994, Meinke et al. 1994, Parcy et al. 1994, West et al. 1994, Nambara et al. 1995, Parcy et al. 1997, Raz et al. 2001). In Arabidopsis, ABI3, FUS3 and LEC1 are the three major regulatory genetic loci of the maturation program (Koornneef et al. 1984, Meinke et al. 1994, Bäumlein et al. 1994, Keith et al. 1994, Meinke et al. 1994, West et al. 1994). Also, the LEC2 gene is reported to have a similar function (Meinke et al. 1994). The plant hormone abscisic acid (ABA) participates in the regulation of seed maturation and is closely linked to the function&#10;                     of ABI3 (Koornneef et al. 1984, Giraudat et al. 1992, Parcy et al. 1994, Parcy et al. 1997). All of these regulatory genes encode transcription factors. ABI3, FUS3 and LEC2 are members of a transcription factor family,&#10;                     which contains a plant-specific DNA-binding domain called B3 (Giraudat et al. 1992, Luerßen et al. 1998, Stone et al. 2001). LEC1 encodes a homolog of the CCAAT-binding factor HAP3 subunit (Lotan et al. 1998). The B3 domains of ABI3, FUS3 and LEC2 are most closely related to each other among the B3-containing protein family (Giraudat et al. 1992, Luerßen et al. 1998, Stone et al. 2001). In addition to direct binding to DNA via the B3 domain (Suzuki et al. 1997, Monke et al. 2004), ABI3 also functions as a coactivator by interacting with the ABA-response element (ABRE)-binding factors (Hattori et al. 1992, Hattori et al. 1995, Carson et al. 1997, Hobo et al. 1999, Nakamura et al. 2001).&#10;                  &#10;                  &#10;                  Despite the molecular similarities between FUS3 and ABI3, fus3 mutants resemble lec1 mutants morphologically in that they exhibit leafy traits in cotyledons, as represented by trichome formation and anthocyanin&#10;                     accumulation (Meinke 1992, Bäumlein et al. 1994, Keith et al. 1994, West et al. 1994). abi3 mutant seeds also display unique phenotypes, such as failure in chlorophyll degradation and ABA insensitivity upon germination,&#10;                     which distinguish abi3 mutants from fus3 and lec1 mutants (Koornneef et al. 1984, Finkelstein and Somerville 1990, Meinke 1992, Nambara et al. 1992, Parcy et al. 1994, Nambara et al. 1995, Parcy et al. 1997). The similarity between the fus3 and lec1 mutant phenotypes suggests that wild-type fus3 and lec1 regulate a common set of downstream genes. However, genetic studies have revealed no epistatic relationships between them&#10;                     at least for the morphological phenotypes (West et al. 1994, Lotan et al. 1998, Raz et al. 2001). Despite the phenotypic differences between fus3/lec1 and abi3 mutants, these loci genetically interact as the phenotypes specific to the monogenic mutant of either type are enhanced in&#10;                     digenic mutants (Parcy et al. 1997, Nambara et al. 2000, Raz et al. 2001). Synergistic interactions are also observed for phenotypes common to lec-type and abi3 mutants such as the suppressive effect on SSP gene expression (Parcy et al. 1997, Nambara et al. 2000).&#10;                  &#10;                  &#10;                  12S globulins (cruciferins) and 2S albumins are the two abundant classes of SSP in Arabidopsis and are encoded by gene families with 4–5 members: Cruciferins consist of CRA–CRC and an unnamed member, and 2S albumins consist of At2S1–At2S4 and an unnamed member (Pang et al. 1988, Guerche et al. 1990). The expression of these storage protein genes is greatly reduced in the mutants of the above-mentioned seed maturation&#10;                     regulatory genes (Nambara et al. 1992, Bäumlein et al. 1994, Keith et al. 1994, Meinke et al. 1994, Parcy et al. 1994, West et al. 1994, Nambara et al. 1995, Parcy et al. 1997, Nambara et al. 2000). Interactions of FUS3 or ABI3 with the promoters of the SSP genes have been investigated by experimental methods such as the transient co-transfection assay and DNA–protein interaction&#10;                     assays in yeast cells or in vitro (Bobb et al. 1997, Luerßen et al. 1998, Ezcurra et al. 2000, Reidt et al. 2000, Kroj et al. 2003, Monke et al. 2004). Such analyses have revealed that both FUS3 and ABI3 bind to a cis-element, called the RY repeat (CATGCA), present in the promoters of 2S albumin genes and other seed-specific promoters. When ABI3 or FUS3 is ectopically expressed, the SSP genes are activated in vegetative tissues in a completely or partially ABA-dependent manner (Parcy et al. 1994, Parcy et al. 1997, Kagaya et al. 2005). In addition to the direct interaction with the promoters, we have demonstrated that the activation of the SSP genes by FUS3 requires secondary regulatory factor(s), which are induced by FUS3.&#10;                  &#10;                  &#10;                  In contrast to the increasing knowledge about the molecular action of FUS3 and ABI3, the mechanisms through which LEC1 regulates&#10;                     SSP and other seed-specific genes are largely unknown. When LEC1 is ectopically expressed using the cauliflower mosaic virus&#10;                     (CaMV) 35S promoter, somatic embryos are formed in vegetative tissues, and seed-specific genes, including the SSP genes, are activated (Lotan et al. 1998). However, it is unknown whether such ectopic expression of the SSP genes is a result of ectopic embryogenesis or can be induced by LEC1 without embryogenesis. In addition, no genes under direct&#10;                     regulation by LEC1 have been identified. Thus, no cis-elements through which LEC1 acts have been identified, though LEC1 is known to be a homolog of a subunit of the CCAAT-binding&#10;                     factor.&#10;                  &#10;                  &#10;                  In the present study, LEC1 was ectopically expressed using an artificial dexamethasone (Dex) induction system (Aoyama and Chua 1997). This induction system showed that the SSP genes are induced by LEC1 with slower kinetics compared with the induction by FUS3 or ABI3, but within a time range where&#10;                     no ectopic embryogenesis is initiated. Furthermore, we show that LEC1 induction of the SSP genes requires functional FUS3 and ABI3 genes, which were also demonstrated to be rapidly induced by LEC1. From these data, we suggest that LEC1 controls the expression&#10;                     of the SSP genes in a hierarchical manner, which involves ABI3 and FUS3.&#10;                  &#10;                  &#10;               &#10;               &#10;                  Previous SectionNext Section&#10;                  &#10;                  Results&#10;                  &#10;                  &#10;                  Ectopic expression of LEC1 results in the induction of the SSP genes&#10;                  &#10;                  Previously, Lotan et al. (1998) reported that constitutive expression of LEC1, driven by the CaMV 35S promoter, resulted in the formation of somatic embryos&#10;                     in vegetative tissues. As expected, the SSP genes were expressed in these somatic embryos. However, these results do not provide much information about the mechanisms&#10;                     of how LEC1 is involved in the regulation of the SSP genes because the SSP gene expression could be regarded as a consequence of embryogenesis resulting from the long-term effect of ectopic LEC1 expression.&#10;                     In order to study the effect of LEC1 ectopic expression for a defined time period, transgenic Arabidopsis lines (TA-LEC1) were generated, in which LEC1 expression could be induced by Dex treatment.&#10;                  &#10;                  &#10;                  When young TA-LEC1 plants (7 d old) were treated with Dex in the presence of ABA, the transcripts of two SSP genes, At2S3 and CRC, were found to be induced (Fig. 1A, B). Very low levels of induction were observed at 6 h of treatment, but the expression of CRC and At2S3 became significant after 24 h. The induction levels of these SSP transcripts in TA-LEC1 lines were comparable with or somewhat lower than those in the TA-ABI3 or TA-FUS3 plants in which&#10;                     ABI3 or FUS3, respectively, could be induced by Dex treatment. Although accurate comparisons were difficult because of the&#10;                     differences in the expression levels, the induction kinetics of CRC and At2S3 expression in TA-LEC1 plants appeared to be slower than those in TA-FUS3 and ABI3 plants (Fig. 1).&#10;                  &#10;                  &#10;                     View larger version:In this window&#10;                              In a new window&#10;                           Download as PowerPoint Slide&#10;                           &#10;                     &#10;                     &#10;                        Fig. 1 Induction of SSP mRNA by Dex and ABA in TA-FUS3, TA-ABI3 or TA-LEC1 transgenic plants. Seven-day-old transgenic Arabidopsis plants carrying glucocorticoid-inducible FUS3 (TA-FUS3), ABI3 (TA-ABI3) or LEC1 (TA-LEC1) transgenes, or transformed with&#10;                           empty pTA7001 vector (TA) were treated with 30 µM Dex alone or simultaneously with 50 µM ABA for the indicated times. RNA&#10;                           was prepared from these plants and analyzed by Northern blot analysis using 32P-labeled probes specific to the indicated genes. Lanes labeled ‘C’ were loaded with RNA samples from plants before treatment.&#10;                           No variation in RNA loading and quality between samples, which might affect the interpretation of the results, was observed&#10;                           based on the examination of ethidium bromide-stained rRNA bands (data not shown).&#10;                        &#10;                        &#10;                     &#10;                  &#10;                  &#10;                  While the SSP transcripts accumulated to significant levels after 72 h of LEC1 induction, no ectopic embryogenesis or other morphological&#10;                     abnormalities were observed in TA-LEC1 plants within this time period (Fig. 2). Thus, the ectopic activation of SSP genes by LEC1 occurred independently of embryogenesis.&#10;                  &#10;                  &#10;                     View larger version:In this window&#10;                              In a new window&#10;                           Download as PowerPoint Slide&#10;                           &#10;                     &#10;                     &#10;                        Fig. 2 Photographs of 10-day-old TA-LEC1 or the control TA plants that had been treated with 30 µM Dex (+Dex) for 72 h and the untreated&#10;                           plants (–Dex).&#10;                        &#10;                        &#10;                     &#10;                  &#10;                  &#10;                  &#10;                  &#10;                  Ectopic expression of LEC1 induces the expression of FUS3, ABI3 and LEC2&#10;                  &#10;                  Cross-regulation among seed maturation-related transcription factors has been described (Parcy et al. 1997, Söderman et al. 2000, Brocard et al. 2002, Brocard-Gifford et al. 2003, Kroj et al. 2003. In addition to those observations, the seemingly slower induction kinetics of the SSP genes by LEC1 compared with those by FUS3 or ABI3 led us to hypothesize that the LEC1 activation of SSP genes occurred via the activation of FUS3 and/or ABI3. In agreement with the hypothesis, the expression of FUS3 and ABI3 was found to be induced by Dex in TA-LEC1 but not in the control TA plants (Fig. 3). The induction of FUS3 and ABI3 was already observed at plateau levels after 6 h of Dex treatment (Fig. 3B) in the absence of ABA. Therefore, the activation of FUS3 and ABI3 by LEC1 was significantly rapid and likely to be caused&#10;                     by direct action of LEC1 on the FUS3 and ABI3 promoters. The LEC1-induced expression of FUS3, but not that of ABI3, was enhanced after 48 h in the presence of ABA. In addition to FUS3 and ABI3, induction of LEC2 by Dex treatment was also observed in TA-LEC1 plants with slower kinetics than that of FUS3 or ABI3.&#10;                  &#10;                  &#10;                     View larger version:In this window&#10;                              In a new window&#10;                           Download as PowerPoint Slide&#10;                           &#10;                     &#10;                     &#10;                        Fig. 3 Induction of FUS3 (A), ABI3 (B), LEC2 (C) or LEC1 (D) mRNAs by Dex and ABA in TA-LEC1 transgenic plants. TA-LEC1 or the control TA transgenic plants were treated and analyzed&#10;                           as described for Fig. 1. No variation in RNA loading and quality between samples, which might affect the interpretation of the results, was observed&#10;                           based on the examination of ethidium bromide-stained rRNA bands (data not shown).&#10;                        &#10;                        &#10;                     &#10;                  &#10;                  &#10;                  In contrast to the previous observation with TA-ABI3 and TA-FUS3 plants, in which the transgene expression levels declined&#10;                     at later times after Dex treatment (Kagaya et al. 2005), LEC1 transcript levels in TA-LEC1 plants tended to increase after 48 h of Dex treatment, particularly in the absence of&#10;                     ABA (Fig. 3D). Therefore, it could be possible that LEC1 may up-regulate its own gene.&#10;                  &#10;                  &#10;                  &#10;                  &#10;                  Expression of FUS3 and ABI3 is controlled by LEC1 in developing seeds&#10;                  &#10;                  Since FUS3 and ABI3 were found to be ectopically induced by LEC1 in vegetative tissues, we tested if LEC1 regulates FUS3 and ABI3 during seed development. Northern analysis performed with RNA from developing siliques of the wild-type and lec1-1 mutant plants (Meinke 1992, Meinke et al. 1994) showed that the levels of ABI3 and FUS3 transcripts were significantly reduced in the lec1 mutant (Fig. 4). These results supported that LEC1 controls the expression of the SSP genes via the regulation of FUS3 and ABI3 in developing seeds.&#10;                  &#10;                  &#10;                     View larger version:In this window&#10;                              In a new window&#10;                           Download as PowerPoint Slide&#10;                           &#10;                     &#10;                     &#10;                        Fig. 4 Regulation of ABI3 and FUS3 expression by LEC1 in developing seed. RNA was prepared from developing siliques of wild-type (ecotype WS) Arabidopsis plants (WS) or the lec1-1 mutant at 4–7 days after flowering (DAF, E), 8–11 DAF (M) or 12–15 DAF (L), and analyzed by Northern analysis using 32P-labeled probes specific for the indicated genes. Ethidium bromide (EtBr)-stained rRNA bands are shown to verify RNA loading&#10;                           and quality.&#10;                        &#10;                        &#10;                     &#10;                  &#10;                  &#10;                  &#10;                  &#10;                  Ectopic induction of the SSP genes by LEC1 requires functional ABI3 and FUS3 alleles&#10;                  &#10;                  To confirm further that ectopic induction of the SSP genes by LEC1 is mediated by FUS3 and ABI3, the TA-LEC1 transgene was transferred into the abi3 or fus3 mutant background by crossing. The levels of CRC and At2S3 induction by Dex treatment in vegetative tissues were reduced moderately in the fus3-3 mutant and greatly in the abi3-6 mutant as compared with TA-LEC1 plants with the wild-type background (Fig. 5). This indicated that the ectopic induction of CRC and At2S3 in vegetative tissues by LEC1 required, at least in part, functional FUS3 and ABI3, thus showing that the regulation of the&#10;                     SSP genes by ectopic expression of LEC1 was mediated by FUS3 and ABI3, the induction of which by LEC1 preceded the SSP gene induction.&#10;                  &#10;                  &#10;                     View larger version:In this window&#10;                              In a new window&#10;                           Download as PowerPoint Slide&#10;                           &#10;                     &#10;                     &#10;                        Fig. 5 Dependence of ectopic At2S3 and CRC induction on the functional allele of ABI3 or FUS3. Seven-day-old TA-LEC1 transgenic plants with wild-type Columbia (Wt) or the fus3-3 or abi3-6 mutant background, or the control TA plants were treated with 30 µM Dex alone or simultaneously with 50 µM ABA for 72 h and&#10;                           analyzed by gel blot hybridization using 32P-labeled probes specific to the indicated genes. Ethidium bromide (EtBr)-stained rRNA bands are shown to verify RNA loading&#10;                           and quality.&#10;                        &#10;                        &#10;                     &#10;                  &#10;                  &#10;                  &#10;                  &#10;                  LEC1 regulation of an aspartic protease gene is also mediated by FUS3&#10;                  &#10;                  From preliminary microarray analysis using TA-FUS3 transgenic plants, we identified that the gene encoding an isoform of aspartic&#10;                     protease (At1g62290) was ectopically induced by FUS3 in either the presence or absence of ABA. However, it was not, or only to very low levels,&#10;                     induced in TA-ABI3 plants upon Dex treatment (Fig. 6A). In accordance with this observation, the level of the At1g62290 transcripts in developing siliques was found to be greatly lowered in the fus3-3 plants but not in the abi3-6 plants (Fig 6B). Therefore, the At1g62290 aspartic protease gene was considered to be preferentially regulated by FUS3.&#10;                  &#10;                  &#10;                     View larger version:In this window&#10;                              In a new window&#10;                           Download as PowerPoint Slide&#10;                           &#10;                     &#10;                     &#10;                        Fig. 6 FUS3-dependent LEC1 regulation of the At1g62290 aspartic protease gene. (A) The expression of the At1g62290 aspartic protease gene in TA, TA-FUS3, TA-ABI3 or TA-LEC1 transgenic plants was analyzed as in Fig. 1. No variation in RNA loading and quality between samples was observed based on the examination of ethidium bromide (EtBr)-stained&#10;                           rRNA bands (data not shown). (B) The expression of the At1g62290 aspartic protease gene in developing siliques of wild type (Col. or WS) or the indicated mutants was analyzed as in Fig.&#10;                           4. (C) Seven-day-old TA-LEC1 transgenic plants with wild type Columbia (Wt) or the fus3-3 or abi3-6 mutant background, or the control TA plants were treated and analyzed as in Fig. 5. EtBr-stained rRNA bands are shown to verify RNA loading and quality (B and C).&#10;                        &#10;                        &#10;                     &#10;                  &#10;                  &#10;                  When the expression of the At1g62290 aspartic protease gene was analyzed in TA-LEC1 plants, an induction was observed by Dex treatment in the presence of ABA&#10;                     with slower kinetics than that in TA-FUS3 plants (Fig. 6A). LEC1 regulation of the aspartic protease gene was confirmed by the decreased expression in the lec1-1 mutant siliques (Fig. 6B). These results suggested that LEC1 regulation of the At1g62290 gene was mediated preferentially by FUS3. ABA dependence of the At1g62290 induction in TA-LEC1 plants, which was not observed in TA-FUS3 plants, was considered to be due to the enhancement of LEC1-induced&#10;                     FUS3 expression by ABA (Fig. 3A).&#10;                  &#10;                  &#10;                  &#10;                  &#10;                  Ectopic induction of the aspartic protease gene by LEC1 also preferentially depends on FUS3&#10;                  &#10;                  The ectopic SSP gene induction by LEC1 appeared to depend more on ABI3 than FUS3 judging from the more severe effect on the transcript levels&#10;                     in the abi3-6 background than in the fus3-3 background (Fig. 5), although the effects of the mutations in the SSP transcript levels in seeds were not as significantly different between the two mutants (Parcy et al. 1997). In contrast, the expression of the At1g62290 aspartic protease gene depended more strongly on functional FUS3 than ABI3 in developing seeds (Fig. 6B). To correlate the LEC1-induced ectopic gene induction mediated by FUS3 and/or ABI3 with the gene regulation in developing&#10;                     seeds, LEC1-induced ectopic expression of the At1g62290 gene in TA-LEC1 plants was compared between the wild type and the fus3 or abi3 mutant background (Fig. 6C). The level of LEC1-induced expression of the At1g62290 gene after Dex treatment was significantly lower in TA-LEC1 plants with the fus3-3 background than in those with the wild-type or abi3-6 background. Thus, the At1g62290 gene also preferentially required FUS3 for LEC1-induced ectopic expression. Such correlation in the FUS3 preference between&#10;                     the ectopic expression and the expression in developing seeds supported the hypothesis that LEC1 controls the expression of&#10;                     certain sets of genes during seed development via its regulation of FUS3 and/or ABI3 as seen for the ectopic expression.&#10;                  &#10;                  &#10;                  &#10;               &#10;               &#10;                  Previous SectionNext Section&#10;                  &#10;                  Discussion&#10;                  &#10;                  In the present study, we showed that LEC1 was capable of activating SSP gene expression when it was ectopically induced in vegetative tissues of transgenic plants. The use of the artificial Dex&#10;                     induction system enabled us to perform kinetic analyses of LEC1-induced SSP gene expression. Such analyses revealed that SSP gene induction by LEC1 was slower than that by ABI3 or FUS3 but was not a result of ectopic embryogenesis caused by the long-term&#10;                     effect of LEC1 expression. Furthermore, we demonstrated that LEC1 was capable of activating the expression of ABI3 and FUS3 with rapid kinetics. The reduced levels of LEC1-induced ectopic expression of the SSP genes in TA-LEC1 plants with an abi3 or fus3 mutant background indicated that the SSP genes were activated by ectopic expression of LEC1 via the induction of the ABI3 and FUS3 transcription factors. In addition,&#10;                     the following results supported that such a regulatory cascade is likely to represent a part of the regulatory networks for&#10;                     SSP expression operating in the developing embryo. First, the expression of ABI3 and FUS3 was regulated by LEC1 because the ABI3 and FUS3 transcript levels were lowered in the lec1 mutant embryo. Secondly, the relative dependency on FUS3 or ABI3 of ectopic induction of the At1g62290 aspartic protease gene by LEC1 correlated with those in developing seed.&#10;                  &#10;                  &#10;                  LEC1 regulation of FUS3 was consistent with the report by Brocard-Gifford et al. (2003). However, the down-regulation of the ABI3 transcript in lec1 mutants appeared contradictory to the results of Parcy et al. (1997), in which no difference was observed in the ABI3 protein levels between the wild-type and the lec1 mutant embryo. The reason for the apparent discrepancy is not clear, but it may be derived from the differences in the stages&#10;                     of embryo samples, which had not been clearly defined in their report.&#10;                  &#10;                  &#10;                  The LEC2 transcript was also found to be induced by LEC1. The regulation of LEC2 by LEC1 had not been known previously. However, such regulation remains to be investigated in developing seeds. Ectopic LEC2 induction by LEC1 was significantly slower than that of FUS3 and ABI3. Therefore, LEC1 may regulate LEC2 via intermediate regulatory factor(s), whose synthesis depends on LEC1.&#10;                  &#10;                  &#10;                  The FUS3 and ABI3 transcripts were still present in lec1-1 developing seeds, although they were significantly reduced. Therefore, LEC1 regulation of FUS3 and ABI3 is considered to be quantitative. Nevertheless, the effects of the lec1 mutation on SSP expression at both the mRNA and protein level were as severe as the fus3 or abi3 single mutation (Parcy et al. 1997). One explanation for the apparently greater effect of the lec1 mutation on SSP gene expression than that on FUS3 or ABI3 expression is that LEC1 regulates SSP expression through both FUS3/ABI3-dependent and -independent mechanisms. However, combination of the abi3 and fus3 mutation has been reported to affect the SSP expression synergistically as well as other maturation-related phenotypes (Keith et al. 1994, Parcy et al. 1997, Nambara et al. 2000). Therefore, an alternative possibility is that partial inhibition of both FUS3 and ABI3 expression in the lec1 mutant may synergistically affect SSP expression in developing seed, thereby resulting in the greater reduction of SSP expression than that expected from the additive effects of the decrease in the FUS3 and ABI3 transcript levels.&#10;                  &#10;                  &#10;                  It should be noted that the hierarchical LEC1 regulation of the SSP genes via FUS3 and ABI3 is likely to be a part of the regulatory networks of the SSP gene regulation because the LEC1 regulation of ABI3 and FUS3 is only quantitative, as mentioned above. It remains to be assessed as to what extent FUS3/ABI3-dependent LEC1 regulation&#10;                     of the SSP genes contributes to the overall network, although it is not easy to do so. Yet, the inducible ectopic expression of LEC1&#10;                     in the present study effectively uncovered the presence of such a transcription cascade by isolating it from the complex regulatory&#10;                     network operating in developing seed. Despite the fact that very similar phenotypes are displayed by fus3 and lec1 mutants, no epistatic relationships have been revealed by genetic studies (West et al. 1994, Lotan et al. 1998, Raz et al. 2001). However, the results of these genetic studies are not necessarily inconsistent with our results if we envisage the hierarchical&#10;                     regulation as an element of the complex regulatory network. Additionally, it should be noted that no epistasy analysis has&#10;                     actually been performed with respect to the SSP phenotypes.&#10;                  &#10;                  &#10;                  The abi3 mutation affected the LEC1-induced ectopic expression of the SSP genes more severely than the fus3 mutation did. Thus, it appeared that the contribution of ABI3 to the LEC1-regulated SSP gene expression is greater than that of FUS3. However, the difference may not necessarily reflect the relative contribution&#10;                     of ABI3 and FUS3 to the LEC1 regulation of the SSP genes in developing seeds because the regulation observed in the ectopic expression experiments was considered as an element&#10;                     of the regulatory network operating in the developing seeds.&#10;                  &#10;                  &#10;                  LEC1 is a homolog of the HAP3 subunit of the trimeric CCAAT-binding factor that is widely distributed from fungi to mammals&#10;                     and may function in a similar complex in plants (Lotan et al. 1998). However, such a complex with the LEC1 subunit is expected to regulate a specific set of genes mainly related to embryo&#10;                     development, but not to function as a general transcription factor because of the seed-specific phenotypes of the mutants.&#10;                     Although the downstream genes of LEC1 are known, neither direct targets nor the cis-elements of the putative LEC1 complex have been identified. The induction of ABI3 and FUS3 in TA-LEC1 plants by Dex was extremely rapid. In an independent experiment, we observed ABI3 induction in TA-LEC1 plants within 3 h (Y. Kagaya and T. Hattori, unpublished result), comparable with the induction kinetics&#10;                     of AtEm1 and AtEm6 genes by ABI3, which probably represented a direct activation via the interaction with ABRE-binding factor (Kagaya et al. 2005). Therefore, ABI3 and FUS3 are likely candidates for the direct targets of the LEC1 complex. Analyses of the ABI3 or FUS3 promoters with respect to LEC1 regulation will identify the cis-element for the LEC1 complex and ultimately lead to a fundamental understanding of the molecular mechanism of LEC1 action.&#10;                  &#10;                  &#10;               &#10;               &#10;                  Previous SectionNext Section&#10;                  &#10;                  Materials and Methods&#10;                  &#10;                  &#10;                  Plasmid construction&#10;                  &#10;                  The LEC1 coding sequence was amplified by polymerase chain reaction (PCR) from the expressed sequence tag (EST) clone SQ243a11F (Kazusa&#10;                     DNA Research Institute) and synthetic primers T3 (5′-AAT TAA CCC TCA CTA AAG GG-3′) and Rev LEC1 SalT (5′-TGC TGT CGA CTA&#10;                     TAG AAA TGT TAT TGA TAAG-3′), digested with BamHI and SalI, and cloned into the corresponding sites p35S-DH-His-NosT (Kagaya et al. 2005). A dHA-His-tagged LEC1 sequence was excised with BamHI and NotI, blunt-ended with Klenow, and cloned into the EcoRV site of pBluescript. The insert in the pBluscript subclone was excised with XhoI and SpeI, and cloned into the corresponding sites of pTA7001, which subsequently was used to transform Arabidopsis.&#10;                  &#10;                  &#10;                  &#10;                  &#10;                  Transgenic plants&#10;                  &#10;                  TA-LEC1 transgenic plants were produced using the LEC1 construct in pTA7001 (see above) as described previously (Kagaya et al. 2005). Ectopic induction of CRC, ABI3 and FUS3 was confirmed in eight independent TA-LEC1 lines, from which a representative line was selected for detailed analyses.&#10;                  &#10;                  &#10;                  &#10;                  &#10;                  Genetic cross&#10;                  &#10;                  TA-LEC1 transgenic Arabidopsis was crossed with the abi3-6 (Nambara et al. 1994) or fus3-3 (Keith et al. 1994, Luerßen et al. 1998) mutant. The F2 seedlings homozygous for fus3-3 or abi3-6 were selected by the visible phenotypes or by PCR that discriminates the presence or absence of the internal deletion specific&#10;                     to the abi3-6 allele, respectively. F3 generations that carried the TA-LEC1 transgene and showed levels of transgene expression comparable with those with the wild-type&#10;                     Columbia background were selected and utilized for experiments.&#10;                  &#10;                  &#10;                  &#10;                  &#10;                  Other methods&#10;                  &#10;                  Plant treatments, RNA isolation and Northern analysis were performed as described previously (Kagaya et al. 2005).&#10;                  &#10;                  &#10;                  &#10;               &#10;               &#10;                  Previous SectionNext Section&#10;                  &#10;                  Acknowledgments&#10;                  &#10;                  We thank Dr. Nam-Hai Chua for providing the Dex-inducible expression vector, and Ms. Tomiko Chikada for excellent technical&#10;                     assistance. This work was funded in part by Grants-in-Aid for Scientific Research on Priority Areas (Grant 12138204) and by&#10;                     Research for the Future (JSPS-00L1603) from the Japan Society for the Promotion of Sciences (JSPS).&#10;                  &#10;                  &#10;               &#10;               JSPP © 2005&#10;               &#10;                  Previous Section &#10;                  &#10;                  References&#10;                  ↵&#10;                        &#10;                        &#10;                           Aoyama, T. and Chua, N.-H. (1997) A glucocorticoid-mediated transcriptional induction system in transgenic plants. Plant J. 11: 606–612.&#10;                           &#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Bäumlein, H., Miséra, S., Luerßen, H., Kölle, K., Horstmann, C., Wobus, U. and Müller, A.J. (1994) The FUS3 gene of Arabidopsis thaliana is a regulator of gene expression during late embryogenesis. Plant J. 6: 379–387.&#10;                           CrossRefWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Bobb, A.J., Chern, M.S. and Bustos, M.M. (1997) Conserved RY repeats mediate transactivation of seed-specific promoters by the developmental regulator PvALF. Nucleic Acids Res. 25: 641–647.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Brocard, I., Lynch, T. and Finkelstein, R. (2002) Regulation and role of the Arabidopsis ABA-insensitive (ABI)5 gene in ABA, sugar and stress response. Plant Physiol. 129: 1533–1543.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Brocard-Gifford, I.M., Lynch, T.J. and Finkelstein, R.R (2003) Regulatory networks in seeds integrating developmental, abscisic acid, sugar and light signaling. Plant Physiol. 131: 78–92.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Carson, C.B., Hattori, T., Rosenkrans, L., Vasil, V., Vasil, I.K., Peterson, P.A. and McCarty, D.R. (1997) The quiescent/colorless alleles of the conserved B3 domain of Vp1 is not essential for ABA-regulated gene-expression in&#10;                                 the seed. Plant J. 11: 1231–1240.&#10;                           &#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Ezcurra, I., Wycliffe, P., Nehlin, L., Ellerström, M. and Rask, L. (2000) Transactivation of the Brassica napus napin promoter by ABI3 requires interaction of the conserved B2 and B3 domains of ABI3 with different cis-elements: B2 mediates activation through an ABRE, whereas B3 interacts with an RY/G-box. Plant J. 24: 57–66.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Finkelstein, R.R. and Somerville, C.R. (1990) Three classes of abscisic acid (ABA)-insensitive mutations of Arabidopsis define genes that control overlapping subsets of ABA responses. Plant Physiol. 94: 1172–1179.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Giraudat, J., Hauge, B.M., Valon, C., Smalle, J., Parcy, F. and Goodman, H.M. (1992) Isolation of the Arabidopsis ABI3 gene by positional cloning. Plant Cell 4: 1251–1261.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Guerche, P., Tire, C., De Sa, F.G., De Clercq, A., Van Montagu, M. and Krebbers, E. (1990) Differential expression of the Arabidopsis 2S albumin genes and the effect of increasing gene family size. Plant Cell 2: 469–478.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Harada, J.J. (1997) Seed maturation and control of germination. In Advances in Cellular and Molecular Biology of Seed Development. Edited by Larkins, B.A. and Vasil, I.K. pp. 545–592. Kluwer Academic Publishers, Dordrecht, The Netherlands.&#10;                           &#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Hattori, T., Vasil, V., Rosenkrans, L., Hannah, L.C., McCarty, D.R. and Vasil, I.K. (1992) The Viviparous-1 gene and abscisic acid activate the C1 regulatory gene for anthocyanin biosynthesis during seed maturation in maize. Genes Dev. 6: 609–618.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Hattori, T., Terada, T. and Hamasuna, S. (1995) Regulation of the Osem gene by abscisic acid and the transcriptional activator VP1: analysis of cis-acting promoter elements required for regulation by abscisic acid and VP1. Plant J. 7: 913–925.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Hobo, T., Kowyama, Y. and Hattori, T. (1999) A bZIP factor, TRAB1, interacts with VP1 and mediates abscisic acid-induced transcription. Proc. Natl Acad. Sci. USA 96: 15348–15353.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Kagaya, Y., Okuda, R., Ban, A., Toyoshima, R., Tsutsumida, K., Usui, H., Yamamoto, A. and Hattori, T. (2005) Indirect ABA-dependent regulation of seed storage protein genes by FUSCA3 transcription factor in Arabidopsis. Plant Cell Physiol. 46: 300–311.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Keith, K., Kraml, M., Dengler, N.G. and McCourt, P. (1994) fusca3: a heterochronic mutation affecting late embryo development in Arabidopsis. Plant Cell 6: 589–600.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Koornneef, M., Reuling, G. and Karssen, C. (1984) The isolation and characterization of abscisic acid-insensitive mutants of Arabidopsis thaliana. Physiol. Plant. 61: 377–383.&#10;                           CrossRef&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Kroj, T., Savino, G., Valon, C., Giraudat, J. and Parcy, F. (2003) Regulation of storage protein gene expression in Arabidopsis. Development 130: 6065–6073.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Lotan, T., Ohto, M., Yee, K.M., West, M.A.L., Lo, R., Kwong, R.W., Yamagishi, K., Fisher, R.L., Goldberg, R.B. and Harada,&#10;                                 J.J. (1998) Arabidopsis LEAFY COTYLEDON1 is sufficient to induce embryo development in vegetative cells. Cell 93: 1195–1205.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Luerßen, H., Kirik, V., Herrmann, P. and Miséra, S. (1998) FUSCA3 encodes a protein with a conserved VP1/ABI3-like B3 domain which is of functional importance for the regulation of seed maturation&#10;                                 in Arabidopsis thaliana. Plant J. 15: 755–764.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Meinke, D.W. (1992) A homeotic mutant of Arabidopsis thaliana with leafy cotyledons. Science 258: 1647–1650.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Meinke, D.W., Franzmann, L.H., Nickle, T.C. and Yeung, E.C. (1994) Leafy Cotyledon mutants of Arabidopsis. Plant Cell 6: 1049–1064.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Monke, G., Altschmied, L., Tewes, A., Reidt, W., Mock, H.P., Baumlein, H. and Conrad, U. (2004) Seed-specific transcription factors ABI3 and FUS3: molecular interaction with DNA. Planta 219: 158–160.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Nakamura, S., Lynch, T.J. and Finkelstein, R.R. (2001) Physical interactions between ABA response loci of Arabidopsis. Plant J. 26: 627–635.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Nambara, E., Hayama, R., Tsuchiya, Y., Nishimura, M., Kawaide, H., Kamiya, Y. and Naito, S. (2000) The role of ABI3 and FUS3 loci in Arabidopsis thaliana on phase transition from late embryo development to germination. Dev. Biol. 220: 412–423.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Nambara, E., Keith, K., McCourt, P. and Naito, S. (1994) Isolation of an internal deletion mutant of the Arabidopsis thaliana ABI3 gene. Plant Cell Physiol. 35: 509–513&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Nambara, E., Keith, K., McCourt, P. and Naito, S. (1995) A regulatory role for the ABI3 gene in the establishment of embryo maturation in Arabidopsis thaliana. Development 121: 629–636&#10;                           Abstract&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Nambara, E., Naito, S. and McCourt, P. (1992) A mutant of Arabidopsis which is defective in seed development and storage protein accumulation is new abi3 allele. Plant J. 11: 435–441.&#10;                           CrossRef&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Pang, P.P., Pruitt, R.E. and Meyerowitz, E.M. (1988) Molecular cloning, genomic organization, expression and evolution of 12S seed storage protein genes of Arabidopsis thaliana. Plant Mol. Biol. 11: 805–820&#10;                           &#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Parcy, F., Valon, C., Kohara, A., Miséra, S. and Giraudat, J. (1997) The ABSCISIC ACID-INSENSITIVE3, FUSCA3 and LEAFY COTYLEDON1 loci act in concert to control multiple aspects of Arabidopsis seed development. Plant Cell 9: 1265–1277.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Parcy, F., Valon, C., Raynal, M., Gaubier-Comella, P., Delseny, M. and Giraudat, J. (1994) Regulation of gene expression programs during Arabidopsis seed development: roles of the ABI3 locus and of endogenous abscisic acid. Plant Cell 6: 1567–1582.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Raz, V., Bergervoet, J.H.W. and Koornneef, M. (2001) Sequential steps for developmental arrest in Arabidopsis seeds. Development 128: 243–252.&#10;                           Abstract&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Reidt, W., Wohlfarth, T., Ellerström, M., Czihal, A., Tewes, A., Ezcurra, I., Rask, L. and Bäumlein, H. (2000) Gene regulation during late embryogenesis: the RY motif of maturation-specific gene promoters is a direct target of the&#10;                                 FUS3 gene product. Plant J. 21: 401–408.&#10;                           CrossRefMedlineWeb of Science&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Stone, S.L., Kwong, L.W., Yee, K.M., Pelletier, J., Lepiniec, L., Fischer, R.L., Goldberg, R.B. and Harada, J.J. (2001) LEAFY COTYLEDON2 encodes a B3 domain transcription factor that induces embryo development. Proc. Natl Acad. Sci. USA 98: 11806–11811.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Suzuki, M., Kao, C.Y. and McCarty, D.R. (1997) The conserved B3 domain of Viviparous1 has a cooperative DNA-binding activity. Plant Cell 9: 799–807.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           Söderman, E., Brocard, I., Lynch, T. and Finkelstein, R. (2000) Regulation and function of the Arabidopsis ABA-insensitive4 (ABI4) gene in seed and ABA response signaling networks. Plant Physiol. 124: 1752–1765.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                     ↵&#10;                        &#10;                        &#10;                           West, M.A.L., Yee, K.M., Danao, J., Zimmerman, J.L., Fischer, R.L., Goldberg, R.B. and Harada, J.J. (1994) LEAFY COTYLEDON1 is an essential regulator of late embryogenesis and cotyledon identity in Arabidopsis. Plant Cell 6: 1731–1745.&#10;                           Abstract/FREE Full Text&#10;                        &#10;                        &#10;                     &#10;                  &#10;  &#10;"/>
+    <types:FeatureProxy xmi:id="18" key="source" value="html"/>
+    <types:FeatureProxy xmi:id="21" key="url" value="https://www.ncbi.nlm.nih.gov/pubmed/"/>
+    <types:FeatureProxy xmi:id="24" key="url" value="https://www.ncbi.nlm.nih.gov/pubmed/15695450"/>
+    <types:FeatureProxy xmi:id="27" key="title" value="LEAFY COTYLEDON1 Controls Seed Storage Protein Genes through Its Regulation of FUSCA3 and ABSCISIC ACID INSENSITIVE3"/>
+    <types:FeatureProxy xmi:id="30" key="ID" value="15695450"/>
+    <types:SectionProxy xmi:id="40" sofa="1" begin="0" end="116" name="title" features="48" layers="" relations=""/>
+    <types:FeatureProxy xmi:id="48" key="sectionname" value="title"/>
+    <types:SectionProxy xmi:id="58" sofa="1" begin="116" end="1663" name="abstract" features="66" layers="" relations=""/>
+    <types:FeatureProxy xmi:id="66" key="sectionname" value="abstract"/>
+    <types:SectionProxy xmi:id="76" sofa="1" begin="1663" end="53345" name="alltext" features="84" layers="5179" relations=""/>
+    <types:FeatureProxy xmi:id="84" key="sectionname" value="alltext"/>
+    <types:LayerProxy xmi:id="5179" sofa="1" name="html" annotations="5183"/>
+    <cas:FSArray xmi:id="5183" elements="90 109 120 131 150 181 212 243 274 305 324 339 354 369 384 403 418 437 456 467 478 489 500 511 522 533 544 555 566 577 588 599 610 621 632 643 654 665 676 687 698 709 720 731 742 753 768 783 798 813 824 839 854 869 884 899 914 929 944 959 970 981 992 1003 1014 1025 1036 1047 1058 1069 1080 1091 1102 1113 1124 1135 1146 1157 1168 1179 1190 1201 1212 1223 1234 1245 1256 1267 1278 1289 1300 1311 1322 1333 1344 1355 1366 1377 1388 1399 1410 1421 1432 1443 1454 1465 1476 1487 1498 1509 1520 1531 1542 1553 1564 1575 1586 1597 1608 1619 1634 1645 1656 1671 1686 1697 1708 1719 1730 1745 1756 1767 1782 1797 1808 1819 1830 1841 1852 1863 1874 1885 1896 1907 1918 1929 1940 1951 1962 1973 1984 1995 2010 2021 2032 2047 2062 2073 2084 2095 2106 2117 2128 2139 2150 2161 2172 2183 2194 2205 2216 2227 2238 2253 2264 2275 2290 2305 2316 2327 2338 2349 2360 2371 2382 2393 2404 2415 2426 2437 2448 2459 2470 2481 2492 2503 2514 2529 2540 2551 2566 2581 2592 2603 2614 2625 2636 2647 2658 2669 2680 2691 2702 2713 2728 2739 2750 2765 2780 2791 2802 2813 2824 2835 2846 2857 2868 2879 2890 2901 2912 2923 2934 2945 2956 2967 2978 2989 3000 3011 3022 3033 3044 3055 3066 3077 3088 3099 3110 3121 3132 3143 3154 3165 3176 3187 3198 3209 3220 3231 3242 3253 3264 3275 3286 3297 3308 3319 3330 3341 3352 3363 3374 3385 3396 3407 3418 3429 3440 3451 3462 3473 3484 3495 3506 3517 3528 3539 3550 3561 3572 3583 3594 3605 3616 3627 3638 3649 3660 3671 3682 3693 3704 3715 3726 3737 3748 3759 3770 3781 3792 3803 3814 3825 3836 3847 3858 3869 3880 3891 3902 3913 3924 3935 3946 3957 3968 3979 3990 4001 4012 4023 4034 4045 4056 4067 4078 4089 4100 4111 4122 4133 4144 4155 4166 4177 4188 4207 4218 4233 4244 4255 4266 4277 4288 4299 4310 4321 4332 4343 4354 4365 4376 4387 4398 4409 4420 4431 4442 4453 4464 4475 4486 4497 4508 4519 4530 4541 4552 4563 4574 4585 4596 4607 4618 4629 4640 4651 4662 4673 4684 4695 4706 4717 4728 4739 4750 4761 4772 4783 4794 4805 4816 4827 4838 4849 4860 4871 4882 4893 4904 4915 4926 4937 4948 4959 4970 4981 4992 5003 5014 5025 5036 5047 5058 5069 5080 5091 5102 5113 5124 5135 5146 5157 5168"/>
+    <types:AnnotationProxy xmi:id="90" sofa="1" begin="1671" end="1787" features="95 98 101"/>
+    <types:FeatureProxy xmi:id="95" key="tag" value="h1"/>
+    <types:FeatureProxy xmi:id="98" key="id" value="article-title-1"/>
+    <types:FeatureProxy xmi:id="101" key="itemprop" value="headline"/>
+    <types:AnnotationProxy xmi:id="109" sofa="1" begin="1750" end="1756" features="114"/>
+    <types:FeatureProxy xmi:id="114" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="120" sofa="1" begin="1761" end="1787" features="125"/>
+    <types:FeatureProxy xmi:id="125" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="131" sofa="1" begin="1822" end="2160" features="136 139 142"/>
+    <types:FeatureProxy xmi:id="136" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="139" key="class" value="contributor-list"/>
+    <types:FeatureProxy xmi:id="142" key="id" value="contrib-group-1"/>
+    <types:AnnotationProxy xmi:id="150" sofa="1" begin="1822" end="1861" features="155 158 161 164 167 170"/>
+    <types:FeatureProxy xmi:id="155" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="158" key="class" value="contributor"/>
+    <types:FeatureProxy xmi:id="161" key="id" value="contrib-1"/>
+    <types:FeatureProxy xmi:id="164" key="itemprop" value="author"/>
+    <types:FeatureProxy xmi:id="167" key="itemscope" value="itemscope"/>
+    <types:FeatureProxy xmi:id="170" key="itemtype" value="http://schema.org/Person"/>
+    <types:AnnotationProxy xmi:id="181" sofa="1" begin="1883" end="1923" features="186 189 192 195 198 201"/>
+    <types:FeatureProxy xmi:id="186" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="189" key="class" value="contributor"/>
+    <types:FeatureProxy xmi:id="192" key="id" value="contrib-2"/>
+    <types:FeatureProxy xmi:id="195" key="itemprop" value="author"/>
+    <types:FeatureProxy xmi:id="198" key="itemscope" value="itemscope"/>
+    <types:FeatureProxy xmi:id="201" key="itemtype" value="http://schema.org/Person"/>
+    <types:AnnotationProxy xmi:id="212" sofa="1" begin="1945" end="1979" features="217 220 223 226 229 232"/>
+    <types:FeatureProxy xmi:id="217" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="220" key="class" value="contributor"/>
+    <types:FeatureProxy xmi:id="223" key="id" value="contrib-3"/>
+    <types:FeatureProxy xmi:id="226" key="itemprop" value="author"/>
+    <types:FeatureProxy xmi:id="229" key="itemscope" value="itemscope"/>
+    <types:FeatureProxy xmi:id="232" key="itemtype" value="http://schema.org/Person"/>
+    <types:AnnotationProxy xmi:id="243" sofa="1" begin="2001" end="2037" features="248 251 254 257 260 263"/>
+    <types:FeatureProxy xmi:id="248" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="251" key="class" value="contributor"/>
+    <types:FeatureProxy xmi:id="254" key="id" value="contrib-4"/>
+    <types:FeatureProxy xmi:id="257" key="itemprop" value="author"/>
+    <types:FeatureProxy xmi:id="260" key="itemscope" value="itemscope"/>
+    <types:FeatureProxy xmi:id="263" key="itemtype" value="http://schema.org/Person"/>
+    <types:AnnotationProxy xmi:id="274" sofa="1" begin="2059" end="2101" features="279 282 285 288 291 294"/>
+    <types:FeatureProxy xmi:id="279" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="282" key="class" value="contributor"/>
+    <types:FeatureProxy xmi:id="285" key="id" value="contrib-5"/>
+    <types:FeatureProxy xmi:id="288" key="itemprop" value="author"/>
+    <types:FeatureProxy xmi:id="291" key="itemscope" value="itemscope"/>
+    <types:FeatureProxy xmi:id="294" key="itemtype" value="http://schema.org/Person"/>
+    <types:AnnotationProxy xmi:id="305" sofa="1" begin="2123" end="2141" features="310 313 316"/>
+    <types:FeatureProxy xmi:id="310" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="313" key="class" value="last"/>
+    <types:FeatureProxy xmi:id="316" key="id" value="contrib-6"/>
+    <types:AnnotationProxy xmi:id="324" sofa="1" begin="2160" end="2452" features="329 332"/>
+    <types:FeatureProxy xmi:id="329" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="332" key="class" value="affiliation-list"/>
+    <types:AnnotationProxy xmi:id="339" sofa="1" begin="2160" end="2275" features="344 347"/>
+    <types:FeatureProxy xmi:id="344" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="347" key="class" value="aff"/>
+    <types:AnnotationProxy xmi:id="354" sofa="1" begin="2297" end="2433" features="359 362"/>
+    <types:FeatureProxy xmi:id="359" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="362" key="class" value="aff"/>
+    <types:AnnotationProxy xmi:id="369" sofa="1" begin="2452" end="2576" features="374 377"/>
+    <types:FeatureProxy xmi:id="374" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="377" key="class" value="corresp-list"/>
+    <types:AnnotationProxy xmi:id="384" sofa="1" begin="2452" end="2557" features="389 392 395"/>
+    <types:FeatureProxy xmi:id="389" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="392" key="class" value="corresp"/>
+    <types:FeatureProxy xmi:id="395" key="id" value="corresp-1"/>
+    <types:AnnotationProxy xmi:id="403" sofa="1" begin="2576" end="2715" features="408 411"/>
+    <types:FeatureProxy xmi:id="408" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="411" key="class" value="history-list"/>
+    <types:AnnotationProxy xmi:id="418" sofa="1" begin="2576" end="2625" features="423 426 429"/>
+    <types:FeatureProxy xmi:id="423" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="426" key="class" value="received"/>
+    <types:FeatureProxy xmi:id="429" key="hwp:start" value="2004-11-26"/>
+    <types:AnnotationProxy xmi:id="437" sofa="1" begin="2647" end="2696" features="442 445 448"/>
+    <types:FeatureProxy xmi:id="442" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="445" key="class" value="accepted"/>
+    <types:FeatureProxy xmi:id="448" key="hwp:start" value="2004-12-28"/>
+    <types:AnnotationProxy xmi:id="456" sofa="1" begin="2804" end="2812" features="461"/>
+    <types:FeatureProxy xmi:id="461" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="467" sofa="1" begin="2850" end="2889" features="472"/>
+    <types:FeatureProxy xmi:id="472" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="478" sofa="1" begin="2891" end="2895" features="483"/>
+    <types:FeatureProxy xmi:id="483" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="489" sofa="1" begin="2898" end="2904" features="494"/>
+    <types:FeatureProxy xmi:id="494" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="500" sofa="1" begin="2906" end="2910" features="505"/>
+    <types:FeatureProxy xmi:id="505" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="511" sofa="1" begin="2916" end="2932" features="516"/>
+    <types:FeatureProxy xmi:id="516" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="522" sofa="1" begin="2934" end="2938" features="527"/>
+    <types:FeatureProxy xmi:id="527" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="533" sofa="1" begin="3091" end="3095" features="538"/>
+    <types:FeatureProxy xmi:id="538" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="544" sofa="1" begin="3133" end="3136" features="549"/>
+    <types:FeatureProxy xmi:id="549" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="555" sofa="1" begin="3160" end="3164" features="560"/>
+    <types:FeatureProxy xmi:id="560" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="566" sofa="1" begin="3168" end="3172" features="571"/>
+    <types:FeatureProxy xmi:id="571" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="577" sofa="1" begin="3227" end="3230" features="582"/>
+    <types:FeatureProxy xmi:id="582" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="588" sofa="1" begin="3538" end="3542" features="593"/>
+    <types:FeatureProxy xmi:id="593" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="599" sofa="1" begin="3547" end="3551" features="604"/>
+    <types:FeatureProxy xmi:id="604" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="610" sofa="1" begin="3596" end="3599" features="615"/>
+    <types:FeatureProxy xmi:id="615" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="621" sofa="1" begin="3630" end="3634" features="626"/>
+    <types:FeatureProxy xmi:id="626" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="632" sofa="1" begin="3639" end="3643" features="637"/>
+    <types:FeatureProxy xmi:id="637" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="643" sofa="1" begin="3705" end="3709" features="648"/>
+    <types:FeatureProxy xmi:id="648" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="654" sofa="1" begin="3753" end="3756" features="659"/>
+    <types:FeatureProxy xmi:id="659" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="665" sofa="1" begin="3839" end="3843" features="670"/>
+    <types:FeatureProxy xmi:id="670" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="676" sofa="1" begin="3847" end="3851" features="681"/>
+    <types:FeatureProxy xmi:id="681" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="687" sofa="1" begin="3924" end="3933" features="692"/>
+    <types:FeatureProxy xmi:id="692" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="698" sofa="1" begin="4053" end="4057" features="703"/>
+    <types:FeatureProxy xmi:id="703" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="709" sofa="1" begin="4077" end="4081" features="714"/>
+    <types:FeatureProxy xmi:id="714" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="720" sofa="1" begin="4159" end="4162" features="725"/>
+    <types:FeatureProxy xmi:id="725" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="731" sofa="1" begin="4210" end="4214" features="736"/>
+    <types:FeatureProxy xmi:id="736" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="742" sofa="1" begin="4219" end="4223" features="747"/>
+    <types:FeatureProxy xmi:id="747" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="753" sofa="1" begin="4294" end="4303" features="758 761"/>
+    <types:FeatureProxy xmi:id="758" key="tag" value="h3"/>
+    <types:FeatureProxy xmi:id="761" key="class" value="kwd-header"/>
+    <types:AnnotationProxy xmi:id="768" sofa="1" begin="4319" end="4554" features="773 776"/>
+    <types:FeatureProxy xmi:id="773" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="776" key="class" value="kwd-group KWD"/>
+    <types:AnnotationProxy xmi:id="783" sofa="1" begin="4319" end="4323" features="788 791"/>
+    <types:FeatureProxy xmi:id="788" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="791" key="class" value="kwd"/>
+    <types:AnnotationProxy xmi:id="798" sofa="1" begin="4342" end="4418" features="803 806"/>
+    <types:FeatureProxy xmi:id="803" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="806" key="class" value="kwd"/>
+    <types:AnnotationProxy xmi:id="813" sofa="1" begin="4370" end="4390" features="818"/>
+    <types:FeatureProxy xmi:id="818" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="824" sofa="1" begin="4437" end="4441" features="829 832"/>
+    <types:FeatureProxy xmi:id="829" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="832" key="class" value="kwd"/>
+    <types:AnnotationProxy xmi:id="839" sofa="1" begin="4460" end="4464" features="844 847"/>
+    <types:FeatureProxy xmi:id="844" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="847" key="class" value="kwd"/>
+    <types:AnnotationProxy xmi:id="854" sofa="1" begin="4483" end="4499" features="859 862"/>
+    <types:FeatureProxy xmi:id="859" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="862" key="class" value="kwd"/>
+    <types:AnnotationProxy xmi:id="869" sofa="1" begin="4518" end="4538" features="874 877"/>
+    <types:FeatureProxy xmi:id="874" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="877" key="class" value="kwd"/>
+    <types:AnnotationProxy xmi:id="884" sofa="1" begin="4554" end="4563" features="889 892"/>
+    <types:FeatureProxy xmi:id="889" key="tag" value="h3"/>
+    <types:FeatureProxy xmi:id="892" key="class" value="kwd-header"/>
+    <types:AnnotationProxy xmi:id="899" sofa="1" begin="4579" end="4706" features="904 907"/>
+    <types:FeatureProxy xmi:id="904" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="907" key="class" value="kwd-group ABR"/>
+    <types:AnnotationProxy xmi:id="914" sofa="1" begin="4579" end="4609" features="919 922"/>
+    <types:FeatureProxy xmi:id="919" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="922" key="class" value="kwd"/>
+    <types:AnnotationProxy xmi:id="929" sofa="1" begin="4628" end="4646" features="934 937"/>
+    <types:FeatureProxy xmi:id="934" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="937" key="class" value="kwd"/>
+    <types:AnnotationProxy xmi:id="944" sofa="1" begin="4665" end="4690" features="949 952"/>
+    <types:FeatureProxy xmi:id="949" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="952" key="class" value="kwd"/>
+    <types:AnnotationProxy xmi:id="959" sofa="1" begin="4791" end="4803" features="964"/>
+    <types:FeatureProxy xmi:id="964" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="970" sofa="1" begin="5846" end="5857" features="975"/>
+    <types:FeatureProxy xmi:id="975" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="981" sofa="1" begin="5859" end="5863" features="986"/>
+    <types:FeatureProxy xmi:id="986" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="992" sofa="1" begin="5865" end="5869" features="997"/>
+    <types:FeatureProxy xmi:id="997" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1003" sofa="1" begin="5874" end="5878" features="1008"/>
+    <types:FeatureProxy xmi:id="1008" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1014" sofa="1" begin="6083" end="6087" features="1019"/>
+    <types:FeatureProxy xmi:id="1019" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1025" sofa="1" begin="6666" end="6670" features="1030"/>
+    <types:FeatureProxy xmi:id="1030" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1036" sofa="1" begin="7350" end="7354" features="1041"/>
+    <types:FeatureProxy xmi:id="1041" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1047" sofa="1" begin="7372" end="7376" features="1052"/>
+    <types:FeatureProxy xmi:id="1052" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1058" sofa="1" begin="7611" end="7615" features="1063"/>
+    <types:FeatureProxy xmi:id="1063" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1069" sofa="1" begin="7783" end="7787" features="1074"/>
+    <types:FeatureProxy xmi:id="1074" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1080" sofa="1" begin="7801" end="7805" features="1085"/>
+    <types:FeatureProxy xmi:id="1085" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1091" sofa="1" begin="7810" end="7814" features="1096"/>
+    <types:FeatureProxy xmi:id="1096" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1102" sofa="1" begin="8001" end="8005" features="1107"/>
+    <types:FeatureProxy xmi:id="1107" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1113" sofa="1" begin="8010" end="8014" features="1118"/>
+    <types:FeatureProxy xmi:id="1118" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1124" sofa="1" begin="8057" end="8061" features="1129"/>
+    <types:FeatureProxy xmi:id="1129" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1135" sofa="1" begin="8066" end="8070" features="1140"/>
+    <types:FeatureProxy xmi:id="1140" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1146" sofa="1" begin="8355" end="8359" features="1151"/>
+    <types:FeatureProxy xmi:id="1151" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1157" sofa="1" begin="8360" end="8364" features="1162"/>
+    <types:FeatureProxy xmi:id="1162" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1168" sofa="1" begin="8369" end="8373" features="1173"/>
+    <types:FeatureProxy xmi:id="1173" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1179" sofa="1" begin="8661" end="8664" features="1184"/>
+    <types:FeatureProxy xmi:id="1184" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1190" sofa="1" begin="8674" end="8678" features="1195"/>
+    <types:FeatureProxy xmi:id="1195" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1201" sofa="1" begin="8721" end="8724" features="1206"/>
+    <types:FeatureProxy xmi:id="1206" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1212" sofa="1" begin="8922" end="8933" features="1217"/>
+    <types:FeatureProxy xmi:id="1217" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1223" sofa="1" begin="8985" end="8996" features="1228"/>
+    <types:FeatureProxy xmi:id="1228" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1234" sofa="1" begin="9008" end="9011" features="1239"/>
+    <types:FeatureProxy xmi:id="1239" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1245" sofa="1" begin="9012" end="9015" features="1250"/>
+    <types:FeatureProxy xmi:id="1250" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1256" sofa="1" begin="9043" end="9054" features="1261"/>
+    <types:FeatureProxy xmi:id="1261" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1267" sofa="1" begin="9066" end="9071" features="1272"/>
+    <types:FeatureProxy xmi:id="1272" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1278" sofa="1" begin="9072" end="9077" features="1283"/>
+    <types:FeatureProxy xmi:id="1283" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1289" sofa="1" begin="9535" end="9538" features="1294"/>
+    <types:FeatureProxy xmi:id="1294" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1300" sofa="1" begin="9899" end="9902" features="1305"/>
+    <types:FeatureProxy xmi:id="1305" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1311" sofa="1" begin="9971" end="9973" features="1316"/>
+    <types:FeatureProxy xmi:id="1316" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1322" sofa="1" begin="10071" end="10074" features="1327"/>
+    <types:FeatureProxy xmi:id="1327" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1333" sofa="1" begin="10333" end="10336" features="1338"/>
+    <types:FeatureProxy xmi:id="1338" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1344" sofa="1" begin="10625" end="10628" features="1349"/>
+    <types:FeatureProxy xmi:id="1349" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1355" sofa="1" begin="10881" end="10884" features="1360"/>
+    <types:FeatureProxy xmi:id="1360" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1366" sofa="1" begin="10989" end="10992" features="1371"/>
+    <types:FeatureProxy xmi:id="1371" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1377" sofa="1" begin="11191" end="11194" features="1382"/>
+    <types:FeatureProxy xmi:id="1382" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1388" sofa="1" begin="11578" end="11581" features="1393"/>
+    <types:FeatureProxy xmi:id="1393" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1399" sofa="1" begin="11812" end="11815" features="1404"/>
+    <types:FeatureProxy xmi:id="1404" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1410" sofa="1" begin="11842" end="11846" features="1415"/>
+    <types:FeatureProxy xmi:id="1415" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1421" sofa="1" begin="11851" end="11855" features="1426"/>
+    <types:FeatureProxy xmi:id="1426" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1432" sofa="1" begin="12013" end="12016" features="1437"/>
+    <types:FeatureProxy xmi:id="1437" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1443" sofa="1" begin="12064" end="12068" features="1448"/>
+    <types:FeatureProxy xmi:id="1448" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1454" sofa="1" begin="12073" end="12077" features="1459"/>
+    <types:FeatureProxy xmi:id="1459" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1465" sofa="1" begin="12233" end="12240" features="1470"/>
+    <types:FeatureProxy xmi:id="1470" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="1476" sofa="1" begin="12297" end="12365" features="1481"/>
+    <types:FeatureProxy xmi:id="1481" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="1487" sofa="1" begin="12621" end="12624" features="1492"/>
+    <types:FeatureProxy xmi:id="1492" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1498" sofa="1" begin="12818" end="12821" features="1503"/>
+    <types:FeatureProxy xmi:id="1503" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1509" sofa="1" begin="12840" end="12843" features="1514"/>
+    <types:FeatureProxy xmi:id="1514" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1520" sofa="1" begin="13091" end="13102" features="1525"/>
+    <types:FeatureProxy xmi:id="1525" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1531" sofa="1" begin="13356" end="13359" features="1536"/>
+    <types:FeatureProxy xmi:id="1536" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1542" sofa="1" begin="13367" end="13372" features="1547"/>
+    <types:FeatureProxy xmi:id="1547" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1553" sofa="1" begin="13377" end="13380" features="1558"/>
+    <types:FeatureProxy xmi:id="1558" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1564" sofa="1" begin="13507" end="13510" features="1569"/>
+    <types:FeatureProxy xmi:id="1569" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1575" sofa="1" begin="13515" end="13520" features="1580"/>
+    <types:FeatureProxy xmi:id="1580" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1586" sofa="1" begin="13582" end="13585" features="1591"/>
+    <types:FeatureProxy xmi:id="1591" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1597" sofa="1" begin="13936" end="13939" features="1602"/>
+    <types:FeatureProxy xmi:id="1602" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1608" sofa="1" begin="13944" end="13949" features="1613"/>
+    <types:FeatureProxy xmi:id="1613" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1619" sofa="1" begin="14128" end="14216" features="1624 1627"/>
+    <types:FeatureProxy xmi:id="1624" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="1627" key="class" value="callout-links"/>
+    <types:AnnotationProxy xmi:id="1634" sofa="1" begin="14128" end="14142" features="1639"/>
+    <types:FeatureProxy xmi:id="1639" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1645" sofa="1" begin="14173" end="14188" features="1650"/>
+    <types:FeatureProxy xmi:id="1650" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1656" sofa="1" begin="14216" end="14272" features="1661 1664"/>
+    <types:FeatureProxy xmi:id="1661" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="1664" key="class" value="fig-services"/>
+    <types:AnnotationProxy xmi:id="1671" sofa="1" begin="14216" end="14244" features="1676 1679"/>
+    <types:FeatureProxy xmi:id="1676" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="1679" key="class" value="ppt-link"/>
+    <types:AnnotationProxy xmi:id="1686" sofa="1" begin="14361" end="14364" features="1691"/>
+    <types:FeatureProxy xmi:id="1691" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1697" sofa="1" begin="14460" end="14471" features="1702"/>
+    <types:FeatureProxy xmi:id="1702" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1708" sofa="1" begin="15373" end="15376" features="1713"/>
+    <types:FeatureProxy xmi:id="1713" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1719" sofa="1" begin="15634" end="15637" features="1724"/>
+    <types:FeatureProxy xmi:id="1724" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1730" sofa="1" begin="15772" end="15860" features="1735 1738"/>
+    <types:FeatureProxy xmi:id="1735" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="1738" key="class" value="callout-links"/>
+    <types:AnnotationProxy xmi:id="1745" sofa="1" begin="15772" end="15786" features="1750"/>
+    <types:FeatureProxy xmi:id="1750" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1756" sofa="1" begin="15817" end="15832" features="1761"/>
+    <types:FeatureProxy xmi:id="1761" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="1767" sofa="1" begin="15860" end="15916" features="1772 1775"/>
+    <types:FeatureProxy xmi:id="1772" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="1775" key="class" value="fig-services"/>
+    <types:AnnotationProxy xmi:id="1782" sofa="1" begin="15860" end="15888" features="1787 1790"/>
+    <types:FeatureProxy xmi:id="1787" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="1790" key="class" value="ppt-link"/>
+    <types:AnnotationProxy xmi:id="1797" sofa="1" begin="16330" end="16402" features="1802"/>
+    <types:FeatureProxy xmi:id="1802" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="1808" sofa="1" begin="16720" end="16723" features="1813"/>
+    <types:FeatureProxy xmi:id="1813" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1819" sofa="1" begin="16824" end="16827" features="1824"/>
+    <types:FeatureProxy xmi:id="1824" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1830" sofa="1" begin="16865" end="16869" features="1835"/>
+    <types:FeatureProxy xmi:id="1835" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1841" sofa="1" begin="16877" end="16881" features="1846"/>
+    <types:FeatureProxy xmi:id="1846" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1852" sofa="1" begin="16935" end="16939" features="1857"/>
+    <types:FeatureProxy xmi:id="1857" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1863" sofa="1" begin="16944" end="16948" features="1868"/>
+    <types:FeatureProxy xmi:id="1868" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1874" sofa="1" begin="17051" end="17055" features="1879"/>
+    <types:FeatureProxy xmi:id="1879" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1885" sofa="1" begin="17060" end="17064" features="1890"/>
+    <types:FeatureProxy xmi:id="1890" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1896" sofa="1" begin="17316" end="17320" features="1901"/>
+    <types:FeatureProxy xmi:id="1901" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1907" sofa="1" begin="17325" end="17329" features="1912"/>
+    <types:FeatureProxy xmi:id="1912" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1918" sofa="1" begin="17372" end="17376" features="1923"/>
+    <types:FeatureProxy xmi:id="1923" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1929" sofa="1" begin="17394" end="17398" features="1934"/>
+    <types:FeatureProxy xmi:id="1934" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1940" sofa="1" begin="17463" end="17467" features="1945"/>
+    <types:FeatureProxy xmi:id="1945" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1951" sofa="1" begin="17472" end="17476" features="1956"/>
+    <types:FeatureProxy xmi:id="1956" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1962" sofa="1" begin="17491" end="17495" features="1967"/>
+    <types:FeatureProxy xmi:id="1967" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1973" sofa="1" begin="17583" end="17587" features="1978"/>
+    <types:FeatureProxy xmi:id="1978" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1984" sofa="1" begin="17591" end="17595" features="1989"/>
+    <types:FeatureProxy xmi:id="1989" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="1995" sofa="1" begin="17676" end="17764" features="2000 2003"/>
+    <types:FeatureProxy xmi:id="2000" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="2003" key="class" value="callout-links"/>
+    <types:AnnotationProxy xmi:id="2010" sofa="1" begin="17676" end="17690" features="2015"/>
+    <types:FeatureProxy xmi:id="2015" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2021" sofa="1" begin="17721" end="17736" features="2026"/>
+    <types:FeatureProxy xmi:id="2026" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2032" sofa="1" begin="17764" end="17820" features="2037 2040"/>
+    <types:FeatureProxy xmi:id="2037" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="2040" key="class" value="fig-services"/>
+    <types:AnnotationProxy xmi:id="2047" sofa="1" begin="17764" end="17792" features="2052 2055"/>
+    <types:FeatureProxy xmi:id="2052" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="2055" key="class" value="ppt-link"/>
+    <types:AnnotationProxy xmi:id="2062" sofa="1" begin="17909" end="17913" features="2067"/>
+    <types:FeatureProxy xmi:id="2067" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2073" sofa="1" begin="17919" end="17923" features="2078"/>
+    <types:FeatureProxy xmi:id="2078" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2084" sofa="1" begin="17929" end="17933" features="2089"/>
+    <types:FeatureProxy xmi:id="2089" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2095" sofa="1" begin="17941" end="17945" features="2100"/>
+    <types:FeatureProxy xmi:id="2100" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2106" sofa="1" begin="19007" end="19076" features="2111"/>
+    <types:FeatureProxy xmi:id="2111" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="2117" sofa="1" begin="19120" end="19124" features="2122"/>
+    <types:FeatureProxy xmi:id="2122" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2128" sofa="1" begin="19129" end="19133" features="2133"/>
+    <types:FeatureProxy xmi:id="2133" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2139" sofa="1" begin="19230" end="19234" features="2144"/>
+    <types:FeatureProxy xmi:id="2144" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2150" sofa="1" begin="19239" end="19243" features="2155"/>
+    <types:FeatureProxy xmi:id="2155" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2161" sofa="1" begin="19352" end="19358" features="2166"/>
+    <types:FeatureProxy xmi:id="2166" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2172" sofa="1" begin="19433" end="19437" features="2177"/>
+    <types:FeatureProxy xmi:id="2177" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2183" sofa="1" begin="19442" end="19446" features="2188"/>
+    <types:FeatureProxy xmi:id="2188" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2194" sofa="1" begin="19493" end="19497" features="2199"/>
+    <types:FeatureProxy xmi:id="2199" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2205" sofa="1" begin="19580" end="19583" features="2210"/>
+    <types:FeatureProxy xmi:id="2210" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2216" sofa="1" begin="19612" end="19616" features="2221"/>
+    <types:FeatureProxy xmi:id="2221" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2227" sofa="1" begin="19621" end="19625" features="2232"/>
+    <types:FeatureProxy xmi:id="2232" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2238" sofa="1" begin="19726" end="19814" features="2243 2246"/>
+    <types:FeatureProxy xmi:id="2243" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="2246" key="class" value="callout-links"/>
+    <types:AnnotationProxy xmi:id="2253" sofa="1" begin="19726" end="19740" features="2258"/>
+    <types:FeatureProxy xmi:id="2258" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2264" sofa="1" begin="19771" end="19786" features="2269"/>
+    <types:FeatureProxy xmi:id="2269" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2275" sofa="1" begin="19814" end="19870" features="2280 2283"/>
+    <types:FeatureProxy xmi:id="2280" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="2283" key="class" value="fig-services"/>
+    <types:AnnotationProxy xmi:id="2290" sofa="1" begin="19814" end="19842" features="2295 2298"/>
+    <types:FeatureProxy xmi:id="2295" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="2298" key="class" value="ppt-link"/>
+    <types:AnnotationProxy xmi:id="2305" sofa="1" begin="19960" end="19964" features="2310"/>
+    <types:FeatureProxy xmi:id="2310" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2316" sofa="1" begin="19969" end="19973" features="2321"/>
+    <types:FeatureProxy xmi:id="2321" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2327" sofa="1" begin="19988" end="19992" features="2332"/>
+    <types:FeatureProxy xmi:id="2332" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2338" sofa="1" begin="20081" end="20092" features="2343"/>
+    <types:FeatureProxy xmi:id="2343" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2349" sofa="1" begin="20112" end="20118" features="2354"/>
+    <types:FeatureProxy xmi:id="2354" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2360" sofa="1" begin="20569" end="20653" features="2365"/>
+    <types:FeatureProxy xmi:id="2365" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="2371" sofa="1" begin="20740" end="20743" features="2376"/>
+    <types:FeatureProxy xmi:id="2376" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2382" sofa="1" begin="20835" end="20839" features="2387"/>
+    <types:FeatureProxy xmi:id="2387" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2393" sofa="1" begin="20843" end="20847" features="2398"/>
+    <types:FeatureProxy xmi:id="2398" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2404" sofa="1" begin="20893" end="20896" features="2409"/>
+    <types:FeatureProxy xmi:id="2409" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2415" sofa="1" begin="20901" end="20906" features="2420"/>
+    <types:FeatureProxy xmi:id="2420" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2426" sofa="1" begin="20987" end="20993" features="2431"/>
+    <types:FeatureProxy xmi:id="2431" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2437" sofa="1" begin="21020" end="21026" features="2442"/>
+    <types:FeatureProxy xmi:id="2442" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2448" sofa="1" begin="21151" end="21154" features="2453"/>
+    <types:FeatureProxy xmi:id="2453" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2459" sofa="1" begin="21159" end="21164" features="2464"/>
+    <types:FeatureProxy xmi:id="2464" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2470" sofa="1" begin="21310" end="21313" features="2475"/>
+    <types:FeatureProxy xmi:id="2475" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2481" sofa="1" begin="21366" end="21370" features="2486"/>
+    <types:FeatureProxy xmi:id="2486" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2492" sofa="1" begin="21375" end="21379" features="2497"/>
+    <types:FeatureProxy xmi:id="2497" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2503" sofa="1" begin="21425" end="21428" features="2508"/>
+    <types:FeatureProxy xmi:id="2508" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2514" sofa="1" begin="21524" end="21612" features="2519 2522"/>
+    <types:FeatureProxy xmi:id="2519" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="2522" key="class" value="callout-links"/>
+    <types:AnnotationProxy xmi:id="2529" sofa="1" begin="21524" end="21538" features="2534"/>
+    <types:FeatureProxy xmi:id="2534" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2540" sofa="1" begin="21569" end="21584" features="2545"/>
+    <types:FeatureProxy xmi:id="2545" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2551" sofa="1" begin="21612" end="21668" features="2556 2559"/>
+    <types:FeatureProxy xmi:id="2556" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="2559" key="class" value="fig-services"/>
+    <types:AnnotationProxy xmi:id="2566" sofa="1" begin="21612" end="21640" features="2571 2574"/>
+    <types:FeatureProxy xmi:id="2571" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="2574" key="class" value="ppt-link"/>
+    <types:AnnotationProxy xmi:id="2581" sofa="1" begin="21766" end="21771" features="2586"/>
+    <types:FeatureProxy xmi:id="2586" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2592" sofa="1" begin="21776" end="21779" features="2597"/>
+    <types:FeatureProxy xmi:id="2597" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2603" sofa="1" begin="21818" end="21822" features="2608"/>
+    <types:FeatureProxy xmi:id="2608" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2614" sofa="1" begin="21826" end="21830" features="2619"/>
+    <types:FeatureProxy xmi:id="2619" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2625" sofa="1" begin="21908" end="21914" features="2630"/>
+    <types:FeatureProxy xmi:id="2630" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2636" sofa="1" begin="21918" end="21924" features="2641"/>
+    <types:FeatureProxy xmi:id="2641" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2647" sofa="1" begin="22450" end="22519" features="2652"/>
+    <types:FeatureProxy xmi:id="2652" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="2658" sofa="1" begin="22718" end="22727" features="2663"/>
+    <types:FeatureProxy xmi:id="2663" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2669" sofa="1" begin="22983" end="22992" features="2674"/>
+    <types:FeatureProxy xmi:id="2674" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2680" sofa="1" begin="23067" end="23073" features="2685"/>
+    <types:FeatureProxy xmi:id="2685" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2691" sofa="1" begin="23096" end="23102" features="2696"/>
+    <types:FeatureProxy xmi:id="2696" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2702" sofa="1" begin="23135" end="23144" features="2707"/>
+    <types:FeatureProxy xmi:id="2707" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2713" sofa="1" begin="23302" end="23390" features="2718 2721"/>
+    <types:FeatureProxy xmi:id="2718" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="2721" key="class" value="callout-links"/>
+    <types:AnnotationProxy xmi:id="2728" sofa="1" begin="23302" end="23316" features="2733"/>
+    <types:FeatureProxy xmi:id="2733" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2739" sofa="1" begin="23347" end="23362" features="2744"/>
+    <types:FeatureProxy xmi:id="2744" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="2750" sofa="1" begin="23390" end="23446" features="2755 2758"/>
+    <types:FeatureProxy xmi:id="2755" key="tag" value="ul"/>
+    <types:FeatureProxy xmi:id="2758" key="class" value="fig-services"/>
+    <types:AnnotationProxy xmi:id="2765" sofa="1" begin="23390" end="23418" features="2770 2773"/>
+    <types:FeatureProxy xmi:id="2770" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="2773" key="class" value="ppt-link"/>
+    <types:AnnotationProxy xmi:id="2780" sofa="1" begin="23560" end="23569" features="2785"/>
+    <types:FeatureProxy xmi:id="2785" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2791" sofa="1" begin="23620" end="23629" features="2796"/>
+    <types:FeatureProxy xmi:id="2796" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2802" sofa="1" begin="23944" end="23953" features="2807"/>
+    <types:FeatureProxy xmi:id="2807" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2813" sofa="1" begin="24185" end="24191" features="2818"/>
+    <types:FeatureProxy xmi:id="2818" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2824" sofa="1" begin="24195" end="24201" features="2829"/>
+    <types:FeatureProxy xmi:id="2829" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2835" sofa="1" begin="24520" end="24529" features="2840"/>
+    <types:FeatureProxy xmi:id="2840" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2846" sofa="1" begin="24827" end="24833" features="2851"/>
+    <types:FeatureProxy xmi:id="2851" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2857" sofa="1" begin="24913" end="24922" features="2862"/>
+    <types:FeatureProxy xmi:id="2862" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2868" sofa="1" begin="24987" end="24996" features="2873"/>
+    <types:FeatureProxy xmi:id="2873" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2879" sofa="1" begin="25277" end="25368" features="2884"/>
+    <types:FeatureProxy xmi:id="2884" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="2890" sofa="1" begin="25418" end="25421" features="2895"/>
+    <types:FeatureProxy xmi:id="2895" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2901" sofa="1" begin="25576" end="25582" features="2906"/>
+    <types:FeatureProxy xmi:id="2906" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2912" sofa="1" begin="25606" end="25612" features="2917"/>
+    <types:FeatureProxy xmi:id="2917" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2923" sofa="1" begin="25679" end="25682" features="2928"/>
+    <types:FeatureProxy xmi:id="2928" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2934" sofa="1" begin="25826" end="25835" features="2939"/>
+    <types:FeatureProxy xmi:id="2939" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2945" sofa="1" begin="26130" end="26139" features="2950"/>
+    <types:FeatureProxy xmi:id="2950" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2956" sofa="1" begin="26206" end="26210" features="2961"/>
+    <types:FeatureProxy xmi:id="2961" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2967" sofa="1" begin="26214" end="26218" features="2972"/>
+    <types:FeatureProxy xmi:id="2972" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2978" sofa="1" begin="26292" end="26301" features="2983"/>
+    <types:FeatureProxy xmi:id="2983" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="2989" sofa="1" begin="26378" end="26384" features="2994"/>
+    <types:FeatureProxy xmi:id="2994" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3000" sofa="1" begin="26432" end="26438" features="3005"/>
+    <types:FeatureProxy xmi:id="3005" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3011" sofa="1" begin="26461" end="26470" features="3016"/>
+    <types:FeatureProxy xmi:id="3016" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3022" sofa="1" begin="26829" end="26833" features="3027"/>
+    <types:FeatureProxy xmi:id="3027" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3033" sofa="1" begin="26841" end="26845" features="3038"/>
+    <types:FeatureProxy xmi:id="3038" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3044" sofa="1" begin="27055" end="27065" features="3049"/>
+    <types:FeatureProxy xmi:id="3049" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="3055" sofa="1" begin="27171" end="27174" features="3060"/>
+    <types:FeatureProxy xmi:id="3060" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3066" sofa="1" begin="27390" end="27393" features="3071"/>
+    <types:FeatureProxy xmi:id="3071" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3077" sofa="1" begin="27439" end="27442" features="3082"/>
+    <types:FeatureProxy xmi:id="3082" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3088" sofa="1" begin="27704" end="27708" features="3093"/>
+    <types:FeatureProxy xmi:id="3093" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3099" sofa="1" begin="27713" end="27717" features="3104"/>
+    <types:FeatureProxy xmi:id="3104" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3110" sofa="1" begin="27800" end="27803" features="3115"/>
+    <types:FeatureProxy xmi:id="3115" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3121" sofa="1" begin="27836" end="27840" features="3126"/>
+    <types:FeatureProxy xmi:id="3126" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3132" sofa="1" begin="27844" end="27848" features="3137"/>
+    <types:FeatureProxy xmi:id="3137" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3143" sofa="1" begin="27886" end="27889" features="3148"/>
+    <types:FeatureProxy xmi:id="3148" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3154" sofa="1" begin="28182" end="28185" features="3159"/>
+    <types:FeatureProxy xmi:id="3159" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3165" sofa="1" begin="28258" end="28262" features="3170"/>
+    <types:FeatureProxy xmi:id="3170" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3176" sofa="1" begin="28267" end="28271" features="3181"/>
+    <types:FeatureProxy xmi:id="3181" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3187" sofa="1" begin="28306" end="28310" features="3192"/>
+    <types:FeatureProxy xmi:id="3192" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3198" sofa="1" begin="28315" end="28319" features="3203"/>
+    <types:FeatureProxy xmi:id="3203" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3209" sofa="1" begin="28358" end="28362" features="3214"/>
+    <types:FeatureProxy xmi:id="3214" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3220" sofa="1" begin="28456" end="28465" features="3225"/>
+    <types:FeatureProxy xmi:id="3225" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3231" sofa="1" begin="28614" end="28618" features="3236"/>
+    <types:FeatureProxy xmi:id="3236" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3242" sofa="1" begin="28720" end="28724" features="3247"/>
+    <types:FeatureProxy xmi:id="3247" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3253" sofa="1" begin="28739" end="28743" features="3258"/>
+    <types:FeatureProxy xmi:id="3258" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3264" sofa="1" begin="28907" end="28911" features="3269"/>
+    <types:FeatureProxy xmi:id="3269" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3275" sofa="1" begin="29190" end="29194" features="3280"/>
+    <types:FeatureProxy xmi:id="3280" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3286" sofa="1" begin="29262" end="29266" features="3291"/>
+    <types:FeatureProxy xmi:id="3291" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3297" sofa="1" begin="29387" end="29391" features="3302"/>
+    <types:FeatureProxy xmi:id="3302" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3308" sofa="1" begin="29448" end="29452" features="3313"/>
+    <types:FeatureProxy xmi:id="3313" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3319" sofa="1" begin="29457" end="29461" features="3324"/>
+    <types:FeatureProxy xmi:id="3324" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3330" sofa="1" begin="29492" end="29496" features="3335"/>
+    <types:FeatureProxy xmi:id="3335" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3341" sofa="1" begin="29629" end="29633" features="3346"/>
+    <types:FeatureProxy xmi:id="3346" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3352" sofa="1" begin="29638" end="29642" features="3357"/>
+    <types:FeatureProxy xmi:id="3357" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3363" sofa="1" begin="29677" end="29683" features="3368"/>
+    <types:FeatureProxy xmi:id="3368" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3374" sofa="1" begin="29774" end="29778" features="3379"/>
+    <types:FeatureProxy xmi:id="3379" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3385" sofa="1" begin="29783" end="29787" features="3390"/>
+    <types:FeatureProxy xmi:id="3390" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3396" sofa="1" begin="29855" end="29859" features="3401"/>
+    <types:FeatureProxy xmi:id="3401" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3407" sofa="1" begin="29872" end="29875" features="3412"/>
+    <types:FeatureProxy xmi:id="3412" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3418" sofa="1" begin="29944" end="29948" features="3423"/>
+    <types:FeatureProxy xmi:id="3423" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3429" sofa="1" begin="29952" end="29956" features="3434"/>
+    <types:FeatureProxy xmi:id="3434" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3440" sofa="1" begin="30051" end="30055" features="3445"/>
+    <types:FeatureProxy xmi:id="3445" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3451" sofa="1" begin="30068" end="30071" features="3456"/>
+    <types:FeatureProxy xmi:id="3456" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3462" sofa="1" begin="30101" end="30105" features="3467"/>
+    <types:FeatureProxy xmi:id="3467" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3473" sofa="1" begin="30109" end="30113" features="3478"/>
+    <types:FeatureProxy xmi:id="3478" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3484" sofa="1" begin="30148" end="30151" features="3489"/>
+    <types:FeatureProxy xmi:id="3489" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3495" sofa="1" begin="30253" end="30257" features="3500"/>
+    <types:FeatureProxy xmi:id="3500" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3506" sofa="1" begin="30262" end="30266" features="3511"/>
+    <types:FeatureProxy xmi:id="3511" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3517" sofa="1" begin="30308" end="30311" features="3522"/>
+    <types:FeatureProxy xmi:id="3522" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3528" sofa="1" begin="30520" end="30524" features="3533"/>
+    <types:FeatureProxy xmi:id="3533" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3539" sofa="1" begin="30529" end="30533" features="3544"/>
+    <types:FeatureProxy xmi:id="3544" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3550" sofa="1" begin="30552" end="30556" features="3555"/>
+    <types:FeatureProxy xmi:id="3555" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3561" sofa="1" begin="30591" end="30594" features="3566"/>
+    <types:FeatureProxy xmi:id="3566" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3572" sofa="1" begin="30672" end="30675" features="3577"/>
+    <types:FeatureProxy xmi:id="3577" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3583" sofa="1" begin="30755" end="30759" features="3588"/>
+    <types:FeatureProxy xmi:id="3588" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3594" sofa="1" begin="30764" end="30768" features="3599"/>
+    <types:FeatureProxy xmi:id="3599" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3605" sofa="1" begin="30908" end="30911" features="3610"/>
+    <types:FeatureProxy xmi:id="3610" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3616" sofa="1" begin="30922" end="30926" features="3621"/>
+    <types:FeatureProxy xmi:id="3621" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3627" sofa="1" begin="30931" end="30935" features="3632"/>
+    <types:FeatureProxy xmi:id="3632" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3638" sofa="1" begin="30993" end="30996" features="3643"/>
+    <types:FeatureProxy xmi:id="3643" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3649" sofa="1" begin="31044" end="31048" features="3654"/>
+    <types:FeatureProxy xmi:id="3654" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3660" sofa="1" begin="31053" end="31057" features="3665"/>
+    <types:FeatureProxy xmi:id="3665" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3671" sofa="1" begin="31208" end="31211" features="3676"/>
+    <types:FeatureProxy xmi:id="3676" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3682" sofa="1" begin="31609" end="31613" features="3687"/>
+    <types:FeatureProxy xmi:id="3687" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3693" sofa="1" begin="31618" end="31622" features="3698"/>
+    <types:FeatureProxy xmi:id="3698" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3704" sofa="1" begin="32090" end="32093" features="3709"/>
+    <types:FeatureProxy xmi:id="3709" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3715" sofa="1" begin="32166" end="32170" features="3720"/>
+    <types:FeatureProxy xmi:id="3720" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3726" sofa="1" begin="32232" end="32235" features="3731"/>
+    <types:FeatureProxy xmi:id="3731" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3737" sofa="1" begin="32265" end="32269" features="3742"/>
+    <types:FeatureProxy xmi:id="3742" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3748" sofa="1" begin="32354" end="32357" features="3753"/>
+    <types:FeatureProxy xmi:id="3753" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3759" sofa="1" begin="32550" end="32553" features="3764"/>
+    <types:FeatureProxy xmi:id="3764" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3770" sofa="1" begin="33348" end="33352" features="3775"/>
+    <types:FeatureProxy xmi:id="3775" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3781" sofa="1" begin="33395" end="33398" features="3786"/>
+    <types:FeatureProxy xmi:id="3786" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3792" sofa="1" begin="33476" end="33480" features="3797"/>
+    <types:FeatureProxy xmi:id="3797" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3803" sofa="1" begin="33485" end="33489" features="3808"/>
+    <types:FeatureProxy xmi:id="3808" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3814" sofa="1" begin="33578" end="33582" features="3819"/>
+    <types:FeatureProxy xmi:id="3819" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3825" sofa="1" begin="33733" end="33738" features="3830"/>
+    <types:FeatureProxy xmi:id="3830" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3836" sofa="1" begin="33743" end="33748" features="3841"/>
+    <types:FeatureProxy xmi:id="3841" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3847" sofa="1" begin="33889" end="33893" features="3852"/>
+    <types:FeatureProxy xmi:id="3852" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3858" sofa="1" begin="33898" end="33902" features="3863"/>
+    <types:FeatureProxy xmi:id="3863" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3869" sofa="1" begin="33985" end="33989" features="3874"/>
+    <types:FeatureProxy xmi:id="3874" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3880" sofa="1" begin="33993" end="33997" features="3885"/>
+    <types:FeatureProxy xmi:id="3885" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3891" sofa="1" begin="34058" end="34061" features="3896"/>
+    <types:FeatureProxy xmi:id="3896" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3902" sofa="1" begin="34339" end="34360" features="3907"/>
+    <types:FeatureProxy xmi:id="3907" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="3913" sofa="1" begin="34417" end="34437" features="3918"/>
+    <types:FeatureProxy xmi:id="3918" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="3924" sofa="1" begin="34479" end="34483" features="3929"/>
+    <types:FeatureProxy xmi:id="3929" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3935" sofa="1" begin="34819" end="34822" features="3940"/>
+    <types:FeatureProxy xmi:id="3940" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3946" sofa="1" begin="34829" end="34832" features="3951"/>
+    <types:FeatureProxy xmi:id="3951" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3957" sofa="1" begin="34931" end="34935" features="3962"/>
+    <types:FeatureProxy xmi:id="3962" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3968" sofa="1" begin="34962" end="34965" features="3973"/>
+    <types:FeatureProxy xmi:id="3973" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3979" sofa="1" begin="34972" end="34975" features="3984"/>
+    <types:FeatureProxy xmi:id="3984" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="3990" sofa="1" begin="35023" end="35026" features="3995"/>
+    <types:FeatureProxy xmi:id="3995" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4001" sofa="1" begin="35105" end="35108" features="4006"/>
+    <types:FeatureProxy xmi:id="4006" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4012" sofa="1" begin="35114" end="35117" features="4017"/>
+    <types:FeatureProxy xmi:id="4017" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4023" sofa="1" begin="35213" end="35224" features="4028"/>
+    <types:FeatureProxy xmi:id="4028" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4034" sofa="1" begin="35320" end="35337" features="4039"/>
+    <types:FeatureProxy xmi:id="4039" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="4045" sofa="1" begin="35530" end="35533" features="4050"/>
+    <types:FeatureProxy xmi:id="4050" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4056" sofa="1" begin="35535" end="35539" features="4061"/>
+    <types:FeatureProxy xmi:id="4061" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4067" sofa="1" begin="35544" end="35548" features="4072"/>
+    <types:FeatureProxy xmi:id="4072" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4078" sofa="1" begin="35762" end="35775" features="4083"/>
+    <types:FeatureProxy xmi:id="4083" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="4089" sofa="1" begin="35832" end="35843" features="4094"/>
+    <types:FeatureProxy xmi:id="4094" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4100" sofa="1" begin="35865" end="35871" features="4105"/>
+    <types:FeatureProxy xmi:id="4105" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4111" sofa="1" begin="35897" end="35903" features="4116"/>
+    <types:FeatureProxy xmi:id="4116" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4122" sofa="1" begin="35985" end="35991" features="4127"/>
+    <types:FeatureProxy xmi:id="4127" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4133" sofa="1" begin="35995" end="36001" features="4138"/>
+    <types:FeatureProxy xmi:id="4138" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4144" sofa="1" begin="36157" end="36163" features="4149"/>
+    <types:FeatureProxy xmi:id="4149" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4155" sofa="1" begin="36498" end="36511" features="4160"/>
+    <types:FeatureProxy xmi:id="4160" key="tag" value="h3"/>
+    <types:AnnotationProxy xmi:id="4166" sofa="1" begin="36837" end="36852" features="4171"/>
+    <types:FeatureProxy xmi:id="4171" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="4177" sofa="1" begin="37349" end="37376" features="4182"/>
+    <types:FeatureProxy xmi:id="4182" key="tag" value="ul"/>
+    <types:AnnotationProxy xmi:id="4188" sofa="1" begin="37349" end="37360" features="4193 4196 4199"/>
+    <types:FeatureProxy xmi:id="4193" key="tag" value="li"/>
+    <types:FeatureProxy xmi:id="4196" key="class" value="copyright-statement"/>
+    <types:FeatureProxy xmi:id="4199" key="id" value="copyright-statement-1"/>
+    <types:AnnotationProxy xmi:id="4207" sofa="1" begin="37450" end="37460" features="4212"/>
+    <types:FeatureProxy xmi:id="4212" key="tag" value="h2"/>
+    <types:AnnotationProxy xmi:id="4218" sofa="1" begin="37479" end="53341" features="4223 4226"/>
+    <types:FeatureProxy xmi:id="4223" key="tag" value="ol"/>
+    <types:FeatureProxy xmi:id="4226" key="class" value="cit-list ref-use-labels"/>
+    <types:AnnotationProxy xmi:id="4233" sofa="1" begin="37479" end="37794" features="4238"/>
+    <types:FeatureProxy xmi:id="4238" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4244" sofa="1" begin="37816" end="38235" features="4249"/>
+    <types:FeatureProxy xmi:id="4249" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4255" sofa="1" begin="37998" end="38002" features="4260"/>
+    <types:FeatureProxy xmi:id="4260" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4266" sofa="1" begin="38011" end="38031" features="4271"/>
+    <types:FeatureProxy xmi:id="4271" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4277" sofa="1" begin="38257" end="38648" features="4282"/>
+    <types:FeatureProxy xmi:id="4282" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4288" sofa="1" begin="38670" end="39054" features="4293"/>
+    <types:FeatureProxy xmi:id="4293" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4299" sofa="1" begin="38826" end="38837" features="4304"/>
+    <types:FeatureProxy xmi:id="4304" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4310" sofa="1" begin="38838" end="38853" features="4315"/>
+    <types:FeatureProxy xmi:id="4315" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4321" sofa="1" begin="38855" end="38858" features="4326"/>
+    <types:FeatureProxy xmi:id="4326" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4332" sofa="1" begin="38859" end="38860" features="4337"/>
+    <types:FeatureProxy xmi:id="4337" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4343" sofa="1" begin="39076" end="39465" features="4348"/>
+    <types:FeatureProxy xmi:id="4348" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4354" sofa="1" begin="39487" end="39959" features="4359"/>
+    <types:FeatureProxy xmi:id="4359" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4365" sofa="1" begin="39981" end="40515" features="4370"/>
+    <types:FeatureProxy xmi:id="4370" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4376" sofa="1" begin="40157" end="40171" features="4381"/>
+    <types:FeatureProxy xmi:id="4381" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4387" sofa="1" begin="40274" end="40277" features="4392"/>
+    <types:FeatureProxy xmi:id="4392" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4398" sofa="1" begin="40537" end="40952" features="4403"/>
+    <types:FeatureProxy xmi:id="4403" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4409" sofa="1" begin="40724" end="40735" features="4414"/>
+    <types:FeatureProxy xmi:id="4414" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4420" sofa="1" begin="40974" end="41347" features="4425"/>
+    <types:FeatureProxy xmi:id="4425" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4431" sofa="1" begin="41155" end="41166" features="4436"/>
+    <types:FeatureProxy xmi:id="4436" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4442" sofa="1" begin="41167" end="41171" features="4447"/>
+    <types:FeatureProxy xmi:id="4447" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4453" sofa="1" begin="41369" end="41791" features="4458"/>
+    <types:FeatureProxy xmi:id="4458" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4464" sofa="1" begin="41570" end="41581" features="4469"/>
+    <types:FeatureProxy xmi:id="4469" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4475" sofa="1" begin="41813" end="42231" features="4480"/>
+    <types:FeatureProxy xmi:id="4480" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4486" sofa="1" begin="41956" end="41958" features="4491"/>
+    <types:FeatureProxy xmi:id="4491" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4497" sofa="1" begin="42253" end="42702" features="4502"/>
+    <types:FeatureProxy xmi:id="4502" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4508" sofa="1" begin="42427" end="42439" features="4513"/>
+    <types:FeatureProxy xmi:id="4513" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4519" sofa="1" begin="42476" end="42478" features="4524"/>
+    <types:FeatureProxy xmi:id="4524" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4530" sofa="1" begin="42724" end="43175" features="4535"/>
+    <types:FeatureProxy xmi:id="4535" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4541" sofa="1" begin="42947" end="42950" features="4546"/>
+    <types:FeatureProxy xmi:id="4546" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4552" sofa="1" begin="43197" end="43577" features="4557"/>
+    <types:FeatureProxy xmi:id="4557" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4563" sofa="1" begin="43599" end="44053" features="4568"/>
+    <types:FeatureProxy xmi:id="4568" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4574" sofa="1" begin="43885" end="43896" features="4579"/>
+    <types:FeatureProxy xmi:id="4579" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4585" sofa="1" begin="44075" end="44441" features="4590"/>
+    <types:FeatureProxy xmi:id="4590" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4596" sofa="1" begin="44213" end="44219" features="4601"/>
+    <types:FeatureProxy xmi:id="4601" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4607" sofa="1" begin="44283" end="44294" features="4612"/>
+    <types:FeatureProxy xmi:id="4612" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4618" sofa="1" begin="44463" end="44825" features="4623"/>
+    <types:FeatureProxy xmi:id="4623" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4629" sofa="1" begin="44667" end="44688" features="4634"/>
+    <types:FeatureProxy xmi:id="4634" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4640" sofa="1" begin="44847" end="45205" features="4645"/>
+    <types:FeatureProxy xmi:id="4645" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4651" sofa="1" begin="45042" end="45053" features="4656"/>
+    <types:FeatureProxy xmi:id="4656" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4662" sofa="1" begin="45227" end="45715" features="4667"/>
+    <types:FeatureProxy xmi:id="4667" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4673" sofa="1" begin="45474" end="45502" features="4678"/>
+    <types:FeatureProxy xmi:id="4678" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4684" sofa="1" begin="45737" end="46221" features="4689"/>
+    <types:FeatureProxy xmi:id="4689" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4695" sofa="1" begin="45875" end="45881" features="4700"/>
+    <types:FeatureProxy xmi:id="4700" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4706" sofa="1" begin="46049" end="46069" features="4711"/>
+    <types:FeatureProxy xmi:id="4711" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4717" sofa="1" begin="46243" end="46553" features="4722"/>
+    <types:FeatureProxy xmi:id="4722" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4728" sofa="1" begin="46363" end="46383" features="4733"/>
+    <types:FeatureProxy xmi:id="4733" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4739" sofa="1" begin="46575" end="46908" features="4744"/>
+    <types:FeatureProxy xmi:id="4744" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4750" sofa="1" begin="46721" end="46736" features="4755"/>
+    <types:FeatureProxy xmi:id="4755" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4761" sofa="1" begin="46748" end="46759" features="4766"/>
+    <types:FeatureProxy xmi:id="4766" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4772" sofa="1" begin="46930" end="47337" features="4777"/>
+    <types:FeatureProxy xmi:id="4777" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4783" sofa="1" begin="47359" end="47707" features="4788"/>
+    <types:FeatureProxy xmi:id="4788" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4794" sofa="1" begin="47544" end="47555" features="4799"/>
+    <types:FeatureProxy xmi:id="4799" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4805" sofa="1" begin="47729" end="48180" features="4810"/>
+    <types:FeatureProxy xmi:id="4810" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4816" sofa="1" begin="47941" end="47961" features="4821"/>
+    <types:FeatureProxy xmi:id="4821" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4827" sofa="1" begin="48202" end="48572" features="4832"/>
+    <types:FeatureProxy xmi:id="4832" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4838" sofa="1" begin="48386" end="48406" features="4843"/>
+    <types:FeatureProxy xmi:id="4843" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4849" sofa="1" begin="48594" end="48965" features="4854"/>
+    <types:FeatureProxy xmi:id="4854" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4860" sofa="1" begin="48756" end="48760" features="4865"/>
+    <types:FeatureProxy xmi:id="4865" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4871" sofa="1" begin="48811" end="48831" features="4876"/>
+    <types:FeatureProxy xmi:id="4876" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4882" sofa="1" begin="48987" end="49357" features="4887"/>
+    <types:FeatureProxy xmi:id="4887" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4893" sofa="1" begin="49124" end="49135" features="4898"/>
+    <types:FeatureProxy xmi:id="4898" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4904" sofa="1" begin="49215" end="49219" features="4909"/>
+    <types:FeatureProxy xmi:id="4909" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4915" sofa="1" begin="49379" end="49764" features="4920"/>
+    <types:FeatureProxy xmi:id="4920" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4926" sofa="1" begin="49614" end="49634" features="4931"/>
+    <types:FeatureProxy xmi:id="4931" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4937" sofa="1" begin="49786" end="50222" features="4942"/>
+    <types:FeatureProxy xmi:id="4942" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="4948" sofa="1" begin="49938" end="49962" features="4953"/>
+    <types:FeatureProxy xmi:id="4953" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4959" sofa="1" begin="49966" end="49972" features="4964"/>
+    <types:FeatureProxy xmi:id="4964" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4970" sofa="1" begin="49977" end="49993" features="4975"/>
+    <types:FeatureProxy xmi:id="4975" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4981" sofa="1" begin="50045" end="50056" features="4986"/>
+    <types:FeatureProxy xmi:id="4986" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="4992" sofa="1" begin="50244" end="50694" features="4997"/>
+    <types:FeatureProxy xmi:id="4997" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="5003" sofa="1" begin="50460" end="50471" features="5008"/>
+    <types:FeatureProxy xmi:id="5008" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="5014" sofa="1" begin="50503" end="50507" features="5019"/>
+    <types:FeatureProxy xmi:id="5019" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="5025" sofa="1" begin="50716" end="51045" features="5030"/>
+    <types:FeatureProxy xmi:id="5030" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="5036" sofa="1" begin="50893" end="50904" features="5041"/>
+    <types:FeatureProxy xmi:id="5041" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="5047" sofa="1" begin="51067" end="51579" features="5052"/>
+    <types:FeatureProxy xmi:id="5052" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="5058" sofa="1" begin="51601" end="52056" features="5063"/>
+    <types:FeatureProxy xmi:id="5063" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="5069" sofa="1" begin="51800" end="51816" features="5074"/>
+    <types:FeatureProxy xmi:id="5074" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="5080" sofa="1" begin="52078" end="52428" features="5085"/>
+    <types:FeatureProxy xmi:id="5085" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="5091" sofa="1" begin="52231" end="52242" features="5096"/>
+    <types:FeatureProxy xmi:id="5096" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="5102" sofa="1" begin="52450" end="52863" features="5107"/>
+    <types:FeatureProxy xmi:id="5107" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="5113" sofa="1" begin="52624" end="52635" features="5118"/>
+    <types:FeatureProxy xmi:id="5118" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="5124" sofa="1" begin="52636" end="52652" features="5129"/>
+    <types:FeatureProxy xmi:id="5129" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="5135" sofa="1" begin="52654" end="52658" features="5140"/>
+    <types:FeatureProxy xmi:id="5140" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="5146" sofa="1" begin="52885" end="53322" features="5151"/>
+    <types:FeatureProxy xmi:id="5151" key="tag" value="li"/>
+    <types:AnnotationProxy xmi:id="5157" sofa="1" begin="53071" end="53087" features="5162"/>
+    <types:FeatureProxy xmi:id="5162" key="tag" value="em"/>
+    <types:AnnotationProxy xmi:id="5168" sofa="1" begin="53162" end="53173" features="5173"/>
+    <types:FeatureProxy xmi:id="5173" key="tag" value="em"/>
+    <cas:View sofa="1" members="8 13"/>
+</xmi:XMI>
