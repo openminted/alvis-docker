@@ -26,7 +26,7 @@ To run the workflow (from the folder containing the README):
 ```
 docker run -m 12g -i -v $PWD/test-data:/alvisnlp/data \
 bibliome/uc-tdm-as-e \
-alvisnlp -J "-Xmx30g" -verbose /as-e/plan/entities-xmi.plan \
+alvisnlp -J-Xmx8g -verbose /as-e/plan/entities-xmi.plan \
 --input /alvisnlp/data/corpus/xmi \
 --output /alvisnlp/data/output
 ```
