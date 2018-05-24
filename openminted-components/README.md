@@ -11,7 +11,7 @@
 | [GeniaTagger](geniatagger/)  | done | [Alvis GeniaTagger](https://test.openminted.eu/landingPage/component/2cb79581-8629-412e-ba7c-51a4b6c5bb19) | failed | similar to ToMap |
 | [RDFProjector](rdfprojector/) | done | [Alvis RDFProjector](https://test.openminted.eu/landingPage/component/1e382d21-8669-45ef-8415-3f9e1ecff3bf) | failed | similar to ToMap |
 | [RegExp](regexp/)  | done | [Alvis RegExp](https://test.openminted.eu/landingPage/component/ed724697-a907-4140-ac83-9aa485375ce4) | failed | similar to ToMap |
-| [Wheat Phenotypic Information Extractor](uc-tdm-as-d/) | done | [Wheat Phenotypic Information Extractor](https://test.openminted.eu/landingPage/application/ba29d568-b9e3-4ff5-b875-65ddbf4d5ecb) |  failed | RAM memory issue |
+| [Wheat Phenotypic Information Extractor](uc-tdm-as-d/) | done | [Wheat Phenotypic Information Extractor](https://test.openminted.eu/landingPage/application/8480d942-8727-4347-9ccc-225e7c7471a6) |  finished | run on test instance |
 | [Habitat-Phenotype Relation Extractor for Microbes](uc-tdm-as-c/) | done | private component on OMTD | failed | similar to Wheat Phenotypic Information Extractor |
 | [Arabidopsis Gene Regulation Extractor](uc-tdm-as-e/) | done | private component on OMTD | failed | similar to Wheat Phenotypic Information Extractor |
 
