@@ -13,5 +13,5 @@
 | [ToMap](tomap/) | done | [Alvis ToMap](https://test.openminted.eu/landingPage/component/f145b471-c3e7-48b1-992d-c19bd79d156e) | [worked but does not display the results](https://github.com/openminted/alvis-docker/issues/10#issuecomment-388838168) | seems to be a problem of AAI communication  |
 | [GeniaTagger](geniatagger/)  | done | [Alvis GeniaTagger](https://test.openminted.eu/landingPage/component/2cb79581-8629-412e-ba7c-51a4b6c5bb19) | successed one time but was not possible to remake it | similar to ToMap |
 | [RDFProjector](rdfprojector/) | done | [Alvis RDFProjector](https://test.openminted.eu/landingPage/component/1e382d21-8669-45ef-8415-3f9e1ecff3bf) | successed one time but was not possible to remake it | similar to ToMap |
-| [RegExp](regexp/)  | done | [Alvis RegExp](https://test.openminted.eu/landingPage/component/ed724697-a907-4140-ac83-9aa485375ce4) | failed | similar to ToMap |
+| [RegExp](regexp/)  | done | [Alvis RegExp](https://test.openminted.eu/landingPage/component/ed724697-a907-4140-ac83-9aa485375ce4) | successed one time but was not possible to remake it | similar to ToMap |
 
