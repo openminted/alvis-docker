@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ms:componentMetadataRecord
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ms="http://www.meta-share.org/OMTD-SHARE_XMLSchema">
+    <ms:metadataHeaderInfo>
+        <ms:metadataRecordIdentifier metadataIdentifierSchemeName="OMTD">b1072fb6-78fb-4fdb-bd20-9916f74810b9</ms:metadataRecordIdentifier>
+        <ms:metadataCreationDate>2018-05-25Z</ms:metadataCreationDate>
+        <ms:metadataCreators>
+            <ms:metadataCreator>
+                <ms:surname>ba</ms:surname>
+                <ms:givenName>Mouhamadou</ms:givenName>
+                <ms:personIdentifiers>
+                    <ms:personIdentifier personIdentifierSchemeName="other">0931730001872836@openminted.eu</ms:personIdentifier>
+                </ms:personIdentifiers>
+                <ms:communicationInfo>
+                    <ms:emails>
+                        <ms:email>mandiayba@gmail.com</ms:email>
+                    </ms:emails>
+                </ms:communicationInfo>
+                <ms:affiliation>
+                    <ms:position>member</ms:position>
+                    <ms:affiliatedOrganization>
+                        <ms:organizationNames>
+                            <ms:organizationName lang="en">INRA</ms:organizationName>
+                        </ms:organizationNames>
+                    </ms:affiliatedOrganization>
+                </ms:affiliation>
+            </ms:metadataCreator>
+        </ms:metadataCreators>
+        <ms:metadataLastDateUpdated>2018-05-25Z</ms:metadataLastDateUpdated>
+    </ms:metadataHeaderInfo>
+    <ms:componentInfo>
+        <ms:resourceType>component</ms:resourceType>
+        <ms:identificationInfo>
+            <ms:resourceNames>
+                <ms:resourceName lang="en">Arabidopsis Gene Regulation Extractor</ms:resourceName>
+            </ms:resourceNames>
+            <ms:descriptions>
+                <ms:description lang="en">Recognizes Gene, Protein and RNA of Arabidopsis thaliana. It normalizes them with Gene Locus and identifies interacts_with relationships between Gene and Protein.</ms:description>
+            </ms:descriptions>
+            <ms:resourceIdentifiers>
+                <ms:resourceIdentifier resourceIdentifierSchemeName="OMTD">b1072fb6-78fb-4fdb-bd20-9916f74810b9</ms:resourceIdentifier>
+                <ms:resourceIdentifier resourceIdentifierSchemeName="other" ms:schemeURI="workflowName">0931730001872836-aad2b9d7-22bc-4eb6-a65c-ac5bccb7caa6</ms:resourceIdentifier>
+            </ms:resourceIdentifiers>
+            <ms:public>true</ms:public>
+        </ms:identificationInfo>
+        <ms:versionInfo>
+            <ms:version>1.0.0</ms:version>
+        </ms:versionInfo>
+        <ms:contactInfo>
+            <ms:contactPoint>mandiayba@gmail.com</ms:contactPoint>
+            <ms:contactType>contactEmail</ms:contactType>
+        </ms:contactInfo>
+        <ms:resourceDocumentations>
+            <ms:resourceDocumentationInfo>
+                <ms:documentationDescription>https://github.com/openminted/alvis-docker/tree/master/openminted-components/uc-tdm-as-e</ms:documentationDescription>
+                <ms:documentationType>onLineHelpURL</ms:documentationType>
+            </ms:resourceDocumentationInfo>
+        </ms:resourceDocumentations>
+        <ms:application>true</ms:application>
+        <ms:functionInfo>
+            <ms:function>http://w3id.org/meta-share/omtd-share/ExtractionOfDomainSpecificInformation</ms:function>
+        </ms:functionInfo>
+        <ms:distributionInfos>
+            <ms:componentDistributionInfo>
+                <ms:componentDistributionForm>galaxyWorkflow</ms:componentDistributionForm>
+                <ms:distributionLocation>https://test.openminted.eu/api/request/workflow/de0f2832-0c7c-4803-a97d-2cfab8a92113</ms:distributionLocation>
+            </ms:componentDistributionInfo>
+        </ms:distributionInfos>
+        <ms:rightsInfo>
+            <ms:licenceInfos>
+                <ms:licenceInfo>
+                    <ms:licence>Apache-2.0</ms:licence>
+                </ms:licenceInfo>
+            </ms:licenceInfos>
+            <ms:rightsStatement>openAccess</ms:rightsStatement>
+        </ms:rightsInfo>
+        <ms:inputContentResourceInfo>
+            <ms:processingResourceType>corpus</ms:processingResourceType>
+            <ms:dataFormats>
+                <ms:dataFormatInfo>
+                    <ms:dataFormat>http://w3id.org/meta-share/omtd-share/Xmi</ms:dataFormat>
+                </ms:dataFormatInfo>
+            </ms:dataFormats>
+            <ms:languages>
+                <ms:language>en</ms:language>
+            </ms:languages>
+        </ms:inputContentResourceInfo>
+        <ms:outputResourceInfo>
+            <ms:processingResourceType>corpus</ms:processingResourceType>
+            <ms:dataFormats>
+                <ms:dataFormatInfo>
+                    <ms:dataFormat>http://w3id.org/meta-share/omtd-share/Xmi</ms:dataFormat>
+                </ms:dataFormatInfo>
+            </ms:dataFormats>
+            <ms:languages>
+                <ms:language>en</ms:language>
+            </ms:languages>
+            <ms:annotationTypes>
+                <ms:annotationTypeInfo>
+                    <ms:annotationType>http://w3id.org/meta-share/omtd-share/Gene</ms:annotationType>
+                </ms:annotationTypeInfo>
+                <ms:annotationTypeInfo>
+                    <ms:annotationType>http://w3id.org/meta-share/omtd-share/Protein</ms:annotationType>
+                </ms:annotationTypeInfo>
+                <ms:annotationTypeInfo>
+                    <ms:annotationType>http://w3id.org/meta-share/omtd-share/Rna</ms:annotationType>
+                </ms:annotationTypeInfo>
+            </ms:annotationTypes>
+        </ms:outputResourceInfo>
+        <ms:previousAnnotationTypesPolicy>drop</ms:previousAnnotationTypesPolicy>
+        <ms:componentDependencies>
+            <ms:typesystem>
+                <ms:resourceNames>
+                    <ms:resourceName lang="en">alvis type system</ms:resourceName>
+                </ms:resourceNames>
+                <ms:resourceIdentifiers>
+                    <ms:resourceIdentifier resourceIdentifierSchemeName="URL">https://github.com/Bibliome/alvisnlp/blob/master/alvisnlp-bibliome/src/main/resources/fr/inra/maiage/bibliome/alvisnlp/bibliomefactory/modules/uima/uima-document.xml</ms:resourceIdentifier>
+                </ms:resourceIdentifiers>
+            </ms:typesystem>
+        </ms:componentDependencies>
+        <ms:componentCreationInfo>
+            <ms:framework>AlvisNLP</ms:framework>
+            <ms:TDMMethod>http://w3id.org/meta-share/omtd-share/TdmMethod</ms:TDMMethod>
+        </ms:componentCreationInfo>
+    </ms:componentInfo>
+</ms:componentMetadataRecord>
