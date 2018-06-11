@@ -1,4 +1,4 @@
-# Recap of the deployment of the Alvis components 
+# Recap of the deployment of Alvis components 
 
 > [this issue is opened to track the tests](https://github.com/openminted/alvis-docker/issues/10)   /!\
 
