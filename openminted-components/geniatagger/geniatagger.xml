@@ -3,8 +3,8 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ms="http://www.meta-share.org/OMTD-SHARE_XMLSchema">
     <ms:metadataHeaderInfo>
-        <ms:metadataRecordIdentifier metadataIdentifierSchemeName="OMTD">2cb79581-8629-412e-ba7c-51a4b6c5bb19</ms:metadataRecordIdentifier>
-        <ms:metadataCreationDate>2018-05-12Z</ms:metadataCreationDate>
+        <ms:metadataRecordIdentifier metadataIdentifierSchemeName="OMTD">794d6be2-14b0-4878-9dc8-1769586fb714</ms:metadataRecordIdentifier>
+        <ms:metadataCreationDate>2018-06-12Z</ms:metadataCreationDate>
         <ms:metadataCreators>
             <ms:metadataCreator>
                 <ms:surname>Ba</ms:surname>
@@ -26,8 +26,28 @@
                     </ms:affiliatedOrganization>
                 </ms:affiliation>
             </ms:metadataCreator>
+            <ms:metadataCreator>
+                <ms:surname>ba</ms:surname>
+                <ms:givenName>Mouhamadou</ms:givenName>
+                <ms:personIdentifiers>
+                    <ms:personIdentifier personIdentifierSchemeName="other">0931730001872836@openminted.eu</ms:personIdentifier>
+                </ms:personIdentifiers>
+                <ms:communicationInfo>
+                    <ms:emails>
+                        <ms:email>mandiayba@gmail.com</ms:email>
+                    </ms:emails>
+                </ms:communicationInfo>
+                <ms:affiliation>
+                    <ms:position>member</ms:position>
+                    <ms:affiliatedOrganization>
+                        <ms:organizationNames>
+                            <ms:organizationName lang="en">INRA</ms:organizationName>
+                        </ms:organizationNames>
+                    </ms:affiliatedOrganization>
+                </ms:affiliation>
+            </ms:metadataCreator>
         </ms:metadataCreators>
-        <ms:metadataLastDateUpdated>2018-05-12Z</ms:metadataLastDateUpdated>
+        <ms:metadataLastDateUpdated>2018-06-12Z</ms:metadataLastDateUpdated>
     </ms:metadataHeaderInfo>
     <ms:componentInfo>
         <ms:resourceType>component</ms:resourceType>
@@ -39,6 +59,7 @@
                 <ms:description lang="en">Performs segmentation, POS-tagging, lemmatization, NER (DNA, cell_line, cell_type, PROTEIN).</ms:description>
             </ms:descriptions>
             <ms:resourceIdentifiers>
+                <ms:resourceIdentifier resourceIdentifierSchemeName="OMTD">794d6be2-14b0-4878-9dc8-1769586fb714</ms:resourceIdentifier>
                 <ms:resourceIdentifier resourceIdentifierSchemeName="OMTD-docker">org.bibliome.alvisnlp.modules.geniatagger</ms:resourceIdentifier>
             </ms:resourceIdentifiers>
             <ms:public>false</ms:public>
@@ -78,6 +99,28 @@
                 <ms:documentationType>onLineHelpURL</ms:documentationType>
             </ms:resourceDocumentationInfo>
         </ms:resourceDocumentations>
+        <ms:resourceCreationInfo>
+            <ms:resourceCreators>
+                <ms:resourceCreator>
+                    <ms:actorType>group</ms:actorType>
+                    <ms:relatedGroup>
+                        <ms:groupNames>
+                            <ms:groupName lang="en">MaIAGE-Bibliome</ms:groupName>
+                        </ms:groupNames>
+                        <ms:affiliatedOrganization>
+                            <ms:organizationNames>
+                                <ms:organizationName lang="en">INRA</ms:organizationName>
+                            </ms:organizationNames>
+                            <ms:communicationInfo>
+                                <ms:emails>
+                                    <ms:email>maiage-bibliome@inra.fr</ms:email>
+                                </ms:emails>
+                            </ms:communicationInfo>
+                        </ms:affiliatedOrganization>
+                    </ms:relatedGroup>
+                </ms:resourceCreator>
+            </ms:resourceCreators>
+        </ms:resourceCreationInfo>
         <ms:application>false</ms:application>
         <ms:functionInfo>
             <ms:function>http://w3id.org/meta-share/omtd-share/NamedEntitityRecognizer</ms:function>
@@ -85,7 +128,7 @@
         <ms:distributionInfos>
             <ms:componentDistributionInfo>
                 <ms:componentDistributionForm>dockerImage</ms:componentDistributionForm>
-                <ms:distributionLocation>bibliome/geniatagger</ms:distributionLocation>
+                <ms:distributionLocation>bibliome/geniatagger:1.0.0</ms:distributionLocation>
                 <ms:command>alvisnlp  -verbose  /alvisnlp/OMTD_GeniaTagger.plan</ms:command>
             </ms:componentDistributionInfo>
         </ms:distributionInfos>
@@ -103,6 +146,9 @@
                 <ms:dataFormatInfo>
                     <ms:dataFormat>http://w3id.org/meta-share/omtd-share/Xmi</ms:dataFormat>
                 </ms:dataFormatInfo>
+                <ms:dataFormatInfo>
+                    <ms:dataFormat>http://w3id.org/meta-share/omtd-share/AlvisEnrichedDocumentFormat</ms:dataFormat>
+                </ms:dataFormatInfo>
             </ms:dataFormats>
             <ms:languages>
                 <ms:language>en</ms:language>
@@ -114,6 +160,9 @@
                 <ms:dataFormatInfo>
                     <ms:dataFormat>http://w3id.org/meta-share/omtd-share/Xmi</ms:dataFormat>
                 </ms:dataFormatInfo>
+                <ms:dataFormatInfo>
+                    <ms:dataFormat>http://w3id.org/meta-share/omtd-share/AlvisEnrichedDocumentFormat</ms:dataFormat>
+                </ms:dataFormatInfo>
             </ms:dataFormats>
             <ms:languages>
                 <ms:language>en</ms:language>
@@ -121,6 +170,10 @@
             <ms:annotationTypes>
                 <ms:annotationTypeInfo>
                     <ms:annotationType>http://w3id.org/meta-share/omtd-share/NamedEntity</ms:annotationType>
+                </ms:annotationTypeInfo>
+                <ms:annotationTypeInfo>
+                    <ms:annotationType>http://w3id.org/meta-share/omtd-share/Protein</ms:annotationType>
+                    <ms:annotationTypeOther>cell-type, cell-line, DNA</ms:annotationTypeOther>
                 </ms:annotationTypeInfo>
             </ms:annotationTypes>
         </ms:outputResourceInfo>
@@ -140,5 +193,15 @@
             <ms:TDMMethod>http://w3id.org/meta-share/omtd-share/TdmMethod</ms:TDMMethod>
             <ms:implementationLanguage>Java</ms:implementationLanguage>
         </ms:componentCreationInfo>
+        <ms:keywords>
+            <ms:keyword>segmentation</ms:keyword>
+            <ms:keyword>POS-tagging</ms:keyword>
+            <ms:keyword>lemmatization</ms:keyword>
+            <ms:keyword>NER</ms:keyword>
+            <ms:keyword>DNA</ms:keyword>
+            <ms:keyword>cell_line</ms:keyword>
+            <ms:keyword>cell_type</ms:keyword>
+            <ms:keyword>protein</ms:keyword>
+        </ms:keywords>
     </ms:componentInfo>
 </ms:componentMetadataRecord>
