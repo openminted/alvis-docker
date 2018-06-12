@@ -3,8 +3,8 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ms="http://www.meta-share.org/OMTD-SHARE_XMLSchema">
     <ms:metadataHeaderInfo>
-        <ms:metadataRecordIdentifier metadataIdentifierSchemeName="OMTD">55e418d1-2fee-40cc-8a83-24546affa3fe</ms:metadataRecordIdentifier>
-        <ms:metadataCreationDate>2018-05-31Z</ms:metadataCreationDate>
+        <ms:metadataRecordIdentifier metadataIdentifierSchemeName="OMTD">8480d942-8727-4347-9ccc-225e7c7471a6</ms:metadataRecordIdentifier>
+        <ms:metadataCreationDate>2018-05-23Z</ms:metadataCreationDate>
         <ms:metadataCreators>
             <ms:metadataCreator>
                 <ms:surname>ba</ms:surname>
@@ -27,27 +27,29 @@
                 </ms:affiliation>
             </ms:metadataCreator>
         </ms:metadataCreators>
-        <ms:metadataLastDateUpdated>2018-06-03Z</ms:metadataLastDateUpdated>
+        <ms:metadataLastDateUpdated>2018-05-24Z</ms:metadataLastDateUpdated>
     </ms:metadataHeaderInfo>
     <ms:componentInfo>
         <ms:resourceType>component</ms:resourceType>
         <ms:identificationInfo>
             <ms:resourceNames>
-                <ms:resourceName lang="en">Alvis Wheat Phenotypic Information Extractor</ms:resourceName>
+                <ms:resourceName lang="en">Wheat Phenotype Information Extractor</ms:resourceName>
             </ms:resourceNames>
             <ms:descriptions>
-                <ms:description lang="en">Recognizes phenotypes, genes, markers, and wheat-related taxa. It categorizes the phenotypes with the Wheat Trait Ontology.</ms:description>
+                <ms:description lang="en">Recognizes phenotypes, genes, markers, and wheat-related taxa. It categorizes the phenotypes with the Wheat Trait Ontology. </ms:description>
             </ms:descriptions>
+            <ms:resourceShortName>Wheat Extractor</ms:resourceShortName>
             <ms:resourceIdentifiers>
-                <ms:resourceIdentifier resourceIdentifierSchemeName="OMTD">55e418d1-2fee-40cc-8a83-24546affa3fe</ms:resourceIdentifier>
+                <ms:resourceIdentifier resourceIdentifierSchemeName="OMTD">8480d942-8727-4347-9ccc-225e7c7471a6</ms:resourceIdentifier>
+                <ms:resourceIdentifier resourceIdentifierSchemeName="other" ms:schemeURI="workflowName">0931730001872836-e7a8e3f0-6e89-4fdc-86a8-38993aef16c1</ms:resourceIdentifier>
             </ms:resourceIdentifiers>
-            <ms:public>false</ms:public>
+            <ms:public>true</ms:public>
         </ms:identificationInfo>
         <ms:versionInfo>
             <ms:version>1.0.0</ms:version>
         </ms:versionInfo>
         <ms:contactInfo>
-            <ms:contactPoint>mouhamadou.ba@inra.fr</ms:contactPoint>
+            <ms:contactPoint>mandiayba@gmail.com</ms:contactPoint>
             <ms:contactType>contactEmail</ms:contactType>
         </ms:contactInfo>
         <ms:resourceDocumentations>
@@ -56,38 +58,14 @@
                 <ms:documentationType>onLineHelpURL</ms:documentationType>
             </ms:resourceDocumentationInfo>
         </ms:resourceDocumentations>
-        <ms:resourceCreationInfo>
-            <ms:resourceCreators>
-                <ms:resourceCreator>
-                    <ms:actorType>group</ms:actorType>
-                    <ms:relatedGroup>
-                        <ms:groupNames>
-                            <ms:groupName lang="en">MaIAGE-Bibliome</ms:groupName>
-                        </ms:groupNames>
-                        <ms:affiliatedOrganization>
-                            <ms:organizationNames>
-                                <ms:organizationName lang="en">INRA</ms:organizationName>
-                            </ms:organizationNames>
-                            <ms:communicationInfo>
-                                <ms:emails>
-                                    <ms:email>maiage-bibliome@inra.fr</ms:email>
-                                </ms:emails>
-                            </ms:communicationInfo>
-                        </ms:affiliatedOrganization>
-                    </ms:relatedGroup>
-                </ms:resourceCreator>
-            </ms:resourceCreators>
-        </ms:resourceCreationInfo>
-        <ms:application>false</ms:application>
+        <ms:application>true</ms:application>
         <ms:functionInfo>
-            <ms:function>http://w3id.org/meta-share/omtd-share/InformationExtractor</ms:function>
-            <ms:functionOther></ms:functionOther>
+            <ms:function>http://w3id.org/meta-share/omtd-share/ExtractionOfDomainSpecificInformation</ms:function>
         </ms:functionInfo>
         <ms:distributionInfos>
             <ms:componentDistributionInfo>
-                <ms:componentDistributionForm>dockerImage</ms:componentDistributionForm>
-                <ms:distributionLocation>bibliome/uc-tdm-as-d:1.0.0</ms:distributionLocation>
-                <ms:command>alvisnlp -J-Xmx8g -verbose /as-d/plans/tag_xmi.plan</ms:command>
+                <ms:componentDistributionForm>galaxyWorkflow</ms:componentDistributionForm>
+                <ms:distributionLocation>https://test.openminted.eu/api/request/workflow/c2a373f3-38b8-4630-be19-4163ffc8e7ad</ms:distributionLocation>
             </ms:componentDistributionInfo>
         </ms:distributionInfos>
         <ms:rightsInfo>
@@ -104,9 +82,6 @@
                 <ms:dataFormatInfo>
                     <ms:dataFormat>http://w3id.org/meta-share/omtd-share/Xmi</ms:dataFormat>
                 </ms:dataFormatInfo>
-                <ms:dataFormatInfo>
-                    <ms:dataFormat>http://w3id.org/meta-share/omtd-share/AlvisEnrichedDocumentFormat</ms:dataFormat>
-                </ms:dataFormatInfo>
             </ms:dataFormats>
             <ms:languages>
                 <ms:language>en</ms:language>
@@ -118,22 +93,13 @@
                 <ms:dataFormatInfo>
                     <ms:dataFormat>http://w3id.org/meta-share/omtd-share/Xmi</ms:dataFormat>
                 </ms:dataFormatInfo>
-                <ms:dataFormatInfo>
-                    <ms:dataFormat>http://w3id.org/meta-share/omtd-share/AlvisEnrichedDocumentFormat</ms:dataFormat>
-                </ms:dataFormatInfo>
             </ms:dataFormats>
             <ms:languages>
                 <ms:language>en</ms:language>
             </ms:languages>
             <ms:annotationTypes>
                 <ms:annotationTypeInfo>
-                    <ms:annotationType>http://w3id.org/meta-share/omtd-share/Phenotype</ms:annotationType>
-                </ms:annotationTypeInfo>
-                <ms:annotationTypeInfo>
-                    <ms:annotationType>http://w3id.org/meta-share/omtd-share/Gene</ms:annotationType>
-                </ms:annotationTypeInfo>
-                <ms:annotationTypeInfo>
-                    <ms:annotationType>http://w3id.org/meta-share/omtd-share/Marker</ms:annotationType>
+                    <ms:annotationType>http://w3id.org/meta-share/omtd-share/BiologicalEnity</ms:annotationType>
                 </ms:annotationTypeInfo>
             </ms:annotationTypes>
         </ms:outputResourceInfo>
@@ -143,26 +109,11 @@
                 <ms:resourceNames>
                     <ms:resourceName lang="en">Alvis Type System</ms:resourceName>
                 </ms:resourceNames>
-                <ms:resourceIdentifiers>
-                    <ms:resourceIdentifier resourceIdentifierSchemeName="URL">https://github.com/Bibliome/alvisnlp/blob/master/alvisnlp-bibliome/src/main/resources/fr/inra/maiage/bibliome/alvisnlp/bibliomefactory/modules/uima/uima-document.xml</ms:resourceIdentifier>
-                </ms:resourceIdentifiers>
             </ms:typesystem>
         </ms:componentDependencies>
         <ms:componentCreationInfo>
             <ms:framework>AlvisNLP</ms:framework>
             <ms:TDMMethod>http://w3id.org/meta-share/omtd-share/TdmMethod</ms:TDMMethod>
         </ms:componentCreationInfo>
-        <ms:keywords>
-            <ms:keyword>Plant</ms:keyword>
-            <ms:keyword>Wheat</ms:keyword>
-            <ms:keyword>phenotypes</ms:keyword>
-            <ms:keyword>genes</ms:keyword>
-            <ms:keyword>markers</ms:keyword>
-            <ms:keyword>taxa</ms:keyword>
-            <ms:keyword>entity recognition</ms:keyword>
-        </ms:keywords>
-        <ms:domains>
-            <ms:domain classificationSchemeName="other">Wheat Phenotypes</ms:domain>
-        </ms:domains>
     </ms:componentInfo>
 </ms:componentMetadataRecord>

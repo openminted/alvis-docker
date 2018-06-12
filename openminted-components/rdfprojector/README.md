@@ -16,7 +16,7 @@ From the folder contained the README, run the following command. You're supposed
 ```
 docker run -i --rm -v $PWD/test-data:/alvisnlp/data -a stderr \
 bibliome/rdfprojector \
-alvisnlp /alvisnlp/OMTD_rdfprojector.plan \
+alvisnlp /alvisnlp/OMTD_RDFProjector.plan \
 --input /alvisnlp/data/corpus \
 --output /alvisnlp/data/output \
 ```
