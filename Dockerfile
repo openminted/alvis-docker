@@ -47,7 +47,8 @@ RUN git clone -b docker-sources https://github.com/Bibliome/alvisnlp.git /alvisn
 
 # external softs workdir
 WORKDIR /alvisnlp/psoft
-RUN cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default-param-values.xml && \
+RUN rm -f /alvisnlp/share/default-param-values.xml && \
+    cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default-param-values.xml && \
     ## installing biolg 
     #wget http://staff.cs.utu.fi/~spyysalo/biolg/biolg-1.1.12.tar.gz && \
     #mkdir biolg-1.1.12 && tar xvzf biolg-1.1.12.tar.gz -C biolg-1.1.12/ && \
@@ -115,6 +116,19 @@ RUN cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default
     cd /alvisnlp/psoft && \
     ## params values setting
     cat /alvisnlp/share/default-param-values.xml | \
+    ## xmi import
+    xmlstarlet ed -d "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.uima.XMIImport']/source" | \
+    ## xmi export
+    xmlstarlet ed -u "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.uima.XMIExport']/outDir" -v . | \
+    xmlstarlet ed -u "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.uima.XMIExport']/typeSystemFile" -v typesystem.xml | \
+    ## biolg ?not istalled
+    xmlstarlet ed -d "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.biolg.BioLG']/parserPath" | \
+    xmlstarlet ed -d "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.biolg.BioLG']/lp2lpExecutable" | \
+    xmlstarlet ed -d "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.biolg.BioLG']/lp2lpConf" | \
+    ## enju parser 
+    xmlstarlet ed -d "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.enju.EnjuParser']/enjuExecutable" | \
+    ## enju parser 2    
+    xmlstarlet ed -d "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.enju.EnjuParser2']/enjuExecutable" | \
     ## ccg parser params values setting
     xmlstarlet ed -u "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.ccg.CCGParser']/executable" -v /alvisnlp/psoft/candc-1.00/bin/parser | \
     xmlstarlet ed -d "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.ccg.CCGParser']/parserModel" | \
@@ -126,6 +140,11 @@ RUN cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default
     xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.geniatagger.GeniaTagger']/geniaDir" -v /alvisnlp/psoft/geniatagger-3.0.2  | \
     ## species tagger param setting
     xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.Species']/speciesDir" -v /alvisnlp/psoft/species_tagger/ | \
+    ## Ab3P param settings ?not istalled
+    xmlstarlet ed -d "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.ab3p.Ab3P']/installDir" | \
+    ## ChemSpotA param settings ?not istalled
+    xmlstarlet ed -d "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.chemspot.ChemSpotA']/cRFModel" | \
+    xmlstarlet ed -d "//module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.chemspot.ChemSpotA']/dictionary" | \
     ## stanford param values setting
     xmlstarlet ed -d "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.stanford.StanfordNER']/classifierFile" | \
     ## tees classify params values setting
@@ -150,6 +169,15 @@ RUN cp /alvisnlp/share/default-param-values.xml.template /alvisnlp/share/default
     xmlstarlet ed -u "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.tomap.TomapTrain']/rcFile" -v res://yatea.rc | \
     xmlstarlet ed -d "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.tomap.TomapTrain']/configDir" | \
     xmlstarlet ed -d "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.tomap.TomapTrain']/localeDir" | \
+    ## chemspot ?not istalled
+    xmlstarlet ed -d "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.chemspot.Chemspot']/chemspotDir" | \
+    ## Word2Vec ?not istalled
+    xmlstarlet ed -d "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.contes.Word2Vec']/contesDir" | \
+    xmlstarlet ed -d "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.contes.Word2Vec']/workers" | \
+    ## ContesTrain ?not istalled
+    xmlstarlet ed -d "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.contes.ContesTrain']/contesDir" | \
+    ## ContesPredict ?not istalled
+    xmlstarlet ed -d "/default-param-values/module[@class='fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules.contes.ContesPredict']/contesDir" | \
     tee /alvisnlp/share/default-param-values.xml
 #
 WORKDIR /alvisnlp
