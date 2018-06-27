@@ -7,12 +7,16 @@
 
   <import>res://segmentation.plan</import>
 
-  <tt class="TreeTagger">
-    <noUnknownLemma/>
-  </tt>
+  <genia-tagger class="GeniaTagger">
+    <treeTaggerTagset/>
+  </genia-tagger>
 
   <yatea class="YateaExtractor">
     <workingDir>yatea</workingDir>
+    <configDir>/alvisnlp/config/</configDir>
+    <localeDir>/usr/share/YaTeA/locale</localeDir>
+    <yateaExecutable>/usr/local/bin/yatea</yateaExecutable>
+    <rcFile>/alvisnlp/yatea.rc</rcFile>
   </yatea>
 
   <tomap class="TomapProjector">

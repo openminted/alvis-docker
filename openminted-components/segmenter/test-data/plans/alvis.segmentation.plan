@@ -3,12 +3,17 @@
     <alias module="read" param="source"/>
   </param>
 
-  <read class="XMIImport" />
+  <param name="outDir">
+    <alias module="write" param="outDir"/>
+  </param>
 
+  <read class="XMIImport">
+    <source>.</source>
+    <ignoreMalformedXMI/>
+    <baseNameId/>
+  </read>
 
   <import>res://segmentation.plan</import>
 
-  <write class="XMIExport">
-    <outDir>.</outDir>
-  </write>
+  <write class="XMIExport" />
 </alvisnlp-plan>
