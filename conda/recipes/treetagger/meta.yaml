@@ -12,18 +12,16 @@ package:
 
 build:
   number: 0
+  # script: sh  install-tagger.sh
 
 source:
-  fn: tree-tagger-linux-3.2.1.tar.gz	
-  url: http://www.cis.uni-muenchen.de/%7Eschmid/tools/TreeTagger/data/tree-tagger-linux-3.2.1.tar.gz
-  md5: 072fbdad8e9805e6f9bb2ab0da810eea
-
-requirements:
-  build:
-  run:
+  - url: http://www.cis.uni-muenchen.de/%7Eschmid/tools/TreeTagger/data/tree-tagger-linux-3.2.1.tar.gz
+  - url: http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/tagger-scripts.tar.gz
+  - url: http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/install-tagger.sh
+  - url: http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/english-par-linux-3.2-utf8.bin.gz
 
 test:
     commands:
-      -
+      - echo 'Das ist ein Test.' | cmd/tagger-chunker-german
  
 
