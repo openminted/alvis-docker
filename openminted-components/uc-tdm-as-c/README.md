@@ -13,7 +13,7 @@ To run the workflow (from the folder containing the README):
 
 ```
 docker run -m 12g -i -v $PWD/test-data:/alvisnlp/data \
-bibliome/uc-tdm-as-c \ 
+bibliome/uc-tdm-as-c \
 alvisnlp -J-Xmx8g -verbose \
 /as-c/plans/tag_xmi.plan \
 --input /alvisnlp/data/corpus \
