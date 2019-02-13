@@ -2,13 +2,14 @@
 ## This script set the default default-param-values file
 ## it use an hand-made existing file, if it exists
 ## else create a new file
+
 d_f=default-param-values.xml
 FILE=$1
-REFIX=fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules
+PREFIX=fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules
 
-    if [ -e "$f" ]; then
+    if [ -e "$d_f" ]; then
     	echo "File exists";
-	cat $f > $FILE
+	cat $d_f > $FILE
     else 
     	echo "File does not exist, create one"
 	## params values setting
@@ -83,27 +84,3 @@ REFIX=fr.inra.maiage.bibliome.alvisnlp.bibliomefactory.modules
 	xmlstarlet ed -u "//module[@class='$PREFIX.contes.ContesPredict']/python3Executable" -v /root/miniconda3/envs/contesenv/bin/python3.6 | \
 	tee $FILE
     fi
-
-setValue(){
-        MODULE = $2;
-        PARAM = $1;
-	VALUE = $3;
-
-        if ![ -f $VALUE ]
-	then
-    	   echo "File does not exist"
-        elif ![ -d $VALUE ]
-	then
-	  echo "Directory does not exist"
-        else
-	xmlstarlet ed -u "//module[@class='$PREFIX.$MODULE']/$PARAM" -v $VALUE
-        fi
-}
-
-
-removeParam(){
-        MODULE = $2;
-        PARAM = $1;
-
-	xmlstarlet ed -d "//module[@class='$PREFIX.$MODULE']/$PARAM" | \
-}
